@@ -1,0 +1,19 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2026.1 (64-bit)
+# Tool Version Limit: 2026.06
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver cnn_pipeline_v10
+
+ OPTION supported_peripherals = (cnn_pipeline_v10_v1_0 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = cnn_pipeline_v10;
+ OPTION version = 1.0;
+
+END driver
+

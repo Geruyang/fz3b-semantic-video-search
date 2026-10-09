@@ -1,9 +1,0 @@
-{
-  "board_operations": false,
-  "file_count": 29,
-  "manifest_sha256": "f6ce67226410a40ba5f17336c7099d0ca10d4f05dded3b0cb76edfe187a9c673",
-  "pass": true,
-  "payload_bytes": 364322,
-  "schema": "cnn-v10.5-a0005-software-snapshot-receipt-v1",
-  "status": "PASS_HOST_TARGET_PENDING"
-}

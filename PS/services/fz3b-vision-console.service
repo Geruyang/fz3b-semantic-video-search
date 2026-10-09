@@ -1,0 +1,18 @@
+[Unit]
+Description=FZ3B Vision Console application
+After=fz3b-pl-loader.service network.target fz3b-app-cpu-clock.service fz3b-app-r5.service network-online.target serial-getty@ttyPS0.service
+Requires=fz3b-pl-loader.service fz3b-app-cpu-clock.service fz3b-app-r5.service
+Wants=network-online.target serial-getty@ttyPS0.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/fz3b-vision-console-20261009-001
+ExecStartPre=/usr/bin/python3 -B -m vision_app.link_setup
+ExecStart=/root/fz3b-vision-console-20261009-001/run.sh
+TimeoutStartSec=60
+TimeoutStopSec=360
+SendSIGKILL=no
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-09",
+  "platform": "V10.5/A0005",
+  "application": "semantic-video",
+  "core_identity": {
+    "id": "0x465A5641",
+    "abi": "0x000A0005",
+    "job_mhz": 200,
+    "pw_mhz": 400
+  },
+  "semantic_contract_id": "332b521b0fbdc3104c0c4b0fd017df01e090b004276b1f5982c9a04aace7e09e",
+  "source_manifest_files": 484,
+  "local_board_backup_sha256": "781748599587ea506c0f3d3fe928d4440f7473e2ef6502ed6cd4873827dc4769",
+  "board_services_preserved": true,
+  "scope": "Final application import closure, latest driver sources, one final HLS/IP/platform",
+  "organized_date": "2026-10-10",
+  "verification": {
+    "source_hashes": "PASS",
+    "final_ip_file_references": 306,
+    "application_regression": "60 passed",
+    "excluded_legacy_installation_test": 1,
+    "ps_runtime_imports": "PASS",
+    "board_loader": "READY_A0005",
+    "cpu_verified": true,
+    "r5_verified": true,
+    "camera_error": null,
+    "retained_payloads_checked": 3051
+  }
+}

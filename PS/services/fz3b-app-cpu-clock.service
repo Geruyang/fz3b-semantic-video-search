@@ -1,0 +1,20 @@
+[Unit]
+Description=FZ3B verified CPU-only PM clock owner
+After=fz3b-pl-loader.service fz3b-app-r5.service
+Requires=fz3b-pl-loader.service fz3b-app-r5.service
+Before=fz3b-vision-console.service
+
+[Service]
+Type=notify
+NotifyAccess=main
+WorkingDirectory=/root/fz3b-vision-console-20261009-001
+ExecStart=/usr/bin/python3 -B -m vision_app.cpu_clock_service --module /root/fz3b-vision-console-20261009-001/cpu-clock/fz3b_cpu_clock.ko
+TimeoutStartSec=60
+TimeoutStopSec=15
+SendSIGKILL=no
+Restart=no
+UMask=0077
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

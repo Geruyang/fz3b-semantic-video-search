@@ -1,0 +1,18 @@
+[Unit]
+Description=FZ3B application dual R5 TCM workers
+After=fz3b-pl-loader.service
+Requires=fz3b-pl-loader.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/fz3b-vision-console-20261009-001
+ExecStart=/usr/bin/python3 -B -m vision_app.r5_start
+ExecStop=/usr/bin/python3 -B -m vision_app.r5_start --stop
+RemainAfterExit=yes
+TimeoutStartSec=60
+TimeoutStopSec=30
+SendSIGKILL=no
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+[Install]
+WantedBy=multi-user.target

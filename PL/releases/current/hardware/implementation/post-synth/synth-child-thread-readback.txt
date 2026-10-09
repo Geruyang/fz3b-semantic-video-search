@@ -1,5 +1,0 @@
-scope=synth_design_child_pre_hook
-child_process_id=7292
-general_threads_readback=16
-synth_threads_readback=8
-effective_algorithm_threads_proven=false
