@@ -1,0 +1,289 @@
+{
+  "c_function_name": "cnn_v10_pw_dsp16_half2x_hls",
+  "rtl_top_module_name": "cnn_v10_pw_dsp16_half2x_hls",
+  "c_files": [
+    {
+      "c_file": "cnn_v10_pw_dsp_half2x_model.cpp",
+      "cflag": ""
+    }
+  ],
+  "rtl_files": [
+    "cnn_v10_pw_dsp16.v",
+    "cnn_v10_pw_dsp16_half2x.v",
+    "cnn_v10_pw_dsp16_half2x_hls.v"
+  ],
+  "c_parameters": [
+    {
+      "c_name": "pw_fast_clk",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "fast_clk"
+      }
+    },
+    {
+      "c_name": "pw_fast_rst",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "fast_rst"
+      }
+    },
+    {
+      "c_name": "prior",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "prior"
+      }
+    },
+    {
+      "c_name": "value0",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value0"
+      }
+    },
+    {
+      "c_name": "weight0",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight0"
+      }
+    },
+    {
+      "c_name": "value1",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value1"
+      }
+    },
+    {
+      "c_name": "weight1",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight1"
+      }
+    },
+    {
+      "c_name": "value2",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value2"
+      }
+    },
+    {
+      "c_name": "weight2",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight2"
+      }
+    },
+    {
+      "c_name": "value3",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value3"
+      }
+    },
+    {
+      "c_name": "weight3",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight3"
+      }
+    },
+    {
+      "c_name": "value4",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value4"
+      }
+    },
+    {
+      "c_name": "weight4",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight4"
+      }
+    },
+    {
+      "c_name": "value5",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value5"
+      }
+    },
+    {
+      "c_name": "weight5",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight5"
+      }
+    },
+    {
+      "c_name": "value6",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value6"
+      }
+    },
+    {
+      "c_name": "weight6",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight6"
+      }
+    },
+    {
+      "c_name": "value7",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value7"
+      }
+    },
+    {
+      "c_name": "weight7",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight7"
+      }
+    },
+    {
+      "c_name": "value8",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value8"
+      }
+    },
+    {
+      "c_name": "weight8",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight8"
+      }
+    },
+    {
+      "c_name": "value9",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value9"
+      }
+    },
+    {
+      "c_name": "weight9",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight9"
+      }
+    },
+    {
+      "c_name": "value10",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value10"
+      }
+    },
+    {
+      "c_name": "weight10",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight10"
+      }
+    },
+    {
+      "c_name": "value11",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value11"
+      }
+    },
+    {
+      "c_name": "weight11",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight11"
+      }
+    },
+    {
+      "c_name": "value12",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value12"
+      }
+    },
+    {
+      "c_name": "weight12",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight12"
+      }
+    },
+    {
+      "c_name": "value13",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value13"
+      }
+    },
+    {
+      "c_name": "weight13",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight13"
+      }
+    },
+    {
+      "c_name": "value14",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value14"
+      }
+    },
+    {
+      "c_name": "weight14",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight14"
+      }
+    },
+    {
+      "c_name": "value15",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "value15"
+      }
+    },
+    {
+      "c_name": "weight15",
+      "c_port_direction": "in",
+      "rtl_ports": {
+        "data_read_in": "weight15"
+      }
+    }
+  ],
+  "c_return": {
+    "c_port_direction": "out",
+    "rtl_ports": {
+      "data_write_out": "result"
+    }
+  },
+  "rtl_common_signal": {
+    "module_clock": "slow_clk",
+    "module_reset": "slow_rst",
+    "module_clock_enable": "slow_ce",
+    "ap_ctrl_chain_protocol_idle": "",
+    "ap_ctrl_chain_protocol_start": "",
+    "ap_ctrl_chain_protocol_ready": "",
+    "ap_ctrl_chain_protocol_done": "",
+    "ap_ctrl_chain_protocol_continue": ""
+  },
+  "rtl_performance": {
+    "latency": "8",
+    "II": "1"
+  },
+  "rtl_resource_usage": {
+    "FF": "1238",
+    "LUT": "304",
+    "BRAM": "0",
+    "URAM": "0",
+    "DSP": "8"
+  }
+}

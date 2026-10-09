@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-01",
+  "timezone": "Asia/Shanghai",
+  "board": {
+    "model": "Baidu EdgeBoard FZ3B",
+    "model_evidence": "user_statement_2026-10-01",
+    "pcb_revision": null,
+    "soc_marking": null,
+    "vivado_part": null,
+    "physical_verification": false
+  },
+  "documented_hardware": {
+    "evidence_type": "official_document_not_physical_verification",
+    "source": "https://ai.baidu.com/ai-doc/HWCE/nkq9b5ncu",
+    "page_date": "2023-07-04",
+    "sections": [
+      "一、FZ3B简介",
+      "二、ZYNQ芯片",
+      "三、DDR4_DRAM",
+      "四、QSPI_Flash",
+      "五、eMMC_Flash"
+    ],
+    "part_marking_verbatim": "XAZU3EG-1SFVC784I",
+    "ddr4_capacity_gb_as_documented": 4,
+    "ddr4_width_bits": 64,
+    "emmc_capacity_gb_as_documented": 8,
+    "qspi_capacity_mbit_as_documented": 256
+  },
+  "local_legacy_project": {
+    "part": "xczu3eg-sfvc784-1-i",
+    "evidence": "liteseg_vivado/reports/PART_EVIDENCE.md",
+    "tool_versions_in_historical_validation": "Vivado/Vitis HLS 2026.1",
+    "validation_record": "liteseg_vivado/system/VALIDATION.md",
+    "validation_date": "2026-09-15",
+    "physical_compatibility_with_current_board": "unverified",
+    "rerun_in_this_task": false,
+    "status": "deleted_at_user_request_2026-10-01",
+    "evidence_files_available": false
+  },
+  "prepared_tf_card": {
+    "prepared_at": "2026-10-01T23:48:00+08:00",
+    "image": "FZ3B_ubuntu18.04_211115.img",
+    "source": "https://ai.baidu.com/ai-doc/HWCE/Fkuqounlk",
+    "os_offline": "Ubuntu 18.04.5 LTS aarch64",
+    "softcore_readme": "1.8.1",
+    "card_bytes": 31267487744,
+    "image_bytes": 7988051968,
+    "image_and_readback_sha256": "421a2d2d02d73a78cafa6313f47293130941ac1f431103cbd6e6186671800778",
+    "full_image_readback_verified": true,
+    "board_boot_verified": false,
+    "data_partition_expanded": false,
+    "record": "docs/hardware/FZ3B/TF-LINUX-INSTALL.md",
+    "evidence": "reports/fz3b-linux/write-result.json"
+  },
+  "windows_emulation_validation": {
+    "date": "2026-10-02",
+    "platform": "Windows QEMU 11.1.0 virt Cortex-A53 TCG",
+    "kernel": "Debian 6.1.0-50-arm64 (6.1.176-1), not vendor image.ub",
+    "userspace": "Official FZ3B Ubuntu 18.04.5 image",
+    "boot_count": 2,
+    "final_checks_passed": 30,
+    "final_checks_failed": 0,
+    "physical_board_validated": false,
+    "fpga_inference_validated": false,
+    "source_image_unchanged": true,
+    "guest_powered_off": true,
+    "report": "docs/hardware/FZ3B/WINDOWS-QEMU-VALIDATION.md"
+  },
+  "current_system": {
+    "boot_image": null,
+    "kernel": null,
+    "edgeboard_softcore": null,
+    "runtime": null,
+    "model_converter": null,
+    "recovery_verified": false
+  },
+  "unresolved": [
+    "PCB revision and full chip marking",
+    "XA versus XC part correspondence for physical deployment",
+    "Revision-matched schematic and verified pinout/VCCO",
+    "PS DDR/MIO preset, clock/reset and PS-GTR mapping",
+    "Power, boot switch orientation, UART and JTAG connections",
+    "Rebuildable board project/BSP and matching tool versions",
+    "Current image/runtime/driver/FPGA firmware and recovery baseline",
+    "Official documentation conflicts tracked in baidu-fz3b.md"
+  ],
+  "hardware_actions_performed_in_this_task": []
+}

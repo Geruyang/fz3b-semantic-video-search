@@ -1,0 +1,65 @@
+{
+  "commands": [
+    {
+      "command": "set -eu; echo BOOT_ID=$(cat /proc/sys/kernel/random/boot_id); echo KERNEL=$(uname -r); for p in /proc/device-tree/model /sys/firmware/devicetree/base/model; do test ! -r $p || { echo -n MODEL=; tr -d '\\000' <$p; echo; break; }; done; cat /sys/class/fpga_manager/fpga0/state; cat /proc/uptime",
+      "exit_code": 0,
+      "name": "identity",
+      "stderr": "",
+      "stdout": "BOOT_ID=fb0fcec3-d384-41b3-8ef0-998942e54384\nKERNEL=4.14.0-xilinx-v2018.3\noperating\n244.45 936.64\n"
+    },
+    {
+      "command": "set -u; lsmod | grep -E '^(fpgadrv|cnn_ddr_v10)' || true; for m in fpgadrv cnn_ddr_v10_candidate cnn_ddr_v10_p3_candidate cnn_ddr_v10_p3_dma_candidate; do if test -d /sys/module/$m; then echo MODULE=$m REF=$(cat /sys/module/$m/refcnt 2>/dev/null || echo NA) VERSION=$(cat /sys/module/$m/version 2>/dev/null || echo NA) SRCVERSION=$(cat /sys/module/$m/srcversion 2>/dev/null || echo NA); fi; done; ls -l /dev/fpgadrv0 /dev/network10_v10 /dev/network10_v10_p3 /dev/network10_v10_p3_dma 2>/dev/null || true; for d in /dev/fpgadrv0 /dev/network10_v10 /dev/network10_v10_p3 /dev/network10_v10_p3_dma; do test ! -e $d || { echo DEVICE=$d; fuser $d 2>/dev/null || true; }; done; find /sys/kernel/config/device-tree/overlays -mindepth 1 -maxdepth 1 -type d -printf '%f ' -exec sh -c 'cat \"$1/status\" 2>/dev/null || true' sh {} \\; 2>/dev/null || true",
+      "exit_code": 0,
+      "name": "factory-and-candidates",
+      "stderr": "",
+      "stdout": "fpgadrv                65536  0\nMODULE=fpgadrv REF=0 VERSION=1.8.0-b64e2a9-release SRCVERSION=D3F5E0E8E99A195D822B4CF\ncrw------- 1 root root 241, 0 Aug 31 19:53 /dev/fpgadrv0\nDEVICE=/dev/fpgadrv0\n"
+    },
+    {
+      "command": "set -u; ps -eo pid=,ppid=,stat=,etimes=,comm=,args= | grep -E '[o]rt_partition_runner|[b]enchmark_cnn_pipeline_v10|[r]un_cnn_pipeline_v10|[p]ython.*network10' || true",
+      "exit_code": 0,
+      "name": "runtime-processes",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "set -eu; test -r /sys/kernel/debug/clk/clk_summary; sha256sum /sys/kernel/debug/clk/clk_summary; grep -E 'pl0_ref(_div[12])?[[:space:]]' /sys/kernel/debug/clk/clk_summary",
+      "exit_code": 0,
+      "name": "clock",
+      "stderr": "",
+      "stdout": "cff1246a2f4c61cb8e0a3c12cc46a592ac3097720badf95c23fb8d423f555846  /sys/kernel/debug/clk/clk_summary\n                      pl0_ref_div1           0            0   101375992          0 0  \n                         pl0_ref_div2           0            0   101375992          0 0  \n                            pl0_ref           0            0   101375992          0 0  \n"
+    },
+    {
+      "command": "set -u; sha256sum /root/workspace/driver/fpgadrv.ko /run/media/mmcblk1p1/BOOT.BIN /run/media/mmcblk1p1/image.ub 2>&1; find /media/root/ESD-USB3/codex-fpga-backups -maxdepth 1 -type f -name 'board-debug-kernel-20261004.tar' -exec stat -c 'RECOVERY %n bytes=%s mtime=%y' {} \\; sha256sum /media/root/ESD-USB3/codex-fpga-backups/board-debug-kernel-20261004.tar 2>&1 || true",
+      "exit_code": 0,
+      "name": "factory-recovery",
+      "stderr": "",
+      "stdout": "a482b11d47a117e60f98efd43631b45a3a33ba98e81ff610204d2f301dbb0b6f  /root/workspace/driver/fpgadrv.ko\n6d4af725b4157281295e3fa19fbc94d3e31478df3da8533ff2e49529e114e2ff  /run/media/mmcblk1p1/BOOT.BIN\n7ff1a24ffaea24d9122742a6b4ec9c57200a2b1107e60e81330f45d8cc0974ce  /run/media/mmcblk1p1/image.ub\nfind: paths must precede expression: `sha256sum'\n"
+    },
+    {
+      "command": "set -u; K=/root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3; test -d $K && echo KERNEL_TREE_PRESENT=1 || echo KERNEL_TREE_PRESENT=0; if test -d $K; then echo TREE_KERNEL=$(make -s -C $K ARCH=arm64 kernelrelease 2>/dev/null); stat -c '%n bytes=%s' $K/Module.symvers $K/.config $K/scripts/mod/modpost 2>/dev/null; sha256sum $K/Module.symvers $K/.config $K/scripts/mod/modpost 2>/dev/null; fi",
+      "exit_code": 0,
+      "name": "kernel-tree",
+      "stderr": "",
+      "stdout": "KERNEL_TREE_PRESENT=1\nTREE_KERNEL=4.14.0-xilinx-v2018.3\n/root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/Module.symvers bytes=2333\n/root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/.config bytes=140287\n/root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/scripts/mod/modpost bytes=85352\ned188d47135d6224f954bd018aff9b7da988650c8a08c61abed3235cc3168326  /root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/Module.symvers\n570e4e5a4df262f0167a9518ba05d563b95859fed94149cdac54990925443a70  /root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/.config\nabc8d015efbb59b3d9da5e5d8ce599f05203ca0387e3f11b9e48d9b6c804e38c  /root/board-debug-kernel-20261004/linux-xlnx-xilinx-v2018.3/scripts/mod/modpost\n"
+    },
+    {
+      "command": "set -u; df -Pk / /root/workspace /media/root/ESD-USB3 2>/dev/null; stat -f -c 'ROOT block=%S free=%f avail=%a free_inodes=%d' /; grep -E '^(MemAvailable|CmaTotal|CmaFree):' /proc/meminfo; ip -brief address show eth0; echo carrier=$(cat /sys/class/net/eth0/carrier) speed=$(cat /sys/class/net/eth0/speed) duplex=$(cat /sys/class/net/eth0/duplex); findmnt -rn -S /dev/sda1 -o SOURCE,TARGET,FSTYPE,OPTIONS || true; lsusb",
+      "exit_code": 0,
+      "name": "capacity-network-usb",
+      "stderr": "",
+      "stdout": "Filesystem     1024-blocks    Used Available Capacity Mounted on\n/dev/root          7159288 6823096         0     100% /\n/dev/mmcblk1p3      242823   53853    172126      24% /root/workspace\n/dev/sda1         30702592 8471648  22230944      28% /media/root/ESD-USB3\nROOT block=4096 free=84048 avail=0 free_inodes=273820\nMemAvailable:    1657768 kB\nCmaTotal:         131072 kB\nCmaFree:          125420 kB\neth0             UP             192.168.1.254/24 fe80::1497:f978:90da:8558/64 \ncarrier=1 speed=1000 duplex=full\n/dev/sda1 /media/root/ESD-USB3 vfat rw,nosuid,nodev,relatime,sync,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro\nBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 001 Device 004: ID 3535:6300  \nBus 001 Device 003: ID 0c45:636f Microdia \nBus 001 Device 002: ID 05e3:0610 Genesys Logic, Inc. 4-port hub\nBus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\n"
+    },
+    {
+      "command": "set -u; for n in buffer@0 buffer@1; do p=/sys/firmware/devicetree/base/reserved-memory/$n; echo NODE=$n; test -e $p/no-map && echo NO_MAP=1 || echo NO_MAP=0; od -An -v -tx1 $p/reg 2>/dev/null | tr -d ' \\n'; echo; done; grep -E '^(00000000-3fffffff|840000000-87fffffff) : System RAM$' /proc/iomem || true",
+      "exit_code": 0,
+      "name": "reserved-memory",
+      "stderr": "",
+      "stdout": "NODE=buffer@0\nNO_MAP=1\n00000000400000000000000040000000\nNODE=buffer@1\nNO_MAP=1\n00000008000000000000000040000000\n00000000-3fffffff : System RAM\n840000000-87fffffff : System RAM\n"
+    }
+  ],
+  "finished_utc": "2026-10-07T16:08:08.109158+00:00",
+  "mode": "read_only_no_upload_no_module_change_no_overlay_no_pl_change",
+  "schema": "fz3b-v10.4-read-only-board-inventory-v2",
+  "started_utc": "2026-10-07T16:08:03.031474+00:00",
+  "status": "READ_ONLY_BOARD_INVENTORY_PASS"
+}

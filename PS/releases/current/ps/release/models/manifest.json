@@ -1,0 +1,356 @@
+{
+  "accelerator_profile_mapping": {
+    "profile0": {
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "stage": "N2"
+    },
+    "profile1": {
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "stage": "N4"
+    },
+    "profile2": {
+      "blocks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "stage": "N0"
+    }
+  },
+  "boundaries": {
+    "feature_output": "features",
+    "n0_input": "/image_encoder/model/patch_embed/patch_embed.2/activation/Mul_1_output_0",
+    "n0_output": "/image_encoder/model/network.0/network.0.3/Add_output_0",
+    "n2_input": "/image_encoder/model/network.1/proj/proj.1/activation/Mul_1_output_0",
+    "n2_output": "/image_encoder/model/network.2/network.2.11/Add_output_0",
+    "n4_input": "/image_encoder/model/network.3/proj/proj.1/activation/Mul_1_output_0",
+    "n4_output": "/image_encoder/model/network.4/network.4.19/Add_output_0"
+  },
+  "cases": [
+    {
+      "boundary_checks": {
+        "n0_to_network1_to_n2": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            128,
+            32,
+            32
+          ]
+        },
+        "n2_to_network3_to_n4": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            256,
+            16,
+            16
+          ]
+        },
+        "n4_to_suffix_feature": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            512
+          ]
+        },
+        "stem_to_n0": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            64,
+            64,
+            64
+          ]
+        }
+      },
+      "case_id": "synthetic-case-00",
+      "input_sha256": "b3f03ec2eaf09adf4d512c8dcf0249e34e39cc3e234871505a134661a686ff51",
+      "pure_ps_feature_sha256": "0879d98f78e56a74b6d2c79c22296b7473488fd07ac61c3fee170b46dda089aa"
+    },
+    {
+      "boundary_checks": {
+        "n0_to_network1_to_n2": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            128,
+            32,
+            32
+          ]
+        },
+        "n2_to_network3_to_n4": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            256,
+            16,
+            16
+          ]
+        },
+        "n4_to_suffix_feature": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            512
+          ]
+        },
+        "stem_to_n0": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            64,
+            64,
+            64
+          ]
+        }
+      },
+      "case_id": "synthetic-case-01",
+      "input_sha256": "fa8c28459cd4dff194d916acbe35d465a15e73abbc304e99ed6408f80933c4b6",
+      "pure_ps_feature_sha256": "a14e23448022316414e8cf0d9067677f56926e60184437c0609b676e79d7535c"
+    },
+    {
+      "boundary_checks": {
+        "n0_to_network1_to_n2": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            128,
+            32,
+            32
+          ]
+        },
+        "n2_to_network3_to_n4": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            256,
+            16,
+            16
+          ]
+        },
+        "n4_to_suffix_feature": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            512
+          ]
+        },
+        "stem_to_n0": {
+          "exact": true,
+          "max_abs": 0.0,
+          "shape": [
+            1,
+            64,
+            64,
+            64
+          ]
+        }
+      },
+      "case_id": "synthetic-case-02",
+      "input_sha256": "a829a5cbd5a3969ca69acfcfa2b31d647471f5409710612aa686e58bcee2e6c4",
+      "pure_ps_feature_sha256": "659a20487201cf7191b316c01b011900e25e12106b02a0bd5251b5cabf4bafa7"
+    }
+  ],
+  "checks": {
+    "all_shapes_static_float32": true,
+    "network1_bridge_present": true,
+    "network3_full_se_gate_chain_present": true,
+    "split_boundaries_max_abs_zero": true,
+    "suffix_excludes_n4": true
+  },
+  "models": {
+    "network1-bridge": {
+      "bytes": 98467,
+      "inputs": [
+        {
+          "bytes": 1048576,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/network.0/network.0.3/Add_output_0",
+          "shape": [
+            1,
+            64,
+            64,
+            64
+          ]
+        }
+      ],
+      "node_count": 18,
+      "outputs": [
+        {
+          "bytes": 524288,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/network.1/proj/proj.1/activation/Mul_1_output_0",
+          "shape": [
+            1,
+            128,
+            32,
+            32
+          ]
+        }
+      ],
+      "path": "network1-bridge.onnx",
+      "sha256": "768410c97149468880dc1fd3d1d2c79b4e7460b31ce861020e7216da81968529"
+    },
+    "network3-bridge": {
+      "bytes": 456072,
+      "inputs": [
+        {
+          "bytes": 524288,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/network.2/network.2.11/Add_output_0",
+          "shape": [
+            1,
+            128,
+            32,
+            32
+          ]
+        }
+      ],
+      "node_count": 24,
+      "outputs": [
+        {
+          "bytes": 262144,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/network.3/proj/proj.1/activation/Mul_1_output_0",
+          "shape": [
+            1,
+            256,
+            16,
+            16
+          ]
+        }
+      ],
+      "path": "network3-bridge.onnx",
+      "sha256": "8d13fdac02839ac10ae672fa4f081e8dfe8071e9ea42b59632df8afe2b2bc970"
+    },
+    "stem-prefix": {
+      "bytes": 36661,
+      "inputs": [
+        {
+          "bytes": 786432,
+          "dtype": "<f4",
+          "name": "image",
+          "shape": [
+            1,
+            3,
+            256,
+            256
+          ]
+        }
+      ],
+      "node_count": 27,
+      "outputs": [
+        {
+          "bytes": 1048576,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/patch_embed/patch_embed.2/activation/Mul_1_output_0",
+          "shape": [
+            1,
+            64,
+            64,
+            64
+          ]
+        }
+      ],
+      "path": "stem-prefix.onnx",
+      "sha256": "8c1b912d148648724722ec8daa250bef8f8ac15f972a22985daab8f3d8ae30e8"
+    },
+    "suffix": {
+      "bytes": 46985648,
+      "inputs": [
+        {
+          "bytes": 262144,
+          "dtype": "<f4",
+          "name": "/image_encoder/model/network.4/network.4.19/Add_output_0",
+          "shape": [
+            1,
+            256,
+            16,
+            16
+          ]
+        }
+      ],
+      "node_count": 248,
+      "outputs": [
+        {
+          "bytes": 2048,
+          "dtype": "<f4",
+          "name": "features",
+          "shape": [
+            1,
+            512
+          ]
+        }
+      ],
+      "path": "suffix.onnx",
+      "sha256": "b8a558830d31873f590f66b6fd3a8e8be269968855b9c21814129f36e4edb175"
+    }
+  },
+  "network3_required_nodes": [
+    "/image_encoder/model/network.3/proj/proj.0/lkb_reparam/Conv",
+    "/image_encoder/model/network.3/proj/proj.0/se/ReduceMean",
+    "/image_encoder/model/network.3/proj/proj.0/se/fc1/Conv",
+    "/image_encoder/model/network.3/proj/proj.0/se/act/Relu",
+    "/image_encoder/model/network.3/proj/proj.0/se/fc2/Conv",
+    "/image_encoder/model/network.3/proj/proj.0/se/gate/Sigmoid",
+    "/image_encoder/model/network.3/proj/proj.1/reparam_conv/Conv"
+  ],
+  "onnx_version": "1.17.0",
+  "onnxruntime_version": "1.20.1",
+  "ort_provider": "CPUExecutionProvider",
+  "pl_execution": false,
+  "schema_version": 1,
+  "source_model": {
+    "bytes": 86077972,
+    "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261004\\host\\s1-onnx-001\\mobileclip_s1_image.onnx",
+    "sha256": "5b8494a03aa81a59b2bd0a3f3dcba91813363bb65060c32d6e4bf4243f8e3587"
+  },
+  "status": "V5_FOUR_PS_SPLITS_ORIGINAL_ONNX_VALIDATED_NOT_PL"
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "cnn-v10.5-dual-lane-storage-dw7-baseline-v1",
+  "created_date": "2026-10-08",
+  "status": "BASELINE_FROZEN",
+  "source_identity": {
+    "core_abi": "0x000A0004",
+    "software": "sw10.4",
+    "guard_caps": "0x000007ff"
+  },
+  "baseline": {
+    "description": "fused half2x IP1.2 200/400MHz source baseline before storage/DW7 changes",
+    "exactloc_place_receipt_sha256": "a7a546976b35ab06749443734540c77ed9ffed98a060a386a0f2cae420943e01",
+    "post_physopt_dcp_sha256": "8cfd13169843e5f4ee187e477afd4cedbb7f7ccbcfd9d07ed475ff609481235b",
+    "stopped_route_receipt_sha256": "6ca9089a270c9ac1ba215765058b9a59dc6101199a17bb1c10ebe641c7ec7dd4",
+    "complete_synth_resources": {
+      "lut": 60102,
+      "ff": 95298,
+      "bram36_equivalent": 176,
+      "dsp": 214
+    },
+    "last_place_resources": {
+      "lut": 56187,
+      "ff": 88469,
+      "bram36_equivalent": 176,
+      "dsp": 214
+    }
+  },
+  "sources": [
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_pipeline_v10.cpp",
+      "sha256": "d0d4792363578c7754119c07a9071d4ae8cbadcc85c7209fbe5f81a70658a18b",
+      "bytes": 72158
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_pipeline_v10.hpp",
+      "sha256": "2383f6f6ea9d7d4cfaedebbe2810e05bdb68d452c09f170e4215ad9c180e0d93",
+      "bytes": 4396
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_v10_pointwise.hpp",
+      "sha256": "2a8e60a99f444b0e6216e42a09c14114028534af0afd5e91c3a4362b4b91c31b",
+      "bytes": 19046
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_v10_identity.hpp",
+      "sha256": "6204d6f9166175a31cc99a4251c676fcfe4bcd76230717d92f5b49bfa1bbe7d6",
+      "bytes": 423
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_v10_pw_dsp.hpp",
+      "sha256": "26994f7d03874986c4e3330604024ad4b538205915bb8a8d9c03e1c8f430bff5",
+      "bytes": 2648
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_v10_n1.hpp",
+      "sha256": "444afa338b1e975a792fcb1adcdbb43d312caedadfbc20897fa057b66f8be916",
+      "bytes": 2932
+    },
+    {
+      "path": "desktop_vlm/hardware/acceleration/cnn_v10_arithmetic.hpp",
+      "sha256": "f0f4f9a0109228b278e5d6395bca77381f8cdf004c322979292c491f387ca6c1",
+      "bytes": 1766
+    }
+  ],
+  "new_candidate": {
+    "directory": "desktop_vlm/hardware/acceleration/experiments/dual_lane_storage_dw7_opt/candidate",
+    "core_abi": "0x000A0005",
+    "software": "sw10.5",
+    "guard_caps": "0x00000fff",
+    "verification_started": false,
+    "synthesis_started": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "assets": {
+    "a0005_driver_ko": {
+      "bytes": 798576,
+      "path": "/root/workspace/network10-v10.5-a0005-board-validation-001/deployment/files/cnn_ddr_v10_signed40_candidate.ko",
+      "sha256": "7a273d19ccc20c6d19c7f64bd6c07fc0067ad600dedf70c6bd111441b85e57f5"
+    },
+    "a0005_dtbo": {
+      "bytes": 795,
+      "path": "/root/workspace/network10-v10.5-a0005-board-validation-001/deployment/platform/network10_v10_signed40.dtbo",
+      "sha256": "bc933ce55458343c7231ac85ff5e11bae9e8362adc4b43d2e90a908121d0e312"
+    },
+    "a0005_firmware": {
+      "bytes": 4329164,
+      "firmware_name": "network10-v10.5/a0005-post-route.bit.bin",
+      "path": "/lib/firmware/network10-v10.5/a0005-post-route.bit.bin",
+      "sha256": "ab2397203562cf9c5bcbe19437d5bbc440055a1277de7dc756659a3e5e40a852"
+    },
+    "a0005_native_bin": {
+      "bytes": 4329164,
+      "path": "/root/workspace/network10-v10.5-pl-loader/a0005-post-route.bin",
+      "sha256": "504eb307f338c9151b37023342a8138189447cba47379c9f05506b2538a31c95"
+    },
+    "a0005_source_bit": {
+      "bytes": 4329407,
+      "path": "/root/workspace/network10-v10.5-pl-loader/a0005-post-route.bit",
+      "sha256": "a7950894715edd4e0f535b094e4a7866a220bd44f7158d153bb8e927d07bdebc"
+    },
+    "admission": {
+      "bytes": 1452,
+      "path": "/root/workspace/network10-v10.5-a0005-board-validation-001/validation/contract/admission.json",
+      "sha256": "cfa5f1a3a29aa04f11a83a7e3b23637be063e22e5627ca66b4c20c62745443dd"
+    },
+    "combined_manifest": {
+      "bytes": 5214,
+      "path": "/root/workspace/network10-v10.5-a0005-board-validation-001/validation/contract/combined-manifest.json",
+      "sha256": "4a32c9373e783ac572a5d3374b316181a4d52ae9a92ec45f8b13d763ef028690"
+    },
+    "factory_driver_ko": {
+      "bytes": 2085072,
+      "path": "/root/workspace/factory-backups/network10-factory-20261009-a0005-retained/fpgadrv.ko",
+      "sha256": "a482b11d47a117e60f98efd43631b45a3a33ba98e81ff610204d2f301dbb0b6f"
+    },
+    "factory_firmware": {
+      "bytes": 5568668,
+      "firmware_name": "network10-v10.5/factory-restore-pcap-word-swapped.bin",
+      "path": "/lib/firmware/network10-v10.5/factory-restore-pcap-word-swapped.bin",
+      "sha256": "0fde8e95fc96388d2e04732d4f90e7fb339cce707ebd0aec84298ee0d14de81b"
+    },
+    "factory_native_source": {
+      "bytes": 5568668,
+      "path": "/root/workspace/factory-backups/network10-factory-20261009-a0005-retained/factory-restore-native.bin",
+      "sha256": "59e1a6176194eccc05603738ba3c2e71ea25c3c09cdf9dce47ed1ad1ddf5fc2e"
+    },
+    "lease_ko": {
+      "bytes": 234600,
+      "path": "/root/workspace/network10-v10.4-pl1-iopll-lease-candidate-001/fz3b_pl1_iopll_lease.ko",
+      "sha256": "3e3643b8cb334b610095311f563cd9019b1acc886fd2c133efec063bf2a6f272"
+    },
+    "range_proof": {
+      "bytes": 98930,
+      "path": "/root/workspace/network10-v10.5-a0005-board-validation-001/validation/contract/range-proof.json",
+      "sha256": "9f3de6ffb18a9d1de54addbcc471f95f18c47acf86f31e051794d59e528b2676"
+    }
+  },
+  "identity": {
+    "core_abi": "0x000A0005",
+    "core_id": "0x465A5641",
+    "guard_caps": "0x00000FFF",
+    "software_uapi": 10
+  },
+  "manager_timeout_s": 30,
+  "paths": {
+    "a0005_device": "/dev/network10_v10_signed40",
+    "a0005_module": "cnn_ddr_v10_signed40_candidate",
+    "factory_devices": [
+      "/dev/network_latency",
+      "/dev/network_throughput"
+    ],
+    "factory_module": "fpgadrv",
+    "lease_device": "/dev/fz3b_pl1_iopll_lease",
+    "lease_module": "fz3b_pl1_iopll_lease",
+    "manager_firmware": "/sys/class/fpga_manager/fpga0/firmware",
+    "manager_flags": "/sys/class/fpga_manager/fpga0/flags",
+    "manager_state": "/sys/class/fpga_manager/fpga0/state",
+    "overlay_dir": "/sys/kernel/config/device-tree/overlays/network10-v10.5-a0005",
+    "runtime_python_paths": [
+      "/root/workspace/network10-v10.5-a0005-board-validation-001/runtime",
+      "/root/workspace/network10-v10.5-a0005-board-validation-001/validation/runtime"
+    ],
+    "strict_identity_helper": "/root/workspace/network10-v10.5-pl-loader/strict_a0005_identity.py"
+  },
+  "schema": "fz3b-v10.5-ps-pl-loader-v1"
+}

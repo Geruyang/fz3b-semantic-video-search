@@ -1,0 +1,1971 @@
+{
+  "all_nodes": [
+    {
+      "max_ms": 10.812,
+      "mean_ms": 10.783666666666667,
+      "min_ms": 10.759,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/conv/conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.812,
+      "mean_ms": 10.783333333333333,
+      "min_ms": 10.766,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/conv/conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.773,
+      "mean_ms": 10.749,
+      "min_ms": 10.736,
+      "name": "/image_encoder/model/network.6/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.241,
+      "mean_ms": 10.148333333333333,
+      "min_ms": 10.076,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/fc2/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.117,
+      "mean_ms": 10.104000000000001,
+      "min_ms": 10.093,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/fc2/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.981,
+      "mean_ms": 9.959666666666667,
+      "min_ms": 9.927,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/fc1/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.934,
+      "mean_ms": 9.921,
+      "min_ms": 9.9,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/fc1/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.324,
+      "mean_ms": 9.290666666666667,
+      "min_ms": 9.239,
+      "name": "MatMul_With_Transpose",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.256,
+      "mean_ms": 9.231,
+      "min_ms": 9.207,
+      "name": "MatMul_With_Transpose_token_317",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.236,
+      "mean_ms": 9.220666666666666,
+      "min_ms": 9.207,
+      "name": "MatMul_With_Transpose_token_318",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 8.148,
+      "mean_ms": 8.128333333333334,
+      "min_ms": 8.113,
+      "name": "/image_encoder/model/network.5/proj/proj.0/lkb_reparam/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.735,
+      "mean_ms": 6.657333333333334,
+      "min_ms": 6.616,
+      "name": "QLinearConv_token_323",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.618,
+      "mean_ms": 6.605333333333333,
+      "min_ms": 6.586,
+      "name": "QLinearConv_token_334",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.376,
+      "mean_ms": 6.363666666666667,
+      "min_ms": 6.351,
+      "name": "QLinearConv_token_327",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.368,
+      "mean_ms": 6.347333333333333,
+      "min_ms": 6.335,
+      "name": "QLinearConv_token_338",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.101,
+      "mean_ms": 6.050333333333334,
+      "min_ms": 6.008,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/qkv/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 4.268,
+      "mean_ms": 4.264,
+      "min_ms": 4.259,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 4.257,
+      "mean_ms": 4.248666666666667,
+      "min_ms": 4.244,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 3.526,
+      "mean_ms": 3.5033333333333334,
+      "min_ms": 3.487,
+      "name": "/image_encoder/model/network.5/proj/proj.1/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.942,
+      "mean_ms": 2.908333333333333,
+      "min_ms": 2.878,
+      "name": "/image_encoder/model/conv_exp/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.88,
+      "mean_ms": 2.845,
+      "min_ms": 2.817,
+      "name": "/image_encoder/model/conv_exp/activation/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.162,
+      "mean_ms": 2.151333333333333,
+      "min_ms": 2.13,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.162,
+      "mean_ms": 2.1466666666666665,
+      "min_ms": 2.128,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.17,
+      "mean_ms": 2.146333333333333,
+      "min_ms": 2.129,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.15,
+      "mean_ms": 2.133,
+      "min_ms": 2.122,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.805,
+      "mean_ms": 1.7723333333333333,
+      "min_ms": 1.755,
+      "name": "Gelu_token_315",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.786,
+      "mean_ms": 1.7663333333333333,
+      "min_ms": 1.733,
+      "name": "Gelu_token_316",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.461,
+      "mean_ms": 1.4446666666666668,
+      "min_ms": 1.435,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.729,
+      "mean_ms": 0.722,
+      "min_ms": 0.715,
+      "name": "Gelu",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.669,
+      "mean_ms": 0.6486666666666667,
+      "min_ms": 0.636,
+      "name": "QLinearConv_token_331",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.666,
+      "mean_ms": 0.6473333333333333,
+      "min_ms": 0.637,
+      "name": "QLinearConv",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.609,
+      "mean_ms": 0.5996666666666667,
+      "min_ms": 0.594,
+      "name": "/image_encoder/model/head/MatMul",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.6,
+      "mean_ms": 0.5720000000000001,
+      "min_ms": 0.556,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/MatMul_FusedMatMulAndScale",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.59,
+      "mean_ms": 0.5663333333333334,
+      "min_ms": 0.551,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/MatMul_FusedMatMulAndScale",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.568,
+      "mean_ms": 0.5586666666666666,
+      "min_ms": 0.552,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/MatMul_FusedMatMulAndScale",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.547,
+      "mean_ms": 0.544,
+      "min_ms": 0.541,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_FusedMatMulAndScale",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.546,
+      "mean_ms": 0.5286666666666667,
+      "min_ms": 0.509,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_1",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.536,
+      "mean_ms": 0.5203333333333333,
+      "min_ms": 0.506,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/MatMul_1",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.546,
+      "mean_ms": 0.5196666666666667,
+      "min_ms": 0.506,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/MatMul_1",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.512,
+      "mean_ms": 0.5096666666666667,
+      "min_ms": 0.506,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/MatMul_1",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.516,
+      "mean_ms": 0.499,
+      "min_ms": 0.487,
+      "name": "/image_encoder/model/conv_exp/se/reduce/Conv",
+      "op": "FusedConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.507,
+      "mean_ms": 0.4703333333333333,
+      "min_ms": 0.452,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Softmax",
+      "op": "Softmax",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.457,
+      "mean_ms": 0.45533333333333337,
+      "min_ms": 0.454,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Softmax",
+      "op": "Softmax",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.457,
+      "mean_ms": 0.45466666666666666,
+      "min_ms": 0.453,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Softmax",
+      "op": "Softmax",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.457,
+      "mean_ms": 0.45433333333333337,
+      "min_ms": 0.452,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Softmax",
+      "op": "Softmax",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.477,
+      "mean_ms": 0.4483333333333333,
+      "min_ms": 0.433,
+      "name": "/image_encoder/model/network.5/proj/proj.0/se/fc1/Conv",
+      "op": "FusedConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.425,
+      "mean_ms": 0.405,
+      "min_ms": 0.395,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Mul_1_output_0_QuantizeLinear",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.408,
+      "mean_ms": 0.4036666666666667,
+      "min_ms": 0.401,
+      "name": "/image_encoder/model/conv_exp/activation/Div",
+      "op": "Div",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.403,
+      "mean_ms": 0.39733333333333337,
+      "min_ms": 0.394,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Mul_1_output_0_QuantizeLinear",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.413,
+      "mean_ms": 0.39566666666666667,
+      "min_ms": 0.375,
+      "name": "/image_encoder/model/network.5/proj/proj.0/se/fc2/Conv",
+      "op": "FusedConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.416,
+      "mean_ms": 0.39466666666666667,
+      "min_ms": 0.381,
+      "name": "/image_encoder/model/conv_exp/se/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.437,
+      "mean_ms": 0.39,
+      "min_ms": 0.366,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/MatMul_1_output_0_q",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.383,
+      "mean_ms": 0.37233333333333335,
+      "min_ms": 0.367,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_1_output_0_q",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.375,
+      "mean_ms": 0.36866666666666664,
+      "min_ms": 0.361,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_2",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.369,
+      "mean_ms": 0.36866666666666664,
+      "min_ms": 0.368,
+      "name": "/image_encoder/model/network.7/network.7.3/Add_output_0_QuantizeLinear",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.377,
+      "mean_ms": 0.36833333333333335,
+      "min_ms": 0.363,
+      "name": "/image_encoder/model/network.7/network.7.0/norm/BatchNormalization_output_0_q",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.368,
+      "mean_ms": 0.36733333333333335,
+      "min_ms": 0.367,
+      "name": "/image_encoder/model/network.7/network.7.1/Add_output_0_QuantizeLinear",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.37,
+      "mean_ms": 0.36666666666666664,
+      "min_ms": 0.365,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/MatMul_1_output_0_q",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.368,
+      "mean_ms": 0.36566666666666664,
+      "min_ms": 0.364,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/MatMul_1_output_0_q",
+      "op": "QuantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.364,
+      "mean_ms": 0.36333333333333334,
+      "min_ms": 0.363,
+      "name": "Transpose_token_14",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.363,
+      "mean_ms": 0.36233333333333334,
+      "min_ms": 0.362,
+      "name": "Transpose_token_7",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.365,
+      "mean_ms": 0.362,
+      "min_ms": 0.36,
+      "name": "Transpose_token_21",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.365,
+      "mean_ms": 0.35466666666666663,
+      "min_ms": 0.349,
+      "name": "Transpose_token_4",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.385,
+      "mean_ms": 0.35233333333333333,
+      "min_ms": 0.33,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Transpose_2",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.353,
+      "mean_ms": 0.35133333333333333,
+      "min_ms": 0.348,
+      "name": "Transpose_token_17",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.353,
+      "mean_ms": 0.3496666666666666,
+      "min_ms": 0.347,
+      "name": "Transpose_token_24",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.352,
+      "mean_ms": 0.34933333333333333,
+      "min_ms": 0.347,
+      "name": "Transpose_token_10",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.337,
+      "mean_ms": 0.33133333333333337,
+      "min_ms": 0.328,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Transpose_2",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.332,
+      "mean_ms": 0.33033333333333337,
+      "min_ms": 0.328,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Transpose_2",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.332,
+      "mean_ms": 0.328,
+      "min_ms": 0.326,
+      "name": "/image_encoder/model/conv_exp/se/expand/Conv",
+      "op": "FusedConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.374,
+      "mean_ms": 0.327,
+      "min_ms": 0.273,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Split",
+      "op": "Split",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.352,
+      "mean_ms": 0.321,
+      "min_ms": 0.303,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Split",
+      "op": "Split",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.326,
+      "mean_ms": 0.31033333333333335,
+      "min_ms": 0.284,
+      "name": "Transpose_token_349",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.352,
+      "mean_ms": 0.30633333333333335,
+      "min_ms": 0.228,
+      "name": "Transpose_token_1",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.318,
+      "mean_ms": 0.304,
+      "min_ms": 0.288,
+      "name": "/image_encoder/model/conv_exp/activation/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.309,
+      "mean_ms": 0.303,
+      "min_ms": 0.299,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Split",
+      "op": "Split",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.305,
+      "mean_ms": 0.30266666666666664,
+      "min_ms": 0.301,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Split",
+      "op": "Split",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.303,
+      "mean_ms": 0.30033333333333334,
+      "min_ms": 0.298,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Div",
+      "op": "Div",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.303,
+      "mean_ms": 0.29633333333333334,
+      "min_ms": 0.289,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Div",
+      "op": "Div",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.299,
+      "mean_ms": 0.28833333333333333,
+      "min_ms": 0.277,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.318,
+      "mean_ms": 0.2876666666666667,
+      "min_ms": 0.236,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Transpose_4",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.294,
+      "mean_ms": 0.2823333333333333,
+      "min_ms": 0.268,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.288,
+      "mean_ms": 0.2803333333333333,
+      "min_ms": 0.276,
+      "name": "/image_encoder/model/conv_exp/se/AveragePool",
+      "op": "AveragePool",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.329,
+      "mean_ms": 0.2793333333333333,
+      "min_ms": 0.229,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Transpose_4",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.344,
+      "mean_ms": 0.277,
+      "min_ms": 0.224,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/fc1/Conv_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.272,
+      "mean_ms": 0.26333333333333336,
+      "min_ms": 0.255,
+      "name": "/image_encoder/model/network.7/network.7.2/Add_1",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.286,
+      "mean_ms": 0.2633333333333333,
+      "min_ms": 0.252,
+      "name": "/image_encoder/model/network.7/network.7.2/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.266,
+      "mean_ms": 0.25866666666666666,
+      "min_ms": 0.246,
+      "name": "/image_encoder/model/network.7/network.7.2/norm/BatchNormalization",
+      "op": "BatchNormalization",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.265,
+      "mean_ms": 0.25533333333333336,
+      "min_ms": 0.249,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/fc1/Conv_output_0_DequantizeLinear/duplicated",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.256,
+      "mean_ms": 0.254,
+      "min_ms": 0.252,
+      "name": "/image_encoder/model/network.7/network.7.0/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.266,
+      "mean_ms": 0.254,
+      "min_ms": 0.244,
+      "name": "/image_encoder/model/network.7/network.7.0/Add_1",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.252,
+      "mean_ms": 0.25133333333333335,
+      "min_ms": 0.251,
+      "name": "/image_encoder/model/network.7/network.7.0/norm/BatchNormalization",
+      "op": "BatchNormalization",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.279,
+      "mean_ms": 0.251,
+      "min_ms": 0.235,
+      "name": "/image_encoder/model/network.7/network.7.3/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.278,
+      "mean_ms": 0.25066666666666665,
+      "min_ms": 0.237,
+      "name": "/image_encoder/model/network.7/network.7.1/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.251,
+      "mean_ms": 0.25033333333333335,
+      "min_ms": 0.25,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/fc1/Conv_output_0_DequantizeLinear/duplicated",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.249,
+      "mean_ms": 0.24833333333333332,
+      "min_ms": 0.247,
+      "name": "/image_encoder/model/network.7/network.7.3/norm/BatchNormalization",
+      "op": "BatchNormalization",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.269,
+      "mean_ms": 0.248,
+      "min_ms": 0.237,
+      "name": "/image_encoder/model/network.5/proj/proj.0/se/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.279,
+      "mean_ms": 0.24766666666666667,
+      "min_ms": 0.228,
+      "name": "/image_encoder/model/network.7/network.7.1/Add_1",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.252,
+      "mean_ms": 0.24733333333333332,
+      "min_ms": 0.243,
+      "name": "/image_encoder/model/network.7/network.7.1/norm/BatchNormalization",
+      "op": "BatchNormalization",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.246,
+      "mean_ms": 0.24533333333333332,
+      "min_ms": 0.245,
+      "name": "/image_encoder/model/network.7/network.7.3/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.251,
+      "mean_ms": 0.243,
+      "min_ms": 0.239,
+      "name": "/image_encoder/model/network.7/network.7.3/Add_1",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.248,
+      "mean_ms": 0.24233333333333332,
+      "min_ms": 0.238,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Div",
+      "op": "Div",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.245,
+      "mean_ms": 0.23666666666666666,
+      "min_ms": 0.232,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_1_output_0_dq",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.237,
+      "mean_ms": 0.23566666666666666,
+      "min_ms": 0.234,
+      "name": "/image_encoder/model/network.7/network.7.0/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.236,
+      "mean_ms": 0.23466666666666666,
+      "min_ms": 0.234,
+      "name": "/image_encoder/model/network.7/network.7.2/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.253,
+      "mean_ms": 0.23133333333333334,
+      "min_ms": 0.22,
+      "name": "/image_encoder/model/conv_exp/activation/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.242,
+      "mean_ms": 0.23066666666666666,
+      "min_ms": 0.219,
+      "name": "/image_encoder/model/network.7/network.7.2/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.234,
+      "mean_ms": 0.228,
+      "min_ms": 0.219,
+      "name": "/image_encoder/model/network.7/network.7.3/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.232,
+      "mean_ms": 0.22766666666666668,
+      "min_ms": 0.222,
+      "name": "/image_encoder/model/network.7/network.7.1/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.253,
+      "mean_ms": 0.22733333333333333,
+      "min_ms": 0.214,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_4",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.225,
+      "mean_ms": 0.22466666666666668,
+      "min_ms": 0.224,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/fc1/Conv_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.228,
+      "mean_ms": 0.22433333333333333,
+      "min_ms": 0.221,
+      "name": "/image_encoder/model/network.7/network.7.0/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.234,
+      "mean_ms": 0.222,
+      "min_ms": 0.215,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Transpose_4",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.224,
+      "mean_ms": 0.21933333333333332,
+      "min_ms": 0.217,
+      "name": "/image_encoder/model/conv_exp/activation/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.26,
+      "mean_ms": 0.218,
+      "min_ms": 0.196,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.231,
+      "mean_ms": 0.20866666666666667,
+      "min_ms": 0.196,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/proj/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.21,
+      "mean_ms": 0.20466666666666666,
+      "min_ms": 0.2,
+      "name": "/image_encoder/model/network.7/network.7.1/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.204,
+      "mean_ms": 0.20233333333333334,
+      "min_ms": 0.199,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/proj/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.212,
+      "mean_ms": 0.202,
+      "min_ms": 0.193,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/proj/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.207,
+      "mean_ms": 0.19933333333333333,
+      "min_ms": 0.195,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_3",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.2,
+      "mean_ms": 0.199,
+      "min_ms": 0.197,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.2,
+      "mean_ms": 0.19733333333333333,
+      "min_ms": 0.196,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Transpose_3",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.203,
+      "mean_ms": 0.19666666666666668,
+      "min_ms": 0.192,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/proj/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.196,
+      "mean_ms": 0.19533333333333333,
+      "min_ms": 0.195,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Transpose_3",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.196,
+      "mean_ms": 0.19533333333333333,
+      "min_ms": 0.195,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Transpose_3",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.196,
+      "mean_ms": 0.194,
+      "min_ms": 0.192,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.195,
+      "mean_ms": 0.19366666666666668,
+      "min_ms": 0.193,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.218,
+      "mean_ms": 0.17933333333333334,
+      "min_ms": 0.16,
+      "name": "/image_encoder/model/network.5/proj/proj.0/se/ReduceMean",
+      "op": "ReduceMean",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.175,
+      "mean_ms": 0.174,
+      "min_ms": 0.173,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Mul",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.181,
+      "mean_ms": 0.17166666666666666,
+      "min_ms": 0.164,
+      "name": "/image_encoder/model/head/pool/ReduceMean",
+      "op": "ReduceMean",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.18,
+      "mean_ms": 0.15933333333333333,
+      "min_ms": 0.149,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/fc2/Conv_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.151,
+      "mean_ms": 0.14966666666666667,
+      "min_ms": 0.147,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Add",
+      "op": "Add",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.15,
+      "mean_ms": 0.149,
+      "min_ms": 0.148,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Mul_1",
+      "op": "Mul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.174,
+      "mean_ms": 0.14666666666666667,
+      "min_ms": 0.133,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/fc2/Conv_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.146,
+      "mean_ms": 0.14466666666666667,
+      "min_ms": 0.143,
+      "name": "Transpose_token_337",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.159,
+      "mean_ms": 0.13433333333333333,
+      "min_ms": 0.116,
+      "name": "Transpose_token_319",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.141,
+      "mean_ms": 0.13333333333333333,
+      "min_ms": 0.129,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/proj/MatMul_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.132,
+      "mean_ms": 0.13066666666666668,
+      "min_ms": 0.129,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/proj/MatMul_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.131,
+      "mean_ms": 0.13033333333333333,
+      "min_ms": 0.13,
+      "name": "/image_encoder/model/network.7/network.7.1/Add_output_0_DequantizeLinear/duplicated",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.13,
+      "mean_ms": 0.13,
+      "min_ms": 0.13,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/proj/MatMul_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.13,
+      "mean_ms": 0.12966666666666668,
+      "min_ms": 0.129,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/proj/MatMul_output_0_DequantizeLinear",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.124,
+      "mean_ms": 0.12333333333333334,
+      "min_ms": 0.123,
+      "name": "/image_encoder/model/network.7/network.7.3/Add_output_0_DequantizeLinear/duplicated",
+      "op": "DequantizeLinear",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.121,
+      "mean_ms": 0.116,
+      "min_ms": 0.113,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Transpose",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.113,
+      "mean_ms": 0.113,
+      "min_ms": 0.113,
+      "name": "Transpose_token_329",
+      "op": "Transpose",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.09,
+      "mean_ms": 0.09,
+      "min_ms": 0.09,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Reshape_1",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.09,
+      "mean_ms": 0.08933333333333333,
+      "min_ms": 0.088,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Reshape_1",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.089,
+      "mean_ms": 0.089,
+      "min_ms": 0.089,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Reshape_1",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.09,
+      "mean_ms": 0.088,
+      "min_ms": 0.087,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Reshape_1",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.111,
+      "mean_ms": 0.08666666666666667,
+      "min_ms": 0.074,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Reshape_2",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.109,
+      "mean_ms": 0.08533333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Reshape_2",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.082,
+      "mean_ms": 0.081,
+      "min_ms": 0.08,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Squeeze_1",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.083,
+      "mean_ms": 0.07933333333333334,
+      "min_ms": 0.077,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Squeeze_1",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.08,
+      "mean_ms": 0.07933333333333334,
+      "min_ms": 0.079,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Squeeze_1",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.079,
+      "mean_ms": 0.07866666666666666,
+      "min_ms": 0.078,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Squeeze_1",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.077,
+      "mean_ms": 0.07533333333333334,
+      "min_ms": 0.074,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Reshape",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.078,
+      "mean_ms": 0.075,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Squeeze_2",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.077,
+      "mean_ms": 0.07433333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Reshape",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.076,
+      "mean_ms": 0.07433333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Reshape_3",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.077,
+      "mean_ms": 0.07433333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Reshape",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.075,
+      "mean_ms": 0.07433333333333333,
+      "min_ms": 0.074,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Reshape_2",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.076,
+      "mean_ms": 0.074,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/Squeeze",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.074,
+      "min_ms": 0.074,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Squeeze_2",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.074,
+      "min_ms": 0.074,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Reshape",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.075,
+      "mean_ms": 0.074,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Reshape_3",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07366666666666666,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Reshape_3",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07366666666666666,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Squeeze",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07366666666666666,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Squeeze_2",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07366666666666666,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/conv_exp/se/Reshape",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07333333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Squeeze",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.075,
+      "mean_ms": 0.07333333333333333,
+      "min_ms": 0.072,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Reshape_3",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.07333333333333333,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/Reshape_2",
+      "op": "Reshape",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.073,
+      "mean_ms": 0.073,
+      "min_ms": 0.073,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/Squeeze_2",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.074,
+      "mean_ms": 0.073,
+      "min_ms": 0.072,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/Squeeze",
+      "op": "Squeeze",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    }
+  ],
+  "model_run_mean_ms": 215.15133333333333,
+  "model_run_ms": [
+    215.921,
+    215.111,
+    214.422
+  ],
+  "operators": {
+    "Add": {
+      "mean_ms": 3.497,
+      "model_run_share_percent": 1.6253675707331583,
+      "nodes": 16
+    },
+    "AveragePool": {
+      "mean_ms": 0.2803333333333333,
+      "model_run_share_percent": 0.1302958847570857,
+      "nodes": 1
+    },
+    "BatchNormalization": {
+      "mean_ms": 1.0056666666666667,
+      "model_run_share_percent": 0.4674229302165608,
+      "nodes": 4
+    },
+    "Conv": {
+      "mean_ms": 86.989,
+      "model_run_share_percent": 40.431541209753135,
+      "nodes": 10
+    },
+    "DequantizeLinear": {
+      "mean_ms": 2.3273333333333333,
+      "model_run_share_percent": 1.0817192239880766,
+      "nodes": 13
+    },
+    "Div": {
+      "mean_ms": 1.2426666666666666,
+      "model_run_share_percent": 0.577577952882777,
+      "nodes": 4
+    },
+    "Erf": {
+      "mean_ms": 12.802333333333335,
+      "model_run_share_percent": 5.95038531018477,
+      "nodes": 4
+    },
+    "FusedConv": {
+      "mean_ms": 1.671,
+      "model_run_share_percent": 0.7766626281656013,
+      "nodes": 4
+    },
+    "FusedMatMul": {
+      "mean_ms": 29.983333333333334,
+      "model_run_share_percent": 13.935927269797695,
+      "nodes": 7
+    },
+    "Gelu": {
+      "mean_ms": 4.260666666666667,
+      "model_run_share_percent": 1.9803115326576335,
+      "nodes": 3
+    },
+    "MatMul": {
+      "mean_ms": 2.678,
+      "model_run_share_percent": 1.2447052772157272,
+      "nodes": 5
+    },
+    "Mul": {
+      "mean_ms": 4.416,
+      "model_run_share_percent": 2.0525087767679806,
+      "nodes": 18
+    },
+    "QLinearConv": {
+      "mean_ms": 27.269666666666666,
+      "model_run_share_percent": 12.674644513784097,
+      "nodes": 6
+    },
+    "QLinearMatMul": {
+      "mean_ms": 14.627666666666666,
+      "model_run_share_percent": 6.7987803933355435,
+      "nodes": 5
+    },
+    "QuantizeLinear": {
+      "mean_ms": 3.4013333333333335,
+      "model_run_share_percent": 1.5809027444248545,
+      "nodes": 9
+    },
+    "ReduceMean": {
+      "mean_ms": 0.351,
+      "model_run_share_percent": 0.1631409829360419,
+      "nodes": 2
+    },
+    "Reshape": {
+      "mean_ms": 1.343,
+      "model_run_share_percent": 0.6242117951085593,
+      "nodes": 17
+    },
+    "Softmax": {
+      "mean_ms": 1.8346666666666667,
+      "model_run_share_percent": 0.852733114985731,
+      "nodes": 4
+    },
+    "Split": {
+      "mean_ms": 1.2536666666666667,
+      "model_run_share_percent": 0.5826906332596902,
+      "nodes": 4
+    },
+    "Squeeze": {
+      "mean_ms": 0.9079999999999999,
+      "model_run_share_percent": 0.422028525657909,
+      "nodes": 12
+    },
+    "Transpose": {
+      "mean_ms": 6.803666666666666,
+      "model_run_share_percent": 3.1622702779748826,
+      "nodes": 25
+    }
+  },
+  "optimized_model_sha256": "6acad76423f9326a5de9c0b625630f0319039c7d3c9fbca7af0e10491fa75750",
+  "optimized_node_count": 173,
+  "profile_sha256": "b12a13195d046e7a7f454466e50b55d9fc1091c7c1b5eaace53070fa0804ad87",
+  "profiled_node_count": 173,
+  "schema": "cnn-v10.1-suffix-ort-node-profile-analysis-v1",
+  "scope": "diagnostic only; profiler timing is not a formal throughput benchmark",
+  "status": "PASS_THREE_RUN_TARGET_ORT_PROFILE_ANALYZED",
+  "top_nodes": [
+    {
+      "max_ms": 10.812,
+      "mean_ms": 10.783666666666667,
+      "min_ms": 10.759,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/conv/conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.812,
+      "mean_ms": 10.783333333333333,
+      "min_ms": 10.766,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/conv/conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.773,
+      "mean_ms": 10.749,
+      "min_ms": 10.736,
+      "name": "/image_encoder/model/network.6/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.241,
+      "mean_ms": 10.148333333333333,
+      "min_ms": 10.076,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/fc2/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 10.117,
+      "mean_ms": 10.104000000000001,
+      "min_ms": 10.093,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/fc2/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.981,
+      "mean_ms": 9.959666666666667,
+      "min_ms": 9.927,
+      "name": "/image_encoder/model/network.7/network.7.2/convffn/fc1/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.934,
+      "mean_ms": 9.921,
+      "min_ms": 9.9,
+      "name": "/image_encoder/model/network.7/network.7.0/convffn/fc1/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.324,
+      "mean_ms": 9.290666666666667,
+      "min_ms": 9.239,
+      "name": "MatMul_With_Transpose",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.256,
+      "mean_ms": 9.231,
+      "min_ms": 9.207,
+      "name": "MatMul_With_Transpose_token_317",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 9.236,
+      "mean_ms": 9.220666666666666,
+      "min_ms": 9.207,
+      "name": "MatMul_With_Transpose_token_318",
+      "op": "FusedMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 8.148,
+      "mean_ms": 8.128333333333334,
+      "min_ms": 8.113,
+      "name": "/image_encoder/model/network.5/proj/proj.0/lkb_reparam/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.735,
+      "mean_ms": 6.657333333333334,
+      "min_ms": 6.616,
+      "name": "QLinearConv_token_323",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.618,
+      "mean_ms": 6.605333333333333,
+      "min_ms": 6.586,
+      "name": "QLinearConv_token_334",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.376,
+      "mean_ms": 6.363666666666667,
+      "min_ms": 6.351,
+      "name": "QLinearConv_token_327",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.368,
+      "mean_ms": 6.347333333333333,
+      "min_ms": 6.335,
+      "name": "QLinearConv_token_338",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 6.101,
+      "mean_ms": 6.050333333333334,
+      "min_ms": 6.008,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/qkv/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 4.268,
+      "mean_ms": 4.264,
+      "min_ms": 4.259,
+      "name": "/image_encoder/model/network.7/network.7.3/convffn/act/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 4.257,
+      "mean_ms": 4.248666666666667,
+      "min_ms": 4.244,
+      "name": "/image_encoder/model/network.7/network.7.1/convffn/act/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 3.526,
+      "mean_ms": 3.5033333333333334,
+      "min_ms": 3.487,
+      "name": "/image_encoder/model/network.5/proj/proj.1/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.942,
+      "mean_ms": 2.908333333333333,
+      "min_ms": 2.878,
+      "name": "/image_encoder/model/conv_exp/reparam_conv/Conv",
+      "op": "Conv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.88,
+      "mean_ms": 2.845,
+      "min_ms": 2.817,
+      "name": "/image_encoder/model/conv_exp/activation/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.162,
+      "mean_ms": 2.151333333333333,
+      "min_ms": 2.13,
+      "name": "/image_encoder/model/network.7/network.7.2/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.162,
+      "mean_ms": 2.1466666666666665,
+      "min_ms": 2.128,
+      "name": "/image_encoder/model/network.7/network.7.3/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.17,
+      "mean_ms": 2.146333333333333,
+      "min_ms": 2.129,
+      "name": "/image_encoder/model/network.7/network.7.1/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 2.15,
+      "mean_ms": 2.133,
+      "min_ms": 2.122,
+      "name": "/image_encoder/model/network.7/network.7.0/token_mixer/proj/MatMul",
+      "op": "QLinearMatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.805,
+      "mean_ms": 1.7723333333333333,
+      "min_ms": 1.755,
+      "name": "Gelu_token_315",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.786,
+      "mean_ms": 1.7663333333333333,
+      "min_ms": 1.733,
+      "name": "Gelu_token_316",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 1.461,
+      "mean_ms": 1.4446666666666668,
+      "min_ms": 1.435,
+      "name": "/image_encoder/model/network.5/proj/proj.0/activation/Erf",
+      "op": "Erf",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.729,
+      "mean_ms": 0.722,
+      "min_ms": 0.715,
+      "name": "Gelu",
+      "op": "Gelu",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.669,
+      "mean_ms": 0.6486666666666667,
+      "min_ms": 0.636,
+      "name": "QLinearConv_token_331",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.666,
+      "mean_ms": 0.6473333333333333,
+      "min_ms": 0.637,
+      "name": "QLinearConv",
+      "op": "QLinearConv",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    },
+    {
+      "max_ms": 0.609,
+      "mean_ms": 0.5996666666666667,
+      "min_ms": 0.594,
+      "name": "/image_encoder/model/head/MatMul",
+      "op": "MatMul",
+      "provider": "CPUExecutionProvider",
+      "samples": 3
+    }
+  ]
+}

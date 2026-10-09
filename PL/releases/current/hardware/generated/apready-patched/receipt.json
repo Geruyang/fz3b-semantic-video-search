@@ -1,0 +1,94 @@
+{
+  "actual_replacements": 12,
+  "changed_files": [
+    {
+      "after_sha256": "c40d09314bfe1ad903968fbd5cc2c2841a905d718463de19606224260742f079",
+      "before_sha256": "b1664b0153746640a483c3d2f89007eb8e19bc0920ae89943988ec5c08115462",
+      "path": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_1_false_256_Pipeline_VITIS_LOOP_101_9.v",
+      "replacements": 4
+    },
+    {
+      "after_sha256": "5814dc9d05079d5d1615e2bb5cd7ed72a94a1bde60e3ab036a4f6fb13a7903b7",
+      "before_sha256": "4fcf6aa752fa658f99cd5eb28b03c08062f04e5b039826f150e7df8bec7b0ac3",
+      "path": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1.v",
+      "replacements": 4
+    },
+    {
+      "after_sha256": "c35b9b3ef715e2710b3b1e8e494603b9f85efbb63f0cbc268be441b67a2178dc",
+      "before_sha256": "17ed74e28ec8021a3d17277ae51849077fd9e113aa6229fe30c619bd1687c3f3",
+      "path": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1_1.v",
+      "replacements": 4
+    }
+  ],
+  "expected_replacements": 12,
+  "frozen_blackbox_modified": false,
+  "invalid_ready_signal_references": [],
+  "pass": true,
+  "ready_signal_reference_counts_before": [
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_1_false_256_Pipeline_VITIS_LOOP_101_9.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_907_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_1_false_256_Pipeline_VITIS_LOOP_101_9.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_944_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_1_false_256_Pipeline_VITIS_LOOP_101_9.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_981_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_1_false_256_Pipeline_VITIS_LOOP_101_9.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_1018_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_856_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_893_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_930_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_967_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_856_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_893_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_930_ap_ready"
+    },
+    {
+      "caller_file": "cnn_pipeline_v10_p_anonymous_namespace_pointwise_compute_final_streaming_Pipeline_VITIS_LOOP_183_1_1.v",
+      "module_file_reference_count_before": 2,
+      "signal": "grp_cnn_v10_pw_dsp16_fu_967_ap_ready"
+    }
+  ],
+  "remaining_callers": [],
+  "rtl_dir": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-hls-ip-apready-patched-002\\hls-ip\\hdl\\verilog",
+  "schema": "cnn-v10.3-hls-ap-ctrl-none-ready-patch-v1",
+  "scope": "generated caller named-port compatibility only",
+  "tool": "patch_cnn_v10_hls_ap_ready.py"
+}

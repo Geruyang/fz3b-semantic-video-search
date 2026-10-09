@@ -1,0 +1,19 @@
+{
+  "all_five_paths_match": true,
+  "commands": [
+    {
+      "command": "set -eu\nbase=/root/workspace/network10-v10.5-a0005-board-validation-001\ntest \"$(sha256sum \"$base/validation/contract/p3-params.bin\"|cut -d' ' -f1)\" = f6ece07c73678835a6d25dd13b5ecafa7f106f03d279eea7b2b51a1898cc09ce\nfor p in \"$base/runtime/cnn_ddr_v10_p3_dma_runtime.py\" \"$base/validation/runtime/cnn_ddr_v10_p3_dma_runtime.py\"; do test \"$(sha256sum \"$p\"|cut -d' ' -f1)\" = 2edced5bc1cb3d314a6c76cce118160798f32002b71f006b8798dd3c34773d97; done\nfor p in \"$base/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\" \"$base/validation/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\"; do test \"$(sha256sum \"$p\"|cut -d' ' -f1)\" = f77049e380ba522fe4c605774fe64bbbac5da60b2caa5e7736fd4bb204746d60; done\nsha256sum \"$base/validation/contract/p3-params.bin\" \"$base/runtime/cnn_ddr_v10_p3_dma_runtime.py\" \"$base/validation/runtime/cnn_ddr_v10_p3_dma_runtime.py\" \"$base/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\" \"$base/validation/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\"\ncat /root/workspace/factory-backups/network10-factory-20261009-a0005-retained/README.txt\ncat /root/workspace/factory-backups/network10-factory-20261009-a0005-retained/SHA256SUMS\n",
+      "exit_code": 0,
+      "name": "verify-redeploy-delta-and-factory-metadata",
+      "stderr": "",
+      "stdout": "f6ece07c73678835a6d25dd13b5ecafa7f106f03d279eea7b2b51a1898cc09ce  /root/workspace/network10-v10.5-a0005-board-validation-001/validation/contract/p3-params.bin\n2edced5bc1cb3d314a6c76cce118160798f32002b71f006b8798dd3c34773d97  /root/workspace/network10-v10.5-a0005-board-validation-001/runtime/cnn_ddr_v10_p3_dma_runtime.py\n2edced5bc1cb3d314a6c76cce118160798f32002b71f006b8798dd3c34773d97  /root/workspace/network10-v10.5-a0005-board-validation-001/validation/runtime/cnn_ddr_v10_p3_dma_runtime.py\nf77049e380ba522fe4c605774fe64bbbac5da60b2caa5e7736fd4bb204746d60  /root/workspace/network10-v10.5-a0005-board-validation-001/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\nf77049e380ba522fe4c605774fe64bbbac5da60b2caa5e7736fd4bb204746d60  /root/workspace/network10-v10.5-a0005-board-validation-001/validation/runtime/cnn_ddr_v10_signed40_candidate_runtime.py\nFactory recovery assets copied to the confirmed SD Data partition (/dev/mmcblk1p3 mounted at /root/workspace).\nThese files are backups only. They do not modify BOOT.BIN, image.ub, startup services, the active PL, or the active kernel module.\nExpected SHA256:\n  factory-restore-native.bin 59e1a6176194eccc05603738ba3c2e71ea25c3c09cdf9dce47ed1ad1ddf5fc2e\n  fpgadrv.ko                 a482b11d47a117e60f98efd43631b45a3a33ba98e81ff610204d2f301dbb0b6f\nFuture restore must follow the separately frozen official Vivado PL-only/no-PS-reset flow and matched postflight; do not load this KO while A0005 is active.\n59e1a6176194eccc05603738ba3c2e71ea25c3c09cdf9dce47ed1ad1ddf5fc2e  /root/workspace/factory-backups/network10-factory-20261009-a0005-retained/factory-restore-native.bin\na482b11d47a117e60f98efd43631b45a3a33ba98e81ff610204d2f301dbb0b6f  /root/workspace/factory-backups/network10-factory-20261009-a0005-retained/fpgadrv.ko\n55b0091c70b4b7ebbd460d8a79f9756b89f283cebacd1fb224e9f22d74d0c39f  /root/workspace/factory-backups/network10-factory-20261009-a0005-retained/README.txt\n"
+    }
+  ],
+  "created_utc": "2026-10-08T17:14:25.021216+00:00",
+  "factory_backup_metadata_captured": true,
+  "manifest_sha256": "820f680777e5ddc2541aefb42e9018a0f321b9f14f3bdf5294d6e105042cda51",
+  "pass": true,
+  "remote_base": "/root/workspace/network10-v10.5-a0005-board-validation-001",
+  "schema": "fz3b-v10.5-a0005-redeploy-delta-target-verify-v1",
+  "status": "PASS"
+}

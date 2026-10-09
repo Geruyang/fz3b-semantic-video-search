@@ -1,0 +1,134 @@
+{
+  "schema": "cnn-v10.5-a0005-dual-lane-storage-dw7-native-cases-v1",
+  "source_freeze_manifest": {
+    "path": "desktop_vlm/hardware/acceleration/experiments/dual_lane_storage_dw7_opt/candidate/source-manifest.json",
+    "sha256": "f8714065c490506f5e08b1738c8fe121270db2c66da9eb42d9674907102e0593"
+  },
+  "release_manifest_sha256": "3f52238b2a35d23f6f07c4cc9263ff8d4330c5aa27a6ed91640c4a45a8d45a2d",
+  "combined_parameter_manifest_sha256": "4a32c9373e783ac572a5d3374b316181a4d52ae9a92ec45f8b13d763ef028690",
+  "source_manifest": [
+    {
+      "path": "cnn_v10_pw_dsp.hpp",
+      "sha256": "26994f7d03874986c4e3330604024ad4b538205915bb8a8d9c03e1c8f430bff5",
+      "role": "native_header"
+    },
+    {
+      "path": "cnn_v10_pw_dsp_model.cpp",
+      "sha256": "e9de73d26c5ae3513b3671f3610b2bf8d58db4681e0cd74a2e1457115a87a8f8",
+      "role": "native_source"
+    },
+    {
+      "path": "cnn_v10_pw_dsp16.json",
+      "sha256": "46f37dd6c05fa744de0573548dfb4d6bac65e3fb7f8b6c952715fa064ae98b23",
+      "role": "metadata"
+    },
+    {
+      "path": "cnn_v10_pw_dsp16.v",
+      "sha256": "112e118f23682816e5be4741433b93f940a269548517de0de639f71b9a9e10b9",
+      "role": "rtl"
+    },
+    {
+      "path": "tb_cnn_v10_pw_dsp16.sv",
+      "sha256": "3cbc7bccc0c77de98386171a486765f43743b6450ee6e7750ae797655a18bbe6",
+      "role": "rtl"
+    },
+    {
+      "path": "cnn_pipeline_v10_a0005.hpp",
+      "sha256": "2383f6f6ea9d7d4cfaedebbe2810e05bdb68d452c09f170e4215ad9c180e0d93",
+      "role": "header"
+    },
+    {
+      "path": "cnn_v10_pointwise_a0005.hpp",
+      "sha256": "a5ca1175d671f7bd87babe1fcb8a1ecba955e559aea7ea0c799f5f031b06be05",
+      "role": "header"
+    },
+    {
+      "path": "cnn_v10_identity_a0005.hpp",
+      "sha256": "042efb1a098d7dd2c2d49791fd285162b7bc95fed0e0c78f62db32092d8af93d",
+      "role": "header"
+    },
+    {
+      "path": "cnn_v10_storage_contract.hpp",
+      "sha256": "a2634442d410fef0106ce44e6d6a8012786d24f3b0c7af3fc651f8b877fbd32d",
+      "role": "header"
+    },
+    {
+      "path": "cnn_v10_storage_helpers.hpp",
+      "sha256": "3c1ad9a3a8dc0f2306ee533bf347b0b2768adbcf3ea276bde1a9d749aeb78d05",
+      "role": "header"
+    },
+    {
+      "path": "cnn_v10_pw2_storage.hpp",
+      "sha256": "94667c1df475de9ced92d4af608deb0d001c2c79481c1ac78ba6fc97dc0302dd",
+      "role": "header"
+    },
+    {
+      "path": "candidate-contract.json",
+      "sha256": "a65bdd2c50a5f1b5329350e22a67d9fb9ff4731c3517454ae524f667c5dc3f4d",
+      "role": "metadata"
+    },
+    {
+      "path": "candidate-source-manifest.json",
+      "sha256": "f8714065c490506f5e08b1738c8fe121270db2c66da9eb42d9674907102e0593",
+      "role": "metadata"
+    }
+  ],
+  "cases": [
+    {
+      "name": "paired-p3-a0004-gates",
+      "args": [
+        "paired",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261007\\acceleration\\host\\cnn-v10.3-p3-dma-chain-parameters-002\\p3-params.bin",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261007\\acceleration\\host\\cnn-v10-n1-p3-full-w16-002\\image-00-p3-input-hcw-a16.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261007\\acceleration\\host\\cnn-v10-n1-p3-full-w16-002\\image-00-p3-full-w16-output.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261007\\acceleration\\host\\cnn-v10-n1-p3-full-w16-002\\image-01-p3-input-hcw-a16.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261007\\acceleration\\host\\cnn-v10-n1-p3-full-w16-002\\image-01-p3-full-w16-output.i16",
+        "3",
+        "1",
+        "1"
+      ],
+      "expected_exit": 0,
+      "timeout_seconds": 60
+    },
+    {
+      "name": "paired-p2-release003-gates",
+      "args": [
+        "paired",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-release-bundle-003\\params\\profile2.bin",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-00\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-00\\expected-4-blocks-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-01\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-01\\expected-4-blocks-hcw.i16",
+        "2",
+        "4",
+        "1"
+      ],
+      "expected_exit": 0,
+      "timeout_seconds": 180
+    },
+    {
+      "name": "paired-p0-p1-release003-same-process-gates",
+      "args": [
+        "sequence",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-release-bundle-003\\params\\profile0.bin",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-00\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-00\\expected-12-blocks-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-01\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-01\\expected-12-blocks-hcw.i16",
+        "0",
+        "12",
+        "1",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-release-bundle-003\\params\\profile1.bin",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-00\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-00\\expected-20-blocks-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-01\\input-hcw.i16",
+        "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-01\\expected-20-blocks-hcw.i16",
+        "1",
+        "20",
+        "1"
+      ],
+      "expected_exit": 0,
+      "timeout_seconds": 900
+    }
+  ]
+}

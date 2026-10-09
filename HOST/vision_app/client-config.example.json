@@ -1,0 +1,5 @@
+{
+  "host": "169.254.220.254",
+  "token": "REPLACE_WITH_YOUR_BOARD_TOKEN",
+  "model_root": "releases/current/model-source"
+}

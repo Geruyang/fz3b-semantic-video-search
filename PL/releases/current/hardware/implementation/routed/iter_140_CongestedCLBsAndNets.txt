@@ -1,0 +1,6 @@
+List of CLB Tiles
+CLEM_R_X29Y159
+CLEL_R_X29Y159
+
+List of Congested Nets
+

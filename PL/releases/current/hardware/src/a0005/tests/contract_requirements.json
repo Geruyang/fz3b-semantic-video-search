@@ -1,0 +1,49 @@
+{
+  "schema": "dual-lane-storage-dw7-opt-contract-v1",
+  "pw1": {
+    "logical_banks": 16,
+    "physical_banks": 8,
+    "ports_per_bank": 2,
+    "pairing": "adjacent_logical_banks_2p_and_2p_plus_1",
+    "bank_depth_symbol": "BANK_DEPTH",
+    "old_address_range": "0 <= old_address < 2 * BANK_DEPTH",
+    "new_physical_bank_depth": "4 * BANK_DEPTH",
+    "physical_bank_formula": "logical_bank >> 1",
+    "port_formula": "logical_bank & 1",
+    "physical_address_formula": "port * (2 * BANK_DEPTH) + old_address",
+    "required_helper": "cnn_v10_candidate::pw1_physical_location",
+    "out_of_range": "reject"
+  },
+  "dw7": {
+    "physical_banks": 16,
+    "reads_per_tap": 16,
+    "ports_per_bank": 1,
+    "normal_source_x": "xb + lane + dx",
+    "p3_source_x": "2 * (xb + lane) + dx",
+    "dx_min": -3,
+    "dx_max": 3,
+    "normal_source_lanes": 16,
+    "p3_source_lanes": 8,
+    "p3_multiplier_outputs_per_source": 2,
+    "fixed_read_bank_formula": "physical_bank in 0..15 exactly once",
+    "normal_select_formula": "bank_values[(lane + dx) & 15]",
+    "p3_select_formula": "bank_values[(2 * lane + dx) & 15]",
+    "required_helpers": [
+      "cnn_v10_candidate::dw7_fixed_bank_read",
+      "cnn_v10_candidate::dw7_normal_source_bank",
+      "cnn_v10_candidate::dw7_p3_source_bank"
+    ],
+    "padding": "fixed_bank_safe_read_then_mask_zero",
+    "invalid_address": "remain_inside_current_channel_row"
+  },
+  "packed_accumulator": {
+    "lanes": 4,
+    "lane_bits": 40,
+    "packed_bits": 160,
+    "word_bits": 32,
+    "word_count": 5,
+    "bit_order": "lane0_bits_39_0_then_lane1_lane2_lane3",
+    "unpack": "signed40_sign_extend_to_int64",
+    "overflow": "atomic_reject_output_unchanged"
+  }
+}

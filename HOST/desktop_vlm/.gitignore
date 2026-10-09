@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+*.npz
+*.pt
+*.dcp
+*.jou
+*.log
+xsim.dir/
+.Xil/
+.venv/

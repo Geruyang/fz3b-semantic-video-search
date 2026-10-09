@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "model": "mobileclip_s1",
+  "dimension": 512,
+  "weight_sha256": "1270fab6ea23bacbd61cea564bd521a7e875fdb0fcb6d31382bccf4d973b71a6",
+  "source_revision": "48faa0fea4b08d74188b3841771aca6ff2c92852",
+  "source_files": {
+    "official-mobileclip/mobileclip/clip.py": "24bbf20e888aab024824659407a23dc6c06c21aa6af3d9bac9033d6dc98a02ea",
+    "official-mobileclip/mobileclip/image_encoder.py": "9694364c57a30b8c390d826e5f40418b3ade646f2010a87f718c34736327218f",
+    "official-mobileclip/mobileclip/logger.py": "8bcd78f1b00314a9d48e27402d961323d3a82e335f3a4f9c06e6b65c0ecaca45",
+    "official-mobileclip/mobileclip/text_encoder.py": "3267c58f269f34756a18b41a677ba3b45a3b67d671a33233f5a829af3200a5c0",
+    "official-mobileclip/mobileclip/__init__.py": "e4dd982388b30069224239eaf34ce3eb6b8bf03cfbfcaa4c651a0f6ce7c22903",
+    "official-mobileclip/mobileclip/configs/mobileclip_b.json": "5e11f14d7c8f5102077e2cc3ccb8d496cc02c9abe25f62c0eb5d0e4684be6d92",
+    "official-mobileclip/mobileclip/configs/mobileclip_s0.json": "b8500657bae59ce9ff472a102ea85a7f15a8d344a409a8655d1ec01c57fcaea5",
+    "official-mobileclip/mobileclip/configs/mobileclip_s1.json": "4dcde4a93fa9c7cf1a67f8858bd3ffc47bb3657f51b26bb1cd669f10b9a52597",
+    "official-mobileclip/mobileclip/configs/mobileclip_s2.json": "59ea1b54f343117c721706816c9bd945f994f3c8b8bb383ce5f12a6e68c5d32d",
+    "official-mobileclip/mobileclip/models/mci.py": "68e7316c356f48f453ffb2def0ba8b57fc958e056556c230b8dc310e5bade2c2",
+    "official-mobileclip/mobileclip/models/vit.py": "9dd0cc983deb49cb7151dd9a64ceab11efe6c51bf1645e4bf62555b46431d0d1",
+    "official-mobileclip/mobileclip/models/__init__.py": "e6d1a3a50ac21b53d7aa4895773065f24526657356bb59532d5f4298d065c244",
+    "official-mobileclip/mobileclip/modules/__init__.py": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+    "official-mobileclip/mobileclip/modules/common/mobileone.py": "ce7b36caceea21ece26a72e333d9c106835562504ba2a66645896dce275961ae",
+    "official-mobileclip/mobileclip/modules/common/transformer.py": "fffcf15574f4d34e606fc4566b07827e92054b4da8e1beaadf7db61dc5bc9e0b",
+    "official-mobileclip/mobileclip/modules/common/__init__.py": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+    "official-mobileclip/mobileclip/modules/image/image_projection.py": "f19193cb6cd0cadb01eee783b3303a5dae8e34184a365fa0ae12e2351016ec28",
+    "official-mobileclip/mobileclip/modules/image/replknet.py": "074fd9deba721153c913fe5d3458cc5484c5d2117b12c53c56835cf565256b28",
+    "official-mobileclip/mobileclip/modules/image/__init__.py": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+    "official-mobileclip/mobileclip/modules/text/repmixer.py": "d367663ff5507d5215bf7af84401872767a2f4075beaf806f1db1bc2b6119d29",
+    "official-mobileclip/mobileclip/modules/text/tokenizer.py": "d91d2537ec702f3478f4b646f3f5cd77a9bb46a09f17e085d3031de03e911d81",
+    "official-mobileclip/mobileclip/modules/text/__init__.py": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9"
+  },
+  "image_backend": "A0005/direct_wc/split/suffix11",
+  "combined_manifest_sha256": "4a32c9373e783ac572a5d3374b316181a4d52ae9a92ec45f8b13d763ef028690",
+  "bundle_sha256": "3f52238b2a35d23f6f07c4cc9263ff8d4330c5aa27a6ed91640c4a45a8d45a2d",
+  "deployment_sha256": "6e01472fae50fcab672bf8a6097648630618b8b304c860f0703472cd6ec1d2f3",
+  "suffix_selection_sha256": "441feea506c6e1697ee05604c0f9b09c32500dd8b7443343a8238cdcaf3490da",
+  "bpe_sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a",
+  "preprocess": {
+    "rgb": true,
+    "resize_short_side": 256,
+    "crop": [
+      256,
+      256
+    ],
+    "bilinear": true,
+    "scale": "float32/255",
+    "mean": null,
+    "std": null
+  },
+  "normalization": "l2-float32-v1",
+  "contract_id": "332b521b0fbdc3104c0c4b0fd017df01e090b004276b1f5982c9a04aace7e09e"
+}

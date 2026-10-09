@@ -1,0 +1,569 @@
+{
+  "ok": true,
+  "tests": 61,
+  "retained": {
+    "pass": true,
+    "payloads_checked": 3051
+  },
+  "pl_or_model_changed": false,
+  "gui": {
+    "ok": true,
+    "sha256": "268b198a15fe717bb50d97bc6200ac67d0b88ead835503fe716dc70bece733b5"
+  },
+  "exe": {
+    "ok": true,
+    "sha256": "b6715767a0f6ce9c6152d31ed59c9d96de882b5494aac846d940fa6a19742520"
+  },
+  "audio": {
+    "ok": true,
+    "sha256": "31e52aa4b3b5c660e767bcba83c5af6b3c69cce93a51cef79ecd6362d9961227"
+  },
+  "cancel": {
+    "ok": true,
+    "sha256": "fddfb5e28ce5ae7a009c324698a980bd5643f7bb6387f568fd4980082fc75a93"
+  },
+  "network": {
+    "ok": true,
+    "sha256": "46a8faf772d3ba5e7e17698a6bad4da05d262ac4f36e0f6be528d1b78435f18c"
+  },
+  "live_recording": {
+    "frames": 521,
+    "received_gaps": 0,
+    "missing_hit_frames": [],
+    "end_frame_id": 8293,
+    "live_restart_after_offline": true
+  },
+  "credit_window_test": {
+    "ok": true,
+    "frames": 23
+  },
+  "r5": {
+    "ok": true,
+    "max_score_error": 4.517208086633013e-05,
+    "receipt": "artifacts\\semantic-video-20261009\\r5-20261009T131752Z.json"
+  },
+  "accuracy": {
+    "frames": 725,
+    "threshold": 0.2,
+    "micro": {
+      "precision": 1.0,
+      "recall": 0.5459882583170255,
+      "f1": 0.7063291139240506,
+      "accuracy": 0.9085353834023261
+    },
+    "per_query": {
+      "0": {
+        "label": "茶壶图案",
+        "tp": 171,
+        "fp": 0,
+        "fn": 0,
+        "tn": 552,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "1": {
+        "label": "人物在射箭",
+        "tp": 300,
+        "fp": 0,
+        "fn": 0,
+        "tn": 425,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "2": {
+        "label": "户外运动场",
+        "tp": 0,
+        "fp": 0,
+        "fn": 300,
+        "tn": 425,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "accuracy": 0.5862068965517241
+      },
+      "3": {
+        "label": "桌面上的杯子",
+        "tp": 87,
+        "fp": 0,
+        "fn": 44,
+        "tn": 594,
+        "precision": 1.0,
+        "recall": 0.6641221374045801,
+        "f1": 0.7981651376146789,
+        "accuracy": 0.9393103448275862
+      },
+      "4": {
+        "label": "有人在房间里",
+        "tp": 0,
+        "fp": 0,
+        "fn": 120,
+        "tn": 605,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "accuracy": 0.8344827586206897
+      },
+      "5": {
+        "label": "跑动的狗",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 725,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "accuracy": 1.0
+      },
+      "6": {
+        "label": "行驶的汽车",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 725,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "accuracy": 1.0
+      }
+    },
+    "reference": "artifacts/semantic-video-20261009/web-accuracy/accuracy-with-user-examples.json"
+  },
+  "board": {
+    "type": "hello",
+    "protocol": 1,
+    "platform": "A0005",
+    "boot_id": "735adf18-ce66-4320-b0b3-7fd5d31faf1c",
+    "contract_id": "332b521b0fbdc3104c0c4b0fd017df01e090b004276b1f5982c9a04aace7e09e",
+    "cpu": {
+      "current_khz": 1199999,
+      "available_khz": [
+        600000,
+        800000,
+        1000000,
+        1200000
+      ],
+      "governor": "verified_cpu_clock",
+      "affected_cpus": "0 1 2 3",
+      "min_khz": 600000,
+      "max_khz": 1200000,
+      "verified": true,
+      "cached_sysfs_khz": 1066666,
+      "actual_hz": 1199999988,
+      "ccf_hz": 1066666656,
+      "acpu_ctrl": 50331906,
+      "parent": 2,
+      "divider": 1,
+      "last_error": 0,
+      "held": true,
+      "requested_khz": 1200000,
+      "supported_khz": [
+        600000,
+        800000,
+        1000000,
+        1200000
+      ]
+    },
+    "cpu_frequency_changing": false,
+    "memory_kb": {
+      "MemTotal": 1977936,
+      "MemAvailable": 1532572
+    },
+    "loadavg": [
+      "1.00",
+      "1.02",
+      "1.07"
+    ],
+    "camera": {
+      "frames": 57360,
+      "fps": 24.845656375639084,
+      "sequence_gaps": 1,
+      "error": null,
+      "width": 1280,
+      "height": 720,
+      "requested_fps": 30
+    },
+    "inference": {
+      "state": "STOPPED",
+      "error": null,
+      "frames": 120,
+      "fps": 0.09148977886514112,
+      "max_in_flight": 4,
+      "result_interval_fps": 4.509015830484465,
+      "preprocess_async": false,
+      "performance": {
+        "input_wait_ms": {
+          "count": 120,
+          "sum_ms": 4.684637999616825,
+          "max_ms": 0.2046320000772539,
+          "mean_ms": 0.039038649996806875
+        },
+        "jpeg_decode_ms": {
+          "count": 120,
+          "sum_ms": 1052.390841999113,
+          "max_ms": 24.71235699999852,
+          "mean_ms": 8.769923683325942
+        },
+        "resize_ms": {
+          "count": 120,
+          "sum_ms": 1907.225599999947,
+          "max_ms": 28.143971000190504,
+          "mean_ms": 15.893546666666225
+        },
+        "tensor_ms": {
+          "count": 120,
+          "sum_ms": 719.3389179994938,
+          "max_ms": 13.694926999960444,
+          "mean_ms": 5.994490983329115
+        },
+        "preprocess_ms": {
+          "count": 120,
+          "sum_ms": 3678.955359998554,
+          "max_ms": 44.88476899996385,
+          "mean_ms": 30.657961333321282
+        },
+        "stem-prefix_call_ms": {
+          "count": 120,
+          "sum_ms": 16240.075950999653,
+          "max_ms": 164.44838400002482,
+          "mean_ms": 135.33396625833043
+        },
+        "stem-prefix_ort_ms": {
+          "count": 120,
+          "sum_ms": 14777.916999999998,
+          "max_ms": 152.574,
+          "mean_ms": 123.14930833333331
+        },
+        "network3-bridge_call_ms": {
+          "count": 120,
+          "sum_ms": 5028.275217999635,
+          "max_ms": 67.31482300006064,
+          "mean_ms": 41.90229348333029
+        },
+        "network3-bridge_ort_ms": {
+          "count": 120,
+          "sum_ms": 4161.033999999999,
+          "max_ms": 56.218,
+          "mean_ms": 34.675283333333326
+        },
+        "suffix_call_ms": {
+          "count": 120,
+          "sum_ms": 26425.54464399904,
+          "max_ms": 277.0254100000784,
+          "mean_ms": 220.21287203332534
+        },
+        "suffix_ort_ms": {
+          "count": 120,
+          "sum_ms": 25923.567999999992,
+          "max_ms": 274.194,
+          "mean_ms": 216.02973333333327
+        },
+        "result_postprocess_ms": {
+          "count": 120,
+          "sum_ms": 294.7617659976913,
+          "max_ms": 5.988030000025901,
+          "mean_ms": 2.456348049980761
+        }
+      }
+    },
+    "query_revision": 4,
+    "threshold": 0.2,
+    "result_delivery_drops": 0,
+    "input_source": "upload",
+    "upload": {
+      "job_id": "87ac996577d64d298033ec2979484746",
+      "received": 120,
+      "completed": 120,
+      "queued": 0,
+      "finished": true,
+      "cancelled": false,
+      "error": null
+    },
+    "r5": {
+      "mode": "dual R5 split / TCM",
+      "offload_verified": true,
+      "semantic_matches": 725,
+      "exact_threshold_fallbacks": 42,
+      "cores": [
+        {
+          "core": 0,
+          "heartbeat": 1444331,
+          "requests": 1736,
+          "role": "semantic scores / hits / frame sequence / telemetry"
+        },
+        {
+          "core": 1,
+          "heartbeat": 1650676,
+          "requests": 1008,
+          "role": "transport CRC / framing"
+        }
+      ]
+    },
+    "serial": {
+      "rx_bytes": 0,
+      "tx_bytes": 0,
+      "authenticated": false,
+      "decoder_errors": 0
+    },
+    "ok": true
+  },
+  "services": [
+    "enabled",
+    "enabled",
+    "enabled",
+    "enabled",
+    "active",
+    "active",
+    "active",
+    "active"
+  ],
+  "installed_sources": {
+    "board_agent.py": "e6386d8b47577464deb355191c71629694d0a0c4b8004e5ded5d87c818c60fcd",
+    "state.py": "f3282b5f634f7f30513ac02791a703ebdc70abcc94c3d05d8422bbaa61a6ea55",
+    "protocol.py": "e127737f5c7cc3f29a6975afd6bf9066ecce5ca59c791637dd16bff0e37b4ec3",
+    "upload_source.py": "1aba54e47006d24688577cd8cb1b057dc872fe956a62169a51398aef6441981b",
+    "r5_bridge.py": "c1695156be3ab7622dcd9af91824606da3600f1d1fd0fac7206e7fd49d93642d",
+    "camera.py": "0e1c93f16e234aa12bc93646a4bf69d3f59286714b2e0b775a3fe603bfc8a914"
+  },
+  "normal_reboot": {
+    "ok": true,
+    "boot_id": "735adf18-ce66-4320-b0b3-7fd5d31faf1c",
+    "receipt": "artifacts\\ps-application-20261009\\boot\\reboot-20261009T134950Z.json"
+  },
+  "files": [
+    {
+      "path": "vision_app/board_agent.py",
+      "bytes": 38413,
+      "sha256": "e6386d8b47577464deb355191c71629694d0a0c4b8004e5ded5d87c818c60fcd"
+    },
+    {
+      "path": "vision_app/board_runtime.py",
+      "bytes": 3344,
+      "sha256": "8fb7f3bcbc9024e5bc822a1a1f598ee60e7fc44ac41276dd9fafbe872e3f0f2d"
+    },
+    {
+      "path": "vision_app/board_speed.py",
+      "bytes": 3035,
+      "sha256": "edcfc3a7d4224390dbb2d3dbb28d419a7b1d728623d32a9bd5900305e6a71728"
+    },
+    {
+      "path": "vision_app/board_validate.py",
+      "bytes": 1431,
+      "sha256": "1955d5e70b86536276e173d00c0edf7673934e2d6192be3bab3b48088daa42d1"
+    },
+    {
+      "path": "vision_app/boot_units.py",
+      "bytes": 2084,
+      "sha256": "71883c1e8a604ba3f9f7388eb0bbcd7dd22ff30ec46b793e574003e0bbbbf27d"
+    },
+    {
+      "path": "vision_app/camera.py",
+      "bytes": 3976,
+      "sha256": "0e1c93f16e234aa12bc93646a4bf69d3f59286714b2e0b775a3fe603bfc8a914"
+    },
+    {
+      "path": "vision_app/client.py",
+      "bytes": 30599,
+      "sha256": "15db44171bd01f2d86bc9a1258634f0b0a703d460cb8c37a825ddda6d14aceee"
+    },
+    {
+      "path": "vision_app/contract.py",
+      "bytes": 3213,
+      "sha256": "385264626b4ebe4bd4c522c4daf05b812078a185787048305e4e329b36e941fd"
+    },
+    {
+      "path": "vision_app/cpu_clock_service.py",
+      "bytes": 8497,
+      "sha256": "890105437843effab2dc9716e3b8381b2b60781370b0aa80154b0d4c8a450e0c"
+    },
+    {
+      "path": "vision_app/diagnostic_baseline.py",
+      "bytes": 1198,
+      "sha256": "0c1747e46ebe648cc6441948177bcb33808a086034086ec45f3187a85ce11e16"
+    },
+    {
+      "path": "vision_app/frequency.py",
+      "bytes": 1399,
+      "sha256": "7acba52b9f84f81756564d49e1a9d9652f8912506371c91a135c130d17d31fc6"
+    },
+    {
+      "path": "vision_app/host_network.py",
+      "bytes": 18860,
+      "sha256": "9757c68968d66c29924ef62200beaf170add9eb8cc39b1aeb06ba8f02ce9d3a4"
+    },
+    {
+      "path": "vision_app/launch.py",
+      "bytes": 757,
+      "sha256": "31dbb92dff666652a42ae2c06279a391af8683172d7821ea5da9b99897df9937"
+    },
+    {
+      "path": "vision_app/link_setup.py",
+      "bytes": 893,
+      "sha256": "c1588aec59ca6c89cd6d8a77edf881176a7a26bc308f9fc0afbbfe146c7458d6"
+    },
+    {
+      "path": "vision_app/network_dialog.py",
+      "bytes": 11567,
+      "sha256": "e480543175548266889b795c68b9adb08cfbdd55096d5eb922b0e92e9e4b82b3"
+    },
+    {
+      "path": "vision_app/prefetch.py",
+      "bytes": 1881,
+      "sha256": "3ec1b6459ac86b95a7fd2ed2de632b7fb9c6e4395fac1b04645180bccc37f01d"
+    },
+    {
+      "path": "vision_app/protocol.py",
+      "bytes": 5879,
+      "sha256": "e127737f5c7cc3f29a6975afd6bf9066ecce5ca59c791637dd16bff0e37b4ec3"
+    },
+    {
+      "path": "vision_app/r5_bridge.py",
+      "bytes": 5914,
+      "sha256": "c1695156be3ab7622dcd9af91824606da3600f1d1fd0fac7206e7fd49d93642d"
+    },
+    {
+      "path": "vision_app/r5_start.py",
+      "bytes": 7935,
+      "sha256": "a90dd0fa18d5cb690be0002a919701c1ff0afb70cc9010e7089186912fbefe6c"
+    },
+    {
+      "path": "vision_app/semantic_media.py",
+      "bytes": 9971,
+      "sha256": "b38021c61d0f2265c261452bd1a997d626122f4f3366f895330005eec6113e09"
+    },
+    {
+      "path": "vision_app/semantic_ui.py",
+      "bytes": 24508,
+      "sha256": "9915047c35b3753d26f737f328117c7dec3b9d0163fca3c0c87c333cc1dbda03"
+    },
+    {
+      "path": "vision_app/state.py",
+      "bytes": 3883,
+      "sha256": "f3282b5f634f7f30513ac02791a703ebdc70abcc94c3d05d8422bbaa61a6ea55"
+    },
+    {
+      "path": "vision_app/text_encoder.py",
+      "bytes": 3737,
+      "sha256": "7934eb91a71743a51c50941590dcb4432b2fdf4ed509becade10c463a0d61b99"
+    },
+    {
+      "path": "vision_app/translation.py",
+      "bytes": 2113,
+      "sha256": "be79c81205a93d519d37fccbd9d637dda4257511ac14066973c33c23fc5df9cc"
+    },
+    {
+      "path": "vision_app/transports.py",
+      "bytes": 7460,
+      "sha256": "4bce0a7ebec68486cbebda1ab3f233de540095b4e5bfef429d83f24bf3ef7afc"
+    },
+    {
+      "path": "vision_app/upload_source.py",
+      "bytes": 2458,
+      "sha256": "1aba54e47006d24688577cd8cb1b057dc872fe956a62169a51398aef6441981b"
+    },
+    {
+      "path": "vision_app/video_analysis.py",
+      "bytes": 7506,
+      "sha256": "d96ce1bf3728b2675bbad1e3d8e049934365d5bcf9dec8d54d2f1510d5e04f8c"
+    },
+    {
+      "path": "vision_app/__init__.py",
+      "bytes": 72,
+      "sha256": "3f33e9546ad5161f054ab8b7c19a0e00f4c151a8f3ea5c4eee9bc68de504bcbf"
+    },
+    {
+      "path": "vision_app/r5/build.ps1",
+      "bytes": 835,
+      "sha256": "8d7df9dd484479adc8b40d52fc0b83629a45fe53d3b5b3dca32a84cb3a5a1a86"
+    },
+    {
+      "path": "vision_app/r5/start.S",
+      "bytes": 351,
+      "sha256": "d05e441aa9327786c037361734ff999341d3f394563161fc0ddcd75f1521d0d2"
+    },
+    {
+      "path": "vision_app/r5/tcm-split-overlay.dts",
+      "bytes": 1769,
+      "sha256": "e0401b22169f3fa7305780f3c89d1892023620af4797e22bc39d4c9160c1a3b1"
+    },
+    {
+      "path": "vision_app/r5/tcm.ld",
+      "bytes": 421,
+      "sha256": "d15ab3fd3e6a956045757fd85a68827ec3cd5e82db3cca35d2f3537221aa7743"
+    },
+    {
+      "path": "vision_app/r5/tcm_io.c",
+      "bytes": 2245,
+      "sha256": "5e7d9ee42b0d39da28df24a8200889ea32888d4f520610fb0c2b3b16c0098caa"
+    },
+    {
+      "path": "vision_app/r5/worker.c",
+      "bytes": 3743,
+      "sha256": "7a82da87008a09f66ac72bb2e448fa7983223aa0fce1c9b1d1de2bc12796cca6"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/FZ3BVisionConsole.exe",
+      "bytes": 66608601,
+      "sha256": "52c8061a0a10d2d15195a0481f73c3d4b13bf18089349bdde70168c584afac9b"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/semantic-contract.json",
+      "bytes": 3934,
+      "sha256": "5f2f281ff7d3f92539a96f42728bd0dcdf5e70d07c98a00cff7f07fdb64aac87"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/build-environment.txt",
+      "bytes": 1752,
+      "sha256": "5c7071851d93af2aad2a5465ecc9382925c1d3b543253c0ba64cbb1165aefa72"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/models/mobileclip_s1.pt",
+      "bytes": 340784294,
+      "sha256": "1270fab6ea23bacbd61cea564bd521a7e875fdb0fcb6d31382bccf4d973b71a6"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/config.json",
+      "bytes": 1394,
+      "sha256": "d84104da12fa90da59acf5f0ed30428e43cc92574ad4b9dfa88f29eeeb2b0eb0"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/generation_config.json",
+      "bytes": 293,
+      "sha256": "81f06422302b9f4666f20c6f20f43b904e38ccce9326a208f82ff97c2c9699e5"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/pytorch_model.bin",
+      "bytes": 312087009,
+      "sha256": "9d8ceb91d103ef89400c9d9d62328b4858743cf8924878aee3b8afc594242ce0"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/README.md",
+      "bytes": 3174,
+      "sha256": "7f4b7f90672cd55b85b213bbe21f4b2d0c92327e885734b7e86b019feb145a6b"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/source.spm",
+      "bytes": 804677,
+      "sha256": "e27a3a1b539f4959ec72ea60e453f49156289f95d4e6000b29332efc45616203"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/target.spm",
+      "bytes": 806530,
+      "sha256": "6a881f4717cd7265f53fea54fd3dc689c767c05338fac7a4590f3088cb2d7855"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/tokenizer_config.json",
+      "bytes": 44,
+      "sha256": "53cc7a6f05224f287476af4798d96b1b85da2edae60257e58633f092c7b5b823"
+    },
+    {
+      "path": "deliverables/vision-console/FZ3BVisionConsole/translation/vocab.json",
+      "bytes": 1617902,
+      "sha256": "c0f79ee4c413ccb24cd808a0c727eec85b2130f23c82802cc1caeb07b5f0d458"
+    }
+  ],
+  "review": "PASS: five Important findings corrected and reverified; no remaining Important/Critical in scoped review"
+}

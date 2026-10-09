@@ -1,0 +1,6 @@
+{
+  "pid": 34252,
+  "started_at": "2026-10-09T00:04:34.2300157+08:00",
+  "priority": 32,
+  "command": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-fresh-place-preg-002\\invoke-vivado.cmd"
+}

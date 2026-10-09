@@ -1,0 +1,41 @@
+/dts-v1/;
+/plugin/;
+
+/*
+ * FZVA/A0005 signed40 candidate only. Do not apply this overlay until the final
+ * V10 system address report proves the two control windows and all 12 DDR
+ * master segments (six low plus six high), the routed bitstream passes every
+ * offline gate, and board deployment is explicitly authorized.
+ */
+/ {
+    fragment@0 {
+        target-path = "/amba_pl@0";
+        __overlay__ {
+            #address-cells = <2>;
+            #size-cells = <2>;
+
+            fz3b-cnn-ddr-v10-signed40@a4000000 {
+                compatible = "fz3b,cnn-ddr-v10-signed40-candidate";
+                reg = <0x0 0xa4000000 0x0 0x00010000
+                       0x0 0xa4010000 0x0 0x00010000>;
+                reg-names = "hls-control", "guard-identity";
+                /* Loadable candidate; deployment remains blocked by the
+                 * separately hashed platform manifest and user board gate. */
+                status = "disabled";
+
+                fz3b,address-bits = <40>;
+                fz3b,data-bits = <128>;
+                fz3b,core-id = <0x465a5641>;
+                fz3b,abi-version = <0x000a0005>;
+                fz3b,factory-handoff-contract = "fpgadrv-unloaded-refcount0-v1";
+                fz3b,high-ddr-path-required;
+
+                fz3b,arena-low = <0x0 0x40000000 0x0 0x3ff00000>;
+                fz3b,arena-high = <0x8 0x00000000 0x0 0x40000000>;
+                /* No dmas/dma-names are guessed here.  DMAENGINE_COPY is
+                 * advertised only when a future final overlay provides a
+                 * proven named "memcpy" channel and probe acquires it. */
+            };
+        };
+    };
+};

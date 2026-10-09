@@ -1,0 +1,30 @@
+/dts-v1/;
+/plugin/;
+/* Architectural TCM addresses from Linux xilinx-v2018.3 driver and AMD UG1085.
+ * No external DDR carveout, IPI, peripheral handoff or PL changes.
+ */
+/ {
+ fragment@0 {
+  target-path = "/";
+  __overlay__ {
+   app_pd_r50: app-pd-r50 { #power-domain-cells=<0>; pd-id=<7>; };
+   app_pd_r51: app-pd-r51 { #power-domain-cells=<0>; pd-id=<8>; };
+   app_pd_tcm0a: app-pd-tcm0a { #power-domain-cells=<0>; pd-id=<15>; };
+   app_pd_tcm0b: app-pd-tcm0b { #power-domain-cells=<0>; pd-id=<16>; };
+   app_pd_tcm1a: app-pd-tcm1a { #power-domain-cells=<0>; pd-id=<17>; };
+   app_pd_tcm1b: app-pd-tcm1b { #power-domain-cells=<0>; pd-id=<18>; };
+  };
+ };
+ fragment@1 {
+  target-path = "/amba";
+  __overlay__ {
+   #address-cells=<2>; #size-cells=<2>;
+   app_tcm0a: app-tcm@ffe00000 { compatible="mmio-sram"; reg=<0 0xffe00000 0 0x10000>; pd-handle=<&app_pd_tcm0a>; };
+   app_tcm0b: app-tcm@ffe20000 { compatible="mmio-sram"; reg=<0 0xffe20000 0 0x10000>; pd-handle=<&app_pd_tcm0b>; };
+   app_tcm1a: app-tcm@ffe90000 { compatible="mmio-sram"; reg=<0 0xffe90000 0 0x10000>; pd-handle=<&app_pd_tcm1a>; };
+   app_tcm1b: app-tcm@ffeb0000 { compatible="mmio-sram"; reg=<0 0xffeb0000 0 0x10000>; pd-handle=<&app_pd_tcm1b>; };
+   app-r50@ff9a0100 { compatible="xlnx,zynqmp-r5-remoteproc-1.0"; reg=<0 0xff9a0100 0 0x100>,<0 0xff9a0000 0 0x100>; reg-names="rpu_base","rpu_glbl_base"; core_conf="split0"; srams=<&app_tcm0a &app_tcm0b>; pd-handle=<&app_pd_r50>; firmware-name="fz3b-app-r50.elf"; };
+   app-r51@ff9a0200 { compatible="xlnx,zynqmp-r5-remoteproc-1.0"; reg=<0 0xff9a0200 0 0x100>,<0 0xff9a0000 0 0x100>; reg-names="rpu_base","rpu_glbl_base"; core_conf="split1"; srams=<&app_tcm1a &app_tcm1b>; pd-handle=<&app_pd_r51>; firmware-name="fz3b-app-r51.elf"; };
+  };
+ };
+};

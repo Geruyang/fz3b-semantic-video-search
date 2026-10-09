@@ -1,0 +1,95 @@
+{
+  "baseline_iopll_ccf_counts": {
+    "enable": 9,
+    "prepare": 13
+  },
+  "boot_id": "3d766e07-9adf-4515-93c3-a9214190f12d",
+  "clock_write_performed": false,
+  "commands": [
+    {
+      "command": "set -eu; test \"$(cat /proc/sys/kernel/random/boot_id)\" = '3d766e07-9adf-4515-93c3-a9214190f12d'; cd '/root/workspace/network10-v10.4-pl1-iopll-lease-candidate-001'; test \"$(sha256sum fz3b_pl1_iopll_lease.ko | cut -d' ' -f1)\" = '3e3643b8cb334b610095311f563cd9019b1acc886fd2c133efec063bf2a6f272'; test ! -e /sys/module/fz3b_pl1_iopll_lease; test ! -e /dev/fz3b_pl1_iopll_lease; test ! -e /sys/module/cnn_ddr_v10_p3_dma_candidate; test ! -e /dev/network10_v10_p3_dma; test -d '/sys/kernel/config/device-tree/overlays/network10-v10.4-a0004-fpd-cmask'; test \"$(cat '/sys/kernel/config/device-tree/overlays/network10-v10.4-a0004-fpd-cmask/status')\" = applied; test -z \"$(pgrep -f '[o]rt_partition_runner|[b]enchmark_cnn_pipeline_v10|[r]un_cnn_pipeline_v10|[l]ease_jtag_hold' || true)\"; printf 'prepare='; cat /sys/kernel/debug/clk/iopll/clk_prepare_count; printf 'enable='; cat /sys/kernel/debug/clk/iopll/clk_enable_count; /root/workspace/network10-v10.4-clock-raw-baseline-001/read_fz3b_clock_registers; echo PL1_LEASE_PREFLIGHT_PASS",
+      "exit_code": 0,
+      "name": "preflight",
+      "stderr": "",
+      "stdout": "prepare=13\nenable=9\n0xFD1A0020 0x00014000 CRF_APB.APLL_CTRL\n0xFD1A002C 0x00014800 CRF_APB.DPLL_CTRL\n0xFD1A0038 0x00015A09 CRF_APB.VPLL_CTRL\n0xFD1A0044 0x0000003B CRF_APB.PLL_STATUS\n0xFD1A0060 0x03000100 CRF_APB.ACPU_CTRL\n0xFD1A0080 0x01000200 CRF_APB.DDR_CTRL\n0xFF5E0020 0x00015A00 CRL_APB.IOPLL_CTRL\n0xFF5E0030 0x00013000 CRL_APB.RPLL_CTRL\n0xFF5E00C0 0x01010802 CRL_APB.PL0_REF_CTRL\nPL1_LEASE_PREFLIGHT_PASS\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "upload-holder",
+      "source_sha256": "04e2f598c7945062fd5e6c8e8340bef2adbde42e669299ea2ea419427ac4aa29",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "set -eu; cd '/root/workspace/network10-v10.4-pl1-iopll-lease-candidate-001'; python3 -m py_compile lease_jtag_hold.py; test \"$(sha256sum lease_jtag_hold.py | cut -d' ' -f1)\" = '04e2f598c7945062fd5e6c8e8340bef2adbde42e669299ea2ea419427ac4aa29'; rm -f pl1b.ready.json pl1b.command pl1b.result.json pl1b.holder.log pl1b.pid; insmod ./fz3b_pl1_iopll_lease.ko; test -c /dev/fz3b_pl1_iopll_lease; nohup python3 -B lease_jtag_hold.py --ready pl1b.ready.json --command pl1b.command --result pl1b.result.json --timeout 900 >pl1b.holder.log 2>&1 & echo $! > pl1b.pid; for i in $(seq 1 100); do test -f pl1b.ready.json && break; kill -0 $(cat pl1b.pid); sleep 0.05; done; test -f pl1b.ready.json; kill -0 $(cat pl1b.pid); printf 'prepare='; cat /sys/kernel/debug/clk/iopll/clk_prepare_count; printf 'enable='; cat /sys/kernel/debug/clk/iopll/clk_enable_count; cat pl1b.ready.json",
+      "exit_code": 0,
+      "name": "start-holder",
+      "stderr": "",
+      "stdout": "prepare=14\nenable=10\n{\n  \"begun\": {\n    \"begin_count\": 1,\n    \"ddr_ctrl\": 16777728,\n    \"flags\": 39,\n    \"iopll_ctrl\": 88576,\n    \"iopll_rate_hz\": 1499999985,\n    \"last_error\": 0,\n    \"pl0_ref_ctrl\": 16844802,\n    \"pl1_ref_ctrl\": 335872,\n    \"pl2_ref_ctrl\": 335872,\n    \"pl3_ref_ctrl\": 335872,\n    \"pll_status\": 27,\n    \"reserved0\": 0,\n    \"reserved1\": 0,\n    \"rpll_ctrl\": 77824,\n    \"version\": 2\n  },\n  \"finalize_requested\": false,\n  \"opened\": {\n    \"begin_count\": 0,\n    \"ddr_ctrl\": 16777728,\n    \"flags\": 35,\n    \"iopll_ctrl\": 88576,\n    \"iopll_rate_hz\": 1499999985,\n    \"last_error\": 0,\n    \"pl0_ref_ctrl\": 16844802,\n    \"pl1_ref_ctrl\": 335872,\n    \"pl2_ref_ctrl\": 335872,\n    \"pl3_ref_ctrl\": 335872,\n    \"pll_status\": 27,\n    \"reserved0\": 0,\n    \"reserved1\": 0,\n    \"rpll_ctrl\": 77824,\n    \"version\": 2\n  },\n  \"pass\": false,\n  \"schema\": \"fz3b-pl1-iopll-jtag-hold-v1\",\n  \"status\": \"READY_FOR_PL1_JTAG_TRANSACTION\",\n  \"target_pl1_ref_ctrl\": \"0x01010f00\"\n}\n"
+    },
+    {
+      "command": "set -eu; cd '/root/workspace/network10-v10.4-pl1-iopll-lease-candidate-001'; kill -0 $(cat pl1b.pid); test -e /sys/module/fz3b_pl1_iopll_lease; test \"$(cat /sys/module/fz3b_pl1_iopll_lease/refcnt)\" = 1; printf 'prepare='; cat /sys/kernel/debug/clk/iopll/clk_prepare_count; printf 'enable='; cat /sys/kernel/debug/clk/iopll/clk_enable_count; cat pl1b.ready.json",
+      "exit_code": 0,
+      "name": "verify-holder",
+      "stderr": "",
+      "stdout": "prepare=14\nenable=10\n{\n  \"begun\": {\n    \"begin_count\": 1,\n    \"ddr_ctrl\": 16777728,\n    \"flags\": 39,\n    \"iopll_ctrl\": 88576,\n    \"iopll_rate_hz\": 1499999985,\n    \"last_error\": 0,\n    \"pl0_ref_ctrl\": 16844802,\n    \"pl1_ref_ctrl\": 335872,\n    \"pl2_ref_ctrl\": 335872,\n    \"pl3_ref_ctrl\": 335872,\n    \"pll_status\": 27,\n    \"reserved0\": 0,\n    \"reserved1\": 0,\n    \"rpll_ctrl\": 77824,\n    \"version\": 2\n  },\n  \"finalize_requested\": false,\n  \"opened\": {\n    \"begin_count\": 0,\n    \"ddr_ctrl\": 16777728,\n    \"flags\": 35,\n    \"iopll_ctrl\": 88576,\n    \"iopll_rate_hz\": 1499999985,\n    \"last_error\": 0,\n    \"pl0_ref_ctrl\": 16844802,\n    \"pl1_ref_ctrl\": 335872,\n    \"pl2_ref_ctrl\": 335872,\n    \"pl3_ref_ctrl\": 335872,\n    \"pll_status\": 27,\n    \"reserved0\": 0,\n    \"reserved1\": 0,\n    \"rpll_ctrl\": 77824,\n    \"version\": 2\n  },\n  \"pass\": false,\n  \"schema\": \"fz3b-pl1-iopll-jtag-hold-v1\",\n  \"status\": \"READY_FOR_PL1_JTAG_TRANSACTION\",\n  \"target_pl1_ref_ctrl\": \"0x01010f00\"\n}\n"
+    }
+  ],
+  "failure": null,
+  "finished_utc": "2026-10-08T06:14:34.260000+00:00",
+  "hardware_execution": true,
+  "held_iopll_ccf_counts": {
+    "enable": 10,
+    "prepare": 14
+  },
+  "holder_ready": {
+    "begun": {
+      "begin_count": 1,
+      "ddr_ctrl": 16777728,
+      "flags": 39,
+      "iopll_ctrl": 88576,
+      "iopll_rate_hz": 1499999985,
+      "last_error": 0,
+      "pl0_ref_ctrl": 16844802,
+      "pl1_ref_ctrl": 335872,
+      "pl2_ref_ctrl": 335872,
+      "pl3_ref_ctrl": 335872,
+      "pll_status": 27,
+      "reserved0": 0,
+      "reserved1": 0,
+      "rpll_ctrl": 77824,
+      "version": 2
+    },
+    "finalize_requested": false,
+    "opened": {
+      "begin_count": 0,
+      "ddr_ctrl": 16777728,
+      "flags": 35,
+      "iopll_ctrl": 88576,
+      "iopll_rate_hz": 1499999985,
+      "last_error": 0,
+      "pl0_ref_ctrl": 16844802,
+      "pl1_ref_ctrl": 335872,
+      "pl2_ref_ctrl": 335872,
+      "pl3_ref_ctrl": 335872,
+      "pll_status": 27,
+      "reserved0": 0,
+      "reserved1": 0,
+      "rpll_ctrl": 77824,
+      "version": 2
+    },
+    "pass": false,
+    "schema": "fz3b-pl1-iopll-jtag-hold-v1",
+    "status": "READY_FOR_PL1_JTAG_TRANSACTION",
+    "target_pl1_ref_ctrl": "0x01010f00"
+  },
+  "holder_sha256": "04e2f598c7945062fd5e6c8e8340bef2adbde42e669299ea2ea419427ac4aa29",
+  "jtag_review_receipt_sha256": "2414bfc27283f8b088b5608eb93049ab93d300df800c8472796d9bec9a9eb7ae",
+  "jtag_tcl_sha256": "37ac51a44bfea2dc90e73b02192c12444e761f0a65fd1986bbcdb079521a9e0a",
+  "jtag_transport_probe_sha256": "8ffc4c8686ee02d4efb3c1e8c9d6191c97fb61b52746d7e86810ad03ca7773b7",
+  "pass": true,
+  "schema": "fz3b-v10.4-pl1-iopll-jtag-ready-v1",
+  "started_utc": "2026-10-08T06:14:32.743264+00:00",
+  "status": "READY_FOR_PL1_JTAG_100MHZ_SHORTCYCLE",
+  "target_ko_sha256": "3e3643b8cb334b610095311f563cd9019b1acc886fd2c133efec063bf2a6f272"
+}

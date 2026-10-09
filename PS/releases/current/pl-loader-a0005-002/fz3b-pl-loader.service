@@ -1,0 +1,22 @@
+[Unit]
+Description=FZ3B A0005 FPGA Manager loader and runtime switch owner
+After=local-fs.target rc-local.service
+Wants=rc-local.service
+RequiresMountsFor=/root/workspace
+RefuseManualStop=yes
+
+[Service]
+Type=simple
+User=root
+Group=root
+UMask=0077
+RuntimeDirectory=fz3b-pl-loader
+RuntimeDirectoryMode=0700
+ExecStart=/usr/bin/python3 -B /root/workspace/network10-v10.5-pl-loader/fz3b_pl_loader.py daemon --config /root/workspace/network10-v10.5-pl-loader/config.json --auto-target a0005
+Restart=no
+KillMode=process
+TimeoutStartSec=90
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

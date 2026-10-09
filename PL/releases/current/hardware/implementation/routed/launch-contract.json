@@ -1,0 +1,50 @@
+{
+  "schema": "cnn-v10.5-a0005-fastbufgdiv-preg-route-bit-launch-v1",
+  "owner_release_token": "A0005_ROUTE_AND_BIT_APPROVED",
+  "board_accessed": false,
+  "hardware_programming_requested": false,
+  "ltx_requested": false,
+  "route_requested": true,
+  "bit_requested": true,
+  "bin_requested": true,
+  "route_mode": "nonincremental_from_frozen_preg_protected_post_physopt",
+  "route_directive": "MoreGlobalIterations",
+  "jobs": 1,
+  "threads": {
+    "general_supported": 16,
+    "synth_supported": 8,
+    "implementation_effective": 8
+  },
+  "input": {
+    "post_phys_dcp": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-fresh-place-preg-002\\half2x-fresh-rqs-post-physopt.dcp",
+    "post_phys_dcp_sha256": "0b621562e9a0e749eafffed987b13182c64948aa8a3fd6df96cc3831a9197d40",
+    "place_status_sha256": "7ddaf36f4760005417d160d634f140b09bb2809e788c68f16b6f3e688d2ad5ab",
+    "place_launch_contract_sha256": "424b8d7c70e2f14f19ca2e5238bce76eb54f5bacc708a8150f23d2a7ec256dd5",
+    "place_tcl_sha256": "cbba60358e68ff7741b1696f1140efa67964bc2bbd3eb766cc6fbea6a7d39bdc"
+  },
+  "required_gates": [
+    "16 fused units",
+    "128 fused DSP48E2 PREG=1",
+    "32 stage3 DSP DONT_TOUCH in placement input",
+    "single MMCM M12/D1/O3",
+    "sibling BUFGCE_DIV 1/2",
+    "four setup and hold classes >= 0",
+    "pulse >= 0",
+    "check_timing 0",
+    "unrouted 0",
+    "routing errors 0",
+    "Error/Critical-Warning DRC 0",
+    "no debug core",
+    "no LTX"
+  ],
+  "exactloc_applied_by_route_script": false,
+  "incremental_reference": null,
+  "source_snapshot": {
+    "runner": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-route-bit-002\\source-snapshot\\run_cnn_pipeline_v10_a0005_fastbufgdiv_preg_route_bit.ps1",
+    "runner_sha256": "0f8f90358cd33edd289c91a124abf53d090ec8a54dc56ab0b20b69130a08ea6b",
+    "tcl": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-route-bit-002\\source-snapshot\\route_bit_cnn_pipeline_v10_a0005_fastbufgdiv_preg.tcl",
+    "tcl_sha256": "b6bb399ddfd031e4b6e62f485cc5f81dc1955ed39030776a556f063df4d7cb92"
+  },
+  "allowed_existing_vivado": [],
+  "created_utc": "2026-10-08T16:17:33.6546187Z"
+}

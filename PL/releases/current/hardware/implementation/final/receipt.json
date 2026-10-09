@@ -1,0 +1,225 @@
+{
+  "schema": "cnn-v10.5-a0005-preg-routed-finalize-bit-receipt-v1",
+  "pass": true,
+  "tool_exit": 0,
+  "route_rerun": false,
+  "board_accessed": false,
+  "hardware_programmed": false,
+  "completion_token_found": true,
+  "error_marker_found": false,
+  "missing_outputs": [],
+  "ltx_count": 0,
+  "input": {
+    "routed_dcp_sha256": "fea3a0d075e243d22fa874799f93883648ec9def2797b61ff29c47dbf86b61e7",
+    "route_attempt_receipt_sha256": "1b065f48adae899ae2cdf4c4546a18dc24a18c77269f8759222b19ace52a7604",
+    "route_timing_sha256": "4b85b6b25f9847f3c709d33ae15ff8780951feb40ed7828ea21e2a888715e378",
+    "route_status_sha256": "1df17d18884b8ac79f9970c3fcd056a4a1ed37af2c2c880a162c10847506c1b6"
+  },
+  "source": {
+    "runner_sha256": "4c106becf6aee7eeb61ba660dc1e8c7fc99bbcfef6197061908ec87dffb147b1",
+    "tcl_sha256": "17d0134a15108de79ee33d89a14ca4ae4f4ca0d6926bda0f01c3fa89a3ce64af"
+  },
+  "started_utc": "2026-10-08T16:30:29.8787643Z",
+  "finished_utc": "2026-10-08T16:32:56.0947506Z",
+  "elapsed_seconds": 146.2159863,
+  "artifacts": [
+    {
+      "name": "a0005-post-route.dcp",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-route-bit-002\\a0005-post-route.dcp",
+      "bytes": 67910898,
+      "sha256": "fea3a0d075e243d22fa874799f93883648ec9def2797b61ff29c47dbf86b61e7"
+    },
+    {
+      "name": "a0005-post-route.bin",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\a0005-post-route.bin",
+      "bytes": 4329164,
+      "sha256": "504eb307f338c9151b37023342a8138189447cba47379c9f05506b2538a31c95"
+    },
+    {
+      "name": "a0005-post-route.bit",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\a0005-post-route.bit",
+      "bytes": 4329407,
+      "sha256": "a7950894715edd4e0f535b094e4a7866a220bd44f7158d153bb8e927d07bdebc"
+    },
+    {
+      "name": "a0005-route-bit-status.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\a0005-route-bit-status.rpt",
+      "bytes": 1607,
+      "sha256": "00ebb4240151e13e9c470c85a6c45abcf5971bac3cd078e05ceb1b5b48152316"
+    },
+    {
+      "name": "bus-skew-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\bus-skew-post-route.rpt",
+      "bytes": 1185,
+      "sha256": "9dfa476da58976ae73d93697da99b079233224901c40ef648be53f91475fe5ea"
+    },
+    {
+      "name": "cdc-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\cdc-post-route.rpt",
+      "bytes": 1181,
+      "sha256": "d3b7919fb5c8c53e7616b27a29e251b451ef9bc29e2a95780eb8e2a4d6054dfe"
+    },
+    {
+      "name": "check-timing-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\check-timing-post-route.rpt",
+      "bytes": 3564,
+      "sha256": "39d3ba609a60341ff0c0a99c2a7ea2ea7aa3f56f15c689520ca09a60417d44ce"
+    },
+    {
+      "name": "clock-interaction-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\clock-interaction-post-route.rpt",
+      "bytes": 2628,
+      "sha256": "9e047bd590dd926581b853d42c9a1f9a77300503fdf154e11aa67d5d2d4c84a8"
+    },
+    {
+      "name": "clocks-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\clocks-post-route.rpt",
+      "bytes": 2924,
+      "sha256": "42abd6007b8b1eae75ad82f93caeadfa97e8ec7b14ffe86f2cefd6d5e0b9e563"
+    },
+    {
+      "name": "congestion-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\congestion-post-route.rpt",
+      "bytes": 6405,
+      "sha256": "ab85ffb09b382d410dbf86f427574172300b62bb62e24e9e4e67d0af01a35757"
+    },
+    {
+      "name": "drc-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\drc-post-route.rpt",
+      "bytes": 225922,
+      "sha256": "067eb7da52dc47d153a7d1b9644eb5a078224ab4c38db1ab2d406023ed46aa47"
+    },
+    {
+      "name": "fast400-to-fast400-hold-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\fast400-to-fast400-hold-post-route.rpt",
+      "bytes": 964026,
+      "sha256": "e81a35ad5124037526fb2c24c80e779b04280004070d9206f555892fae819ea4"
+    },
+    {
+      "name": "fast400-to-fast400-setup-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\fast400-to-fast400-setup-post-route.rpt",
+      "bytes": 1261779,
+      "sha256": "4d8066e192fd947ee5824ae4cbb9ec08dc04b59dc240320d7d4217a1abb28223"
+    },
+    {
+      "name": "fast400-to-slow200-hold-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\fast400-to-slow200-hold-post-route.rpt",
+      "bytes": 959565,
+      "sha256": "c8b2cd61a1c5d4430a35c768534e048a480f78b2611b5e3134182a8f4eb24d94"
+    },
+    {
+      "name": "fast400-to-slow200-setup-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\fast400-to-slow200-setup-post-route.rpt",
+      "bytes": 988259,
+      "sha256": "45452c90e6acc1bf158b3d392ea2d605bc1d4b4bd425ed70f3026a39d2feb4d2"
+    },
+    {
+      "name": "invoke-vivado.cmd",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\invoke-vivado.cmd",
+      "bytes": 1106,
+      "sha256": "4bff70cfcf25ce363ff2a3de35c4646f4d0a5483ef4cd01c81c8efed46a1d824"
+    },
+    {
+      "name": "launch-contract.json",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\launch-contract.json",
+      "bytes": 942,
+      "sha256": "9ff6b07fe69987432bac4ae15a05e3b51690c4a1036655152aaa9e32a4690efd"
+    },
+    {
+      "name": "methodology-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\methodology-post-route.rpt",
+      "bytes": 18653,
+      "sha256": "6022a613e8f139258361d130bab5926634bc9b9b92446357f63186110c20b5ea"
+    },
+    {
+      "name": "pulse-width-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\pulse-width-post-route.rpt",
+      "bytes": 3799,
+      "sha256": "cbc859ed909a993cc36d635b6604df4c80d61f05b2a3152d32fa0f668988e2f9"
+    },
+    {
+      "name": "qor-suggestions-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\qor-suggestions-post-route.rpt",
+      "bytes": 57040,
+      "sha256": "2a7d5cf4f1c439ca2927b6caf5e6e94aed581988c7ac15d04dd1b5316d369f65"
+    },
+    {
+      "name": "route-status-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\route-status-post-route.rpt",
+      "bytes": 651,
+      "sha256": "1df17d18884b8ac79f9970c3fcd056a4a1ed37af2c2c880a162c10847506c1b6"
+    },
+    {
+      "name": "slow200-to-fast400-hold-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\slow200-to-fast400-hold-post-route.rpt",
+      "bytes": 1060687,
+      "sha256": "3d1ff6b87e19f624af361efc0e5e43e7276449ca5c4fcb576f8dbb67b2c9f2d7"
+    },
+    {
+      "name": "slow200-to-fast400-setup-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\slow200-to-fast400-setup-post-route.rpt",
+      "bytes": 1098585,
+      "sha256": "4c0bc24fac438a0e96b57e3ba8d57ebe19ac996a935ec81e8d85ef71f4415017"
+    },
+    {
+      "name": "slow200-to-slow200-hold-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\slow200-to-slow200-hold-post-route.rpt",
+      "bytes": 772099,
+      "sha256": "f0b7c564d2e01ea45bd18ca506ef813f14db46e2c925693b97fdf2e75a17837a"
+    },
+    {
+      "name": "slow200-to-slow200-setup-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\slow200-to-slow200-setup-post-route.rpt",
+      "bytes": 1249926,
+      "sha256": "5d9f9c7e4c175cb3fca64d4247005687551aa51b48c8f275e5ab313d238f96c6"
+    },
+    {
+      "name": "timing-constraints-before-route.xdc",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\timing-constraints-before-route.xdc",
+      "bytes": 4035,
+      "sha256": "b5a8bfe2dc88c50fd0c89054c4fada29227c8106ca3b25f246566019675dda27"
+    },
+    {
+      "name": "timing-constraints-post-route.xdc",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\timing-constraints-post-route.xdc",
+      "bytes": 4033,
+      "sha256": "a579b765e39ba218904d6c77674c4a31963c84d02e094cfa2a54a5bb9bfae265"
+    },
+    {
+      "name": "timing-summary-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\timing-summary-post-route.rpt",
+      "bytes": 179859,
+      "sha256": "baf98a4c0ba702149358327f7c6d2ff567ad04a97ebcdf748f14fc8ab8cd4da2"
+    },
+    {
+      "name": "utilization-hierarchical-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\utilization-hierarchical-post-route.rpt",
+      "bytes": 298327,
+      "sha256": "366217ad731f42e57b9240966546c51ce47326b31a4c134c456caae04b6778f3"
+    },
+    {
+      "name": "utilization-post-route.rpt",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\utilization-post-route.rpt",
+      "bytes": 13749,
+      "sha256": "f4c2d6c927029e174e8ec85d98f41b60ec244781b0dbc6728d77b4646855b116"
+    },
+    {
+      "name": "vivado.jou",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\vivado.jou",
+      "bytes": 2373,
+      "sha256": "a3c7c2f5a555d0a9bcff47d607420bd5d39ca85dd0de4ce645cc0f0c7026f81d"
+    },
+    {
+      "name": "vivado.log",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\vivado.log",
+      "bytes": 15900,
+      "sha256": "ffbe53b0bb00b11c2ec96246d88eb5199c857f72a49c8f77847e4b85bd63655f"
+    },
+    {
+      "name": "vivado.stdout.log",
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\vivado.stdout.log",
+      "bytes": 14300,
+      "sha256": "52145e6af1e2c09fa4564bc8c132d0070c876c6a71258c3cec399f86ce5b1983"
+    }
+  ]
+}

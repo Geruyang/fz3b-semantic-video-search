@@ -1,0 +1,45 @@
+{
+  "schema": "fz3b-v10.5-ps-loader-board-qualification-v1",
+  "status": "BOARD_VALIDATED_A0005_AUTOSTART_AND_SWITCH",
+  "pass": true,
+  "beijing_date": "2026-10-09",
+  "payload_manifest_sha256": "92d93eea6588f9ab9440d82654f53f4547e082f3adc1445a50c877040842d6c6",
+  "files": [
+    {
+      "path": "evidence/root-runtime-switch.json",
+      "bytes": 6463,
+      "sha256": "835c9b305bf5fdb6803ce98844f655287388eb8b7385c0952ee22bfa913f54d5"
+    },
+    {
+      "path": "evidence/root-reboot-autoload.json",
+      "bytes": 7427,
+      "sha256": "3c3e5821791a130d5b776d2f3a22cbd8ef8ed459b07994d8e177cf975043bb4a"
+    },
+    {
+      "path": "evidence/stable100-validation.json",
+      "bytes": 922,
+      "sha256": "8fac68d46bbfa118f90023016fef194b26d90c8ec7e66201f0e2e34c7a0e8b98"
+    },
+    {
+      "path": "evidence/stable100-result.json",
+      "bytes": 2403481,
+      "sha256": "7ecd1f54a4776b12a52e4a9fe53e2b78d778f4f25992f92751e4bd143d60b580"
+    },
+    {
+      "path": "evidence/root-final-ready.json",
+      "bytes": 3990,
+      "sha256": "16aec6caf2f4cf84707ce1e69a4840dcdf13a46ad86ede1aa1e1cc282e3a1c9e"
+    },
+    {
+      "path": "evidence/manual-manager-exact-receipt.json",
+      "bytes": 40094,
+      "sha256": "e9141a26c4706882d28f3b2c8918d478d4c588fceb1157ed96067c8e9dda8e25"
+    }
+  ],
+  "inference_fps": 4.043501591428084,
+  "auto_start_verified_by_reboot": true,
+  "physical_power_cycle_retest": false,
+  "busy_rejection_verified": true,
+  "factory_roundtrip_verified": true,
+  "final_target": "a0005"
+}

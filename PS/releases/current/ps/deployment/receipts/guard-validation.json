@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all_profiles_exact": true,
+    "board_operations": false,
+    "hardware_execution": false,
+    "protocol_reject_cases": 3,
+    "repeat_without_reset": true,
+    "six_external_axi_masters": true
+  },
+  "full_platform_receipt": {
+    "bytes": 8153,
+    "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\full-platform-receipt-v4.json",
+    "sha256": "8c7cf143f1184cfcaae20f9b968f1cb5ebeba3dc33243d12fafa748bdd916d1a"
+  },
+  "identity": {
+    "candidate_contract_sha256": "a65bdd2c50a5f1b5329350e22a67d9fb9ff4731c3517454ae524f667c5dc3f4d",
+    "candidate_source_manifest_sha256": "f8714065c490506f5e08b1738c8fe121270db2c66da9eb42d9674907102e0593",
+    "combined_parameter_manifest_sha256": "4a32c9373e783ac572a5d3374b316181a4d52ae9a92ec45f8b13d763ef028690",
+    "core_abi": "0x000A0005",
+    "core_id": "0x465A5641",
+    "guard_caps": "0x00000FFF",
+    "software_uapi": 10
+  },
+  "pass": true,
+  "rtl_receipt": {
+    "bytes": 11159,
+    "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\simulation\\cnn-v10.5-a0005-fused-rtl-full-001\\receipt.json",
+    "sha256": "73fe2ab960ec7615035e420826422711bc64d75e1b2bb829b1ad7db2c98cdfef"
+  },
+  "schema": "cnn-v10.5-a0005-derived-guard-validation-v1",
+  "status": "PASS"
+}\n

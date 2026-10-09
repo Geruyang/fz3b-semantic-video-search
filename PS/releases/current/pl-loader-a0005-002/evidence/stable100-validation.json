@@ -1,0 +1,34 @@
+{
+  "pass": true,
+  "fps": 4.043501591428084,
+  "previous_fps": 4.097891941292624,
+  "change_percent": -1.3272763324106318,
+  "result_sha256": "7ecd1f54a4776b12a52e4a9fe53e2b78d778f4f25992f92751e4bd143d60b580",
+  "real_frames": 200,
+  "measured_pairs": 100,
+  "profile_completions": 400,
+  "feature_cosine_min": 0.9990328381014083,
+  "feature_relative_l2_max": 0.04423164151826569,
+  "kernel_clock_hz": 199999998,
+  "pw_clock_hz": 399999996,
+  "cpu_frequency_khz": {
+    "cpu0": 1066666,
+    "cpu1": 1066666,
+    "cpu2": 1066666,
+    "cpu3": 1066666
+  },
+  "partition_threads": {
+    "network1-bridge": 1,
+    "network3-bridge": 1,
+    "stem-prefix": 1,
+    "suffix": 3
+  },
+  "execution_ms": 49462.080198999996,
+  "cleanup": {
+    "all_handles_freed": true,
+    "clients_closed": true,
+    "quiesce_confirmed": true,
+    "transport_closed": true
+  },
+  "fixed_two_inputs_repeated": true
+}
