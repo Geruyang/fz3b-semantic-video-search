@@ -1,0 +1,271 @@
+{
+  "checks": {
+    "board_or_pl_execution": false,
+    "four_split_models_verified": true,
+    "frozen_scale_values_only": true,
+    "hardware_reads_parameter_manifest": false,
+    "v10_parameter_repack_chain_verified": true
+  },
+  "files": {
+    "hardware/component.xml": {
+      "bytes": 726874,
+      "path": "hardware/component.xml",
+      "sha256": "230d7f914bcb5b33cc0511107664d842d5b8d8500dcad22d5d31357f389e5467"
+    },
+    "models/manifest.json": {
+      "bytes": 8658,
+      "path": "models/manifest.json",
+      "sha256": "26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed"
+    },
+    "models/network1-bridge.onnx": {
+      "bytes": 98467,
+      "path": "models/network1-bridge.onnx",
+      "sha256": "768410c97149468880dc1fd3d1d2c79b4e7460b31ce861020e7216da81968529"
+    },
+    "models/network3-bridge.onnx": {
+      "bytes": 456072,
+      "path": "models/network3-bridge.onnx",
+      "sha256": "8d13fdac02839ac10ae672fa4f081e8dfe8071e9ea42b59632df8afe2b2bc970"
+    },
+    "models/stem-prefix.onnx": {
+      "bytes": 36661,
+      "path": "models/stem-prefix.onnx",
+      "sha256": "8c1b912d148648724722ec8daa250bef8f8ac15f972a22985daab8f3d8ae30e8"
+    },
+    "models/suffix.onnx": {
+      "bytes": 46985648,
+      "path": "models/suffix.onnx",
+      "sha256": "b8a558830d31873f590f66b6fd3a8e8be269968855b9c21814129f36e4edb175"
+    },
+    "params/profile0.bin": {
+      "bytes": 4047552,
+      "path": "params/profile0.bin",
+      "sha256": "1be71ba96c31cfb1a1734c0c3a4eb32bd2fd9f519d74f7827ae2385b604bd772"
+    },
+    "params/profile1.bin": {
+      "bytes": 19105600,
+      "path": "params/profile1.bin",
+      "sha256": "2b217316c31ab2c2e5dbb7bd897a308ff07c67941607315af90fd46b7f824814"
+    },
+    "params/profile2.bin": {
+      "bytes": 703040,
+      "path": "params/profile2.bin",
+      "sha256": "8a9718b15e68d6857667d24c4d3c3c67201baaf2d3a560b657f27c358f9cd082"
+    },
+    "platform-contract/fzv10_ddr_guard.sv": {
+      "bytes": 16179,
+      "path": "platform-contract/fzv10_ddr_guard.sv",
+      "sha256": "26c09d1567f6392cd1f201af3fcc86ec4e162627e3df9b6b03b622bfc6d37dcb"
+    },
+    "platform-contract/fzv10_ddr_guard_bd.sv": {
+      "bytes": 5017,
+      "path": "platform-contract/fzv10_ddr_guard_bd.sv",
+      "sha256": "9144914c74860d79d434b073c22beaacbd2a904a98aa03d709e16cb860d68f65"
+    },
+    "platform-contract/network10_v10_driver.c": {
+      "bytes": 30275,
+      "path": "platform-contract/network10_v10_driver.c",
+      "sha256": "2b7498b54b20b9738d4f17f48be3615c581c760271f8eb84d5f935fb58013f9f"
+    },
+    "platform-contract/network10_v10_regs.h": {
+      "bytes": 4349,
+      "path": "platform-contract/network10_v10_regs.h",
+      "sha256": "1779a0ce079157cb909a4274cb6c09b9f98b8a0d3068fec12506a46966278725"
+    },
+    "platform-contract/network10_v10_uapi.h": {
+      "bytes": 4581,
+      "path": "platform-contract/network10_v10_uapi.h",
+      "sha256": "7ed58ffa5487dd030c7ccbf23c47097ea84b02a207cddf48fc8bb6180b4e2b9e"
+    },
+    "provenance/v10-fixture-manifest.json": {
+      "bytes": 13061,
+      "path": "provenance/v10-fixture-manifest.json",
+      "sha256": "83df8803b7a8eb08795c6c19d89538637f850df9044c407b90814d725f0079c4"
+    },
+    "provenance/v5-bundle-manifest.json": {
+      "bytes": 14297,
+      "path": "provenance/v5-bundle-manifest.json",
+      "sha256": "400ecf86365f5e387ce62d350b6e4f24ab34b1dd5d903142c7a139515e19f18a"
+    },
+    "provenance/v5-scale-manifest.json": {
+      "bytes": 19953,
+      "path": "provenance/v5-scale-manifest.json",
+      "sha256": "59c4dde6427a95d7256800f861c76ba14a558029ac6eaec479afae31dc83db29"
+    }
+  },
+  "identity": {
+    "abi": "0x000A0001",
+    "core": "0x465A5641",
+    "flags": 0,
+    "software_label": "sw10.1",
+    "software_uapi": 10
+  },
+  "models": {
+    "files": {
+      "network1-bridge": {
+        "bytes": 98467,
+        "path": "models/network1-bridge.onnx",
+        "sha256": "768410c97149468880dc1fd3d1d2c79b4e7460b31ce861020e7216da81968529"
+      },
+      "network3-bridge": {
+        "bytes": 456072,
+        "path": "models/network3-bridge.onnx",
+        "sha256": "8d13fdac02839ac10ae672fa4f081e8dfe8071e9ea42b59632df8afe2b2bc970"
+      },
+      "stem-prefix": {
+        "bytes": 36661,
+        "path": "models/stem-prefix.onnx",
+        "sha256": "8c1b912d148648724722ec8daa250bef8f8ac15f972a22985daab8f3d8ae30e8"
+      },
+      "suffix": {
+        "bytes": 46985648,
+        "path": "models/suffix.onnx",
+        "sha256": "b8a558830d31873f590f66b6fd3a8e8be269968855b9c21814129f36e4edb175"
+      }
+    },
+    "manifest": "models/manifest.json",
+    "manifest_sha256": "26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed"
+  },
+  "packaged_hardware_identity": {
+    "binding_scope": "release manifest binds packaged IP metadata; hardware has no parameter-manifest hash register",
+    "component_xml": {
+      "bytes": 726874,
+      "path": "hardware/component.xml",
+      "sha256": "230d7f914bcb5b33cc0511107664d842d5b8d8500dcad22d5d31357f389e5467"
+    }
+  },
+  "parameter_identity": {
+    "sha256": "83df8803b7a8eb08795c6c19d89538637f850df9044c407b90814d725f0079c4",
+    "software_driver_words_be32": [
+      2212464643,
+      3081300744,
+      2036100121,
+      3633657955,
+      2139426297,
+      72106107,
+      2424393074,
+      1593866692
+    ],
+    "source_manifest": "provenance/v10-fixture-manifest.json"
+  },
+  "platform_contract": {
+    "expected": {
+      "core_abi": "0x000A0001",
+      "core_id": "0x465A5641",
+      "guard_caps": "0x000007FF",
+      "software_uapi": 10
+    },
+    "offline_checks": [
+      "driver UAPI and register constants match release identity",
+      "guard and guard-BD default parameters match release identity",
+      "driver source, guard sources, component.xml and parameter manifest are SHA-bound"
+    ],
+    "requires_board_execution": [
+      "guard ID/ABI/CAPS register readback from the deployed bitstream",
+      "driver GET_IDENTITY response and software parameter words",
+      "six-master quiesce/reset/ACK behavior and paired inference"
+    ],
+    "sources": {
+      "driver_regs": {
+        "bytes": 4349,
+        "path": "platform-contract/network10_v10_regs.h",
+        "sha256": "1779a0ce079157cb909a4274cb6c09b9f98b8a0d3068fec12506a46966278725"
+      },
+      "driver_source": {
+        "bytes": 30275,
+        "path": "platform-contract/network10_v10_driver.c",
+        "sha256": "2b7498b54b20b9738d4f17f48be3615c581c760271f8eb84d5f935fb58013f9f"
+      },
+      "driver_uapi": {
+        "bytes": 4581,
+        "path": "platform-contract/network10_v10_uapi.h",
+        "sha256": "7ed58ffa5487dd030c7ccbf23c47097ea84b02a207cddf48fc8bb6180b4e2b9e"
+      },
+      "guard_bd": {
+        "bytes": 5017,
+        "path": "platform-contract/fzv10_ddr_guard_bd.sv",
+        "sha256": "9144914c74860d79d434b073c22beaacbd2a904a98aa03d709e16cb860d68f65"
+      },
+      "guard_rtl": {
+        "bytes": 16179,
+        "path": "platform-contract/fzv10_ddr_guard.sv",
+        "sha256": "26c09d1567f6392cd1f201af3fcc86ec4e162627e3df9b6b03b622bfc6d37dcb"
+      }
+    }
+  },
+  "profiles": {
+    "0": {
+      "block_count": 12,
+      "input_scale": 9.687628574169352e-05,
+      "output_scale": 8.010273432023655e-06,
+      "parameter_file": {
+        "bytes": 4047552,
+        "path": "params/profile0.bin",
+        "sha256": "1be71ba96c31cfb1a1734c0c3a4eb32bd2fd9f519d74f7827ae2385b604bd772"
+      },
+      "profile": 0,
+      "scale_provenance": {
+        "input": "per_block[0].scales.input",
+        "manifest": "provenance/v5-scale-manifest.json",
+        "output": "per_block[-1].scales.add",
+        "profile": "0"
+      }
+    },
+    "1": {
+      "block_count": 20,
+      "input_scale": 7.726196825520674e-05,
+      "output_scale": 2.462270113096634e-05,
+      "parameter_file": {
+        "bytes": 19105600,
+        "path": "params/profile1.bin",
+        "sha256": "2b217316c31ab2c2e5dbb7bd897a308ff07c67941607315af90fd46b7f824814"
+      },
+      "profile": 1,
+      "scale_provenance": {
+        "input": "per_block[0].scales.input",
+        "manifest": "provenance/v5-scale-manifest.json",
+        "output": "per_block[-1].scales.add",
+        "profile": "1"
+      }
+    },
+    "2": {
+      "block_count": 4,
+      "input_scale": 0.00016495765799892816,
+      "output_scale": 8.370727368858105e-05,
+      "parameter_file": {
+        "bytes": 703040,
+        "path": "params/profile2.bin",
+        "sha256": "8a9718b15e68d6857667d24c4d3c3c67201baaf2d3a560b657f27c358f9cd082"
+      },
+      "profile": 2,
+      "scale_provenance": {
+        "input": "per_block[0].scales.input",
+        "manifest": "provenance/v5-scale-manifest.json",
+        "output": "per_block[-1].scales.add",
+        "profile": "2"
+      }
+    }
+  },
+  "schedule": {
+    "normal_profiles": [
+      2,
+      0,
+      1
+    ],
+    "ps_partitions": [
+      "stem-prefix",
+      "network1-bridge",
+      "network3-bridge",
+      "suffix"
+    ],
+    "shadow_counts_as_real_frame": false,
+    "single_frame": "mirror A into B immediately; discard shadow output"
+  },
+  "schema": "cnn-pipeline-v10.1-release-bundle-v2",
+  "source_manifests": {
+    "v10_fixture": "83df8803b7a8eb08795c6c19d89538637f850df9044c407b90814d725f0079c4",
+    "v5_parameter": "400ecf86365f5e387ce62d350b6e4f24ab34b1dd5d903142c7a139515e19f18a",
+    "v5_scale": "59c4dde6427a95d7256800f861c76ba14a558029ac6eaec479afae31dc83db29",
+    "v5_split_model": "26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed"
+  }
+}

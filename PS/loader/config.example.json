@@ -11,20 +11,20 @@
       "sha256": "bc933ce55458343c7231ac85ff5e11bae9e8362adc4b43d2e90a908121d0e312"
     },
     "a0005_firmware": {
-      "bytes": 4329164,
-      "firmware_name": "network10-v10.5/a0005-post-route.bit.bin",
-      "path": "/lib/firmware/network10-v10.5/a0005-post-route.bit.bin",
-      "sha256": "ab2397203562cf9c5bcbe19437d5bbc440055a1277de7dc756659a3e5e40a852"
+      "bytes": 5568668,
+      "firmware_name": "rtl-optim-20261010-candidate008/cnn_rtl.pcap.bin",
+      "path": "/lib/firmware/rtl-optim-20261010-candidate008/cnn_rtl.pcap.bin",
+      "sha256": "76dff052e3648a4634585bbed186cfa202b434c66c996a3d2b3349fa3b908c02"
     },
     "a0005_native_bin": {
-      "bytes": 4329164,
-      "path": "/root/workspace/network10-v10.5-pl-loader/a0005-post-route.bin",
-      "sha256": "504eb307f338c9151b37023342a8138189447cba47379c9f05506b2538a31c95"
+      "bytes": 5568668,
+      "path": "/root/rtl_optim-board-20261010/candidate008/cnn_rtl.native.bin",
+      "sha256": "bf788681c0e990c337b07ee949bec735dd81224bcabc4d5948d03221e217d439"
     },
     "a0005_source_bit": {
-      "bytes": 4329407,
-      "path": "/root/workspace/network10-v10.5-pl-loader/a0005-post-route.bit",
-      "sha256": "a7950894715edd4e0f535b094e4a7866a220bd44f7158d153bb8e927d07bdebc"
+      "bytes": 5568891,
+      "path": "/root/rtl_optim-board-20261010/candidate008/cnn_rtl.bit",
+      "sha256": "78038efd603cde7763a1b3ff4581b799cabd1a11395db2d78af33b7c81d46726"
     },
     "admission": {
       "bytes": 1452,

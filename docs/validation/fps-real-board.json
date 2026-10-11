@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "real_camera_results": 38,
+  "stopped": true,
+  "window": 10,
+  "checks": [
+    {
+      "frames": 14,
+      "fps": 3.9905467650364495,
+      "expected": 3.9905467650364495,
+      "samples": 10
+    },
+    {
+      "frames": 20,
+      "fps": 4.254235287455386,
+      "expected": 4.254235287455386,
+      "samples": 10
+    },
+    {
+      "frames": 24,
+      "fps": 4.272775266830662,
+      "expected": 4.272775266830662,
+      "samples": 10
+    },
+    {
+      "frames": 28,
+      "fps": 3.9530836708313233,
+      "expected": 3.9530836708313233,
+      "samples": 10
+    },
+    {
+      "frames": 32,
+      "fps": 4.2009832155038636,
+      "expected": 4.2009832155038636,
+      "samples": 10
+    },
+    {
+      "frames": 36,
+      "fps": 4.240190506467696,
+      "expected": 4.240190506467696,
+      "samples": 10
+    },
+    {
+      "frames": 38,
+      "fps": 4.662986380418566,
+      "expected": 4.662986380418566,
+      "samples": 10
+    }
+  ],
+  "method": "ten completion intervals; eleven timestamp boundaries",
+  "purpose": "throughput timing only; unit embedding is not an accuracy test"
+}

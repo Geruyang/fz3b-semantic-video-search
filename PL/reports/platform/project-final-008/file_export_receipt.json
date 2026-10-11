@@ -1,0 +1,33 @@
+{
+  "impl_run": {
+    "progress": "100%",
+    "status": "write_bitstream Complete!"
+  },
+  "route_receipt_sha256": "05e612082e95a2b5da5e732f51637a8a3cb572a400c6918c46b8c3f7faf1603d",
+  "project_relative": "project-final-008",
+  "source_snapshot_sha256": "9e27dbfae359808d93e45be0d7f6081fb810f97b26464dfe1df8347c5f101d3e",
+  "artifacts": [
+    {
+      "sha256": "78038efd603cde7763a1b3ff4581b799cabd1a11395db2d78af33b7c81d46726",
+      "bytes": 5568891,
+      "path": "reports/platform/project-final-008/cnn_rtl.bit"
+    },
+    {
+      "sha256": "e205d4cdc24afee119f6106895a497d701d54cece82649ca4f13efb3562cd2e6",
+      "bytes": 2464512,
+      "path": "reports/platform/project-final-008/cnn_rtl.xsa"
+    },
+    {
+      "sha256": "b22fc3d816444814a7729dc65489d63631db3d0903a6a6cc112774aba9939435",
+      "bytes": 19982,
+      "path": "reports/platform/project-final-008/build.tcl.executed.tcl"
+    },
+    {
+      "sha256": "96e057571d3173210f843b81191ae6009e79bd5b491ad70fd8d294d6b2b7c129",
+      "bytes": 369105,
+      "path": "reports/platform/project-final-008/build.tcl.log"
+    }
+  ],
+  "xsa_embedded_bit_matches_exported_bit": true,
+  "status": "FILE_EXPORTS_PASS"
+}

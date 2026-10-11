@@ -16,6 +16,7 @@ from .text_encoder import TextEncoder, PRESETS, parse_prompts
 from .transports import Link
 from .state import normalized
 from .translation import PromptTranslator,same_intent
+from .threshold_control import SimilarityStepper
 
 
 def resource_root():
@@ -99,12 +100,9 @@ class Window(QMainWindow):
         self.address = QLineEdit(self.config.get('host', '192.168.1.254'))
         self.address.setPlaceholderText('板卡 IP / COM6')
         self.mode.currentIndexChanged.connect(lambda i: self.address.setText('COM6' if i else self.config.get('host', '192.168.1.254')))
-        self.token = QLineEdit(self.config.get('token', ''))
-        self.token.setEchoMode(QLineEdit.Password)
-        self.token.setPlaceholderText('连接令牌')
         self.connect_button = QPushButton('连接板卡')
         self.connect_button.clicked.connect(self.connect_board)
-        for label, widget in [('连接', self.mode), ('地址', self.address), ('令牌', self.token)]:
+        for label, widget in [('连接', self.mode), ('地址', self.address)]:
             connection.addWidget(QLabel(label))
             connection.addWidget(widget)
         connection.addWidget(self.connect_button)
@@ -131,7 +129,7 @@ class Window(QMainWindow):
         self.overlay.resize(490, 60)
         v.addWidget(self.video, 1)
         bar = QHBoxLayout()
-        self.metrics = QLabel('预览 — FPS   /   推理 — FPS   /   结果年龄 —')
+        self.metrics = QLabel('视频 — FPS · 推理 — FPS')
         bar.addWidget(self.metrics)
         bar.addStretch()
         save = QPushButton('保存当前画面')
@@ -211,22 +209,17 @@ class Window(QMainWindow):
         controls.addWidget(QLabel('A53 共享频率'), 0, 0)
         controls.addWidget(self.cpu, 0, 1)
         controls.addWidget(cpu_apply, 0, 2)
-        self.threshold = QDoubleSpinBox()
+        self.threshold = SimilarityStepper(self)
         self.threshold.setRange(-1, 1)
         self.threshold.setSingleStep(.01)
-        self.threshold.setValue(.2)
-        controls.addWidget(QLabel('匹配阈值'), 1, 0)
-        controls.addWidget(self.threshold, 1, 1)
-        self.inflight = QSpinBox()
+        self.threshold.setValue(.17)
+        self.threshold.hide()
+        self.inflight = QSpinBox(self)
         self.inflight.setRange(1, 4)
         self.inflight.setValue(4)
-        controls.addWidget(QLabel('推理在途对数'), 2, 0)
-        controls.addWidget(self.inflight, 2, 1)
-        apply = QPushButton('应用参数')
-        apply.clicked.connect(lambda: self.request({'op': 'settings', 'threshold': self.threshold.value(), 'max_in_flight': self.inflight.value()}))
-        controls.addWidget(apply, 2, 2)
+        self.inflight.hide()
         d.addLayout(controls)
-        info = QLabel('调频自动暂停/排空，核验后恢复；改变在途数需先停止。\n600/800/1000/1200MHz四档，四个A53共享频率。\n阈值为工程设置，尚未做自然样本准确率校准。')
+        info = QLabel('修改频率时会先暂停推理，完成后自动恢复。')
         self.cpu_hint=info
         info.setWordWrap(True)
         d.addWidget(info)
@@ -262,10 +255,7 @@ class Window(QMainWindow):
             self.video.setText('连接已断开')
             self.overlay.setText('连接已断开 · 推理结果停止更新')
             self.current_result = None
-            self.metrics.setText('预览 — FPS   /   推理 — FPS   /   结果年龄 —')
-            return
-        if len(self.token.text().strip()) < 24:
-            self.error('请填入部署时生成的连接令牌')
+            self.metrics.setText('视频 — FPS · 推理 — FPS')
             return
         self.current_result = None
         self.preview_stamp = None
@@ -274,9 +264,9 @@ class Window(QMainWindow):
         self.link = Link(lambda m: self.events.message.emit(dict(m, _connection_epoch=epoch)), self.events.error.emit)
         if self.mode.currentIndex():
             self.notice.setText('USB-UART：图像为限速缩略图；推理/状态独立回传')
-            self.link.connect_serial(self.address.text().strip(), self.token.text().strip())
+            self.link.connect_serial(self.address.text().strip())
         else:
-            self.link.connect_tcp(self.address.text().strip(), self.token.text().strip())
+            self.link.connect_tcp(self.address.text().strip())
         self.connection_status.setText('正在连接…')
         self.connect_button.setText('断开连接')
 
@@ -380,11 +370,13 @@ class Window(QMainWindow):
         self.gallery_query.clear()
         for item in message['items']:
             self.gallery_query.addItem(item['label'], item['id'])
-        if self.request(message):
+        submitted=self.request(message)
+        if submitted:
             self.query_status.setText('描述已编码，等待板端确认…')
         else:
             self.pending_start = False
             self.query_status.setText('描述已在本地编码，尚未上传到板卡')
+        return submitted
 
     def encoding_error(self, text):
         self.pending_start = False
@@ -447,6 +439,11 @@ class Window(QMainWindow):
             for item in message.get('ranking', []):
                 self.ranking.addItem('%s   %.3f\n%s' % (item['label'], item['score'], item['text']))
 
+    @staticmethod
+    def inference_fps_text(inference):
+        if inference.get('state')=='RUNNING' and inference.get('fps_samples',10)<10:return '采样中'
+        return '%.2f FPS'%inference.get('fps',0)
+
     def tick(self):
         if not self.link:
             return
@@ -486,7 +483,7 @@ class Window(QMainWindow):
             fps = (self.displayed - self.fps_count) / (now - self.fps_at)
             self.fps_count, self.fps_at = self.displayed, now
             infer = self.status_data.get('inference', {})
-            self.metrics.setText('预览 %.1f FPS   /   推理 %.2f FPS   /   结果年龄 %s' % (fps, infer.get('fps', 0), '%.1f s' % age if age is not None else '—'))
+            self.metrics.setText('视频 %.1f FPS · 推理 %s' % (fps, self.inference_fps_text(infer)))
 
     def save_frame(self):
         if not self.link or not self.link.state.preview:
@@ -553,8 +550,8 @@ def main():
             encoder=TextEncoder(window.contract,str(window.model_root));features,identity=encoder.encode(items)
             archive=SemanticArchive(directory,items,1,threshold=-1)
             data=io.BytesIO();Image.new('RGB',(64,64),'red').save(data,'JPEG');jpeg=data.getvalue()
-            for i in range(3):archive.feed_frame(dict(frame_id=i,capture_monotonic=100+i*.1,width=64,height=64),jpeg)
-            archive.feed_result(dict(frame_id=1,capture_monotonic=100.1,query_revision=1,ranking=[dict(id='0',label='red',score=.5)]))
+            for i in range(3):archive.feed_frame(dict(frame_id=i,capture_monotonic=100+i*.25,width=64,height=64),jpeg)
+            for i in range(3):archive.feed_result(dict(frame_id=i,capture_monotonic=100+i*.25,query_revision=1,ranking=[dict(id='0',label='red',score=.5)]))
             archive.finish_at(2)
             if not archive.closed.wait(10):raise TimeoutError('packaged archive did not close')
             report=json.loads((directory/'session.json').read_text(encoding='utf-8'));assert report['ok'],report

@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "previous_version": "1.0",
+  "previous_commit": "7aa5cbeec7d6a2d09afa60dcbdf7bb1bd646abcb",
+  "branch": "main",
+  "tag": "2.0",
+  "platform": "RTL008 / A0005-compatible ABI",
+  "application": "semantic-video-continuity + recent-ten-image FPS",
+  "scope": "Current PS/HOST, final handwritten RTL/project inputs and compact evidence",
+  "external_resources": [
+    "model weights",
+    "learned binary parameters",
+    "native runtime libraries",
+    "compiled client/FPGA artifacts"
+  ]
+}

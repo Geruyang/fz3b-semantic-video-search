@@ -1,0 +1,56 @@
+{
+  "allow_spinning": 0,
+  "candidate_sha256": "a63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac",
+  "formal_timing": false,
+  "iterations": 3,
+  "max_relative_l2": 0.04562705777330138,
+  "min_cosine": 0.9990173073724032,
+  "model_manifest_sha256": "26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed",
+  "optimized_model": "/root/network10-v10.1-suffix11-selection-20261007/results/suffix-candidate-optimized.onnx",
+  "optimized_model_sha256": "6acad76423f9326a5de9c0b625630f0319039c7d3c9fbca7af0e10491fa75750",
+  "preallocate_outputs": 0,
+  "profile_file": "/root/network10-v10.1-suffix11-selection-20261007/results/suffix-candidate-ort-profile_2021-09-01_00-10-51.json",
+  "profile_sha256": "b12a13195d046e7a7f454466e50b55d9fc1091c7c1b5eaace53070fa0804ad87",
+  "samples": [
+    {
+      "call_wall_ms": 219.42843399847334,
+      "case": 0,
+      "iteration": 0,
+      "metrics": {
+        "cosine": 0.9990173073724032,
+        "max_abs": 0.006714202463626862,
+        "relative_l2": 0.04562705777330138
+      },
+      "output_sha256": "406e806a26e63fc82aaf55476e46b44f084e591060fb79699322985921eb9f08",
+      "run_ms": 215.94
+    },
+    {
+      "call_wall_ms": 218.3826529999351,
+      "case": 1,
+      "iteration": 1,
+      "metrics": {
+        "cosine": 0.9991392651026418,
+        "max_abs": 0.006411470472812653,
+        "relative_l2": 0.04393718759133975
+      },
+      "output_sha256": "2a545509e7c003632dab5734a7b49d949a58afe965dc85700478496445471464",
+      "run_ms": 215.13
+    },
+    {
+      "call_wall_ms": 217.68211700145912,
+      "case": 0,
+      "iteration": 2,
+      "metrics": {
+        "cosine": 0.9990173073724032,
+        "max_abs": 0.006714202463626862,
+        "relative_l2": 0.04562705777330138
+      },
+      "output_sha256": "406e806a26e63fc82aaf55476e46b44f084e591060fb79699322985921eb9f08",
+      "run_ms": 214.441
+    }
+  ],
+  "schema": "cnn-v10.1-suffix-candidate-ort-profile-diagnostic-v1",
+  "source_model_sha256": "b8a558830d31873f590f66b6fd3a8e8be269968855b9c21814129f36e4edb175",
+  "status": "PASS_CANDIDATE_PROFILE_AND_ENGINEERING_ERROR_GATE",
+  "threads": 3
+}

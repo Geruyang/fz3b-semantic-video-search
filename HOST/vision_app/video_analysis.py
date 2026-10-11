@@ -9,6 +9,8 @@ import uuid
 import numpy as np
 from .protocol import Decoder,JSON,INPUT_FRAME,encode_message,pack_image
 from .semantic_media import build_segments,export_segments
+from .temporal_segments import segment_report
+from .recent_fps import RecentFps
 
 def video_info(path):
     import av
@@ -17,12 +19,12 @@ def video_info(path):
         duration=float(stream.duration*stream.time_base) if stream.duration else float(container.duration or 0)/1000000
         return dict(width=stream.width,height=stream.height,frames=stream.frames,duration_s=duration,fps=float(stream.average_rate or 25))
 
-def analyze_video(path,host,token,items,features,identity,directory,threshold=.25,on_progress=None,on_frame=None,cancel=None):
+def analyze_video(path,host,items,features,identity,directory,threshold=.25,on_progress=None,on_frame=None,cancel=None,continuity=True):
     import av
     directory=Path(directory);directory.mkdir(parents=True,exist_ok=False);(directory/'matches').mkdir()
     job_id=uuid.uuid4().hex;decoder=Decoder();pending={};rows=[];sent=received=0
     ended=False;begun=False;report={'ok':False,'source':str(Path(path).resolve()),'job_id':job_id,'items':items,'threshold':threshold}
-    started=time.monotonic();last_event=started;origin=None;first_result_at=None
+    started=time.monotonic();last_event=started;origin=None;recent_fps=RecentFps()
     with socket.create_connection((host,8765),timeout=10) as sock,av.open(str(path)) as container,(directory/'results.jsonl').open('w',encoding='utf-8') as log:
         sock.settimeout(.1)
         def send(value):sock.sendall(encode_message(JSON,value))
@@ -40,7 +42,7 @@ def analyze_video(path,host,token,items,features,identity,directory,threshold=.2
                         return value['result']
             raise TimeoutError('板端任务确认超时')
         try:
-            send(dict(op='hello',token=token));hello=None;end=time.monotonic()+10
+            send(dict(op='hello'));hello=None;end=time.monotonic()+10
             while hello is None and time.monotonic()<end:
                 for value in messages():
                     if value.get('type')=='hello':hello=value
@@ -73,14 +75,14 @@ def analyze_video(path,host,token,items,features,identity,directory,threshold=.2
                     fid=value['frame_id']
                     if fid!=received or fid not in pending:raise RuntimeError('视频结果重复、缺失或乱序')
                     stamp,jpeg=pending.pop(fid);received+=1;last_event=time.monotonic()
-                    if first_result_at is None:first_result_at=last_event
+                    recent_fps.add(value['completed_monotonic'])
                     if abs(value['video_time_s']-stamp)>1e-6:raise RuntimeError('视频帧时间身份不一致')
                     row=dict(frame_id=fid,time_s=stamp,ranking=value['ranking'],score_engine=value.get('score_engine'))
                     rows.append(row);log.write(json.dumps(row,ensure_ascii=False)+'\n');log.flush()
                     for hit in row['ranking']:
                         if hit['score']>=threshold:(directory/'matches'/('%010d-q%s.jpg'%(fid,hit['id']))).write_bytes(jpeg)
                     if on_frame:on_frame(jpeg)
-                    if on_progress:on_progress(dict(sent=sent,completed=received,source_time_s=stamp,duration_s=duration,source_fps=info['fps'],fps=(received-1)/max(last_event-first_result_at,.001) if received>1 else 0,ended=ended))
+                    if on_progress:on_progress(dict(sent=sent,completed=received,source_time_s=stamp,duration_s=duration,source_fps=info['fps'],fps=recent_fps.value(),fps_window=10,fps_samples=recent_fps.samples,ended=ended))
                 if time.monotonic()-last_event>180:raise TimeoutError('板端180秒未返回视频结果')
             # All frames acknowledged, then wait for normal hardware cleanup.
             end=time.monotonic()+40;stopped=False
@@ -92,11 +94,11 @@ def analyze_video(path,host,token,items,features,identity,directory,threshold=.2
                         if state=='STOPPED':stopped=True;break
                 if stopped:break
             if not stopped:raise TimeoutError('板端模型正常排空未确认')
-            segments=build_segments(rows,threshold,duration=max(duration,rows[-1]['time_s']+.04) if rows else duration)
+            intervals=segment_report(rows,threshold,duration=max(duration,rows[-1]['time_s']+.04) if rows else duration,continuity=continuity)
             if not sent or received!=sent:raise RuntimeError('视频未完整处理')
-            report.update(ok=True,frames=sent,completed=received,segments=segments,elapsed_s=time.monotonic()-started)
+            report.update(ok=True,frames=sent,completed=received,elapsed_s=time.monotonic()-started,**intervals)
         except BaseException as exc:
-            report.update(error=type(exc).__name__+': '+str(exc),frames=sent,completed=received,segments=build_segments(rows,threshold))
+            report.update(error=type(exc).__name__+': '+str(exc),frames=sent,completed=received,**segment_report(rows,threshold,continuity=continuity))
             if begun:
                 try:send(dict(op='upload_cancel',job_id=job_id,request_id='cancel'))
                 except OSError:pass
@@ -104,4 +106,5 @@ def analyze_video(path,host,token,items,features,identity,directory,threshold=.2
         finally:
             (directory/'session.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
             (directory/'segments.json').write_text(json.dumps(report.get('segments',[]),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+            (directory/'candidates.json').write_text(json.dumps(report.get('candidates',[]),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return dict(report,path=str(directory))

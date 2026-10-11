@@ -1,0 +1,324 @@
+{
+  "abi": {
+    "flags": 0,
+    "magic": "FZV5",
+    "version": 327680
+  },
+  "checks": {
+    "board_or_pl_execution": false,
+    "parameter_files_have_no_headers": true,
+    "profiles": [
+      "0",
+      "1",
+      "2"
+    ],
+    "single_constant_stride_per_profile": true
+  },
+  "files": {
+    "params-profile0.bin": {
+      "bytes": 4307136,
+      "sha256": "503872320ebaec6660a71c87c0ef1d22344119879673980e12c850a764f8a35c"
+    },
+    "params-profile1.bin": {
+      "bytes": 19538240,
+      "sha256": "03ffd9ad560fb6ab86c0df197eae692a54bf3e6fccb441c54166ea7341a649d4"
+    },
+    "params-profile2.bin": {
+      "bytes": 780352,
+      "sha256": "112f6d0bf48d6bd2d06e59c3965126ce426c009f1604c258b3f991afebd1b8d4"
+    },
+    "scale-manifest.json": {
+      "bytes": 19953,
+      "sha256": "59c4dde6427a95d7256800f861c76ba14a558029ac6eaec479afae31dc83db29"
+    }
+  },
+  "profiles": {
+    "0": {
+      "activation": "little-endian signed INT16 HCW, two slots",
+      "block_count": 12,
+      "block_parameter_sources": [
+        {
+          "bytes": 358928,
+          "index": 0,
+          "sha256": "94b47b1ac3d38b154e1ae32e41df2a8d58a3013384657d28bb5fe8cba06b24ef",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-00.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 1,
+          "sha256": "ac0dae09bb4ef2f19579d5f7b9474d506a09a9faed6d51828aa5f9ba6364eb34",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-01.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 2,
+          "sha256": "032659132947e72cad32abdfdf76056a544b961e8c3a071a29a589091a08c3aa",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-02.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 3,
+          "sha256": "7b9311472cad0e1debed1e277f5f3771e835a5b7351a14651fc8f45854581887",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-03.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 4,
+          "sha256": "b230379bb0edd03c5b431fe170ab32476495f695331152c5b31388687560447f",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-04.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 5,
+          "sha256": "b708ead3a74daff1dc7c020f6166569715337c6adb4934a2de874a9f84d48e82",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-05.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 6,
+          "sha256": "acebba9af910dd99863b485ad284763aa63a6e816d298b2ddedbd62762f0cd22",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-06.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 7,
+          "sha256": "a8376d545084a860cdf256e58667ffd8b9ff0e0bdb361dc7c55b95026bf63dda",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-07.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 8,
+          "sha256": "db4799ea830302e5e5a7847628ddfd0f6039d1e576015b61af25672ecccac05f",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-08.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 9,
+          "sha256": "e72292ad4e9575324d3237bf5722ba45e84724d8bae9bd1a1aa5aab06bc3f06d",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-09.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 10,
+          "sha256": "1a991f0ae53c979c09b38b6f5b64a6cfaba2b32a43ef3cf7995b43ed5029157b",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-10.bin"
+        },
+        {
+          "bytes": 358928,
+          "index": 11,
+          "sha256": "e16405d61a0dc55a43d106ff7d309be50fe8033959ca5d4458ba81b3748a4e5d",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile0/block-11.bin"
+        }
+      ],
+      "block_stride_bytes": 358928,
+      "channels": 128,
+      "network": "network2",
+      "parameter_file": {
+        "bytes": 4307136,
+        "path": "params-profile0.bin",
+        "sha256": "503872320ebaec6660a71c87c0ef1d22344119879673980e12c850a764f8a35c"
+      },
+      "parameter_words_per_block": 22433,
+      "profile": 0,
+      "scale_provenance": "network2-int-oracle-board-ps-001 per-block manifests; calibrated from BOARD_PS traces, oracle is host recomputation",
+      "slot_bytes": 262144,
+      "width": 32
+    },
+    "1": {
+      "activation": "little-endian signed INT16 HCW, two slots",
+      "block_count": 20,
+      "block_parameter_sources": [
+        {
+          "bytes": 976912,
+          "index": 0,
+          "sha256": "ab3bac86d09e576b957cf0a4d03bc1304443e66fc33a284c27080b49910e13b8",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-00.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 1,
+          "sha256": "0054e5fc1721ef3c7b4382b236ae572558fa548df5e066b8f1840a11afe9a170",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-01.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 2,
+          "sha256": "4fcc335880da84a14b0ef562005a5dfb450aff87d2bdeb3541dc524b6d49a3a4",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-02.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 3,
+          "sha256": "58da3eb77bc31208a468f70ed44350a9155e4049b386d191f9862daa859c57ce",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-03.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 4,
+          "sha256": "40797d535673c85e1d8f9d0c77b900a71609f90f1ad59b994ef816f736b2ae23",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-04.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 5,
+          "sha256": "da18a1d25f1cb3a4f842ae265c2130e4d0d9eba72da1b342b64a8b9b4567d38d",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-05.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 6,
+          "sha256": "d6bf57e1a9cb306312772a710414ed082a499987c089451aa2ae52017718d9a6",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-06.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 7,
+          "sha256": "83742b8df61a441de03c16056e3402308fe3ae5f2c53a08a2b809cc45095e1ad",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-07.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 8,
+          "sha256": "3eb58cbd8b5498eba7706212c30e93ecd6dc9649cb6316daf3946a56aa2c85fc",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-08.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 9,
+          "sha256": "f5869db77b8c9edd5d8ecd748b47fa3941143246f6fc27a8e553238b06415e45",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-09.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 10,
+          "sha256": "b5ac52a2a856aea89de5ae711f6cd74522e654808b682d74d19168df0dbc9f27",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-10.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 11,
+          "sha256": "3a140a1889811fff3b5c8928cce4d69dbadaac09321d8e172465670dfa277d39",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-11.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 12,
+          "sha256": "ea50e65b808233ef632bac63412a77c5237ce1f7d64a2cf7f839e27272fb2913",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-12.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 13,
+          "sha256": "22de46a218683ba21a3460fe1358adc1eced57b3f9ff2cc5c6f3725cd85bfea3",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-13.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 14,
+          "sha256": "242f060fa2c98c2f62745e8bde18f64dc819767064b171b91a457a6bc469ec0e",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-14.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 15,
+          "sha256": "7ad850bcedf94c95b9d92b185c847ca06979dccb4ce6a11cc59c93add11ad860",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-15.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 16,
+          "sha256": "59a2f70d049bc5dda1efaf49a017208d971a78a8607a2e4fdd56cb5353d6cf65",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-16.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 17,
+          "sha256": "005c0c3e14307bcd76e07893bc65f3ac7cc2aab463ba899ee91f2b95519550a9",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-17.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 18,
+          "sha256": "d9aa2c804fbf1e7854c3ee1793288b4e21165511858f3210f9004ad84512c7a0",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-18.bin"
+        },
+        {
+          "bytes": 976912,
+          "index": 19,
+          "sha256": "9de6081d205e1f5141a6198d8ec33db78273dd1a757fe2eee25aa08feccb62bc",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network-w16-joint-oracle-001/params/profile1/block-19.bin"
+        }
+      ],
+      "block_stride_bytes": 976912,
+      "channels": 256,
+      "network": "network4",
+      "parameter_file": {
+        "bytes": 19538240,
+        "path": "params-profile1.bin",
+        "sha256": "03ffd9ad560fb6ab86c0df197eae692a54bf3e6fccb441c54166ea7341a649d4"
+      },
+      "parameter_words_per_block": 61057,
+      "profile": 1,
+      "scale_provenance": "network4-host-quant-contract-001; calibration from three HOST pure-PS traces, not board PS",
+      "slot_bytes": 131072,
+      "width": 16
+    },
+    "2": {
+      "activation": "little-endian signed INT16 HCW, two slots",
+      "block_count": 4,
+      "block_parameter_sources": [
+        {
+          "bytes": 195088,
+          "index": 0,
+          "sha256": "aafdcf261072bfc7954b7f7bfc39b5d3c7f02fd6744ac55ccb0e58d2c9b600d5",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network0-w16-preflight-001/params/profile2/block-00.bin"
+        },
+        {
+          "bytes": 195088,
+          "index": 1,
+          "sha256": "1c5901cfb10942cd091c8274c625dd7afe815977ed555ff1d56a4fe2aa005da5",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network0-w16-preflight-001/params/profile2/block-01.bin"
+        },
+        {
+          "bytes": 195088,
+          "index": 2,
+          "sha256": "16748ee8c183013c382eb2dc8b6d8dd020ba6544165600419acff0d3b81a9d24",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network0-w16-preflight-001/params/profile2/block-02.bin"
+        },
+        {
+          "bytes": 195088,
+          "index": 3,
+          "sha256": "efaf035379add0140fcc8b958ddc7a92e32de27354d52bc0f9560d8bb6dc2098",
+          "source": "artifacts/board-debug-20261005/acceleration/host/network0-w16-preflight-001/params/profile2/block-03.bin"
+        }
+      ],
+      "block_stride_bytes": 195088,
+      "channels": 64,
+      "network": "network0",
+      "parameter_file": {
+        "bytes": 780352,
+        "path": "params-profile2.bin",
+        "sha256": "112f6d0bf48d6bd2d06e59c3965126ce426c009f1604c258b3f991afebd1b8d4"
+      },
+      "parameter_words_per_block": 12193,
+      "profile": 2,
+      "scale_provenance": "root-stage0-preflight-001; network0 calibration from three HOST pure-PS traces, not board PS",
+      "slot_bytes": 524288,
+      "width": 64
+    }
+  },
+  "scale_manifest": {
+    "bytes": 19953,
+    "path": "scale-manifest.json",
+    "sha256": "59c4dde6427a95d7256800f861c76ba14a558029ac6eaec479afae31dc83db29"
+  },
+  "schema_version": 1,
+  "source_manifests": {
+    "network0_calibration_sha256": "f52ce3d665e785805f961184f3a403846a5d8890e27a96ce9c265ead09e9372b",
+    "network0_w16_sha256": "9fcc4a05e7668c523f0a94d54ed8731c68582e0958f24bc7589c2f702c9f7326",
+    "network2_calibration_sha256": "cd226e0922d7ffb8149ee8cca2eecc877416b52d1dc8d9dec2b02fa658b83522",
+    "network4_calibration_sha256": "830231167bc6ed1b0b170425dd1035c33d6701d492814e20facefb964355093b",
+    "w16_joint_sha256": "4d02889c23aa989dab76e4c5c0fd07143ed164a34fbe455901b566abd2767e4b"
+  },
+  "status": "HOST_FZV5_W16_RUNTIME_PARAM_BUNDLE_NOT_PL"
+}

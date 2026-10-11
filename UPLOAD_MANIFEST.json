@@ -1,0 +1,2603 @@
+{
+  "schema": 1,
+  "version": "2.0",
+  "files": [
+    {
+      "path": "PS/config.example.json",
+      "source": "releases/final/PS/config.example.json",
+      "bytes": 648,
+      "sha256": "3e0364a2e672e9fd75530ad92dd3a4ab92807c5722f4e23d744425a14b8bb73d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/Makefile",
+      "source": "releases/final/PS/drivers/a0005/Makefile",
+      "bytes": 250,
+      "sha256": "59b6fe2028fa6812b35d161771cefa1f2789374d16a833ae32563bcbcc20821b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_arena.c",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_arena.c",
+      "bytes": 25794,
+      "sha256": "95802b79f85ddadb71e1b029b3aad71e273d89df971ae07b5242bee2f30604f5",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_arena.h",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_arena.h",
+      "bytes": 4713,
+      "sha256": "71001fbe939dc74680903878a6af4426718fbac49b599fd95826416bb7358d7b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_dma.c",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_dma.c",
+      "bytes": 20485,
+      "sha256": "f4b3295fe36c10a564373128a3b0eac7742fea987f5f673b6e2367a2d15b4ca4",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_dma.h",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_dma.h",
+      "bytes": 1715,
+      "sha256": "ba15214d368cecc3762a5e85a3b0f54a0039be6a92b7b5ce9797530d316de735",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_driver.c",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_driver.c",
+      "bytes": 38030,
+      "sha256": "1d509dc3b216eed06ed0e743dc9f6843ae50c1d884f5d0892bb9d634aacbceae",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_regs.h",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_regs.h",
+      "bytes": 4454,
+      "sha256": "af866375655e00b10f3923fb1a0ee72d738868e8b80942363f8c58f2b709a56d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_signed40_overlay_candidate.dts",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_signed40_overlay_candidate.dts",
+      "bytes": 1683,
+      "sha256": "3388f3c1619be6ac8aac1b8387e7601dbb4243f3a4c118a893ea0555f2e41e08",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_submit.c",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_submit.c",
+      "bytes": 6640,
+      "sha256": "ace557bee9da89014697d0b1a6e754c6aa75503a44e713d8657b118cdf470f68",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_submit.h",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_submit.h",
+      "bytes": 994,
+      "sha256": "a399d949ef32d5db0f9ecf8e816dfe7bba7a6eb31f8e2a79c68796d11d1f28a6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/a0005/network10_v10_uapi.h",
+      "source": "releases/final/PS/drivers/a0005/network10_v10_uapi.h",
+      "bytes": 7788,
+      "sha256": "59cb1ec5a33db273a56962446f237e7543e47ef6c4e411f3fa2e87a97394f6c7",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/cpu_clock/fz3b_cpu_clock.c",
+      "source": "releases/final/PS/drivers/cpu_clock/fz3b_cpu_clock.c",
+      "bytes": 10736,
+      "sha256": "63c7ccd20f1da279cbabc5be0cdd35ac9a32c0eb240cda05619a020a07555c1e",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/cpu_clock/fz3b_cpu_four.h",
+      "source": "releases/final/PS/drivers/cpu_clock/fz3b_cpu_four.h",
+      "bytes": 5697,
+      "sha256": "fdad32aec7678efa39a3e73f94e9de1f265f86095b3eedafc1e732d72f8044f3",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/cpu_clock/Makefile",
+      "source": "releases/final/PS/drivers/cpu_clock/Makefile",
+      "bytes": 26,
+      "sha256": "1bf96c0abd569d500587f9da249e397a9b02207fa857ac4520339d6b45672b08",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/pl1_clock/fz3b_pl1_iopll_lease.c",
+      "source": "releases/final/PS/drivers/pl1_clock/fz3b_pl1_iopll_lease.c",
+      "bytes": 8295,
+      "sha256": "b2b01cc7cd82a406fe687a3ce55562fc4fba6cdd54d0be68ae3700896e86b657",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/pl1_clock/fz3b_pl1_iopll_lease_uapi.h",
+      "source": "releases/final/PS/drivers/pl1_clock/fz3b_pl1_iopll_lease_uapi.h",
+      "bytes": 1014,
+      "sha256": "3d1c2024ab58a8231af4d9337a23940a8afcd2949f990d560e94bb795a04c62b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/drivers/pl1_clock/Makefile",
+      "source": "releases/final/PS/drivers/pl1_clock/Makefile",
+      "bytes": 32,
+      "sha256": "07f64cf11ddc0a575dd1023b5c0f591a673fa7ef368d549db0d9ec70307068eb",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/loader/config.example.json",
+      "source": "releases/final/PS/loader/config.example.json",
+      "bytes": 4265,
+      "sha256": "09284529cd7984e70953ad6860f4e112c44ba4c8e292dced65c0303a19047a6b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/loader/fz3b_pl_loader.py",
+      "source": "releases/final/PS/loader/fz3b_pl_loader.py",
+      "bytes": 26302,
+      "sha256": "aaa7f5ba913252f7f298eee6f025615c3eccb1ef09928d1e6724caff9a64101d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/loader/strict_a0005_identity.py",
+      "source": "releases/final/PS/loader/strict_a0005_identity.py",
+      "bytes": 1709,
+      "sha256": "7a504d60db8699fc04ca82c172d0050fcc727508d96d303ded035832cdd875e8",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/mjpeg_source.c",
+      "source": "releases/final/PS/mjpeg_source.c",
+      "bytes": 3590,
+      "sha256": "af33b268ef85fd67ca1546cf2e46c02a0a032457df9d8e410ad16a6f59d1f5f5",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/native/cnn_v10_native_quant_neon.c",
+      "source": "releases/final/PS/native/cnn_v10_native_quant_neon.c",
+      "bytes": 5919,
+      "sha256": "d54973b9152f41a8342003c5db47e3dab8c7f6fbd1c78056baa03c1823e0aea3",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/native/ort_partition_runner_v3.c",
+      "source": "releases/final/PS/native/ort_partition_runner_v3.c",
+      "bytes": 16659,
+      "sha256": "cd39e98343f7bb50de1e2bfba0946d70c1c6f32e105831c5bbf2d0c4263ad55f",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/read_clock.c",
+      "source": "releases/final/PS/read_clock.c",
+      "bytes": 2765,
+      "sha256": "161581abf46ed1d9c344c901520f71667105f88a217ce878107f0442b846699e",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/run.sh",
+      "source": "releases/final/PS/run.sh",
+      "bytes": 361,
+      "sha256": "0e9f64959e5d4d7a697f5081d7e958ca7ffc36edcea98927567905c50b495858",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/activation_buffers.py",
+      "source": "releases/final/PS/runtime/activation_buffers.py",
+      "bytes": 3467,
+      "sha256": "d336a9445abbde72f1b645a2c915acd060f91a5d3985c1e98c6101c116591e38",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/bounded_pipeline.py",
+      "source": "releases/final/PS/runtime/bounded_pipeline.py",
+      "bytes": 29716,
+      "sha256": "7dc81d03fdd17d8d9033ae6066b65865263a133d3cc115035b9fd9bed666fca7",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v10_p3_dma_contract.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v10_p3_dma_contract.py",
+      "bytes": 7556,
+      "sha256": "a1bd67b7107370b455a563de0fd4b3b70ebe63ee46af3df818e778c2a7eee34c",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v10_p3_dma_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v10_p3_dma_runtime.py",
+      "bytes": 25400,
+      "sha256": "2edced5bc1cb3d314a6c76cce118160798f32002b71f006b8798dd3c34773d97",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v10_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v10_runtime.py",
+      "bytes": 9237,
+      "sha256": "e61bc9027c56b5d5baa38fd9adfd1d35a353b312b6640a327fe013e873d1f197",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v10_signed40_candidate_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v10_signed40_candidate_runtime.py",
+      "bytes": 4102,
+      "sha256": "f77049e380ba522fe4c605774fe64bbbac5da60b2caa5e7736fd4bb204746d60",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v5_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v5_runtime.py",
+      "bytes": 49730,
+      "sha256": "960b221a64dbf801027d1fd0d050bf8065a91eabf5dd09be9529aa01b2950bed",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_ddr_v6_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_ddr_v6_runtime.py",
+      "bytes": 24269,
+      "sha256": "590329bb24607455cbf5da920bf122fc1a3efed39b05709cd1178555a5e9e0e2",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_bundle.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_bundle.py",
+      "bytes": 11684,
+      "sha256": "597722c7221b8b50bf3ba90ec659191ec389281be83108013f68aa5a06419cf4",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_chain_deployment.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_chain_deployment.py",
+      "bytes": 2789,
+      "sha256": "44be7ac8fd41ba15e20808389f89e8c80185ba220860523f305be3a820e75120",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_deployment.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_deployment.py",
+      "bytes": 9238,
+      "sha256": "463a4c207581e7d6452bfd4485fc141eba623f26d952677aad8f39871d0195dd",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_live_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_live_runtime.py",
+      "bytes": 18673,
+      "sha256": "3b313d812defbc317db268aa2f6dffd95aa03638df66da653c3f02d8362876a6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_mixed_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_mixed_runtime.py",
+      "bytes": 26638,
+      "sha256": "bc8f1cee2b7c386312a3aabc40e817aa2c4196cba5d22839850fb16ec5febd7f",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_p3_chain_parameters.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_p3_chain_parameters.py",
+      "bytes": 12464,
+      "sha256": "67990f089937f7c67b403b58c10e677eeeb7f8a65fb7df7f88f5467ae2b7afb3",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_p3_dma_parameters.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_p3_dma_parameters.py",
+      "bytes": 9877,
+      "sha256": "f6268049b89cd01ded005aca24d85cebd8f08df7fcf1eb22069c8a95e31636a4",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_p3_dma_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_p3_dma_runtime.py",
+      "bytes": 10998,
+      "sha256": "5c69c2765a19d8e4dfa6f84ace9c4847e7a23081ce7cbd672bd583630bd5b933",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_p3_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_p3_runtime.py",
+      "bytes": 12668,
+      "sha256": "5e478c905227ab4e315bd541561e0b5346f6308ca5b9e54006d300856c38962b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_paired_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_paired_runtime.py",
+      "bytes": 16695,
+      "sha256": "7e3dd6fb21332cfb43c4e3f64668c81eec5537112d22bea249f6b365f67d6e77",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_signed40_deployment.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_signed40_deployment.py",
+      "bytes": 11714,
+      "sha256": "4084e38f6755c2da86ad9e64961452b2b1568368da8df36fd70d459278d40031",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_signed40_parameters.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_signed40_parameters.py",
+      "bytes": 13789,
+      "sha256": "330312f1d3572890f1764a07185834947c8282ecf26938ae4e2eb72ec673405b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_signed40_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_signed40_runtime.py",
+      "bytes": 912,
+      "sha256": "c66315623a1ab91eaacefd4ca395ca3c0f2afcc3ed1b41d22e3ed294bd6e5d35",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_split_ps_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_split_ps_runtime.py",
+      "bytes": 13730,
+      "sha256": "a2b8b8b667d54a31a31c70882f7ea5d6962d9bb7d3d224090f43a73b2b18f2c6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_pipeline_v10_stream_runtime.py",
+      "source": "releases/final/PS/runtime/cnn_pipeline_v10_stream_runtime.py",
+      "bytes": 10682,
+      "sha256": "d8224c5ab45db18cde22e067b8b94d4c19833711e9a589e67559750822a5d872",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_v10_n1_native_ctypes.py",
+      "source": "releases/final/PS/runtime/cnn_v10_n1_native_ctypes.py",
+      "bytes": 12059,
+      "sha256": "2a3f5e6bf6759700010a8588cfbd3114e8c36c56ea6be0b3f314d4062748d3e4",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_v10_native_quant.py",
+      "source": "releases/final/PS/runtime/cnn_v10_native_quant.py",
+      "bytes": 7063,
+      "sha256": "5eea7df368298fb37a1b1e44a864e393221c79db6c375ccd6f51352e59711e7a",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_v10_native_quant_ctypes.py",
+      "source": "releases/final/PS/runtime/cnn_v10_native_quant_ctypes.py",
+      "bytes": 3645,
+      "sha256": "6fc9c79f8d2dd8695d916ea04827cb0dd0c2126c05a85b335903004225baadbb",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_v10_ps_shm_clients.py",
+      "source": "releases/final/PS/runtime/cnn_v10_ps_shm_clients.py",
+      "bytes": 19007,
+      "sha256": "413a838604d56bc341f95e4f33395a6ea025fc0323a7a7917ae9e3f06fb3a40a",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/cnn_v10_pw2_signed40_contract.py",
+      "source": "releases/final/PS/runtime/cnn_v10_pw2_signed40_contract.py",
+      "bytes": 11326,
+      "sha256": "d025699218b37e63e6814b8d0defa4dbebb917be6c109476879d8ab75618011a",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/partition_s1.py",
+      "source": "releases/final/PS/runtime/partition_s1.py",
+      "bytes": 18794,
+      "sha256": "30a35bd130de3e6c9a6850c73b890b251d25de37906286aa5739d98d76e95940",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/runtime/preprocess_s1.py",
+      "source": "releases/final/PS/runtime/preprocess_s1.py",
+      "bytes": 1964,
+      "sha256": "dded81a5fa2c83dc71c49e21dc6e493d94e4e13dbd0cd4152c70ba34665ed395",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/services/fz3b-app-cpu-clock.service",
+      "source": "releases/final/PS/services/fz3b-app-cpu-clock.service",
+      "bytes": 571,
+      "sha256": "1caa868f3ab26eac9dcb5168b60a9fa3899a2c9964e73b400f1dd280295dedba",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/services/fz3b-app-r5.service",
+      "source": "releases/final/PS/services/fz3b-app-r5.service",
+      "bytes": 457,
+      "sha256": "2bd6f02aee20f091f53f71def8034fbec1c5d1da33679f0885fc220fab365c32",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/services/fz3b-pl-loader.service",
+      "source": "releases/final/PS/services/fz3b-pl-loader.service",
+      "bytes": 587,
+      "sha256": "337b24f9abc571275d9286334773de75cc427529fb34ee0b1bac45e0e3a0ead7",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/services/fz3b-vision-console.service",
+      "source": "releases/final/PS/services/fz3b-vision-console.service",
+      "bytes": 622,
+      "sha256": "1089e63bb0138e9c0f0c45f22ad8f95a74bcc92fca998fa541f37836844d599b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/__init__.py",
+      "source": "releases/final/PS/vision_app/__init__.py",
+      "bytes": 72,
+      "sha256": "3f33e9546ad5161f054ab8b7c19a0e00f4c151a8f3ea5c4eee9bc68de504bcbf",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/board_agent.py",
+      "source": "releases/final/PS/vision_app/board_agent.py",
+      "bytes": 37977,
+      "sha256": "705ae83c7bb150655f098b6355da44c322ce441670037f3d4e15db28d05cc61e",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/board_runtime.py",
+      "source": "releases/final/PS/vision_app/board_runtime.py",
+      "bytes": 3344,
+      "sha256": "8fb7f3bcbc9024e5bc822a1a1f598ee60e7fc44ac41276dd9fafbe872e3f0f2d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/boot_units.py",
+      "source": "releases/final/PS/vision_app/boot_units.py",
+      "bytes": 2084,
+      "sha256": "71883c1e8a604ba3f9f7388eb0bbcd7dd22ff30ec46b793e574003e0bbbbf27d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/camera.py",
+      "source": "releases/final/PS/vision_app/camera.py",
+      "bytes": 3976,
+      "sha256": "0e1c93f16e234aa12bc93646a4bf69d3f59286714b2e0b775a3fe603bfc8a914",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/contract.py",
+      "source": "releases/final/PS/vision_app/contract.py",
+      "bytes": 2961,
+      "sha256": "104f3a4a3eae2e9ed1ba1801a691b0421c5f152d41bdfbd50de6f369ad815761",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/cpu_clock_service.py",
+      "source": "releases/final/PS/vision_app/cpu_clock_service.py",
+      "bytes": 8497,
+      "sha256": "890105437843effab2dc9716e3b8381b2b60781370b0aa80154b0d4c8a450e0c",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/frequency.py",
+      "source": "releases/final/PS/vision_app/frequency.py",
+      "bytes": 1399,
+      "sha256": "7acba52b9f84f81756564d49e1a9d9652f8912506371c91a135c130d17d31fc6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/hardware_monitor.py",
+      "source": "releases/final/PS/vision_app/hardware_monitor.py",
+      "bytes": 3885,
+      "sha256": "1e725f5a48ab8c832fa42702dcc2937a8128cc7a426f2e995f0b830940dfe930",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/link_setup.py",
+      "source": "releases/final/PS/vision_app/link_setup.py",
+      "bytes": 893,
+      "sha256": "c1588aec59ca6c89cd6d8a77edf881176a7a26bc308f9fc0afbbfe146c7458d6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/prefetch.py",
+      "source": "releases/final/PS/vision_app/prefetch.py",
+      "bytes": 1881,
+      "sha256": "3ec1b6459ac86b95a7fd2ed2de632b7fb9c6e4395fac1b04645180bccc37f01d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/protocol.py",
+      "source": "releases/final/PS/vision_app/protocol.py",
+      "bytes": 5879,
+      "sha256": "e127737f5c7cc3f29a6975afd6bf9066ecce5ca59c791637dd16bff0e37b4ec3",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/build.ps1",
+      "source": "releases/final/PS/vision_app/r5/build.ps1",
+      "bytes": 878,
+      "sha256": "e809810c052d8dc33eecb23fce7f585e15e9c3e4c990311ed284904e13e33cd3",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/start.S",
+      "source": "releases/final/PS/vision_app/r5/start.S",
+      "bytes": 351,
+      "sha256": "d05e441aa9327786c037361734ff999341d3f394563161fc0ddcd75f1521d0d2",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/tcm-split-overlay.dts",
+      "source": "releases/final/PS/vision_app/r5/tcm-split-overlay.dts",
+      "bytes": 1769,
+      "sha256": "e0401b22169f3fa7305780f3c89d1892023620af4797e22bc39d4c9160c1a3b1",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/tcm.ld",
+      "source": "releases/final/PS/vision_app/r5/tcm.ld",
+      "bytes": 421,
+      "sha256": "d15ab3fd3e6a956045757fd85a68827ec3cd5e82db3cca35d2f3537221aa7743",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/tcm_io.c",
+      "source": "releases/final/PS/vision_app/r5/tcm_io.c",
+      "bytes": 2245,
+      "sha256": "5e7d9ee42b0d39da28df24a8200889ea32888d4f520610fb0c2b3b16c0098caa",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5/worker.c",
+      "source": "releases/final/PS/vision_app/r5/worker.c",
+      "bytes": 3743,
+      "sha256": "7a82da87008a09f66ac72bb2e448fa7983223aa0fce1c9b1d1de2bc12796cca6",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5_bridge.py",
+      "source": "releases/final/PS/vision_app/r5_bridge.py",
+      "bytes": 5914,
+      "sha256": "c1695156be3ab7622dcd9af91824606da3600f1d1fd0fac7206e7fd49d93642d",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/r5_start.py",
+      "source": "releases/final/PS/vision_app/r5_start.py",
+      "bytes": 7935,
+      "sha256": "a90dd0fa18d5cb690be0002a919701c1ff0afb70cc9010e7089186912fbefe6c",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/recent_fps.py",
+      "source": "releases/final/PS/vision_app/recent_fps.py",
+      "bytes": 551,
+      "sha256": "49ab2bdbdec42419eebac76692e255a0e42ea22ad8b2d0f819d4f4a546e2358c",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/semantic-contract.json",
+      "source": "releases/final/PS/vision_app/semantic-contract.json",
+      "bytes": 3934,
+      "sha256": "5f2f281ff7d3f92539a96f42728bd0dcdf5e70d07c98a00cff7f07fdb64aac87",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/state.py",
+      "source": "releases/final/PS/vision_app/state.py",
+      "bytes": 3883,
+      "sha256": "f3282b5f634f7f30513ac02791a703ebdc70abcc94c3d05d8422bbaa61a6ea55",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "PS/vision_app/upload_source.py",
+      "source": "releases/final/PS/vision_app/upload_source.py",
+      "bytes": 2458,
+      "sha256": "1aba54e47006d24688577cd8cb1b057dc872fe956a62169a51398aef6441981b",
+      "reason": "Current maintained PS source; private configuration omitted"
+    },
+    {
+      "path": "HOST/README.md",
+      "source": "releases/final/HOST/README.md",
+      "bytes": 3282,
+      "sha256": "ae2a8340b7fa7cf202c27691c488abde89526dcde6efc312c35796ebb49a51c8",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/requirements.txt",
+      "source": "releases/final/HOST/requirements.txt",
+      "bytes": 269,
+      "sha256": "7bfb68f3b70afe0d916f055bc89a7453da4e46092afed944ed2e9c520e639306",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_archive_completion.py",
+      "source": "releases/final/HOST/tests/contracts/test_archive_completion.py",
+      "bytes": 2136,
+      "sha256": "ed686e78527b0df17233f14d97968f832ed1b600c6d5af56aac0254c8b02185d",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_boot.py",
+      "source": "releases/final/HOST/tests/contracts/test_boot.py",
+      "bytes": 5277,
+      "sha256": "5d8cc9b4fa50af54a2fa14623203bab8ad0b7fbc42a97a0df61215aa179ea179",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_client_controls.py",
+      "source": "releases/final/HOST/tests/contracts/test_client_controls.py",
+      "bytes": 3021,
+      "sha256": "b670c971c226b108cc1096c80f21343a30d39c47795cdf7e5935b573687f6f35",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_core.py",
+      "source": "releases/final/HOST/tests/contracts/test_core.py",
+      "bytes": 3644,
+      "sha256": "fa75048f029da6f8269accf651d93cd876aa15a64e700b071daf8f8dbc911d7a",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_cpu_clock.py",
+      "source": "releases/final/HOST/tests/contracts/test_cpu_clock.py",
+      "bytes": 3331,
+      "sha256": "e27fa56191c3b42588e29610ec3d7f7df6cfb5207fcaa4a8a3612004b1c62c49",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_frequency.py",
+      "source": "releases/final/HOST/tests/contracts/test_frequency.py",
+      "bytes": 1430,
+      "sha256": "56a52e94c28781e75436f9fcd861b88d88157b663f4ee42550ba5bf625dd8f1d",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_host_network.py",
+      "source": "releases/final/HOST/tests/contracts/test_host_network.py",
+      "bytes": 3717,
+      "sha256": "818349372667efa1040d17d42217d798cbe497569bfa6d7804abab4a4cf3c690",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_prefetch.py",
+      "source": "releases/final/HOST/tests/contracts/test_prefetch.py",
+      "bytes": 1163,
+      "sha256": "2b1b764ca9125c353d84424a36cdb0360e6c73c7d6421a26ad26a7980b3cecdf",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_reconnect.py",
+      "source": "releases/final/HOST/tests/contracts/test_reconnect.py",
+      "bytes": 3645,
+      "sha256": "04eb5700ec5c4012eb7e064a84eab86ed547cb89859a5b144f51c72116fc562a",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_semantic_controls.py",
+      "source": "releases/final/HOST/tests/contracts/test_semantic_controls.py",
+      "bytes": 1136,
+      "sha256": "7a7d66315cde9eb2a4672ad68acb445fef7a3bd8a3e53ce55a80f91ef0671d21",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_service.py",
+      "source": "releases/final/HOST/tests/contracts/test_service.py",
+      "bytes": 7820,
+      "sha256": "c30dcdc74030de48321532c1d7064f6c54fd2f178855063b0ad201797403161c",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/contracts/test_upload_source.py",
+      "source": "releases/final/HOST/tests/contracts/test_upload_source.py",
+      "bytes": 1153,
+      "sha256": "06fa2ead37ad288137ed1304d9beaf8291edb8c9e194daeec439bec4598d66cb",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_continuity.py",
+      "source": "releases/final/HOST/tests/test_continuity.py",
+      "bytes": 3288,
+      "sha256": "b13c3aed17feebc12bb61ff416e093fd251141760a5fd718b5a2517d2b4345ac",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_grouped_export.py",
+      "source": "releases/final/HOST/tests/test_grouped_export.py",
+      "bytes": 1864,
+      "sha256": "dc98147a4d2385c54f938f514af85ceae4e0ffd0d9c7fcc5247e05e03c37e0e6",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_hardware_monitor.py",
+      "source": "releases/final/HOST/tests/test_hardware_monitor.py",
+      "bytes": 2309,
+      "sha256": "3472b0f1721106b12162595029185fea053ef1adae6a123b2ce85f3e356637af",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_legacy_segments.py",
+      "source": "releases/final/HOST/tests/test_legacy_segments.py",
+      "bytes": 870,
+      "sha256": "17d807e61c31f8be13185ddc0780967fd459139919ca2f555eb03ee4bce0de76",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_open_connection.py",
+      "source": "releases/final/HOST/tests/test_open_connection.py",
+      "bytes": 957,
+      "sha256": "179ff1960c1cd43564b407ff0352430db6f83a69d39bcc76585a0c0cf6490923",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_recent_fps.py",
+      "source": "releases/final/HOST/tests/test_recent_fps.py",
+      "bytes": 2231,
+      "sha256": "043c9c686be2e33de8bd6d8fc23ccd86e7ec4223610dc9f54efc99dffe524ee2",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_recording_feedback.py",
+      "source": "releases/final/HOST/tests/test_recording_feedback.py",
+      "bytes": 4130,
+      "sha256": "712775ed0792943a528ecda2e96f0afcf8aba9391f084dbbb72b16fc93056ab5",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_segment_selection.py",
+      "source": "releases/final/HOST/tests/test_segment_selection.py",
+      "bytes": 1441,
+      "sha256": "1c480f06d3350b70b60e52452d8ab44a88d4f77f4fb73af7748f801f5dc1068e",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_threshold_controls.py",
+      "source": "releases/final/HOST/tests/test_threshold_controls.py",
+      "bytes": 1065,
+      "sha256": "979b156f2ab868a39761510d6938b879d6198f2bb8d2100ac4b872ab799fe9cf",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/tests/test_video_display.py",
+      "source": "releases/final/HOST/tests/test_video_display.py",
+      "bytes": 1817,
+      "sha256": "b9e978c46697278c3888849d8dc8727da80bae5a346b16eb779a98313108be6b",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/__init__.py",
+      "source": "releases/final/HOST/vision_app/__init__.py",
+      "bytes": 72,
+      "sha256": "3f33e9546ad5161f054ab8b7c19a0e00f4c151a8f3ea5c4eee9bc68de504bcbf",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/build.ps1",
+      "source": "releases/final/HOST/vision_app/build.ps1",
+      "bytes": 3998,
+      "sha256": "bc94c7b350d857ec04db54f3a8c7bf785cae4aae78c596396bdeab7501322c01",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/client-config.example.json",
+      "source": "releases/final/HOST/vision_app/client-config.example.json",
+      "bytes": 116,
+      "sha256": "b7648ffbbd243d5b7bd8531e5e78591960ba049d078a2ebb5f4de267cb9a9877",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/client.py",
+      "source": "releases/final/HOST/vision_app/client.py",
+      "bytes": 29924,
+      "sha256": "282564310f3f492ff9d54426bf3a3602d2e39b3d7aeadb0eaa19f35296f51baa",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/contract.py",
+      "source": "releases/final/HOST/vision_app/contract.py",
+      "bytes": 2961,
+      "sha256": "104f3a4a3eae2e9ed1ba1801a691b0421c5f152d41bdfbd50de6f369ad815761",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/frequency.py",
+      "source": "releases/final/HOST/vision_app/frequency.py",
+      "bytes": 1399,
+      "sha256": "7acba52b9f84f81756564d49e1a9d9652f8912506371c91a135c130d17d31fc6",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/host_network.py",
+      "source": "releases/final/HOST/vision_app/host_network.py",
+      "bytes": 18860,
+      "sha256": "9757c68968d66c29924ef62200beaf170add9eb8cc39b1aeb06ba8f02ce9d3a4",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/launch.py",
+      "source": "releases/final/HOST/vision_app/launch.py",
+      "bytes": 757,
+      "sha256": "31dbb92dff666652a42ae2c06279a391af8683172d7821ea5da9b99897df9937",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/network_dialog.py",
+      "source": "releases/final/HOST/vision_app/network_dialog.py",
+      "bytes": 11567,
+      "sha256": "e480543175548266889b795c68b9adb08cfbdd55096d5eb922b0e92e9e4b82b3",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/protocol.py",
+      "source": "releases/final/HOST/vision_app/protocol.py",
+      "bytes": 5879,
+      "sha256": "e127737f5c7cc3f29a6975afd6bf9066ecce5ca59c791637dd16bff0e37b4ec3",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/recent_fps.py",
+      "source": "releases/final/HOST/vision_app/recent_fps.py",
+      "bytes": 551,
+      "sha256": "49ab2bdbdec42419eebac76692e255a0e42ea22ad8b2d0f819d4f4a546e2358c",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/semantic-contract.json",
+      "source": "releases/final/HOST/vision_app/semantic-contract.json",
+      "bytes": 3934,
+      "sha256": "5f2f281ff7d3f92539a96f42728bd0dcdf5e70d07c98a00cff7f07fdb64aac87",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/semantic_media.py",
+      "source": "releases/final/HOST/vision_app/semantic_media.py",
+      "bytes": 11671,
+      "sha256": "de4cfcf502102f6ed0a0c3e1169bd388adb4559ea7aec7789d568d47c12372a8",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/semantic_ui.py",
+      "source": "releases/final/HOST/vision_app/semantic_ui.py",
+      "bytes": 42659,
+      "sha256": "b629030b06ea79ec55fecb11e4ecd0a379d40ce3b197cc7df0c549777044df2a",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/state.py",
+      "source": "releases/final/HOST/vision_app/state.py",
+      "bytes": 3883,
+      "sha256": "f3282b5f634f7f30513ac02791a703ebdc70abcc94c3d05d8422bbaa61a6ea55",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/temporal_segments.py",
+      "source": "releases/final/HOST/vision_app/temporal_segments.py",
+      "bytes": 5192,
+      "sha256": "18fb9bbddbc395756eab9c8155b1d739152f95ea856d48609a2f93bdfa09b9e4",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/text_encoder.py",
+      "source": "releases/final/HOST/vision_app/text_encoder.py",
+      "bytes": 3737,
+      "sha256": "7934eb91a71743a51c50941590dcb4432b2fdf4ed509becade10c463a0d61b99",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/threshold_control.py",
+      "source": "releases/final/HOST/vision_app/threshold_control.py",
+      "bytes": 2464,
+      "sha256": "44e7c8bbafe5dcf4b4243044a2962ed32c337bc048b84286d6e17516e8718634",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/tools/packaging_fix.py",
+      "source": "releases/final/HOST/vision_app/tools/packaging_fix.py",
+      "bytes": 1017,
+      "sha256": "1e6f241fea9aca5edd5d99612dc8ccf0102560f09d79ca873659da906667ba25",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/translation.py",
+      "source": "releases/final/HOST/vision_app/translation.py",
+      "bytes": 2126,
+      "sha256": "4b2fe6f63b4b041b2d5105331eb4d9956db0a0e84bc15b501f2adbd94817fa2f",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/transports.py",
+      "source": "releases/final/HOST/vision_app/transports.py",
+      "bytes": 7303,
+      "sha256": "08ff2f7d053491d3c5227bd3fa125281537b8a5d6870df50ce886881b0ba0c2b",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/ui_icons.py",
+      "source": "releases/final/HOST/vision_app/ui_icons.py",
+      "bytes": 1312,
+      "sha256": "bcc2caf0d1130be7f10cdfcef4d898d11984e5745d2421fc83697a2e31cc0b55",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "HOST/vision_app/video_analysis.py",
+      "source": "releases/final/HOST/vision_app/video_analysis.py",
+      "bytes": 7746,
+      "sha256": "c932f3483c1b06c491a1febaf6875d8317b654fb6c727f0d8e20758dc6abb61e",
+      "reason": "Current maintained HOST source; private configuration omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/admission.json",
+      "source": "releases/final/resources/ps/contracts/files/admission.json",
+      "bytes": 1452,
+      "sha256": "cfa5f1a3a29aa04f11a83a7e3b23637be063e22e5627ca66b4c20c62745443dd",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/candidate-contract.json",
+      "source": "releases/final/resources/ps/contracts/files/candidate-contract.json",
+      "bytes": 3225,
+      "sha256": "a65bdd2c50a5f1b5329350e22a67d9fb9ff4731c3517454ae524f667c5dc3f4d",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/manifest.json",
+      "source": "releases/final/resources/ps/contracts/files/manifest.json",
+      "bytes": 5214,
+      "sha256": "4a32c9373e783ac572a5d3374b316181a4d52ae9a92ec45f8b13d763ef028690",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/proof.json",
+      "source": "releases/final/resources/ps/contracts/files/proof.json",
+      "bytes": 98930,
+      "sha256": "9f3de6ffb18a9d1de54addbcc471f95f18c47acf86f31e051794d59e528b2676",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/receipt.json",
+      "source": "releases/final/resources/ps/contracts/files/receipt.json",
+      "bytes": 30654,
+      "sha256": "1e85e3d07b50a5116c4b8deef77317cdf6bd84144c55c039b25645fa5c3a2770",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/files/source-manifest.json",
+      "source": "releases/final/resources/ps/contracts/files/source-manifest.json",
+      "bytes": 1704,
+      "sha256": "f8714065c490506f5e08b1738c8fe121270db2c66da9eb42d9674907102e0593",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/ps-model-contract.json",
+      "source": "releases/final/resources/ps/contracts/ps-model-contract.json",
+      "bytes": 9493,
+      "sha256": "6e01472fae50fcab672bf8a6097648630618b8b304c860f0703472cd6ec1d2f3",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/receipts/address-map.json",
+      "source": "releases/final/resources/ps/contracts/receipts/address-map.json",
+      "bytes": 1149,
+      "sha256": "e64cfb40be9909cf4925b4f56bb4a256b764fc2db52c66e4baf9252b3d1ebb63",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/receipts/full-platform-v4.json",
+      "source": "releases/final/resources/ps/contracts/receipts/full-platform-v4.json",
+      "bytes": 8153,
+      "sha256": "8c7cf143f1184cfcaae20f9b968f1cb5ebeba3dc33243d12fafa748bdd916d1a",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/receipts/guard-validation.json",
+      "source": "releases/final/resources/ps/contracts/receipts/guard-validation.json",
+      "bytes": 1365,
+      "sha256": "fc118572384fcf9bc63e95503b99649b279db85aa2d9633f34d17d750e076a2f",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/contracts/receipts/timing.json",
+      "source": "releases/final/resources/ps/contracts/receipts/timing.json",
+      "bytes": 2599,
+      "sha256": "63ebc6edefb22971de770190fcd1c73bf5161109a894fdb6cc66fbdc7b6e8ed3",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/hardware/component.xml",
+      "source": "releases/final/resources/ps/release/hardware/component.xml",
+      "bytes": 726874,
+      "sha256": "230d7f914bcb5b33cc0511107664d842d5b8d8500dcad22d5d31357f389e5467",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/manifest.json",
+      "source": "releases/final/resources/ps/release/manifest.json",
+      "bytes": 9723,
+      "sha256": "3f52238b2a35d23f6f07c4cc9263ff8d4330c5aa27a6ed91640c4a45a8d45a2d",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/models/manifest.json",
+      "source": "releases/final/resources/ps/release/models/manifest.json",
+      "bytes": 8658,
+      "sha256": "26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/platform-contract/fzv10_ddr_guard.sv",
+      "source": "releases/final/resources/ps/release/platform-contract/fzv10_ddr_guard.sv",
+      "bytes": 16179,
+      "sha256": "26c09d1567f6392cd1f201af3fcc86ec4e162627e3df9b6b03b622bfc6d37dcb",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/platform-contract/fzv10_ddr_guard_bd.sv",
+      "source": "releases/final/resources/ps/release/platform-contract/fzv10_ddr_guard_bd.sv",
+      "bytes": 5017,
+      "sha256": "9144914c74860d79d434b073c22beaacbd2a904a98aa03d709e16cb860d68f65",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/platform-contract/network10_v10_driver.c",
+      "source": "releases/final/resources/ps/release/platform-contract/network10_v10_driver.c",
+      "bytes": 30275,
+      "sha256": "2b7498b54b20b9738d4f17f48be3615c581c760271f8eb84d5f935fb58013f9f",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/platform-contract/network10_v10_regs.h",
+      "source": "releases/final/resources/ps/release/platform-contract/network10_v10_regs.h",
+      "bytes": 4349,
+      "sha256": "1779a0ce079157cb909a4274cb6c09b9f98b8a0d3068fec12506a46966278725",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/platform-contract/network10_v10_uapi.h",
+      "source": "releases/final/resources/ps/release/platform-contract/network10_v10_uapi.h",
+      "bytes": 4581,
+      "sha256": "7ed58ffa5487dd030c7ccbf23c47097ea84b02a207cddf48fc8bb6180b4e2b9e",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/provenance/v10-fixture-manifest.json",
+      "source": "releases/final/resources/ps/release/provenance/v10-fixture-manifest.json",
+      "bytes": 13061,
+      "sha256": "83df8803b7a8eb08795c6c19d89538637f850df9044c407b90814d725f0079c4",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/provenance/v5-bundle-manifest.json",
+      "source": "releases/final/resources/ps/release/provenance/v5-bundle-manifest.json",
+      "bytes": 14297,
+      "sha256": "400ecf86365f5e387ce62d350b6e4f24ab34b1dd5d903142c7a139515e19f18a",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/provenance/v5-scale-manifest.json",
+      "source": "releases/final/resources/ps/release/provenance/v5-scale-manifest.json",
+      "bytes": 19953,
+      "sha256": "59c4dde6427a95d7256800f861c76ba14a558029ac6eaec479afae31dc83db29",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/release/receipt.json",
+      "source": "releases/final/resources/ps/release/receipt.json",
+      "bytes": 2092,
+      "sha256": "8d4362eafd8874b7c9f395b6104f1dcd08332a0b3d3e517666ef2914b11eaf2e",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/analysis.json",
+      "source": "releases/final/resources/ps/suffix11-selection/analysis.json",
+      "bytes": 56518,
+      "sha256": "bf62c68b3f21a71e2b3ead67c9616db03da2c98d3298c44926ab6f86f0edb2be",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/host-profile-evidence.json",
+      "source": "releases/final/resources/ps/suffix11-selection/host-profile-evidence.json",
+      "bytes": 3770,
+      "sha256": "5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/host-receipt.json",
+      "source": "releases/final/resources/ps/suffix11-selection/host-receipt.json",
+      "bytes": 3770,
+      "sha256": "5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/kernel-classification.json",
+      "source": "releases/final/resources/ps/suffix11-selection/kernel-classification.json",
+      "bytes": 11215,
+      "sha256": "0e2bfc35e135f22103d048605707fbb53465a446c05464cab81f59f0a07a09a6",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/profile-receipt.json",
+      "source": "releases/final/resources/ps/suffix11-selection/profile-receipt.json",
+      "bytes": 2128,
+      "sha256": "a699737ace878adaf1c1025dfe21e06bf54be59e61b3e0e403a29cc0057678e7",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/profile-wrapper-receipt.json",
+      "source": "releases/final/resources/ps/suffix11-selection/profile-wrapper-receipt.json",
+      "bytes": 19394,
+      "sha256": "4157727e44eff14cd1d7c04aa8a601e121d02e32a1e59847a1c691ae054664e2",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/selection-manifest.json",
+      "source": "releases/final/resources/ps/suffix11-selection/selection-manifest.json",
+      "bytes": 2835,
+      "sha256": "441feea506c6e1697ee05604c0f9b09c32500dd8b7443343a8238cdcaf3490da",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/target-result.json",
+      "source": "releases/final/resources/ps/suffix11-selection/target-result.json",
+      "bytes": 16377,
+      "sha256": "d1e1d797ea5edce44133e76d31917db1f0b5cc0a2f6fcf8cf2975304d5a0713a",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PS/resources/suffix11-selection/target-wrapper-receipt.json",
+      "source": "releases/final/resources/ps/suffix11-selection/target-wrapper-receipt.json",
+      "bytes": 19394,
+      "sha256": "4157727e44eff14cd1d7c04aa8a601e121d02e32a1e59847a1c691ae054664e2",
+      "reason": "Required model/UAPI identity metadata; learned binary parameters omitted"
+    },
+    {
+      "path": "PL/rtl/cnn_axi_pkg.sv",
+      "source": "rtl_optim/rtl/cnn_axi_pkg.sv",
+      "bytes": 1023,
+      "sha256": "9972f1b25fbd6fdfec76e6531602050c1d3dc46de9b5818cb6a576559c2ad0c5",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_axi_read.sv",
+      "source": "rtl_optim/rtl/cnn_axi_read.sv",
+      "bytes": 3556,
+      "sha256": "f93d7076fea431e0ce0ce27b3ee2897ea140d9d3f254153f19d9c96c487a02a0",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_axi_write.sv",
+      "source": "rtl_optim/rtl/cnn_axi_write.sv",
+      "bytes": 3277,
+      "sha256": "807bf149663826b964f84b18c3402be71a4bac0e67aab4cc8f75d81e14e1fee5",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_control.sv",
+      "source": "rtl_optim/rtl/cnn_control.sv",
+      "bytes": 5228,
+      "sha256": "cea4e9b27f427b6b4700634d43ff4ed298bbb1d0b2c8cc3e6a688ed2910d01f5",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_dsp_primitives.v",
+      "source": "rtl_optim/rtl/cnn_dsp_primitives.v",
+      "bytes": 23209,
+      "sha256": "109993c737c178ac50e495a698281c2e74323743a24b363c362c27ef51cbabc9",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_dw_core.sv",
+      "source": "rtl_optim/rtl/cnn_dw_core.sv",
+      "bytes": 8304,
+      "sha256": "5e0f3307223cdbb8b6748d2ecccc9bd6c0fcb8fc74d323c6d15daddfe736c78e",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_dw_stage.sv",
+      "source": "rtl_optim/rtl/cnn_dw_stage.sv",
+      "bytes": 7994,
+      "sha256": "2772f2b81ed5bb147f6352b48a9d832849a16f2ca8e0dac739c29b9eefc10780",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_feed.sv",
+      "source": "rtl_optim/rtl/cnn_feed.sv",
+      "bytes": 2292,
+      "sha256": "4e4f6e99aaa4ee40e61c6ebed9cce522ee5e1fbe56e2b4891a84d2a2e65b70f9",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_fifo.sv",
+      "source": "rtl_optim/rtl/cnn_fifo.sv",
+      "bytes": 1949,
+      "sha256": "95de3df6fa8aa442d7b73597b864e8bedd8bd2c76ef0d064e63809898a93f420",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_gelu.sv",
+      "source": "rtl_optim/rtl/cnn_gelu.sv",
+      "bytes": 4720,
+      "sha256": "0c0b1b8b21c79da5a83d94c6a6f089ee9804a1cf6d3ab2385911d4832d861c1c",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_job.sv",
+      "source": "rtl_optim/rtl/cnn_job.sv",
+      "bytes": 2263,
+      "sha256": "329e51f40cce1effb0611d3715c05c8135dac7ea7d18e7a152058b798fc78f17",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_math_pkg.sv",
+      "source": "rtl_optim/rtl/cnn_math_pkg.sv",
+      "bytes": 1024,
+      "sha256": "d009e5d40af5b0b3a5fd12e26d9e024a1d3b1ef5e725e7986b6318b2b6ebc91f",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_narrow_post.sv",
+      "source": "rtl_optim/rtl/cnn_narrow_post.sv",
+      "bytes": 2373,
+      "sha256": "5d76590e0682df442e15febec93a2b143af5b7e3c14de8358519d6bd008d5261",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_output.sv",
+      "source": "rtl_optim/rtl/cnn_output.sv",
+      "bytes": 3362,
+      "sha256": "75adf3eb92e35e431a6e357acc732bfebabf5eb3d0d38ab6fec47542cd75b1f0",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_preflight.sv",
+      "source": "rtl_optim/rtl/cnn_preflight.sv",
+      "bytes": 6553,
+      "sha256": "db2189900b444e02450349702dd8d26eeee7abfaee6c623d78ea029bfadfe0f9",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_profile_pkg.sv",
+      "source": "rtl_optim/rtl/cnn_profile_pkg.sv",
+      "bytes": 3366,
+      "sha256": "beca72eb944b0cfac044e10862f045e830721cb4443ccd8afd30003fbff72dff",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_pw1_stage.sv",
+      "source": "rtl_optim/rtl/cnn_pw1_stage.sv",
+      "bytes": 13268,
+      "sha256": "c7f693d7232c26cc405c453f401754a59b4d0d6eab66258c2d0d6c9abf1b026d",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_pw2_stage.sv",
+      "source": "rtl_optim/rtl/cnn_pw2_stage.sv",
+      "bytes": 21675,
+      "sha256": "038528e64bcabbf8ecacf2f81e926a818f2a141b8eb9f2690d8b8637883ce015",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_pw_mac.sv",
+      "source": "rtl_optim/rtl/cnn_pw_mac.sv",
+      "bytes": 2256,
+      "sha256": "602b9cc411d7b6fe49ea7b5cc5ff15cd101cf8d14794f5e7956f6c840ba7626e",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_read_router.sv",
+      "source": "rtl_optim/rtl/cnn_read_router.sv",
+      "bytes": 1957,
+      "sha256": "25ec5078bdaca593bf7930b06d4e58d45dd5a1b7ea24829ad93993cccfa93cbf",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_residual_store.sv",
+      "source": "rtl_optim/rtl/cnn_residual_store.sv",
+      "bytes": 4120,
+      "sha256": "c75fb6c5f8130901447d4cbe198b4a69893dc26fa74510f7b57b436480def94a",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_row_guard.sv",
+      "source": "rtl_optim/rtl/cnn_row_guard.sv",
+      "bytes": 1088,
+      "sha256": "705841115b17acf8ca9c132a391519f02d56961b87573b5cd76f53a6aa1e996a",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_rtl_bd.sv",
+      "source": "rtl_optim/rtl/cnn_rtl_bd.sv",
+      "bytes": 49554,
+      "sha256": "fa126446efc43dc1d700dbefc374b016a5f82c571abff90b2e882f36e7220c32",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_rtl_top.sv",
+      "source": "rtl_optim/rtl/cnn_rtl_top.sv",
+      "bytes": 26838,
+      "sha256": "b53ebb6d016b96eb27b92b4afac8a523db724a20878b4e93f26f96b1e12eb312",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_scale.sv",
+      "source": "rtl_optim/rtl/cnn_scale.sv",
+      "bytes": 2143,
+      "sha256": "c6d1ed5c2299c9d6df03d36e4e77a0d62377f39f108daf5b96c58336c785b2cf",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_scale_service.sv",
+      "source": "rtl_optim/rtl/cnn_scale_service.sv",
+      "bytes": 2118,
+      "sha256": "3c677b9a15bcb566e389bbaec8618de5f0c0e42904ba9bb6864de9910587b3aa",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_tile_loader.sv",
+      "source": "rtl_optim/rtl/cnn_tile_loader.sv",
+      "bytes": 3298,
+      "sha256": "33d0189641f73cccd82bc21c892cf3ff093f9ee2538e24b0603f68eb0786dcb1",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/rtl/cnn_write_router.sv",
+      "source": "rtl_optim/rtl/cnn_write_router.sv",
+      "bytes": 2066,
+      "sha256": "a10059446d3195e1e11e953dbe2987ca454f626085dbe4b02acb56c2dc65bf1c",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/cnn_v10_half2x_clock_tree.sv",
+      "source": "rtl_optim/platform/cnn_v10_half2x_clock_tree.sv",
+      "bytes": 2307,
+      "sha256": "d3ab3a3197ddf76c941cc818a347ca10cc0053f6c6274adc3e9da96c5ab17c8a",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/create_bd.tcl",
+      "source": "rtl_optim/platform/create_bd.tcl",
+      "bytes": 43604,
+      "sha256": "aaa05f0787cfd88a717d9cefe50012da5468cd4c251ce9c7276699e76f2a21d4",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/fzv10_ddr_guard.sv",
+      "source": "rtl_optim/platform/fzv10_ddr_guard.sv",
+      "bytes": 16179,
+      "sha256": "134af8682253e9c62038c5705c0ed294809eb55b20dd672114907cdc55e725d2",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/fzv10_ddr_guard_bd.sv",
+      "source": "rtl_optim/platform/fzv10_ddr_guard_bd.sv",
+      "bytes": 5017,
+      "sha256": "47a805cc9aa463e2df3314c007c32335727e9680050351866cf20a3de7b278e1",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/fzv10_trace_pack.sv",
+      "source": "rtl_optim/platform/fzv10_trace_pack.sv",
+      "bytes": 1838,
+      "sha256": "b7dd6d7ea7a98da2bad02eb60567795b0032678ba50bc1da69eb8678a6c2e98e",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/fzv4_axi_hp0_monitor.sv",
+      "source": "rtl_optim/platform/fzv4_axi_hp0_monitor.sv",
+      "bytes": 6176,
+      "sha256": "813ea8311ca999b2e9a6df0135f2c0c983c0b18c27a3ff8b7db03d9bd3859247",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/platform/ps8_axi_reset.sv",
+      "source": "rtl_optim/platform/ps8_axi_reset.sv",
+      "bytes": 1402,
+      "sha256": "cc433ce5a3ccbad912614c3b1b006ecb823b28808946642d92bc8102a25aa66d",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/constraints/platform.xdc",
+      "source": "rtl_optim/constraints/platform.xdc",
+      "bytes": 263,
+      "sha256": "651efa18b538ec59d4b7f673062518ef127dcc4447d23cf4e1da0f676a4eb275",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_control_tb.sv",
+      "source": "rtl_optim/tb/axi_control_tb.sv",
+      "bytes": 3681,
+      "sha256": "f0277cb7652c10dc06e6393a785f4d8e30169c3c263230d6f00d00fc700dc250",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_read_fifo_tb.sv",
+      "source": "rtl_optim/tb/axi_read_fifo_tb.sv",
+      "bytes": 6104,
+      "sha256": "33f4f2acd29d8820fac7c769ec6c40fe8223ebeaa475e393d111c29bd9555239",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_read_router_tb.sv",
+      "source": "rtl_optim/tb/axi_read_router_tb.sv",
+      "bytes": 1681,
+      "sha256": "f4ccf370267dbb4f5344ecda2dc8e96a31bf47cf6769f97cdac994e874217201",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_router_tb.sv",
+      "source": "rtl_optim/tb/axi_router_tb.sv",
+      "bytes": 1976,
+      "sha256": "d4900de6ba481f53c380e08295ea8c3596657cf1c9c5f5cfa56ef4878ad23d0e",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_tile_tb.sv",
+      "source": "rtl_optim/tb/axi_tile_tb.sv",
+      "bytes": 4438,
+      "sha256": "2ef4c050594c833c81951b7e54e13546729a3075662497eb90f000991ce581f0",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/axi_transport_tb.sv",
+      "source": "rtl_optim/tb/axi_transport_tb.sv",
+      "bytes": 10552,
+      "sha256": "8c041257687a9457d468f2cd9a09c982a4822c41a6945c827b829411df65f6fc",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/board_report_test.py",
+      "source": "rtl_optim/tb/board_report_test.py",
+      "bytes": 21422,
+      "sha256": "d52813a81a169a8b834767b512b28ad2aeef7567bc189876fe253442322c3ba2",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/dw_tb.sv",
+      "source": "rtl_optim/tb/dw_tb.sv",
+      "bytes": 8478,
+      "sha256": "3d280f72ea1954123d381ff9046d5dd29dba0ca355bb7887415e728d9aff9b3a",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/fixtures/full-rtl/manifest.json",
+      "source": "rtl_optim/tb/fixtures/full-rtl/manifest.json",
+      "bytes": 20022,
+      "sha256": "a2a81c984e48dcedf580559a84e11ddd6dfe515edae728194454c96c600da8bd",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/fixtures/full-rtl/receipt.json",
+      "source": "rtl_optim/tb/fixtures/full-rtl/receipt.json",
+      "bytes": 477,
+      "sha256": "43c1fb405d8c4acdb1697bba8c65eacc1d701007c53afba0e83865edd8782409",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/full_ddr.sv",
+      "source": "rtl_optim/tb/full_ddr.sv",
+      "bytes": 37739,
+      "sha256": "db9e35ad2b63094a01bafc03fab2f441e426f69f05bcec3e44313bf719ff4c28",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_direct_tb.sv",
+      "source": "rtl_optim/tb/math_direct_tb.sv",
+      "bytes": 1600,
+      "sha256": "3687c8f8b02c830b5a54c0ddcf2e9f4692653dd4b90bbc324c832f8c027e5ecc",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_fifo_tb.sv",
+      "source": "rtl_optim/tb/math_fifo_tb.sv",
+      "bytes": 1136,
+      "sha256": "7689059a394e96edf92cb6ea73d966a0343d9d6c3e6c42718cb9c848443c7ad5",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_gelu_tb.sv",
+      "source": "rtl_optim/tb/math_gelu_tb.sv",
+      "bytes": 2845,
+      "sha256": "ea65063457b26a9adcab43eac88bb66a265b1aab9b42cb4d305df73d5dc4ba62",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_missing.sv",
+      "source": "rtl_optim/tb/math_missing.sv",
+      "bytes": 255,
+      "sha256": "d72f900ebbb3fb89944849a38527b1a13234706eb683eaf4eb9cf23efaeb655b",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_narrow_tb.sv",
+      "source": "rtl_optim/tb/math_narrow_tb.sv",
+      "bytes": 1834,
+      "sha256": "4cd71e4c38886860bc40ef39ecccf9a726189896fa30cf0fee08d765128bf37b",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/math_scale_tb.sv",
+      "source": "rtl_optim/tb/math_scale_tb.sv",
+      "bytes": 1970,
+      "sha256": "684691e3ebe85fae8adc24dc552c1b51e5d45ea4c8a354e9282569a5da6c1625",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/preflight_constants.json",
+      "source": "rtl_optim/tb/preflight_constants.json",
+      "bytes": 1583,
+      "sha256": "30b326960d656540849725f2c4f59675f429dc98bbaa5966b2e7858ffb26b203",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/preflight_golden.svh",
+      "source": "rtl_optim/tb/preflight_golden.svh",
+      "bytes": 3793,
+      "sha256": "9b8c522a124f6ae66b022d1a78d108b0d61732a23e4dc09da928f34addca8416",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/preflight_tb.sv",
+      "source": "rtl_optim/tb/preflight_tb.sv",
+      "bytes": 5243,
+      "sha256": "af221aa181aec6b62c6272de4330e711f8fbdc17e749ce7752cc6efeb50bf827",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw1_fast_miter_tb.sv",
+      "source": "rtl_optim/tb/pw1_fast_miter_tb.sv",
+      "bytes": 2470,
+      "sha256": "a704283e8851e4358124a4eb7c7ccd12921cd490d48bba35967bf5e6fdb2d75a",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw1_fast_primitives.sv",
+      "source": "rtl_optim/tb/pw1_fast_primitives.sv",
+      "bytes": 11487,
+      "sha256": "aebd268bccd31d6775a1a6e57c8131e65f40410203cbc40d6b75572c0df990c3",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw1_mac_tb.sv",
+      "source": "rtl_optim/tb/pw1_mac_tb.sv",
+      "bytes": 1833,
+      "sha256": "13a330e7605a362b9de6c901e19ac37014579bc165620c908cf2e1e2719032f1",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw1_profile_tb.sv",
+      "source": "rtl_optim/tb/pw1_profile_tb.sv",
+      "bytes": 7245,
+      "sha256": "c29d6c78fe699e779a3fddab72d89319a0941ac5e402744374ac556b6a09c861",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw1_stage_tb.sv",
+      "source": "rtl_optim/tb/pw1_stage_tb.sv",
+      "bytes": 7953,
+      "sha256": "f43aefa3a97278737b3c671dbce636a88efd258899087ebeae88e9ff1be07862",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/pw2_tb.sv",
+      "source": "rtl_optim/tb/pw2_tb.sv",
+      "bytes": 12862,
+      "sha256": "cc50b0dc7745919557cd8fccee6ad10b047e152c3767b02c6054a7ad56909a75",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/qualification_checker_test.py",
+      "source": "rtl_optim/tb/qualification_checker_test.py",
+      "bytes": 20721,
+      "sha256": "0c1dd590e2c30cec7cb99b523884ab0789c90a884cffd4ada976f27c6835ed2e",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/streams_feed_tb.sv",
+      "source": "rtl_optim/tb/streams_feed_tb.sv",
+      "bytes": 1760,
+      "sha256": "1e3e27366ebbed9b5a06a92cc8d0323ab54f4adf5c0ff6f9f1eb14f451f7f6cc",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/streams_output_tb.sv",
+      "source": "rtl_optim/tb/streams_output_tb.sv",
+      "bytes": 4113,
+      "sha256": "fbe707bfa5ff0a85a6b01e46012bbd18d3c146e24fc690067a491bc4237d026f",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/streams_residual_tb.sv",
+      "source": "rtl_optim/tb/streams_residual_tb.sv",
+      "bytes": 3504,
+      "sha256": "a21375747d11ecfd8aad7adb8e42667f4cd45c482de8d48cd67b7c35a95f4b12",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/tb_cnn_full.sv",
+      "source": "rtl_optim/tb/tb_cnn_full.sv",
+      "bytes": 29275,
+      "sha256": "c92bd92479a392caa810cd94fd871a35e0edbf7c73cfaa434f5569b16bfb3d8c",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/tb_job.sv",
+      "source": "rtl_optim/tb/tb_job.sv",
+      "bytes": 2729,
+      "sha256": "a4bd2701c0064c2ad21d540982361a550d8d8c307fe8a0b684c7fc0259f1e5dc",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/tb/tb_row_guard.sv",
+      "source": "rtl_optim/tb/tb_row_guard.sv",
+      "bytes": 1761,
+      "sha256": "38e7f9f3a328495d938f929c1b60565e079f85baece74580e2b6fa9937df2a87",
+      "reason": "Current handwritten RTL008 source and verification inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.xpr",
+      "source": "rtl_optim/project-final-008/cnn_rtl.xpr",
+      "bytes": 81493,
+      "sha256": "e167f48af2ef3d74fa1948b5979526d7f747fc8e28d4472175b2fb17ae23a043",
+      "reason": "Sole final Vivado project"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/constraints/platform.xdc",
+      "source": "rtl_optim/project-final-008/source_snapshot/constraints/platform.xdc",
+      "bytes": 263,
+      "sha256": "651efa18b538ec59d4b7f673062518ef127dcc4447d23cf4e1da0f676a4eb275",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/cnn_v10_half2x_clock_tree.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/cnn_v10_half2x_clock_tree.sv",
+      "bytes": 2307,
+      "sha256": "d3ab3a3197ddf76c941cc818a347ca10cc0053f6c6274adc3e9da96c5ab17c8a",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/create_bd.tcl",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/create_bd.tcl",
+      "bytes": 43604,
+      "sha256": "aaa05f0787cfd88a717d9cefe50012da5468cd4c251ce9c7276699e76f2a21d4",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/fzv10_ddr_guard.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/fzv10_ddr_guard.sv",
+      "bytes": 16179,
+      "sha256": "134af8682253e9c62038c5705c0ed294809eb55b20dd672114907cdc55e725d2",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/fzv10_ddr_guard_bd.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/fzv10_ddr_guard_bd.sv",
+      "bytes": 5017,
+      "sha256": "47a805cc9aa463e2df3314c007c32335727e9680050351866cf20a3de7b278e1",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/fzv10_trace_pack.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/fzv10_trace_pack.sv",
+      "bytes": 1838,
+      "sha256": "b7dd6d7ea7a98da2bad02eb60567795b0032678ba50bc1da69eb8678a6c2e98e",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/fzv4_axi_hp0_monitor.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/fzv4_axi_hp0_monitor.sv",
+      "bytes": 6176,
+      "sha256": "813ea8311ca999b2e9a6df0135f2c0c983c0b18c27a3ff8b7db03d9bd3859247",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/platform/ps8_axi_reset.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/platform/ps8_axi_reset.sv",
+      "bytes": 1402,
+      "sha256": "cc433ce5a3ccbad912614c3b1b006ecb823b28808946642d92bc8102a25aa66d",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_axi_pkg.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_axi_pkg.sv",
+      "bytes": 1023,
+      "sha256": "9972f1b25fbd6fdfec76e6531602050c1d3dc46de9b5818cb6a576559c2ad0c5",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_axi_read.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_axi_read.sv",
+      "bytes": 3556,
+      "sha256": "f93d7076fea431e0ce0ce27b3ee2897ea140d9d3f254153f19d9c96c487a02a0",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_axi_write.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_axi_write.sv",
+      "bytes": 3277,
+      "sha256": "807bf149663826b964f84b18c3402be71a4bac0e67aab4cc8f75d81e14e1fee5",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_control.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_control.sv",
+      "bytes": 5228,
+      "sha256": "cea4e9b27f427b6b4700634d43ff4ed298bbb1d0b2c8cc3e6a688ed2910d01f5",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_dsp_primitives.v",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_dsp_primitives.v",
+      "bytes": 23209,
+      "sha256": "109993c737c178ac50e495a698281c2e74323743a24b363c362c27ef51cbabc9",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_dw_core.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_dw_core.sv",
+      "bytes": 8304,
+      "sha256": "5e0f3307223cdbb8b6748d2ecccc9bd6c0fcb8fc74d323c6d15daddfe736c78e",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_dw_stage.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_dw_stage.sv",
+      "bytes": 7994,
+      "sha256": "2772f2b81ed5bb147f6352b48a9d832849a16f2ca8e0dac739c29b9eefc10780",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_feed.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_feed.sv",
+      "bytes": 2292,
+      "sha256": "4e4f6e99aaa4ee40e61c6ebed9cce522ee5e1fbe56e2b4891a84d2a2e65b70f9",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_fifo.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_fifo.sv",
+      "bytes": 1949,
+      "sha256": "95de3df6fa8aa442d7b73597b864e8bedd8bd2c76ef0d064e63809898a93f420",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_gelu.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_gelu.sv",
+      "bytes": 4720,
+      "sha256": "0c0b1b8b21c79da5a83d94c6a6f089ee9804a1cf6d3ab2385911d4832d861c1c",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_job.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_job.sv",
+      "bytes": 2263,
+      "sha256": "329e51f40cce1effb0611d3715c05c8135dac7ea7d18e7a152058b798fc78f17",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_math_pkg.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_math_pkg.sv",
+      "bytes": 1024,
+      "sha256": "d009e5d40af5b0b3a5fd12e26d9e024a1d3b1ef5e725e7986b6318b2b6ebc91f",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_narrow_post.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_narrow_post.sv",
+      "bytes": 2373,
+      "sha256": "5d76590e0682df442e15febec93a2b143af5b7e3c14de8358519d6bd008d5261",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_output.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_output.sv",
+      "bytes": 3362,
+      "sha256": "75adf3eb92e35e431a6e357acc732bfebabf5eb3d0d38ab6fec47542cd75b1f0",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_preflight.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_preflight.sv",
+      "bytes": 6553,
+      "sha256": "db2189900b444e02450349702dd8d26eeee7abfaee6c623d78ea029bfadfe0f9",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_profile_pkg.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_profile_pkg.sv",
+      "bytes": 3366,
+      "sha256": "beca72eb944b0cfac044e10862f045e830721cb4443ccd8afd30003fbff72dff",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_pw1_stage.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_pw1_stage.sv",
+      "bytes": 13268,
+      "sha256": "c7f693d7232c26cc405c453f401754a59b4d0d6eab66258c2d0d6c9abf1b026d",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_pw2_stage.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_pw2_stage.sv",
+      "bytes": 21675,
+      "sha256": "038528e64bcabbf8ecacf2f81e926a818f2a141b8eb9f2690d8b8637883ce015",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_pw_mac.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_pw_mac.sv",
+      "bytes": 2256,
+      "sha256": "602b9cc411d7b6fe49ea7b5cc5ff15cd101cf8d14794f5e7956f6c840ba7626e",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_read_router.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_read_router.sv",
+      "bytes": 1957,
+      "sha256": "25ec5078bdaca593bf7930b06d4e58d45dd5a1b7ea24829ad93993cccfa93cbf",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_residual_store.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_residual_store.sv",
+      "bytes": 4120,
+      "sha256": "c75fb6c5f8130901447d4cbe198b4a69893dc26fa74510f7b57b436480def94a",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_row_guard.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_row_guard.sv",
+      "bytes": 1088,
+      "sha256": "705841115b17acf8ca9c132a391519f02d56961b87573b5cd76f53a6aa1e996a",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_rtl_bd.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_rtl_bd.sv",
+      "bytes": 49554,
+      "sha256": "fa126446efc43dc1d700dbefc374b016a5f82c571abff90b2e882f36e7220c32",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_rtl_top.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_rtl_top.sv",
+      "bytes": 26838,
+      "sha256": "b53ebb6d016b96eb27b92b4afac8a523db724a20878b4e93f26f96b1e12eb312",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_scale.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_scale.sv",
+      "bytes": 2143,
+      "sha256": "c6d1ed5c2299c9d6df03d36e4e77a0d62377f39f108daf5b96c58336c785b2cf",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_scale_service.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_scale_service.sv",
+      "bytes": 2118,
+      "sha256": "3c677b9a15bcb566e389bbaec8618de5f0c0e42904ba9bb6864de9910587b3aa",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_tile_loader.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_tile_loader.sv",
+      "bytes": 3298,
+      "sha256": "33d0189641f73cccd82bc21c892cf3ff093f9ee2538e24b0603f68eb0786dcb1",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/rtl/cnn_write_router.sv",
+      "source": "rtl_optim/project-final-008/source_snapshot/rtl/cnn_write_router.sv",
+      "bytes": 2066,
+      "sha256": "a10059446d3195e1e11e953dbe2987ca454f626085dbe4b02acb56c2dc65bf1c",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/source_snapshot/SHA256SUMS.txt",
+      "source": "rtl_optim/project-final-008/source_snapshot/SHA256SUMS.txt",
+      "bytes": 3212,
+      "sha256": "9e27dbfae359808d93e45be0d7f6081fb810f97b26464dfe1df8347c5f101d3e",
+      "reason": "Immutable final project compilation source capture"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/cnn_rtl_platform.bd",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/cnn_rtl_platform.bd",
+      "bytes": 181483,
+      "sha256": "d904e0cd5bdbdafeb580bea0c4b94f7e3e691535fd54b2733b01e23ac6f3bda7",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_all_0/cnn_rtl_platform_ack_all_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_all_0/cnn_rtl_platform_ack_all_0.xci",
+      "bytes": 34793,
+      "sha256": "fdcbbb0071930e1523c510effa60cef3464eab4ed5f98ca3bc1dbeff7ec55699",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_rd_0/cnn_rtl_platform_ack_rd_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_rd_0/cnn_rtl_platform_ack_rd_0.xci",
+      "bytes": 34788,
+      "sha256": "96c5ec616f93a7a1fc4313e27f62b49655bdfee5bea4baf9517c7106597fb635",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_wr_0/cnn_rtl_platform_ack_wr_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ack_wr_0/cnn_rtl_platform_ack_wr_0.xci",
+      "bytes": 34788,
+      "sha256": "608834ac43b0dbc2c13d42d93dcabf2b7d8399ff0ef816435f42800124d44adf",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_clock_wiz_0/cnn_rtl_platform_clock_wiz_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_clock_wiz_0/cnn_rtl_platform_clock_wiz_0.xci",
+      "bytes": 69430,
+      "sha256": "4420b8e7c42d9474e4e8b69bee44516067b03f1385982aa3956847a6971cf334",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_const_one_0/cnn_rtl_platform_const_one_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_const_one_0/cnn_rtl_platform_const_one_0.xci",
+      "bytes": 2763,
+      "sha256": "f1cde20c7ae1ca04c358da91841cd2e3f5dcea81015db818eb6e6f6573e89d82",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_const_zero_0/cnn_rtl_platform_const_zero_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_const_zero_0/cnn_rtl_platform_const_zero_0.xci",
+      "bytes": 2768,
+      "sha256": "058512e68b4027f4584ea5f22a2963c272b1dc07b07ebc1ef3bc546bdc69b357",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_core_0/cnn_rtl_platform_core_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_core_0/cnn_rtl_platform_core_0.xci",
+      "bytes": 95596,
+      "sha256": "a6062ffd3259712f4944a33bfc8957d6cd07dd2f5520482f98d049f191c9c06c",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_core_reset_0/cnn_rtl_platform_core_reset_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_core_reset_0/cnn_rtl_platform_core_reset_0.xci",
+      "bytes": 12826,
+      "sha256": "a32da11d036783b9dcf3f897bbea9a74adce2bdf7193cad57d1cd7a0f9e6d3d2",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_0/cnn_rtl_platform_ctrl_xbar_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_0/cnn_rtl_platform_ctrl_xbar_0.xci",
+      "bytes": 35638,
+      "sha256": "8029a3fee015ca0a43057fd1085becbaf4562e9c7356c096f2bb94a3c8829e3d",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_imp_auto_pc_0/cnn_rtl_platform_ctrl_xbar_imp_auto_pc_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_imp_auto_pc_0/cnn_rtl_platform_ctrl_xbar_imp_auto_pc_0.xci",
+      "bytes": 30224,
+      "sha256": "18190677b4cb9ea5dc8e017f32d5911d1e694181e24a8723bc66fa0b58fef1b6",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_imp_xbar_0/cnn_rtl_platform_ctrl_xbar_imp_xbar_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ctrl_xbar_imp_xbar_0/cnn_rtl_platform_ctrl_xbar_imp_xbar_0.xci",
+      "bytes": 220011,
+      "sha256": "5fcff2e00b43dcb45df60e88b06373598f05fbf699424f7742b415fb05014d9d",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_data_dwidth_0/cnn_rtl_platform_data_dwidth_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_data_dwidth_0/cnn_rtl_platform_data_dwidth_0.xci",
+      "bytes": 32028,
+      "sha256": "5f8970e8a4e96b9e0cb5a4cb0eaf2b985bf6cfadea6a470f7dd546cb26deca9b",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_data_xbar_0/cnn_rtl_platform_data_xbar_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_data_xbar_0/cnn_rtl_platform_data_xbar_0.xci",
+      "bytes": 279303,
+      "sha256": "0fe3ad69b665bd8ec471632da4957f8efb7c7cf530509583d5d5480b02af7675",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_fast_core_reset_0/cnn_rtl_platform_fast_core_reset_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_fast_core_reset_0/cnn_rtl_platform_fast_core_reset_0.xci",
+      "bytes": 12849,
+      "sha256": "d1d89a29f3485586eb0d76337b8b971fd8d6751c91d73e75972a4aacd81d52b2",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_guard_0/cnn_rtl_platform_guard_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_guard_0/cnn_rtl_platform_guard_0.xci",
+      "bytes": 18090,
+      "sha256": "67a854b348d9b8a2b035d1b6109010022613656b630210a3f0885e56b336b64e",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_half2x_clock_tree_0/cnn_rtl_platform_half2x_clock_tree_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_half2x_clock_tree_0/cnn_rtl_platform_half2x_clock_tree_0.xci",
+      "bytes": 6999,
+      "sha256": "a0eb9b51443871ac9a2501e04afe3b4ea964fe12fc907cbea72fab0f7ba6c5ce",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_hp0_monitor_0/cnn_rtl_platform_hp0_monitor_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_hp0_monitor_0/cnn_rtl_platform_hp0_monitor_0.xci",
+      "bytes": 17310,
+      "sha256": "cdf0142c8a8a31de622110431b2ee17b1c76bf30a2ef63c4392e46d189f2a428",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_platform_reset_0/cnn_rtl_platform_platform_reset_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_platform_reset_0/cnn_rtl_platform_platform_reset_0.xci",
+      "bytes": 12846,
+      "sha256": "d9cbe5318e6de64073fb60e6f44bb9acdb1fa2606d9912eceb1bc98877c38dd2",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ps_0/cnn_rtl_platform_ps_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_ps_0/cnn_rtl_platform_ps_0.xci",
+      "bytes": 251795,
+      "sha256": "db1f5f2acdaac66856e89c1c53a0af98ff29a0267a8729c6d877132d20c1cca8",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_0_0/cnn_rtl_platform_req_slice_0_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_0_0/cnn_rtl_platform_req_slice_0_0.xci",
+      "bytes": 3197,
+      "sha256": "cd39155e588bb71b670465d4b5e9e4f594684d0cbefa6456fe945cbbc74ebbe6",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_1_0/cnn_rtl_platform_req_slice_1_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_1_0/cnn_rtl_platform_req_slice_1_0.xci",
+      "bytes": 3197,
+      "sha256": "93bb3294cbab9b36c4525553237a855d0964a2bc6637bf1a6da54092543cd21e",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_2_0/cnn_rtl_platform_req_slice_2_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_2_0/cnn_rtl_platform_req_slice_2_0.xci",
+      "bytes": 3197,
+      "sha256": "fbbed292dbc515f63b121b6092db5959fceeba9129740c3cf3f1a33b2790af54",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_3_0/cnn_rtl_platform_req_slice_3_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_3_0/cnn_rtl_platform_req_slice_3_0.xci",
+      "bytes": 3197,
+      "sha256": "c8c809bb76d97eef91178b6ca23a5c888d7760ce14c9c5c3b184f264d08b68f5",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_4_0/cnn_rtl_platform_req_slice_4_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_4_0/cnn_rtl_platform_req_slice_4_0.xci",
+      "bytes": 3197,
+      "sha256": "0165ef06120808e44d3fb3ad5de72e213037fc13566d3512aaac2bd3d4f6aea9",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_5_0/cnn_rtl_platform_req_slice_5_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_req_slice_5_0/cnn_rtl_platform_req_slice_5_0.xci",
+      "bytes": 3197,
+      "sha256": "d97474e3ce75203f579f7dcdfb9ca0bb78f4464ac9864e85e82b6ce3b9516502",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_reset_0/cnn_rtl_platform_reset_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_reset_0/cnn_rtl_platform_reset_0.xci",
+      "bytes": 6074,
+      "sha256": "fc45274038c840278ff9d067a11bcec1fc4354f0e7dc7372bab85b3072a20694",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_0_0/cnn_rtl_platform_shutdown_0_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_0_0/cnn_rtl_platform_shutdown_0_0.xci",
+      "bytes": 37175,
+      "sha256": "011353860b5908308f727907baea5e46fa273b696da725ae3eeb53320ec31979",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_1_0/cnn_rtl_platform_shutdown_1_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_1_0/cnn_rtl_platform_shutdown_1_0.xci",
+      "bytes": 37149,
+      "sha256": "163fe305014342041ee6451801660ad9c531d408b424fcb71d63b979cd60098f",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_2_0/cnn_rtl_platform_shutdown_2_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_2_0/cnn_rtl_platform_shutdown_2_0.xci",
+      "bytes": 37149,
+      "sha256": "42ae725269acbb8cabf3b35950f52828599daa8434510d875e7e4fa4f7a1bd86",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_3_0/cnn_rtl_platform_shutdown_3_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_3_0/cnn_rtl_platform_shutdown_3_0.xci",
+      "bytes": 37149,
+      "sha256": "558fe0016e2a453f872d26cd371712d6ce9b18e36375a4a69a55ff0342dfc27a",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_4_0/cnn_rtl_platform_shutdown_4_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_4_0/cnn_rtl_platform_shutdown_4_0.xci",
+      "bytes": 37149,
+      "sha256": "efb86e7ac2271e12d79dee7a85bb7e06de90b5dac982d7ab8f5d5c564ee0d10a",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_5_0/cnn_rtl_platform_shutdown_5_0.xci",
+      "source": "rtl_optim/project-final-008/cnn_rtl.srcs/sources_1/bd/cnn_rtl_platform/ip/cnn_rtl_platform_shutdown_5_0/cnn_rtl_platform_shutdown_5_0.xci",
+      "bytes": 37149,
+      "sha256": "17181f0d23f4c8ac50624622890bd7c1800ed88296a03bf8bae76b0e8354b3cc",
+      "reason": "Final BD and standard-IP configuration inputs"
+    },
+    {
+      "path": "PL/project-final-008/cnn_rtl.gen/sources_1/bd/cnn_rtl_platform/hdl/cnn_rtl_platform_wrapper.v",
+      "source": "rtl_optim/project-final-008/cnn_rtl.gen/sources_1/bd/cnn_rtl_platform/hdl/cnn_rtl_platform_wrapper.v",
+      "bytes": 751,
+      "sha256": "9c260262aaf391c043364373d4a2763cf469563534c8b45f00c0a18e59fa4b96",
+      "reason": "Generated BD wrapper directly referenced by the final XPR"
+    },
+    {
+      "path": "PL/scripts/build.ps1",
+      "source": "rtl_optim/scripts/build.ps1",
+      "bytes": 2927,
+      "sha256": "b04a949a18ca25bc095a5ede297e5338f3a5941c2bb934abea67b4f5abd2c6bb",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/build.tcl",
+      "source": "rtl_optim/scripts/build.tcl",
+      "bytes": 19982,
+      "sha256": "b22fc3d816444814a7729dc65489d63631db3d0903a6a6cc112774aba9939435",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/create_project.tcl",
+      "source": "rtl_optim/scripts/create_project.tcl",
+      "bytes": 3774,
+      "sha256": "b61e7668c9264eed40e21aa3de9d93c8bd0c4647c6c28b8b2933efa2abdaebaf",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/run_sim.ps1",
+      "source": "rtl_optim/scripts/run_sim.ps1",
+      "bytes": 1326,
+      "sha256": "e0daa90dc7391dd9d9376c28b8412f0d45300a13a8f13f031ed4bb0a25d6bd35",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_sim.ps1",
+      "source": "rtl_optim/scripts/full_sim.ps1",
+      "bytes": 6779,
+      "sha256": "61462a05e924da4648cd632ba6461e280ded1f1bb62230dedc4230ce4aaed9e6",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_proof.ps1",
+      "source": "rtl_optim/scripts/full_proof.ps1",
+      "bytes": 3004,
+      "sha256": "7dffa3fd8eb357c167f3c6fcfc1c06fdb6715e8a4a46f630a1992820bdd85d95",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_replay.ps1",
+      "source": "rtl_optim/scripts/full_replay.ps1",
+      "bytes": 7031,
+      "sha256": "ff689f42cbff9e1085d879c21d2c4cf4cb08e034d0f762ca3e9a9a9ccd587214",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_result.ps1",
+      "source": "rtl_optim/scripts/full_result.ps1",
+      "bytes": 3014,
+      "sha256": "cbcf50800fb9a96f2d9ac220f37b4faf79e4a5a4361b62edc29d5adab979b89e",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_summary.ps1",
+      "source": "rtl_optim/scripts/full_summary.ps1",
+      "bytes": 2365,
+      "sha256": "cc3d7ce4776737dffb31ac853bee80326faa1e81e3bf07fd04382c07e43cc2c4",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/full_fixture.ps1",
+      "source": "rtl_optim/scripts/full_fixture.ps1",
+      "bytes": 1629,
+      "sha256": "061aac11dc46692c0af912cd295212bce750a5733119eb4b80612a19223d047d",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/math_vectors.py",
+      "source": "rtl_optim/scripts/math_vectors.py",
+      "bytes": 2102,
+      "sha256": "a91d111c5acabf245f6201814bdf0f7edac4c4a014ff9954a2d197b8419604b1",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/preflight_reference.py",
+      "source": "rtl_optim/scripts/preflight_reference.py",
+      "bytes": 6806,
+      "sha256": "91b6206508215437c126633973141cc443c5ea99bba34304637a49507c380500",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/preflight_test.ps1",
+      "source": "rtl_optim/scripts/preflight_test.ps1",
+      "bytes": 160,
+      "sha256": "386cddcb0bcb791e8d048ab51fd3becf6ab71fe24db1cf914f14cad386915eee",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/qualification_report.py",
+      "source": "rtl_optim/scripts/qualification_report.py",
+      "bytes": 32451,
+      "sha256": "87630717b9add84e875f5970667bd45ed60e185fecc28040dc5dfb3e75835cbe",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/pw1_fast_miter.ps1",
+      "source": "rtl_optim/scripts/pw1_fast_miter.ps1",
+      "bytes": 5324,
+      "sha256": "b700e47cf945f93719045326c54ce09d557bd4a5670257340e2f55afa46cc0da",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_control.py",
+      "source": "rtl_optim/scripts/board_control.py",
+      "bytes": 1998,
+      "sha256": "104ca2dd3232009d2e493e689a51a4f49135b4be2d0d91fd7c7c4407199f412b",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_transfer.py",
+      "source": "rtl_optim/scripts/board_transfer.py",
+      "bytes": 2219,
+      "sha256": "fe66a1d62a1f6ae755fd8035e3eb6d91734b302e9c45e319df682d2b2ebc83f4",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_load_rtl.sh",
+      "source": "rtl_optim/scripts/board_load_rtl.sh",
+      "bytes": 5085,
+      "sha256": "e01688d920498198193efb3f1e98fee26cf7661ab7b2fec7ef6b50cf546a699a",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_retain_rtl.sh",
+      "source": "rtl_optim/scripts/board_retain_rtl.sh",
+      "bytes": 4683,
+      "sha256": "32c52715d99d97c81cc68caa6504e89062201b2e0cdb0ad121d768eaa3cd55bb",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_rtl_profiles.sh",
+      "source": "rtl_optim/scripts/board_rtl_profiles.sh",
+      "bytes": 758,
+      "sha256": "1421fed453d8ae349ca390dc78ee171a1b4ca0481932c1eab6d440bf0f19f306",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/scripts/board_rtl_full.sh",
+      "source": "rtl_optim/scripts/board_rtl_full.sh",
+      "bytes": 96,
+      "sha256": "4c79af7971f9b16dcee2b8813df99ff877909dc633ee6ffdc1f1dc1e42a3f28b",
+      "reason": "Current RTL build/test/deployment entry; retired HLS flows excluded"
+    },
+    {
+      "path": "PL/FINAL_VERSION.json",
+      "source": "rtl_optim/FINAL_VERSION.json",
+      "bytes": 2406,
+      "sha256": "700d64dbb3bdf75438564270ada2ab0671ccb9e5b281bab9fb89bfbe20940256",
+      "reason": "Original final RTL qualification identity (covers the full local delivery)"
+    },
+    {
+      "path": "PL/SOURCE_MANIFEST.json",
+      "source": "rtl_optim/SOURCE_MANIFEST.json",
+      "bytes": 57679,
+      "sha256": "0686f19bbd4a85e1e900fdea2647507e0c34792be1b6b58af90d6d1b4b5445ba",
+      "reason": "Original final RTL qualification identity (covers the full local delivery)"
+    },
+    {
+      "path": "PL/qualification_report.json",
+      "source": "rtl_optim/qualification_report.json",
+      "bytes": 2827,
+      "sha256": "b022046146dc3ea6712eceee871933c7d88ef7817a16860e8a9a4a7d40b9090c",
+      "reason": "Original final RTL qualification identity (covers the full local delivery)"
+    },
+    {
+      "path": "PL/reports/platform/project-final-008/route_receipt.json",
+      "source": "rtl_optim/reports/platform/project-final-008/route_receipt.json",
+      "bytes": 5186,
+      "sha256": "05e612082e95a2b5da5e732f51637a8a3cb572a400c6918c46b8c3f7faf1603d",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "PL/reports/platform/project-final-008/file_export_receipt.json",
+      "source": "rtl_optim/reports/platform/project-final-008/file_export_receipt.json",
+      "bytes": 1205,
+      "sha256": "444a915260dcee0a16c4154b2c09b797ea0810c7fe24a0becac8e1ee3d8cfa73",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "PL/reports/platform/project-final-008/routed_utilization.rpt",
+      "source": "rtl_optim/reports/platform/project-final-008/routed_utilization.rpt",
+      "bytes": 13417,
+      "sha256": "512cf812cd5626544b7672814c8f760c06f71a0f5df71e433f7519c91099d289",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "PL/reports/platform/project-final-008/timing_summary.rpt",
+      "source": "rtl_optim/reports/platform/project-final-008/timing_summary.rpt",
+      "bytes": 136122,
+      "sha256": "7f4c5d4cc3047bd15c4d6d7603a9d41a1301aa656750d7e5f131baca62e5c8d2",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "PL/reports/board/candidate008/board_report.json",
+      "source": "rtl_optim/reports/board/candidate008/board_report.json",
+      "bytes": 15477,
+      "sha256": "24f2e3b049bc39ff3453930fa425e0f48093ef7b61b5d08bbdbab067f84d0506",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "PL/reports/board/candidate008/deployment/deployment_report.json",
+      "source": "rtl_optim/reports/board/candidate008/deployment/deployment_report.json",
+      "bytes": 988,
+      "sha256": "1c4f12b4cdcecea4a1bbd8a9bfebeaaaa65e80f8ba664cb6cfef0f7049eac426",
+      "reason": "Compact saved final post-route/board evidence"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/__init__.py",
+      "bytes": 2935,
+      "sha256": "e4dd982388b30069224239eaf34ce3eb6b8bf03cfbfcaa4c651a0f6ce7c22903",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/clip.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/clip.py",
+      "bytes": 2708,
+      "sha256": "24bbf20e888aab024824659407a23dc6c06c21aa6af3d9bac9033d6dc98a02ea",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/configs/mobileclip_b.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/configs/mobileclip_b.json",
+      "bytes": 443,
+      "sha256": "5e11f14d7c8f5102077e2cc3ccb8d496cc02c9abe25f62c0eb5d0e4684be6d92",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/configs/mobileclip_s0.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/configs/mobileclip_s0.json",
+      "bytes": 439,
+      "sha256": "b8500657bae59ce9ff472a102ea85a7f15a8d344a409a8655d1ec01c57fcaea5",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/configs/mobileclip_s1.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/configs/mobileclip_s1.json",
+      "bytes": 441,
+      "sha256": "4dcde4a93fa9c7cf1a67f8858bd3ffc47bb3657f51b26bb1cd669f10b9a52597",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/configs/mobileclip_s2.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/configs/mobileclip_s2.json",
+      "bytes": 441,
+      "sha256": "59ea1b54f343117c721706816c9bd945f994f3c8b8bb383ce5f12a6e68c5d32d",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/image_encoder.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/image_encoder.py",
+      "bytes": 2525,
+      "sha256": "9694364c57a30b8c390d826e5f40418b3ade646f2010a87f718c34736327218f",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/logger.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/logger.py",
+      "bytes": 4703,
+      "sha256": "8bcd78f1b00314a9d48e27402d961323d3a82e335f3a4f9c06e6b65c0ecaca45",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/models/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/models/__init__.py",
+      "bytes": 190,
+      "sha256": "e6d1a3a50ac21b53d7aa4895773065f24526657356bb59532d5f4298d065c244",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/models/mci.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/models/mci.py",
+      "bytes": 31195,
+      "sha256": "68e7316c356f48f453ffb2def0ba8b57fc958e056556c230b8dc310e5bade2c2",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/models/vit.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/models/vit.py",
+      "bytes": 17103,
+      "sha256": "9dd0cc983deb49cb7151dd9a64ceab11efe6c51bf1645e4bf62555b46431d0d1",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/__init__.py",
+      "bytes": 108,
+      "sha256": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/common/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/common/__init__.py",
+      "bytes": 108,
+      "sha256": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/common/mobileone.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/common/mobileone.py",
+      "bytes": 12000,
+      "sha256": "ce7b36caceea21ece26a72e333d9c106835562504ba2a66645896dce275961ae",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/common/transformer.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/common/transformer.py",
+      "bytes": 15743,
+      "sha256": "fffcf15574f4d34e606fc4566b07827e92054b4da8e1beaadf7db61dc5bc9e0b",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/image/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/image/__init__.py",
+      "bytes": 108,
+      "sha256": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/image/image_projection.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/image/image_projection.py",
+      "bytes": 3767,
+      "sha256": "f19193cb6cd0cadb01eee783b3303a5dae8e34184a365fa0ae12e2351016ec28",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/image/replknet.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/image/replknet.py",
+      "bytes": 6452,
+      "sha256": "074fd9deba721153c913fe5d3458cc5484c5d2117b12c53c56835cf565256b28",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/text/__init__.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/text/__init__.py",
+      "bytes": 108,
+      "sha256": "db9f9edd0eaded53c87abfb34ee56f8b5a7c95fa8c964650a007364014bd70e9",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/text/repmixer.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/text/repmixer.py",
+      "bytes": 9699,
+      "sha256": "d367663ff5507d5215bf7af84401872767a2f4075beaf806f1db1bc2b6119d29",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/modules/text/tokenizer.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/modules/text/tokenizer.py",
+      "bytes": 1366,
+      "sha256": "d91d2537ec702f3478f4b646f3f5cd77a9bb46a09f17e085d3031de03e911d81",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/mobileclip/text_encoder.py",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/mobileclip/text_encoder.py",
+      "bytes": 9330,
+      "sha256": "3267c58f269f34756a18b41a677ba3b45a3b67d671a33233f5a829af3200a5c0",
+      "reason": "Pinned source dependency verified by the semantic contract"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/LICENSE",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/LICENSE",
+      "bytes": 1571,
+      "sha256": "e5a06c5060dc91cbf8cf33e0f8d96b7da6a08661ff89702c730a176ae8756c6b",
+      "reason": "Required upstream license/attribution"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/LICENSE_MODELS",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/LICENSE_MODELS",
+      "bytes": 5904,
+      "sha256": "cea52d637cf085b17b5bd39ff6c8b20f44072212306a58bc655ed1ca9bbf4dea",
+      "reason": "Required upstream license/attribution"
+    },
+    {
+      "path": "HOST/model-source/official-mobileclip/ACKNOWLEDGEMENTS",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/models/official-mobileclip/ACKNOWLEDGEMENTS",
+      "bytes": 23325,
+      "sha256": "6ef7d3c6edcfc8a02182811908c75143c6251fa899c75765e793200011bcfccf",
+      "reason": "Required upstream license/attribution"
+    },
+    {
+      "path": "HOST/translation-metadata/README.md",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/translation/README.md",
+      "bytes": 3174,
+      "sha256": "7f4b7f90672cd55b85b213bbe21f4b2d0c92327e885734b7e86b019feb145a6b",
+      "reason": "Current offline translation resource identity; weights remain external"
+    },
+    {
+      "path": "HOST/translation-metadata/config.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/translation/config.json",
+      "bytes": 1394,
+      "sha256": "d84104da12fa90da59acf5f0ed30428e43cc92574ad4b9dfa88f29eeeb2b0eb0",
+      "reason": "Current offline translation resource identity; weights remain external"
+    },
+    {
+      "path": "HOST/translation-metadata/tokenizer_config.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/translation/tokenizer_config.json",
+      "bytes": 44,
+      "sha256": "53cc7a6f05224f287476af4798d96b1b85da2edae60257e58633f092c7b5b823",
+      "reason": "Current offline translation resource identity; weights remain external"
+    },
+    {
+      "path": "HOST/translation-metadata/generation_config.json",
+      "source": "deliverables/vision-console/FZ3BVisionConsole/translation/generation_config.json",
+      "bytes": 293,
+      "sha256": "81f06422302b9f4666f20c6f20f43b904e38ccce9326a208f82ff97c2c9699e5",
+      "reason": "Current offline translation resource identity; weights remain external"
+    },
+    {
+      "path": "docs/validation/2026-10-10-recent-inference-fps.md",
+      "source": "docs/maintenance/2026-10-10-recent-inference-fps.md",
+      "bytes": 2204,
+      "sha256": "77bbee94296918040ba43d6cdc0985c7c7f31d28abe6eb68226896b816c23f36",
+      "reason": "Saved current application/FPS validation evidence"
+    },
+    {
+      "path": "docs/validation/fps-regression.txt",
+      "source": "docs/maintenance/fps-regression.txt",
+      "bytes": 196,
+      "sha256": "2fa404aca5d6b4d5ca7eee95bec6896c8f9807e85cc9a3d5fa389e0e5f15341b",
+      "reason": "Saved current application/FPS validation evidence"
+    },
+    {
+      "path": "docs/validation/fps-client-self-test.json",
+      "source": "docs/maintenance/fps-client-self-test.json",
+      "bytes": 1038,
+      "sha256": "b6715767a0f6ce9c6152d31ed59c9d96de882b5494aac846d940fa6a19742520",
+      "reason": "Saved current application/FPS validation evidence"
+    },
+    {
+      "path": "docs/validation/fps-real-board.json",
+      "source": "docs/maintenance/fps-real-board.json",
+      "bytes": 1159,
+      "sha256": "a1f6507ba3810222bfcd68e49e153a585198dada4abba9a8de10706cf7f340f8",
+      "reason": "Saved current application/FPS validation evidence"
+    },
+    {
+      "path": "docs/images/vision-console.png",
+      "source": "docs/maintenance/fps-client.png",
+      "bytes": 86117,
+      "sha256": "76b0e47eb986fb7db2307a3b52446117ac44893db5eb05056aee82bb2fdeb61c",
+      "reason": "Actual current Windows UI screenshot, without credentials"
+    },
+    {
+      "path": "RELEASE_POLICY.md",
+      "source": "docs/maintenance/github-release-policy.md",
+      "bytes": 1223,
+      "sha256": "9479f3cae0a00c023833bf7704ae6d2b6f15dbb5aaa3dce624e85bfde09a161a",
+      "reason": "User-defined main and immutable-tag publication policy"
+    },
+    {
+      "path": "tools/test_final_application.py",
+      "source": "scripts/test_final_application.py",
+      "bytes": 767,
+      "sha256": "6108bd36f1aab380ac2c56942d742a0f866096d4f2d35e1577a60e82012c95d4",
+      "reason": "Existing maintained regression entry; restore to original workspace paths before use"
+    },
+    {
+      "path": "tools/fz3b_ssh.py",
+      "source": "scripts/fz3b_ssh.py",
+      "bytes": 2153,
+      "sha256": "aa57d6b1dfaeac92c67265a99dadf04d01b95b32f21ff35bad6daea7b2eb8c92",
+      "reason": "Current SSH maintenance entry; account source remains private"
+    }
+  ]
+}

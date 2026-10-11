@@ -1,0 +1,20 @@
+{
+  "schema": "retained-rtl-deployment-v1",
+  "status": "RETAINED_RTL_VERIFIED",
+  "qualified": true,
+  "current_board_design": "RTL008",
+  "persistent_startup_configured": true,
+  "reboot_test_performed": false,
+  "boot_id": "3da2f700-a50a-4b1d-ab1c-1e3e691cd645",
+  "board_report_sha256": "24f2e3b049bc39ff3453930fa425e0f48093ef7b61b5d08bbdbab067f84d0506",
+  "state_sha256": "da9b399b2787c5d87f4d97f3e910eae3469be5e9448417437d9cc97c06c86fb2",
+  "unit_sha256": "b2520099c6d021a2697c716a293359c44fabae2e6cb00ee9b950f092c9bed553",
+  "execution_sha256": "15dd48f91e0f212ee5cbe53632c0449e6bf462a5c640966aece8e1e498475615",
+  "current_bit_sha256": "78038efd603cde7763a1b3ff4581b799cabd1a11395db2d78af33b7c81d46726",
+  "hls_backup_unchanged": true,
+  "all_four_services_active": true,
+  "validation_parameters": {
+    "directory": "rtl_optim\\reports\\board\\candidate008\\deployment",
+    "board_report": "rtl_optim\\reports\\board\\candidate008\\board_report.json"
+  }
+}

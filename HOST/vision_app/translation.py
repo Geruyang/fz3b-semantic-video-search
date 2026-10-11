@@ -5,7 +5,7 @@ import sys
 def chinese(text):return any('\u4e00'<=c<='\u9fff' for c in text)
 def model_path():
     if getattr(sys,'frozen',False):return Path(sys.executable).parent/'translation'
-    return Path(__file__).resolve().parents[1]/'releases/application-resources/opus-mt-zh-en'
+    return Path(__file__).resolve().parents[4]/'deliverables/vision-console/FZ3BVisionConsole/translation'
 
 class PromptTranslator:
     def __init__(self):self.model=self.tokenizer=None;self.cache={}

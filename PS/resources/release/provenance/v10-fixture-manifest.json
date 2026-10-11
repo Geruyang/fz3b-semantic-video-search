@@ -1,0 +1,282 @@
+{
+  "schema": "cnn-v10.1-paired-fixtures-v1",
+  "generated_utc": "2026-10-06T10:51:31.704830+00:00",
+  "status": "HOST_ABI10_1_PAIRED_GOLDEN_NOT_PL",
+  "board_operations": false,
+  "identity": {
+    "core": "0x465A5641",
+    "abi": "0x000A0001",
+    "software": "sw10.1"
+  },
+  "compute_contract": {
+    "dw3_macs_per_core": 4,
+    "dw7_macs_per_core": 16,
+    "pw1_macs_per_core": 64,
+    "pw2_macs_per_core": 64,
+    "pw1_tile": "output-group outer, reduction inner; tile is 4 outputs x 16 inputs",
+    "pw2_tile": "reduction outer, output-group inner; tile is 4 outputs x 16 inputs",
+    "numeric": "signed INT16; signed48 accumulator; signed80 exact product; ties-even; clamp [-32767,32767]"
+  },
+  "parameter_contract": {
+    "compact_gelu_entries": 56256,
+    "compact_gelu_words": 7032,
+    "stride_words": {
+      "0": 21081,
+      "1": 59705,
+      "2": 10985
+    }
+  },
+  "arena_contract": "per image: slot0, slot1, then 4096 128-bit-word residual ring; A and B use independent backing arenas",
+  "repacked_parameters": [
+    {
+      "profile": 2,
+      "blocks": 4,
+      "channels": 64,
+      "source": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\params-4-blocks.bin",
+        "bytes": 780352,
+        "sha256": "112f6d0bf48d6bd2d06e59c3965126ce426c009f1604c258b3f991afebd1b8d4"
+      },
+      "output": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile2-params-4-blocks-v10.1.bin",
+        "bytes": 703040,
+        "sha256": "8a9718b15e68d6857667d24c4d3c3c67201baaf2d3a560b657f27c358f9cd082"
+      },
+      "v5_stride_bytes": 195088,
+      "v10_stride_bytes": 175760,
+      "v10_stride_words": 10985,
+      "pw1_tile_order": "output_group_outer_then_reduction",
+      "pw2_tile_order": "reduction_outer_then_output_group"
+    },
+    {
+      "profile": 0,
+      "blocks": 12,
+      "channels": 128,
+      "source": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\params-12-blocks.bin",
+        "bytes": 4307136,
+        "sha256": "503872320ebaec6660a71c87c0ef1d22344119879673980e12c850a764f8a35c"
+      },
+      "output": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile0-params-12-blocks-v10.1.bin",
+        "bytes": 4047552,
+        "sha256": "1be71ba96c31cfb1a1734c0c3a4eb32bd2fd9f519d74f7827ae2385b604bd772"
+      },
+      "v5_stride_bytes": 358928,
+      "v10_stride_bytes": 337296,
+      "v10_stride_words": 21081,
+      "pw1_tile_order": "output_group_outer_then_reduction",
+      "pw2_tile_order": "reduction_outer_then_output_group"
+    },
+    {
+      "profile": 1,
+      "blocks": 20,
+      "channels": 256,
+      "source": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\params-20-blocks.bin",
+        "bytes": 19538240,
+        "sha256": "03ffd9ad560fb6ab86c0df197eae692a54bf3e6fccb441c54166ea7341a649d4"
+      },
+      "output": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile1-params-20-blocks-v10.1.bin",
+        "bytes": 19105600,
+        "sha256": "2b217316c31ab2c2e5dbb7bd897a308ff07c67941607315af90fd46b7f824814"
+      },
+      "v5_stride_bytes": 976912,
+      "v10_stride_bytes": 955280,
+      "v10_stride_words": 59705,
+      "pw1_tile_order": "output_group_outer_then_reduction",
+      "pw2_tile_order": "reduction_outer_then_output_group"
+    }
+  ],
+  "cases": [
+    {
+      "name": "paired-p2-full-image00-image01",
+      "profile": 2,
+      "blocks": 4,
+      "params": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile2-params-4-blocks-v10.1.bin",
+        "bytes": 703040,
+        "sha256": "8a9718b15e68d6857667d24c4d3c3c67201baaf2d3a560b657f27c358f9cd082"
+      },
+      "params_words": 43940,
+      "slot_words": 32768,
+      "arena_words": 69632,
+      "flags": 0,
+      "images": [
+        {
+          "sample": "image-00",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-00\\input-hcw.i16",
+            "bytes": 524288,
+            "sha256": "facd6060ec2b701f21fde241e23dba53e81f17d2b8efbd14b94546ae73231f24"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-00\\expected-4-blocks-hcw.i16",
+            "bytes": 524288,
+            "sha256": "711a470a881ba5a6fab246f803bfe7bcbbd97dcfc9d847443edcf0de2d541df5"
+          }
+        },
+        {
+          "sample": "image-01",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-01\\input-hcw.i16",
+            "bytes": 524288,
+            "sha256": "41fc9206608c27fe4439b165bd777bd9b3d4a057e1896c0057303b611b000c43"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-profile2-full-fixtures-001\\profile2\\image-01\\expected-4-blocks-hcw.i16",
+            "bytes": 524288,
+            "sha256": "c58821bc833747aa3bf7d1328b4331894789a7a507deb7c05162ea0d3109fb54"
+          }
+        }
+      ],
+      "golden_rule": "both outputs must be byte-exact to the independently frozen FZV5 host-wide integer oracle"
+    },
+    {
+      "name": "paired-p0-full-image00-image01",
+      "profile": 0,
+      "blocks": 12,
+      "params": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile0-params-12-blocks-v10.1.bin",
+        "bytes": 4047552,
+        "sha256": "1be71ba96c31cfb1a1734c0c3a4eb32bd2fd9f519d74f7827ae2385b604bd772"
+      },
+      "params_words": 252972,
+      "slot_words": 16384,
+      "arena_words": 36864,
+      "flags": 0,
+      "images": [
+        {
+          "sample": "image-00",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-00\\input-hcw.i16",
+            "bytes": 262144,
+            "sha256": "1a24d1e056062933255723581b23eff42bea3f1ea2069dc0dbe1244cc810bc01"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-00\\expected-12-blocks-hcw.i16",
+            "bytes": 262144,
+            "sha256": "85c08c2fc958816e8d791a8dbcd296135605dc7d47dbf1cfa27fae2a260725cf"
+          }
+        },
+        {
+          "sample": "image-01",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-01\\input-hcw.i16",
+            "bytes": 262144,
+            "sha256": "99f02de711f3b5e45cee5b81439d8e47eb4d5a9774459d33498770442d1af391"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile0\\image-01\\expected-12-blocks-hcw.i16",
+            "bytes": 262144,
+            "sha256": "67078b0c2ef71ae8c0a27005fbf85564a71dd3dd8b1be77c5d60e53f4f4fe03b"
+          }
+        }
+      ],
+      "golden_rule": "both outputs must be byte-exact to the independently frozen FZV5 host-wide integer oracle"
+    },
+    {
+      "name": "paired-p1-full-image00-image01",
+      "profile": 1,
+      "blocks": 20,
+      "params": {
+        "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261006\\acceleration\\host\\network10-v10.1-paired-fixtures-001\\profile1-params-20-blocks-v10.1.bin",
+        "bytes": 19105600,
+        "sha256": "2b217316c31ab2c2e5dbb7bd897a308ff07c67941607315af90fd46b7f824814"
+      },
+      "params_words": 1194100,
+      "slot_words": 8192,
+      "arena_words": 20480,
+      "flags": 0,
+      "images": [
+        {
+          "sample": "image-00",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-00\\input-hcw.i16",
+            "bytes": 131072,
+            "sha256": "6fb251b8d26bc0ed7e9ca594e5eee8fa237d08d1ef5a1696ae653db43c8ba726"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-00\\expected-20-blocks-hcw.i16",
+            "bytes": 131072,
+            "sha256": "78854ca0771b4a8ce71daa402194438b934727024b1b29d3465974de4e4d6ee6"
+          }
+        },
+        {
+          "sample": "image-01",
+          "input": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-01\\input-hcw.i16",
+            "bytes": 131072,
+            "sha256": "4d267eaccf8c1f35e2ca2c249c667570fdde433845f8a767e162966525fab599"
+          },
+          "expected": {
+            "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\host\\root-v5-full-fixtures-001\\profile1\\image-01\\expected-20-blocks-hcw.i16",
+            "bytes": 131072,
+            "sha256": "727eee0aa0e69ff8f0eb654d73ee0d269cabd91431ad629dbaf970a613998869"
+          }
+        }
+      ],
+      "golden_rule": "both outputs must be byte-exact to the independently frozen FZV5 host-wide integer oracle"
+    }
+  ],
+  "golden_provenance": {
+    "kind": "existing frozen host-wide integer fixtures previously passed by V9 native CSIM",
+    "v9_native_receipt": {
+      "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261005\\acceleration\\jtag\\cnn-v9-native-full-002\\receipt.json",
+      "bytes": 5873,
+      "sha256": "1816216c958e17e9e81e4042635475aa507777f8e91257fc6fc5e41baf435520"
+    }
+  },
+  "v9_frozen_sources": [
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_pipeline_v9.cpp",
+      "sha256": "0e7da4eb36d7a67ad5fa08d92e268d76a7ec36a444f539c9f68cb1d9081d55ed"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_pipeline_v9.hpp",
+      "sha256": "442dbee74cbe8e3a987c1d1f8b7cbdf614f618422cab5b7345364f4c3b6fcc67"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_v9_pointwise.hpp",
+      "sha256": "103016fea507ecb6fa5419b2d14b08974661bde73563a4fc26dc7771b2429138"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_v9_param_broker.hpp",
+      "sha256": "fc2b4041a557ab1ec2c58605b6567fce50e54baeeb81017b2b42b1008e612322"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_v9_arithmetic.hpp",
+      "sha256": "6ad9a0af2a8a0bfece62b7f95f3be06c0031e91c4fbc30a83b739456ed90fe74"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_v9_gelu.hpp",
+      "sha256": "8f3f6bbb52b6a831c2b2a337cfa32ae899f26a34128e5666202b26a4a071a013"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_v9_identity.hpp",
+      "sha256": "8d73b49be802afa5797aa16b005e14489c66d68fa7caa719b603b43609e1a2a2"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\hardware\\acceleration\\cnn_pipeline_v9_tb.cpp",
+      "sha256": "88a469cb113e7d1a41584d225df6103398fb483f21e1353debdc5cb92d640469"
+    }
+  ],
+  "sources": [
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\scripts\\acceleration\\build_cnn_v10_paired_fixtures.py",
+      "bytes": 5500,
+      "sha256": "2d34dea6b91d5a0ae722bbc53819b9224bd0d818c4a13b5ab527c2952bfee657"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\scripts\\acceleration\\cnn_v10_pack.py",
+      "bytes": 5871,
+      "sha256": "73b8ba14ed1e3d1ddf8a2bb6d89125efb5a3d04fed41b28863b252cbc602fd21"
+    },
+    {
+      "path": "E:\\AIProject\\FPGAVibecoding\\desktop_vlm\\scripts\\acceleration\\cnn_v10_param_contract.py",
+      "bytes": 11370,
+      "sha256": "a16acfb513d55aab69f2f65296c842e4a8f22310b59a28bcdd15ce5e82f3e5e9"
+    }
+  ]
+}

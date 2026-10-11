@@ -1,0 +1,123 @@
+{
+  "artifacts": {
+    "profile-receipt.json": {
+      "bytes": 2128,
+      "sha256": "a699737ace878adaf1c1025dfe21e06bf54be59e61b3e0e403a29cc0057678e7"
+    },
+    "suffix-candidate-optimized.onnx": {
+      "bytes": 31932599,
+      "sha256": "6acad76423f9326a5de9c0b625630f0319039c7d3c9fbca7af0e10491fa75750"
+    },
+    "suffix-candidate-ort-profile_2021-09-01_00-10-51.json": {
+      "bytes": 603422,
+      "sha256": "b12a13195d046e7a7f454466e50b55d9fc1091c7c1b5eaace53070fa0804ad87"
+    },
+    "target-result.json": {
+      "bytes": 16377,
+      "sha256": "d1e1d797ea5edce44133e76d31917db1f0b5cc0a2f6fcf8cf2975304d5a0713a"
+    }
+  },
+  "boot_id": "fd395d2a-974c-4a1a-827d-568452cd8488",
+  "candidate_sha256": "a63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac",
+  "commands": [
+    {
+      "command": "set -eu; test \"$(cat /proc/sys/kernel/random/boot_id)\" = fd395d2a-974c-4a1a-827d-568452cd8488; test -d /sys/module/fpgadrv; test \"$(cat /sys/module/fpgadrv/refcnt)\" = 0; test -c /dev/fpgadrv0; test ! -e /dev/network10_v10; test ! -e /dev/network10_v10_p3; test -z \"$(pgrep -f '[o]rt_partition_runner|[o]rt_partition_profiler' || true)\"; test \"$(sha256sum /root/network10-v10.1-board-window/release/models/manifest.json|cut -d' ' -f1)\" = 26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed; mkdir -p /root/network10-v10.1-suffix11-selection-20261007/src /root/network10-v10.1-suffix11-selection-20261007/bin /root/network10-v10.1-suffix11-selection-20261007/results",
+      "exit_code": 0,
+      "name": "factory-ps-only-preflight",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": "sha256sum /root/network10-v10.1-suffix11-selection-20261007/src/benchmark_cnn_v10_suffix_candidate.py /root/network10-v10.1-suffix11-selection-20261007/src/profile_cnn_v10_suffix_candidate.py /root/network10-v10.1-suffix11-selection-20261007/src/cnn_v10_ps_shm_clients.py /root/network10-v10.1-suffix11-selection-20261007/src/cnn_v10_ps_clients.py /root/network10-v10.1-suffix11-selection-20261007/src/ort_partition_profiler_v1.c /root/network10-v10.1-suffix11-selection-20261007/src/suffix-w8a8-qdq-candidate.onnx /root/network10-v10.1-suffix11-selection-20261007/src/host-receipt.json",
+      "exit_code": 0,
+      "name": "uploaded-sha256",
+      "stderr": "",
+      "stdout": "910d1a9ac23299a4062b09a51bf1a2b58f9469d734534c94ed62ce282c0572e3  /root/network10-v10.1-suffix11-selection-20261007/src/benchmark_cnn_v10_suffix_candidate.py\n4946eb5d306d890b9ed2a1b6b65519edd8a08a65765bf62faed9a4a54f3b3684  /root/network10-v10.1-suffix11-selection-20261007/src/profile_cnn_v10_suffix_candidate.py\nfa05716f250defa726bef66abe06ca678decab8c551c3667e1b5f6102e44d09b  /root/network10-v10.1-suffix11-selection-20261007/src/cnn_v10_ps_shm_clients.py\nfc6488763ccaf35ef1fdd375660ccf258fa8374e54246417f1a415e522ca5e45  /root/network10-v10.1-suffix11-selection-20261007/src/cnn_v10_ps_clients.py\nb03504d97baf910a07efc22e3adbe54979db28ac8669479afe1d3a4536907d75  /root/network10-v10.1-suffix11-selection-20261007/src/ort_partition_profiler_v1.c\na63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac  /root/network10-v10.1-suffix11-selection-20261007/src/suffix-w8a8-qdq-candidate.onnx\n5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138  /root/network10-v10.1-suffix11-selection-20261007/src/host-receipt.json\n"
+    },
+    {
+      "command": "set -eu; cd /root/network10-v10.1-suffix11-selection-20261007/src; env ORT_PARTITION_ALLOW_SPINNING=0 ORT_PARTITION_PREALLOC_OUTPUTS=0 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/root/network10-v10.1-suffix11-selection-20261007/src:/root/network10-v10.1-ps-software-ab6-20261007/src:/root/network10-v10.1-board-window/runtime python3 -B benchmark_cnn_v10_suffix_candidate.py --runner /root/network10-v10.1-ps-software-ab6-20261007/bin/ort_partition_runner_v3 --source-model /root/network10-v10.1-board-window/release/models/suffix.onnx --candidate-model /root/network10-v10.1-suffix11-selection-20261007/src/suffix-w8a8-qdq-candidate.onnx --candidate-receipt /root/network10-v10.1-suffix11-selection-20261007/src/host-receipt.json --fixture-root /root/network10-v10.1-ps-opt-20261007/fixtures/image-00 --fixture-root /root/network10-v10.1-ps-opt-20261007/fixtures/image-01 --threads 3 --warmup-rounds 3 --measured-rounds 10 --output /root/network10-v10.1-suffix11-selection-20261007/results/target-result.json",
+      "exit_code": 0,
+      "name": "target-ort116-quality-and-timing",
+      "stderr": "2021-09-01 00:10:43.022131822 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022267514 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_2_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022326854 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/AveragePool_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022368825 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022405725 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_2_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022445415 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Mul_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022496086 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022539856 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_quantized'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022590917 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022627667 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/reduce/Conv_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022670268 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022748238 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022797529 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/reduce/Conv_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022838449 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Mul_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022887530 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/AveragePool_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:43.022934960 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized'. It is not used by any node and should be removed from the model.\n",
+      "stdout": "{\"candidate_run_mean_ms\": 196.947, \"fp32_run_mean_ms\": 229.02745, \"receipt_sha256\": \"d1e1d797ea5edce44133e76d31917db1f0b5cc0a2f6fcf8cf2975304d5a0713a\", \"status\": \"PASS_TARGET_ORT116_ENGINEERING_GATE\"}\n"
+    },
+    {
+      "command": "set -eu; gcc -std=c11 -O2 -Wall -Wextra -Werror -I/root/board-debug-acceleration-20261004/runtime/onnxruntime-linux-aarch64-1.16.3/include /root/network10-v10.1-suffix11-selection-20261007/src/ort_partition_profiler_v1.c -L/root/board-debug-acceleration-20261004/runtime/onnxruntime-linux-aarch64-1.16.3/lib -Wl,-rpath,/root/board-debug-acceleration-20261004/runtime/onnxruntime-linux-aarch64-1.16.3/lib -lonnxruntime -lm -o /root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1; sha256sum /root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1; file /root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1",
+      "exit_code": 0,
+      "name": "compile-profile-runner",
+      "stderr": "",
+      "stdout": "6506e247ebff15fe29e47a841c95e043097f48da390cede4b5e0629dd85675ec  /root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1\n/root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, BuildID[sha1]=0698ecfb80967361344e9ebb6545a7d498b3b05f, not stripped\n"
+    },
+    {
+      "command": "set -eu; cd /root/network10-v10.1-suffix11-selection-20261007/src; env ORT_PARTITION_ALLOW_SPINNING=0 ORT_PARTITION_PREALLOC_OUTPUTS=0 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/root/network10-v10.1-suffix11-selection-20261007/src python3 -B profile_cnn_v10_suffix_candidate.py --candidate /root/network10-v10.1-suffix11-selection-20261007/src/suffix-w8a8-qdq-candidate.onnx --expected-candidate-sha256 a63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac --manifest /root/network10-v10.1-board-window/release/models/manifest.json --expected-manifest-sha256 26d2f61e40566381bf44eb0821170e04cbc4c00e361064dba87958808afbb8ed --runner /root/network10-v10.1-suffix11-selection-20261007/bin/ort_partition_profiler_v1 --input /root/network10-v10.1-ps-opt-20261007/fixtures/image-00/suffix-input.f32 --input /root/network10-v10.1-ps-opt-20261007/fixtures/image-01/suffix-input.f32 --expected /root/network10-v10.1-ps-opt-20261007/fixtures/image-00/suffix-output.f32 --expected /root/network10-v10.1-ps-opt-20261007/fixtures/image-01/suffix-output.f32 --threads 3 --iterations 3 --profile-prefix /root/network10-v10.1-suffix11-selection-20261007/results/suffix-candidate-ort-profile --optimized-model /root/network10-v10.1-suffix11-selection-20261007/results/suffix-candidate-optimized.onnx --output /root/network10-v10.1-suffix11-selection-20261007/results/profile-receipt.json",
+      "exit_code": 0,
+      "name": "target-ort116-three-run-profile",
+      "stderr": "2021-09-01 00:10:51.844629433 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844756995 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_2_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844814955 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/AveragePool_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844856536 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/MatMul_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844892806 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Transpose_2_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844932737 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Mul_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.844982957 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845025287 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_quantized'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845074788 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845110908 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/reduce/Conv_output_0_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845152639 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.weight_zero_point'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845230279 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845279720 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/reduce/Conv_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845319110 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/network.7/network.7.0/token_mixer/Mul_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845368911 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer '/image_encoder/model/conv_exp/se/AveragePool_output_0_scale'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:51.845406891 [W:onnxruntime:, graph.cc:3553 CleanUnusedInitializersAndNodeArgs] Removing initializer 'model.image_encoder.model.conv_exp.se.reduce.bias_quantized'. It is not used by any node and should be removed from the model.\n2021-09-01 00:10:52.573090418 [W:onnxruntime:, inference_session.cc:1732 Initialize] Serializing optimized model with Graph Optimization level greater than ORT_ENABLE_EXTENDED and the NchwcTransformer enabled. The generated model may contain hardware specific optimizations, and should only be used in the same environment the model was optimized in.\nORT_PARTITION_PROFILE_FILE=/root/network10-v10.1-suffix11-selection-20261007/results/suffix-candidate-ort-profile_2021-09-01_00-10-51.json\n",
+      "stdout": "{\"receipt_sha256\": \"a699737ace878adaf1c1025dfe21e06bf54be59e61b3e0e403a29cc0057678e7\", \"status\": \"PASS_CANDIDATE_PROFILE_AND_ENGINEERING_ERROR_GATE\"}\n"
+    },
+    {
+      "command": "find /root/network10-v10.1-suffix11-selection-20261007/results -maxdepth 1 -type f -printf '%f\\n' | sort",
+      "exit_code": 0,
+      "name": "profile-artifact-list",
+      "stderr": "",
+      "stdout": "profile-receipt.json\nsuffix-candidate-optimized.onnx\nsuffix-candidate-ort-profile_2021-09-01_00-10-51.json\ntarget-result.json\n"
+    },
+    {
+      "command": "set -eu; test \"$(cat /proc/sys/kernel/random/boot_id)\" = fd395d2a-974c-4a1a-827d-568452cd8488; test -d /sys/module/fpgadrv; test \"$(cat /sys/module/fpgadrv/refcnt)\" = 0; test -c /dev/fpgadrv0; test ! -e /dev/network10_v10; test ! -e /dev/network10_v10_p3; test -z \"$(pgrep -f '[o]rt_partition_runner|[o]rt_partition_profiler' || true)\"; echo FACTORY_PS_ONLY_UNCHANGED",
+      "exit_code": 0,
+      "name": "factory-ps-only-postflight",
+      "stderr": "",
+      "stdout": "FACTORY_PS_ONLY_UNCHANGED\n"
+    }
+  ],
+  "device_operations": false,
+  "factory_pl_and_driver_retained": true,
+  "finished_utc": "2026-10-07T06:36:11.160574Z",
+  "host_source_receipt": {
+    "bytes": 8332,
+    "path": "artifacts/board-debug-20261007/acceleration/host/cnn-v10-suffix-fp32restore-11-001/receipt.json",
+    "sha256": "fcfdaa44f791c9077e949b72faabe67fa4d831166a0704a199a103942b25ebee"
+  },
+  "label": "suffix11",
+  "profile_runner_sha256": "6506e247ebff15fe29e47a841c95e043097f48da390cede4b5e0629dd85675ec",
+  "schema": "fz3b-v10.1-suffix-selection-target-wrapper-v1",
+  "started_utc": "2026-10-07T06:35:50.336106Z",
+  "status": "PASS_TARGET_ORT116_QUALITY_TIMING_PROFILE_FACTORY_UNCHANGED",
+  "uploads": [
+    {
+      "bytes": 6678,
+      "path": "desktop_vlm/board/benchmark_cnn_v10_suffix_candidate.py",
+      "sha256": "910d1a9ac23299a4062b09a51bf1a2b58f9469d734534c94ed62ce282c0572e3"
+    },
+    {
+      "bytes": 6992,
+      "path": "desktop_vlm/board/profile_cnn_v10_suffix_candidate.py",
+      "sha256": "4946eb5d306d890b9ed2a1b6b65519edd8a08a65765bf62faed9a4a54f3b3684"
+    },
+    {
+      "bytes": 17975,
+      "path": "desktop_vlm/board/cnn_v10_ps_shm_clients.py",
+      "sha256": "fa05716f250defa726bef66abe06ca678decab8c551c3667e1b5f6102e44d09b"
+    },
+    {
+      "bytes": 14435,
+      "path": "desktop_vlm/board/cnn_v10_ps_clients.py",
+      "sha256": "fc6488763ccaf35ef1fdd375660ccf258fa8374e54246417f1a415e522ca5e45"
+    },
+    {
+      "bytes": 16635,
+      "path": "desktop_vlm/board/ort_partition_profiler_v1.c",
+      "sha256": "b03504d97baf910a07efc22e3adbe54979db28ac8669479afe1d3a4536907d75"
+    },
+    {
+      "bytes": 32074675,
+      "path": "artifacts/board-debug-20261007/acceleration/host/cnn-v10-suffix-fp32restore-11-001/suffix-w8a8-qdq-11-fp32-restored.onnx",
+      "sha256": "a63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac"
+    },
+    {
+      "bytes": 3770,
+      "path": "artifacts/board-debug-20261007/acceleration/network/network10-v10.1-suffix11-target-selection-002/host-receipt.json",
+      "sha256": "5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138"
+    }
+  ]
+}

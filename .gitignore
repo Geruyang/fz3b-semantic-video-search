@@ -1,12 +1,10 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.cache/
 .venv*/
-artifacts/
-deliverables/
-build/
-dist/
+.publish/
+workspace/
+.build/
 client-config.json
 connection-token.txt
 token
@@ -23,4 +21,3 @@ token
 *.so
 *.exe
 *.dll
-*.tar.gz

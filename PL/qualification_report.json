@@ -1,0 +1,86 @@
+{
+  "schema": "rtl-optim-qualification-report-v1",
+  "status": "QUALIFIED_HOST_SIMULATION_AND_POST_ROUTE",
+  "qualified": true,
+  "board_operations": false,
+  "board_fps": "not_measured",
+  "simulation_candidate": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\full\\candidates\\20261010-175127-873",
+  "platform_reports": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\platform\\project-final-008",
+  "project": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\project-final-008",
+  "errors": [],
+  "cycles": [
+    {
+      "profile": 0,
+      "blocks": 12,
+      "cycles": 14118890,
+      "baseline_cycles": 18820869,
+      "delta": -4701979,
+      "result": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\full\\candidates\\20261010-175127-873\\p0_r1_result.json"
+    },
+    {
+      "profile": 1,
+      "blocks": 20,
+      "cycles": 25490370,
+      "baseline_cycles": 29923059,
+      "delta": -4432689,
+      "result": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\full\\candidates\\20261010-175127-873\\p1_r1_result.json"
+    },
+    {
+      "profile": 2,
+      "blocks": 4,
+      "cycles": 6477627,
+      "baseline_cycles": 7984637,
+      "delta": -1507010,
+      "result": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\full\\candidates\\20261010-175127-873\\p2_r1_result.json"
+    },
+    {
+      "profile": 3,
+      "blocks": 1,
+      "cycles": 1440768,
+      "baseline_cycles": 1539314,
+      "delta": -98546,
+      "result": "E:\\AIProject\\FPGAVibecoding\\rtl_optim\\reports\\full\\candidates\\20261010-175127-873\\p3_r1_result.json"
+    }
+  ],
+  "resources": [
+    {
+      "resource": "lut",
+      "baseline_post_route": 51334,
+      "candidate_post_route": 47645.0,
+      "delta": -3689.0
+    },
+    {
+      "resource": "ff",
+      "baseline_post_route": 87644,
+      "candidate_post_route": 49690.0,
+      "delta": -37954.0
+    },
+    {
+      "resource": "bram36_equivalent",
+      "baseline_post_route": 162,
+      "candidate_post_route": 146.0,
+      "delta": -16.0
+    },
+    {
+      "resource": "dsp",
+      "baseline_post_route": 214,
+      "candidate_post_route": 202.0,
+      "delta": -12.0
+    }
+  ],
+  "baseline_sha256": "cc2543428a064577d9661e61c99dc75e1a79fe9865652da442c93edf63365b9f",
+  "source_identity": {
+    "simulation_manifest_sha256": "b436d0730e87ded508dff5b7195cd2e485534c197ff28b866c673cdebc7d7982",
+    "project_snapshot_sha256": "9e27dbfae359808d93e45be0d7f6081fb810f97b26464dfe1df8347c5f101d3e",
+    "matched_rtl_files": 26
+  },
+  "mixed_sequence_verified": true,
+  "routed_timing": {
+    "wns_ns": 0.006,
+    "tns_ns": 0.0,
+    "whs_ns": 0.01,
+    "ths_ns": 0.0,
+    "wpws_ns": 0.677
+  },
+  "route_receipt_sha256": "05e612082e95a2b5da5e732f51637a8a3cb572a400c6918c46b8c3f7faf1603d"
+}

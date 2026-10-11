@@ -1,0 +1,100 @@
+{
+  "checks": {
+    "board_operations": false,
+    "four_path_groups_nonnegative": true,
+    "route_drc_cdc_check_timing_clean": true,
+    "setup_hold_pulse_width_met": true
+  },
+  "clock": {
+    "domains": {
+      "driver_job": {
+        "generated_clock": "half2x_clock_tree_driver_job_clk_200",
+        "implemented_exact_hz": 199999998,
+        "nominal_hz": 200000000,
+        "period_ns": 5.0,
+        "runtime_hz": 199999998
+      },
+      "pw_local": {
+        "generated_clock": "clock_wiz_clk_out1",
+        "implemented_exact_hz": 399999996,
+        "nominal_hz": 400000000,
+        "period_ns": 2.5,
+        "runtime_hz": 399999996
+      }
+    },
+    "master": {
+      "implemented_exact_hz": 99999999,
+      "name": "clk_pl_1",
+      "nominal_hz": 100000000,
+      "period_ns": 10.0,
+      "runtime_hz": 99999999
+    },
+    "relationship": {
+      "integer_ratio": 2,
+      "phase_aligned": true,
+      "same_mmcm": true
+    },
+    "topology": {
+      "bufgce_div": {
+        "driver_job_divide": 2,
+        "pw_local_divide": 1
+      },
+      "kind": "mmcm_fast_plus_bufgce_div_v1",
+      "mmcm": {
+        "clkfbout_mult_f": 12.0,
+        "clkout_fast_divide_f": 3.0,
+        "divclk_divide": 1
+      }
+    }
+  },
+  "full_platform_receipt": {
+    "bytes": 8153,
+    "path": "E:\\AIProject\\FPGAVibecoding\\artifacts\\board-debug-20261008\\acceleration\\jtag\\cnn-v10.5-a0005-fastbufgdiv-preg-finalize-bit-002\\full-platform-receipt-v4.json",
+    "sha256": "8c7cf143f1184cfcaae20f9b968f1cb5ebeba3dc33243d12fafa748bdd916d1a"
+  },
+  "pass": true,
+  "resources": {
+    "bram_tiles": 162,
+    "clb_luts": 51334,
+    "clb_registers": 87644,
+    "dsp48e2": 214,
+    "lut_as_logic": 42954,
+    "lut_as_memory": 8380,
+    "ramb18e2": 28,
+    "ramb36e2": 148
+  },
+  "schema": "cnn-v10.5-a0005-derived-timing-v1",
+  "status": "PASS",
+  "timing": {
+    "cdc_violations": 0,
+    "check_timing_violations": 0,
+    "drc_violations": 0,
+    "hold_ths_ns": 0.0,
+    "hold_whs_ns": 0.01,
+    "path_groups": {
+      "fast_to_fast": {
+        "hold_whs_ns": 0.01,
+        "setup_wns_ns": 0.03
+      },
+      "fast_to_slow": {
+        "hold_whs_ns": 0.025,
+        "setup_wns_ns": 0.581
+      },
+      "slow_to_fast": {
+        "hold_whs_ns": 0.015,
+        "setup_wns_ns": 0.086
+      },
+      "slow_to_slow": {
+        "hold_whs_ns": 0.01,
+        "setup_wns_ns": 0.059
+      }
+    },
+    "pulse_width_min_slack_ns": 0.677,
+    "pulse_width_total_negative_slack_ns": 0.0,
+    "route_errors": 0,
+    "setup_tns_ns": 0.0,
+    "setup_wns_ns": 0.03,
+    "severe_drc_count": 0,
+    "unrouted_nets": 0
+  }
+}\n

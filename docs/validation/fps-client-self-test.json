@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "shape": [
+    3,
+    512
+  ],
+  "items": [
+    {
+      "id": "0",
+      "label": "桌面上的杯子",
+      "text": "桌面上的杯子",
+      "translated_text": "a photo of a cup on a desk"
+    },
+    {
+      "id": "1",
+      "label": "有人在房间里",
+      "text": "有人在房间里",
+      "translated_text": "a photo of a person in a room"
+    },
+    {
+      "id": "2",
+      "label": "一个穿红色衣服的人",
+      "text": "一个穿红色衣服的人",
+      "translated_text": "a photo of A man in red"
+    }
+  ],
+  "identity": {
+    "contract_id": "332b521b0fbdc3104c0c4b0fd017df01e090b004276b1f5982c9a04aace7e09e",
+    "weight_sha256": "1270fab6ea23bacbd61cea564bd521a7e875fdb0fcb6d31382bccf4d973b71a6",
+    "source_revision": "48faa0fea4b08d74188b3841771aca6ff2c92852",
+    "normalization": "l2-float32-v1",
+    "tokenizer_context": 77,
+    "bpe_sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"
+  },
+  "frames": 3,
+  "clips": 1
+}

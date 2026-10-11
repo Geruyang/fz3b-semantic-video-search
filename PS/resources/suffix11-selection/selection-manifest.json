@@ -1,0 +1,84 @@
+{
+  "candidate": {
+    "bytes": 32074675,
+    "path": "suffix-w8a8-qdq-candidate.onnx",
+    "precision": "11 selected nodes W8A8 QDQ (6 Conv, 5 MatMul); remaining suffix nodes FP32",
+    "sha256": "a63c35ea73338adc74ca2898363ad3c07f2e1abcc157d80eab9b29ebf26139ac"
+  },
+  "domain_status": {
+    "original_domain": "PASS",
+    "p3_domain": "UNTESTED_REAL_CAPTURE_REQUIRED"
+  },
+  "engineering_gate": {
+    "fixture_count": 3,
+    "max_relative_l2": 0.05,
+    "min_cosine": 0.999,
+    "original_domain_max_relative_l2": 0.04515508128589078,
+    "original_domain_min_cosine": 0.9990360705543245,
+    "pass": true
+  },
+  "evidence": {
+    "host_profile": {
+      "bytes": 3770,
+      "path": "host-profile-evidence.json",
+      "sha256": "5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138"
+    },
+    "host_receipt": {
+      "bytes": 3770,
+      "path": "host-receipt.json",
+      "sha256": "5ed56acc7142e412cf811d02c60c5d24e9e0bc7125ff59ea8cfb0850f2bc4138"
+    },
+    "target_kernel_classification": {
+      "bytes": 11215,
+      "path": "kernel-classification.json",
+      "sha256": "0e2bfc35e135f22103d048605707fbb53465a446c05464cab81f59f0a07a09a6"
+    },
+    "target_optimized_model": {
+      "bytes": 31932599,
+      "path": "suffix-candidate-optimized.onnx",
+      "sha256": "6acad76423f9326a5de9c0b625630f0319039c7d3c9fbca7af0e10491fa75750"
+    },
+    "target_profile_analysis": {
+      "bytes": 56518,
+      "path": "analysis.json",
+      "sha256": "bf62c68b3f21a71e2b3ead67c9616db03da2c98d3298c44926ab6f86f0edb2be"
+    },
+    "target_profile_receipt": {
+      "bytes": 2128,
+      "path": "profile-receipt.json",
+      "sha256": "a699737ace878adaf1c1025dfe21e06bf54be59e61b3e0e403a29cc0057678e7"
+    },
+    "target_profile_wrapper_receipt": {
+      "bytes": 19394,
+      "path": "profile-wrapper-receipt.json",
+      "sha256": "4157727e44eff14cd1d7c04aa8a601e121d02e32a1e59847a1c691ae054664e2"
+    },
+    "target_result": {
+      "bytes": 16377,
+      "path": "target-result.json",
+      "sha256": "d1e1d797ea5edce44133e76d31917db1f0b5cc0a2f6fcf8cf2975304d5a0713a"
+    },
+    "target_wrapper_receipt": {
+      "bytes": 19394,
+      "path": "target-wrapper-receipt.json",
+      "sha256": "4157727e44eff14cd1d7c04aa8a601e121d02e32a1e59847a1c691ae054664e2"
+    }
+  },
+  "schema": "cnn-v10.1-suffix-w8a8-selection-v2",
+  "source_model_sha256": "b8a558830d31873f590f66b6fd3a8e8be269968855b9c21814129f36e4edb175",
+  "status": "PASS",
+  "target_integer_kernel_contract": {
+    "kernel_count": 11,
+    "provider": "CPUExecutionProvider",
+    "qlinear_conv_count": 6,
+    "qlinear_matmul_count": 5
+  },
+  "target_runtime": "onnxruntime-1.16.3-aarch64-cpu",
+  "target_timing": {
+    "candidate_run_mean_ms": 196.947,
+    "fp32_run_mean_ms": 229.02745,
+    "measured_rounds": 10,
+    "threads": 3,
+    "warmup_rounds": 3
+  }
+}

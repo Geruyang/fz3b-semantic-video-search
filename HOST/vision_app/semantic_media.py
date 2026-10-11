@@ -7,51 +7,68 @@ import queue
 import subprocess
 import threading
 import time
+import tempfile
+from .temporal_segments import SegmentTracker,segment_report
 
-def build_segments(rows,threshold=.25,gap_s=1,padding_s=.5,duration=None):
-    active={};segments=[]
-    for row in sorted(rows,key=lambda r:(r['time_s'],r['frame_id'])):
-        stamp=row['time_s'];present=set()
-        for hit in row.get('ranking',[]):
-            key=(hit['id'],hit['label']);present.add(key)
-            if hit['score']<threshold:
-                if key in active:segments.append(active.pop(key))
-                continue
-            if key in active and stamp-active[key]['last_hit_s']>gap_s:segments.append(active.pop(key))
-            if key not in active:active[key]=dict(query_id=key[0],label=key[1],first_hit_s=stamp,last_hit_s=stamp,frame_ids=[],best_score=hit['score'])
-            item=active[key];item['last_hit_s']=stamp;item['frame_ids'].append(row['frame_id']);item['best_score']=max(item['best_score'],hit['score'])
-        for key in list(active):
-            if key not in present:segments.append(active.pop(key))
-    segments.extend(active.values())
-    for i,item in enumerate(sorted(segments,key=lambda r:(r['first_hit_s'],r['query_id']))):
-        item.update(segment_id=i,start_s=max(0,item['first_hit_s']-padding_s),end_s=item['last_hit_s']+padding_s)
-        if duration is not None:item['end_s']=min(duration,item['end_s'])
-    return sorted(segments,key=lambda r:(r['start_s'],r['query_id']))
+def build_segments(rows,threshold=.25,gap_s=1,padding_s=.5,duration=None,continuity=True):
+    return segment_report(rows,threshold,gap_s,padding_s,duration,continuity)['segments']
 
-def export_segments(source,segments,destination,on_progress=None,cancel=None):
+def export_segments(source,segments,destination,on_progress=None,cancel=None,group_by_query=False):
     import imageio_ffmpeg
     destination=Path(destination);destination.mkdir(parents=True,exist_ok=True);outputs=[]
+    if group_by_query:
+        groups=collections.OrderedDict()
+        for item in segments:groups.setdefault((item['query_id'],item['label']),[]).append(item)
+        with tempfile.TemporaryDirectory(prefix='.parts-',dir=destination) as temporary:
+            for index,((qid,label),members) in enumerate(groups.items()):
+                if cancel and cancel.is_set():raise InterruptedError('片段导出已取消')
+                # Union overlapping playback padding so one source frame is not duplicated.
+                cuts=[]
+                for member in sorted(members,key=lambda x:x['start_s']):
+                    if cuts and member['start_s']<=cuts[-1]['end_s']:
+                        cuts[-1]['end_s']=max(cuts[-1]['end_s'],member['end_s'])
+                    else:cuts.append(dict(member))
+                part_root=Path(temporary)/('query-%04d'%index)
+                parts=export_segments(source,cuts,part_root,cancel=cancel)
+                listing=Path(temporary)/('query-%04d.txt'%index)
+                listing.write_text(''.join("file '%s'\n"%Path(p['path']).resolve().as_posix().replace("'","'\\''") for p in parts),encoding='utf-8')
+                target=destination/('query-%04d.mp4'%index)
+                _export_command([imageio_ffmpeg.get_ffmpeg_exe(),'-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',str(listing),'-c','copy','-movflags','+faststart',str(target)],cancel)
+                import av
+                mapping=[];offset=0.
+                for cut,part in zip(cuts,parts):
+                    with av.open(part['path']) as container:length=float(container.duration or 0)/1e6
+                    mapping.append(dict(source_start_s=cut['start_s'],source_end_s=cut['end_s'],output_start_s=offset,output_end_s=offset+length))
+                    offset+=length
+                outputs.append(dict(query_id=qid,label=label,path=str(target),source_intervals=mapping,segments=members,duration_s=offset))
+                if on_progress:on_progress(index+1,len(groups))
+        (destination/'clips.json').write_text(json.dumps(outputs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        return outputs
     for i,item in enumerate(segments):
         if cancel and cancel.is_set():raise InterruptedError('片段导出已取消')
         target=destination/('clip-%04d.mp4'%i)
         args=[imageio_ffmpeg.get_ffmpeg_exe(),'-hide_banner','-loglevel','error','-y','-ss',str(item['start_s']),'-i',str(source),'-t',str(max(.04,item['end_s']-item['start_s'])),'-map','0:v:0','-map','0:a?','-c:v','libx264','-preset','veryfast','-crf','20','-fps_mode','vfr','-c:a','aac','-movflags','+faststart',str(target)]
+        _export_command(args,cancel)
+        outputs.append(dict(item,path=str(target)))
+        if on_progress:on_progress(i+1,len(segments))
+    (destination/'clips.json').write_text(json.dumps(outputs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    return outputs
+
+def _export_command(args,cancel):
         proc=subprocess.Popen(args,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         while proc.poll() is None:
             if cancel and cancel.wait(.1):proc.terminate();proc.wait();raise InterruptedError('片段导出已取消')
             if not cancel:time.sleep(.1)
         error=proc.stderr.read().decode('utf-8','replace');proc.stderr.close()
         if proc.returncode:raise RuntimeError('视频片段导出失败：'+error[-1000:])
-        outputs.append(dict(item,path=str(target)))
-        if on_progress:on_progress(i+1,len(segments))
-    (destination/'clips.json').write_text(json.dumps(outputs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    return outputs
 
 class SemanticArchive:
     """Mux received camera JPEG once; retain only a bounded look-back cache."""
-    def __init__(self,directory,items,revision,threshold=.25,on_update=None,on_missing=None):
+    def __init__(self,directory,items,revision,threshold=.25,on_update=None,on_missing=None,continuity=True):
         self.path=Path(directory);self.path.mkdir(parents=True,exist_ok=False)
         (self.path/'matches').mkdir()
         self.items=items;self.revision=revision;self.threshold=threshold
+        self.segment_tracker=SegmentTracker(threshold,continuity);self.candidates=[]
         self.on_update=on_update or (lambda x:None);self.on_missing=on_missing or (lambda x:None)
         self.queue=queue.Queue(256);self.closed=threading.Event();self.closing=False
         self.error=None;self.frames=0;self.gaps=0;self.rows=[];self.origin=None;self.last_time=0
@@ -116,8 +133,10 @@ class SemanticArchive:
                             if jpeg:self._save_matches(row,jpeg)
                             else:
                                 self.pending[row['frame_id']]=row;self.on_missing(row['frame_id'])
-                        self.segments=build_segments(self.rows,self.threshold,duration=self.last_time+.04)
-                        self.on_update(dict(path=str(self.path),frames=self.frames,hits=len(self.saved),segments=self.segments))
+                        self.segment_tracker.add(row)
+                        intervals=self.segment_tracker.report(duration=self.last_time+.04)
+                        self.segments=intervals['segments'];self.candidates=intervals['candidates']
+                        self.on_update(dict(path=str(self.path),frames=self.frames,hits=len(self.saved),**intervals))
         except BaseException as exc:self.error=type(exc).__name__+': '+str(exc)
         finally:
             if container:
@@ -125,10 +144,13 @@ class SemanticArchive:
                 except Exception as exc:self.error=str(exc)
             if self.pending and not self.error:self.error='有%d个命中帧未收到，索引保留但截图不完整'%len(self.pending)
             if self.gaps and not self.error:self.error='摄像头流缺少%d帧，录像已标记不完整'%self.gaps
-            report=dict(ok=self.error is None and self.frames>0,error=self.error,frames=self.frames,received_frame_gaps=self.gaps,missing_hit_frames=sorted(self.pending),expected_end_frame_id=self.end_frame_id,last_saved_frame_id=self.last_saved_id,duration_s=self.last_time+.04 if self.frames else 0,items=self.items,threshold=self.threshold,source='camera',video='video.mkv',segments=self.segments)
+            intervals=self.segment_tracker.report(duration=self.last_time+.04)
+            self.segments=intervals['segments'];self.candidates=intervals['candidates']
+            report=dict(ok=self.error is None and self.frames>0,error=self.error,frames=self.frames,received_frame_gaps=self.gaps,missing_hit_frames=sorted(self.pending),expected_end_frame_id=self.end_frame_id,last_saved_frame_id=self.last_saved_id,duration_s=self.last_time+.04 if self.frames else 0,items=self.items,threshold=self.threshold,source='camera',video='video.mkv',**intervals)
             try:
                 (self.path/'session.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
                 (self.path/'segments.json').write_text(json.dumps(self.segments,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                (self.path/'candidates.json').write_text(json.dumps(self.candidates,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
             except BaseException as exc:
                 self.error='录像收尾写入失败：'+str(exc);report.update(ok=False,error=self.error)
             finally:

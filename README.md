@@ -1,30 +1,100 @@
-# FZ3B Semantic Video Search — 最终版本
+# FZ3B Semantic Video Search
 
-百度 EdgeBoard FZ3B 的 MobileCLIP-S1 PS–PL 混合推理与语义视频工作台。
-当前版本：2026-10-09，V10.5 / A0005，PL 200/400 MHz，PS 四档 CPU 调频。
+**Describe a scene. Find its moments. Keep the clips.**
 
-| 目录 | 最终内容 |
+[![Version 2.0](https://img.shields.io/badge/version-2.0-2563EB)](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0)
+![EdgeBoard FZ3B](https://img.shields.io/badge/board-EdgeBoard_FZ3B-0F766E)
+![Handwritten RTL](https://img.shields.io/badge/PL-handwritten_RTL-7C3AED)
+![Windows client](https://img.shields.io/badge/client-Windows_%2B_Qt-334155)
+
+**English** · [简体中文](README.zh-CN.md) · [Version history](https://github.com/Geruyang/fz3b-semantic-video-search/tags)
+
+A video search research project combining **MobileCLIP-S1**, a **Windows desktop workbench**, and **PS–PL inference on Baidu EdgeBoard FZ3B**. Record a live camera stream or analyze an existing video, search with natural-language descriptions, and export the matching moments.
+
+![Actual Windows semantic video search workbench](docs/images/vision-console.png)
+
+*The actual client, shown in its disconnected state. The interface is currently in Chinese; the documentation is bilingual.*
+
+## What you can do
+
+- **Search while recording.** Describe objects or scenes, preserve the received video, and keep original matching frames with timestamps.
+- **Search an existing video.** Analyze uploaded frames in order, browse matched intervals, and export clips with the original audio.
+- **Use Chinese descriptions offline.** Local translation feeds the pinned MobileCLIP text encoder; semantic search does not require a cloud inference service.
+- **Keep useful moments together.** Optional continuity processing reduces fragmented intervals, with one combined export per description.
+- **See what the board is doing.** Monitor inference/camera FPS, CPU load, memory, R5 state, temperature and voltages; select 600/800/1000/1200 MHz CPU operation.
+
+## What's new in 2.0
+
+The compute implementation is now **RTL008: handwritten RTL plus AMD standard IP**, replacing the HLS compute implementation in [1.0](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0). The PS/model ABI remains A0005-compatible.
+
+The client also includes the current continuity workflow, device telemetry and **recent-ten-image inference FPS**: ten completion intervals, eleven time boundaries. Startup preparation is excluded, the window resets on a new inference session, and uploaded-video progress uses board completion times.
+
+## Three parts, one pipeline
+
+```mermaid
+flowchart LR
+    T[Scene descriptions] --> H[Windows host<br/>offline translation + text encoder]
+    C[UVC camera or uploaded frames] --> P[PS / A53 Linux<br/>capture + preprocessing + model partitions]
+    H -->|text features over Ethernet| P
+    P <-->|AXI + DDR| F[PL / RTL008<br/>CNN acceleration]
+    P <-->|matching assistance| R[PS / dual R5<br/>TCM workers]
+    P -->|video + frame IDs + results| W[Windows workbench<br/>record · browse · export]
+```
+
+The Linux drivers own the physical camera, Ethernet and UART interfaces. R5 workers assist matching and protocol work; this project does not claim a complete peripheral-stack offload.
+
+| Directory | Responsibility |
 | --- | --- |
-| `PS/` | 板端实际部署的 Linux 应用、唯一的推理 runtime、A0005/CPU/PL1 驱动、R5 源码、FPGA Manager 加载器和实际服务定义 |
-| `PL/` | 最终 HLS 源包、唯一的规范 IP、最终平台 RTL/约束与所采用的综合/PREG 布局/布线脚本 |
-| `HOST/` | 最终 Windows 客户端、录像/视频上传/检索/片段导出、文本编码与翻译接口及固定版本 MobileCLIP 源依赖 |
+| [PS/](PS/) | Current Linux/R5 application, inference runtime, drivers, loader and service definitions |
+| [PL/](PL/) | RTL008 sources, constraints, final Vivado project inputs, immutable compilation snapshot and selected evidence |
+| [HOST/](HOST/) | Current Windows client, maintained tests, pinned source dependencies and build entry |
+| [docs/validation/](docs/validation/) | Saved application and real-camera FPS validation |
+| [UPLOAD_MANIFEST.json](UPLOAD_MANIFEST.json) | Every published input, its original path, size, SHA256 and inclusion reason |
 
-本仓库已经替换此前范围过宽的导出。旧 CLI、实验/测速/探测/维护脚本、旧兼容运行时副本、软件快照、旧 RTL 转换结果、旧部署记录均已移出当前仓库目录。
-`SOURCE_MANIFEST.json` 列出每个保留源文件的来源、保留原因和 SHA256；`FINAL_VERSION.json` 固定本次版本。
-少数 runtime 模块沿用 v5/v6 名称，是最终版本的实际 import 依赖，不是额外部署版本。
+## Measured, not estimated
 
-## 使用
+The saved comparison uses the same FZ3B boot, **1.2 GHz CPU**, and **200/400 MHz job/PW clocks**. Resource counts are from full-platform post-route reports.
 
-PS Python 包保持板端 Python 3.6 兼容；运行路径与当前服务一致。板端完整运行包、模型、驱动二进制和已启用服务已经备份到项目本地 `backups/board-final-20261009/final.tar.gz`。
-该备份包含私有配置，只在本地保存，不上传 GitHub。
+| Metric | 1.0 HLS baseline | 2.0 RTL008 | Change |
+| --- | ---: | ---: | ---: |
+| LUT | 51,334 | 47,645 | −7.19% |
+| Flip-flops | 87,644 | 49,690 | −43.30% |
+| BRAM36 equivalents | 162 | 146 | −9.88% |
+| DSP48E2 | 214 | 202 | −5.61% |
+| Fixed-input pipeline throughput | 4.1244 FPS | 4.3226 FPS | +4.80% |
 
-Windows 使用 Python 3.12，在 `HOST/.venv-vision-client` 建立环境并安装 `HOST/requirements.txt`，在 HOST 目录执行 `python -m vision_app.launch`。
-将 `HOST/vision_app/client-config.example.json` 复制为 `client-config.json`，填写板端连接令牌与模型目录；主机 EXE 构建入口为 `HOST/vision_app/build.ps1`。
+RTL008 saved setup/hold margins are **+0.006 / +0.010 ns**. See the [post-route receipt](PL/reports/platform/project-final-008/route_receipt.json), [timing report](PL/reports/platform/project-final-008/timing_summary.rpt) and [board comparison receipt](PL/reports/board/candidate008/board_report.json).
 
-模型资源单独准备：MobileCLIP-S1 权重放到 `HOST/releases/current/model-source/mobileclip_s1.pt`，官方源码已随当前依赖保存；OPUS-MT 中文→英文资源放到 `HOST/releases/application-resources/opus-mt-zh-en`。
-权重身份、预处理和 ABI 以 semantic-contract 为准。PS 的 ONNX 分区、suffix11 与参数从经校验的本地板端备份恢复，不混用其他版本。
+The throughput row measures fixed engineering tensors to features, **not camera FPS or a recognition-accuracy score**. Cosine similarity is not a calibrated probability. Live search samples inference frames, so very short events between analyzed frames may be missed.
 
-PL 的规范 IP 可直接在 Vivado IP Repository 中使用。HLS 和平台脚本保留原冻结的参数/路径合同，重建时需配置本机工具路径及外部模型/签核输入；本次整理未重新综合或烧录。
-原厂 PS preset 的可重建性、XA/XC 料号和实物 revision 仍保留既有证据边界。
+The latest saved application regression records **92 passed, 1 legacy installation test excluded**. [Regression output](docs/validation/fps-regression.txt) · [Real-camera FPS checks](docs/validation/fps-real-board.json) · [FPS behavior](docs/validation/2026-10-10-recent-inference-fps.md).
 
-MobileCLIP 上游代码 LICENSE 与模型 LICENSE_MODELS 随依赖保留。
+## Get started
+
+### Use a prepared board and client bundle
+
+1. Keep the complete `FZ3BVisionConsole` directory: the EXE, `_internal`, `models` and `translation` are all required.
+2. Connect to the configured FZ3B over Ethernet. The latest client does not ask for a connection token or password.
+3. Enter descriptions, for example **“a cup on a desk”** or **“a person in a room”**, then start recording/searching or select a local video.
+4. Review the matching intervals and export clips. The current default cosine threshold is **0.17**; adjust it before starting a task.
+
+### Work with the source
+
+```powershell
+git clone https://github.com/Geruyang/fz3b-semantic-video-search.git
+cd fz3b-semantic-video-search
+python tools/verify_upload.py
+python tools/materialize_workspace.py --output workspace
+```
+
+The materializer restores the original relative paths in a separate `workspace/`, preserving the three independent source folders. For the client, use **Python 3.12**, install `HOST/requirements.txt` and `pytest` in a local environment, and run the maintained test entry from the restored project root. The final Vivado project is `PL/project-final-008/cnn_rtl.xpr`; its tool version is **Vivado 2026.1**.
+
+This is a **source snapshot**, not an all-in-one binary distribution. Model weights, learned parameters, native runtime libraries, EXE/BIT/DCP and full simulation vectors are managed separately. To run or rebuild, supply the matching resource bundle and honor the hashes in the semantic/model contracts. Board initialization/preset availability and cold-reboot validation remain separate from the saved RTL qualification.
+
+## Versioning
+
+[`main`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/main) tracks the latest published version. [`1.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) preserves the previous release; [`2.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0) fixes this snapshot. Every future version uses the **version number supplied by the user**, updates `main`, and receives an immutable annotated tag. [Publication policy](RELEASE_POLICY.md).
+
+## Model provenance and licensing
+
+MobileCLIP source and model identities are pinned in [the semantic contract](HOST/vision_app/semantic-contract.json). The upstream code license and the separate, research-only model license are retained under [HOST/model-source/official-mobileclip/](HOST/model-source/official-mobileclip/). The code's upstream MIT license does not extend the model weights' permitted uses.

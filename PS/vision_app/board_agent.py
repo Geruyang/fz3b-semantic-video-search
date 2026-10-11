@@ -2,7 +2,6 @@
 import argparse
 import base64
 import collections
-import hmac
 import io
 import json
 import math
@@ -23,6 +22,8 @@ from .camera import Camera, preprocess_jpeg
 from .contract import load_contract
 from .protocol import Decoder, JSON, PREVIEW, RESULT_IMAGE, IMAGE_CHUNK, INPUT_FRAME, encode_message, fragment_image, pack_image,unpack_image
 from .state import Candidates, LatestSlot
+from .hardware_monitor import HardwareMonitor
+from .recent_fps import RecentFps
 
 DEFAULT_CPU_KHZ = 1199999
 
@@ -74,10 +75,8 @@ class Agent:
     def __init__(self, config):
         self.config = config
         self.contract = load_contract(config['contract'])
-        self.token = read(config['token_file'])
-        if not self.token or len(self.token) < 24:
-            raise ValueError('application token missing')
         self.stop = threading.Event()
+        self.hardware_monitor=HardwareMonitor()
         self.frames, self.results = LatestSlot(), LatestSlot()
         self.input_source='camera';self.upload_job=None;self.result_frames=collections.OrderedDict()
         self.queries, self.cpu = Candidates(), CpuPolicy(control_socket=config.get('cpu_control_socket'))
@@ -97,6 +96,7 @@ class Agent:
         self.delivery_drops = 0
         self.performance = {}
         self.first_result_at = self.last_result_at = None
+        self.recent_fps = RecentFps()
         self.client_limit = threading.BoundedSemaphore(8)
         self.serial_metrics = {'rx_bytes': 0, 'tx_bytes': 0, 'authenticated': False, 'decoder_errors': 0}
         self.r5, self.r5_error, self.telemetry_at = None, None, 0
@@ -163,13 +163,17 @@ class Agent:
             performance = {key: dict(value, mean_ms=value['sum_ms']/max(value['count'],1)) for key,value in self.performance.items()}
             first_result_at, last_result_at = self.first_result_at, self.last_result_at
             inference_count, inference_started = self.inference_count, self.inference_started
+            recent_fps=self.recent_fps.value()
+            fps_samples=self.recent_fps.samples
         interval_fps = ((inference_count-1)/(last_result_at-first_result_at)
                         if first_result_at is not None and last_result_at is not None
                         and last_result_at > first_result_at else 0)
         return {'type': 'status', 'protocol': 1, 'platform': 'A0005', 'boot_id': read('/proc/sys/kernel/random/boot_id'),
                 'contract_id': self.contract['contract_id'], 'cpu': cpu, 'cpu_frequency_changing':changing,'memory_kb': mem,
-                'loadavg': (read('/proc/loadavg', '') or '').split()[:3], 'camera': {'frames': self.camera.frames, 'fps': self.camera.frames / max(elapsed, .001), 'sequence_gaps': self.camera.gaps, 'error': self.camera.error, 'width': self.camera.width, 'height': self.camera.height, 'requested_fps': self.camera.fps},
-                'inference': {'state': self.inference_state, 'error': self.inference_error, 'frames': inference_count, 'fps': inference_count / max(time.monotonic() - inference_started, .001) if inference_started else 0, 'max_in_flight': self.max_in_flight,
+                'loadavg': (read('/proc/loadavg', '') or '').split()[:3],
+                'hardware':self.hardware_monitor.status() if getattr(self,'hardware_monitor',None) else {},
+                'camera': {'frames': self.camera.frames, 'fps': self.camera.frames / max(elapsed, .001), 'sequence_gaps': self.camera.gaps, 'error': self.camera.error, 'width': self.camera.width, 'height': self.camera.height, 'requested_fps': self.camera.fps},
+                'inference': {'state': self.inference_state, 'error': self.inference_error, 'frames': inference_count, 'fps': recent_fps, 'fps_window':10,'fps_samples':fps_samples, 'max_in_flight': self.max_in_flight,
                               'result_interval_fps': interval_fps,
                               'preprocess_async': self.config.get('preprocess_async', False), 'performance': performance},
                 'query_revision': snapshot[2] if snapshot else 0, 'threshold': self.threshold, 'result_delivery_drops': self.delivery_drops,
@@ -294,6 +298,7 @@ class Agent:
         retained = {}
         job=self.upload_job if getattr(self,'input_source','camera')=='upload' else None
         self.inference_state, self.inference_error = 'STARTING', None
+        with self.lock:self.recent_fps.clear()
         try:
             from .board_runtime import create_runtime
             runtime = create_runtime(self.contract)
@@ -363,6 +368,7 @@ class Agent:
                         if self.first_result_at is None:
                             self.first_result_at = now
                         self.last_result_at = now
+                        self.recent_fps.add(result['completed_monotonic'])
                     events = output['pair_timing']['ps_events'] if output['frame_id'] == output['pair_timing']['frame_ids'][0] else []
                     for event in events:
                         self.record_performance(event['partition']+'_call_ms', event['call_wall_ms'])
@@ -405,8 +411,8 @@ class Agent:
             entry['sum_ms'] += value
             entry['max_ms'] = max(entry['max_ms'], value)
 
-    def authenticate(self, request):
-        return isinstance(request, dict) and request.get('op') == 'hello' and isinstance(request.get('token'), str) and hmac.compare_digest(request['token'], self.token)
+    def accept_hello(self, request):
+        return isinstance(request, dict) and request.get('op') == 'hello'
 
     def reply(self, request):
         identity = {'type': 'ack', 'request_id': request.get('request_id'), 'op': request.get('op')}
@@ -448,7 +454,7 @@ class Agent:
                             raise ValueError('JSON request required')
                         req = json.loads(payload.decode('utf-8'))
                         if not authenticated:
-                            if not self.authenticate(req):
+                            if not self.accept_hello(req):
                                 return
                             authenticated = True
                             if video:frame_delivery,frame_overflow=self.frames.subscribe()
@@ -561,7 +567,7 @@ class Agent:
         raw[6] = list(previous[6])
         raw[6][termios.VMIN], raw[6][termios.VTIME] = 0, 0
         termios.tcsetattr(fd, termios.TCSANOW, raw)
-        decoder, authenticated = Decoder(reset_validator=self.authenticate), False
+        decoder, authenticated = Decoder(reset_validator=self.accept_hello), False
         version, last_status, last_image = 0, 0, 0
         fragments, outgoing = iter(()), bytearray()
         last_rx = time.monotonic()
@@ -581,7 +587,7 @@ class Agent:
                         try:
                             req = json.loads(payload.decode('utf-8'))
                             if not authenticated or req.get('op') == 'hello':
-                                authenticated = self.authenticate(req)
+                                authenticated = self.accept_hello(req)
                                 self.serial_metrics['authenticated'] = authenticated
                                 if authenticated:
                                     epoch+=1
@@ -609,7 +615,7 @@ class Agent:
                 now = time.monotonic()
                 if now - last_rx > 8:
                     authenticated = False
-                    decoder = Decoder(reset_validator=self.authenticate)
+                    decoder = Decoder(reset_validator=self.accept_hello)
                     self.serial_metrics['authenticated'] = False
                     fragments = iter(())
                     continue
@@ -645,6 +651,7 @@ class Agent:
             os.close(fd)
 
     def run(self):
+        self.spawn(self.hardware_monitor.run,(self.stop,))
         signal.signal(signal.SIGTERM, lambda *unused: self.stop.set())
         signal.signal(signal.SIGINT, lambda *unused: self.stop.set())
         self.apply_boot_defaults()

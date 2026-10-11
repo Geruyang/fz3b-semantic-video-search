@@ -33,29 +33,23 @@ def verify_source(contract, model_root):
 
 
 def generate(project_root, target):
+    """Recheck the final packaged model assets and unchanged PS numerical contract."""
     import open_clip.tokenizer as tokenizer_module
-    root = os.path.join(project_root, 'releases', 'current')
-    source = json.load(open(os.path.join(root, 'model-source', 'preservation-manifest.json'), encoding='utf-8'))
-    files = {}
-    weight = None
-    for item in source['files']:
-        path = item['path'].replace('\\', '/')
-        if path == 'model-source/mobileclip_s1.pt':
-            weight = item['sha256']
-        if path.startswith('model-source/official-mobileclip/mobileclip/') and path.endswith(('.py', '.json')):
-            files[path[len('model-source/'):]] = item['sha256']
-    ps = os.path.join(root, 'ps')
-    contract = {'schema': 1, 'model': 'mobileclip_s1', 'dimension': 512, 'weight_sha256': weight,
-                'source_revision': source['upstream_mobileclip_commit'], 'source_files': files,
-                'image_backend': 'A0005/direct_wc/split/suffix11',
-                'combined_manifest_sha256': sha_file(os.path.join(ps, 'deployment', 'files', 'manifest.json')),
-                'bundle_sha256': sha_file(os.path.join(ps, 'release', 'manifest.json')),
-                'deployment_sha256': sha_file(os.path.join(ps, 'deployment', 'manifest.json')),
-                'suffix_selection_sha256': sha_file(os.path.join(ps, 'suffix11-selection', 'selection-manifest.json')),
-                'bpe_sha256': sha_file(tokenizer_module.default_bpe()),
-                'preprocess': {'rgb': True, 'resize_short_side': 256, 'crop': [256, 256], 'bilinear': True, 'scale': 'float32/255', 'mean': None, 'std': None},
-                'normalization': 'l2-float32-v1'}
+    root = os.path.abspath(project_root)
+    model_root = os.path.join(root, 'deliverables', 'vision-console', 'FZ3BVisionConsole', 'models')
+    recorded = load_contract(os.path.join(root, 'releases', 'final', 'HOST', 'vision_app', 'semantic-contract.json'))
+    verify_source(recorded, model_root)
+    ps = os.path.join(root, 'releases', 'final', 'resources', 'ps')
+    contract = dict(recorded)
+    contract.pop('contract_id')
+    contract.update(weight_sha256=sha_file(os.path.join(model_root, 'mobileclip_s1.pt')),
+                    source_files={path: sha_file(os.path.join(model_root, path)) for path in recorded['source_files']},
+                    combined_manifest_sha256=sha_file(os.path.join(ps, 'contracts', 'files', 'manifest.json')),
+                    bundle_sha256=sha_file(os.path.join(ps, 'release', 'manifest.json')),
+                    deployment_sha256=sha_file(os.path.join(ps, 'contracts', 'ps-model-contract.json')),
+                    suffix_selection_sha256=sha_file(os.path.join(ps, 'suffix11-selection', 'selection-manifest.json')),
+                    bpe_sha256=sha_file(tokenizer_module.default_bpe()))
     contract['contract_id'] = hashlib.sha256(json.dumps(contract, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()).hexdigest()
-    with open(target, 'w', encoding='utf-8') as f:
-        json.dump(contract, f, ensure_ascii=False, indent=2)
+    with open(target, 'w', encoding='utf-8') as stream:
+        json.dump(contract, stream, ensure_ascii=False, indent=2)
     return contract

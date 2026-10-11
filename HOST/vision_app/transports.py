@@ -49,7 +49,6 @@ class Link:
         self.stop = threading.Event()
         self.outgoing = queue.Queue(32)
         self.endpoints, self.threads = [], []
-        self.token = None
         self.preview_enabled=threading.Event();self.preview_enabled.set()
     def set_preview_enabled(self,enabled):
         if enabled:self.preview_enabled.set()
@@ -67,8 +66,7 @@ class Link:
         self.threads.append(t)
         t.start()
 
-    def connect_tcp(self, host, token, control_port=8765, video_port=8766):
-        self.token = token
+    def connect_tcp(self, host, control_port=8765, video_port=8766):
         self._thread(self._tcp, (host, control_port, False))
         self._thread(self._tcp, (host, video_port, True))
 
@@ -78,7 +76,7 @@ class Link:
             sock = socket.create_connection((host, port), timeout=5)
             sock.settimeout(.03)
             self.endpoints.append(sock)
-            sock.sendall(encode_message(JSON, {'op': 'hello', 'token': self.token}))
+            sock.sendall(encode_message(JSON, {'op': 'hello'}))
             decoder, deadline, authenticated = Decoder(), time.monotonic() + 5, False
             preview_mode=None
             while not self.stop.is_set():
@@ -105,7 +103,7 @@ class Link:
                 except socket.timeout:
                     pass
                 if not authenticated and time.monotonic() > deadline:
-                    raise TimeoutError('应用握手超时，请核对连接令牌')
+                    raise TimeoutError('应用握手超时，请检查板卡连接')
         except Exception as exc:
             if not self.stop.is_set():
                 self.on_error(('视频：' if video else '控制：') + str(exc))
@@ -113,8 +111,7 @@ class Link:
             if sock:
                 sock.close()
 
-    def connect_serial(self, port, token, baudrate=115200):
-        self.token = token
+    def connect_serial(self, port, baudrate=115200):
         self._thread(self._serial, (port, baudrate))
 
     def _serial(self, port, baudrate):
@@ -126,13 +123,13 @@ class Link:
             endpoint.port = port
             endpoint.open()
             self.endpoints.append(endpoint)
-            endpoint.write(encode_message(JSON, {'op': 'hello', 'token': self.token}))
+            endpoint.write(encode_message(JSON, {'op': 'hello'}))
             decoder, deadline, authenticated = Decoder(), time.monotonic() + 12, False
             pending, last_hello, last_ping = bytearray(), time.monotonic(), 0
             while not self.stop.is_set():
                 now = time.monotonic()
                 if not authenticated and now - last_hello > 1:
-                    endpoint.write(encode_message(JSON, {'op': 'hello', 'token': self.token}))
+                    endpoint.write(encode_message(JSON, {'op': 'hello'}))
                     last_hello = now
                 if not pending:
                     try:

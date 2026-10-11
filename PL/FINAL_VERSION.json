@@ -1,0 +1,50 @@
+{
+  "schema": "rtl-optim-delivery-v1",
+  "timestamp_utc": "2026-10-10T12:34:38.680238+00:00",
+  "status": "QUALIFIED_HOST_SIMULATION_POST_ROUTE_AND_BOARD",
+  "qualified": true,
+  "host_qualification_status": "QUALIFIED_HOST_SIMULATION_AND_POST_ROUTE",
+  "board_qualification_status": "BOARD_QUALIFIED",
+  "baseline": "V10.5/A0005",
+  "priority": "preserve_throughput_then_reduce_resources",
+  "part": "xazu3eg-sfvc784-1-i",
+  "tool": "Vivado/XSim 2026.1",
+  "clocks_mhz": {
+    "input": 100,
+    "job": 200,
+    "pw": 400
+  },
+  "project": "project-final-008/cnn_rtl.xpr",
+  "project_source_snapshot": "project-final-008/source_snapshot/SHA256SUMS.txt",
+  "project_source_snapshot_sha256": "9e27dbfae359808d93e45be0d7f6081fb810f97b26464dfe1df8347c5f101d3e",
+  "simulation_candidate": "reports/full/candidates/20261010-175127-873",
+  "qualification_report": "qualification_report.json",
+  "qualification_report_sha256": "b022046146dc3ea6712eceee871933c7d88ef7817a16860e8a9a4a7d40b9090c",
+  "route_receipt": "reports/platform/project-final-008/route_receipt.json",
+  "route_receipt_sha256": "05e612082e95a2b5da5e732f51637a8a3cb572a400c6918c46b8c3f7faf1603d",
+  "comparison": "COMPARISON.md",
+  "source_manifest": "SOURCE_MANIFEST.json",
+  "board_operations": true,
+  "board_fps": {
+    "hls": 4.124387399584198,
+    "rtl": 4.322556789262932
+  },
+  "board_scope": "actual board fixed A/B engineering tensors",
+  "hls_restored_after_testing": true,
+  "board_report": "reports/board/candidate008/board_report.json",
+  "board_report_sha256": "24f2e3b049bc39ff3453930fa425e0f48093ef7b61b5d08bbdbab067f84d0506",
+  "board_boot_id": "3da2f700-a50a-4b1d-ab1c-1e3e691cd645",
+  "hls_compute_dependency": false,
+  "current_board_design": "RTL008",
+  "persistent_startup_configured": true,
+  "reboot_test_performed": false,
+  "deployment_report": "reports/board/candidate008/deployment/deployment_report.json",
+  "deployment_report_sha256": "1c4f12b4cdcecea4a1bbd8a9bfebeaaaa65e80f8ba664cb6cfef0f7049eac426",
+  "exports": [
+    "reports/platform/project-final-008/cnn_rtl.bit",
+    "reports/platform/project-final-008/cnn_rtl.xsa"
+  ],
+  "file_export_receipt": "reports/platform/project-final-008/file_export_receipt.json",
+  "file_export_receipt_sha256": "444a915260dcee0a16c4154b2c09b797ea0810c7fe24a0becac8e1ee3d8cfa73",
+  "source_manifest_sha256": "0686f19bbd4a85e1e900fdea2647507e0c34792be1b6b58af90d6d1b4b5445ba"
+}
