@@ -1,0 +1,7 @@
+# GitHub language statistics focus on the PL hardware implementation.
+# Preserve the actual PS/HOST sources; only HDL contributes to the language bar.
+* -linguist-detectable
+*.sv linguist-detectable linguist-language=SystemVerilog
+*.svh linguist-detectable linguist-language=SystemVerilog
+*.v linguist-detectable linguist-language=SystemVerilog
+*.vh linguist-detectable linguist-language=SystemVerilog
