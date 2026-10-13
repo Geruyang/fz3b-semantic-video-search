@@ -2598,6 +2598,55 @@
       "bytes": 2153,
       "sha256": "aa57d6b1dfaeac92c67265a99dadf04d01b95b32f21ff35bad6daea7b2eb8c92",
       "reason": "Current SSH maintenance entry; account source remains private"
+    },
+    {
+      "path": "README.md",
+      "source": "docs/maintenance/github-readme-en.md",
+      "bytes": 8944,
+      "sha256": "85a8525994e0553e29a78938c255e031ebfbc493b2a1f2b8a2ef03b52aa077b9",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "source": "docs/maintenance/github-readme-zh-CN.md",
+      "bytes": 8200,
+      "sha256": "b231c7b4dff5c3fd419de708eb6dc80abbda56c28180c04b0531e9c11bcbaab6",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "docs/media/cover-prompts.json",
+      "source": "docs/media/cover-prompts.json",
+      "bytes": 2991,
+      "sha256": "536ec7db4d25c8a6e8187eb09217c28c315269fef5a5212ca3a2302f915c2f5d",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "docs/media/demo.json",
+      "source": "docs/media/demo.json",
+      "bytes": 2312,
+      "sha256": "e415ec95c8aef63bef48c6004b10120af27adaf3474186b05970cc8a3acd3d3b",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "docs/media/fz3b-applications-demo.mp4",
+      "source": "docs/media/fz3b-applications-demo.mp4",
+      "bytes": 50926476,
+      "sha256": "f340d77e792486a4307c5a4a76ce5a651b228fbd9d20bdbcb37a2cb8c00cda6c",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "docs/media/live-scene-cover.png",
+      "source": "docs/media/live-scene-cover.png",
+      "bytes": 2026809,
+      "sha256": "d785f9c263f0e15b50f328797071c839f1106c63bcf1ffbf4e73eb75d00dbb44",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+    },
+    {
+      "path": "docs/media/video-search-cover.png",
+      "source": "docs/media/video-search-cover.png",
+      "bytes": 1854366,
+      "sha256": "25b72bd918d1e77eacd911011c182336fb962555655ee75f8f82b807cab3095b",
+      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
     }
   ]
 }

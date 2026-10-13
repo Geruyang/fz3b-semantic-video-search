@@ -15,6 +15,23 @@
 
 *实际客户端截图，处于未连接状态。软件界面当前为中文，仓库文档提供中英文版本。*
 
+## 应用演示
+
+**两个真实应用，一支完整视频 · 约 5 分 45 秒 · 当前版本 2.0**
+
+[![应用①：实时文字找场景](docs/media/live-scene-cover.png)](docs/media/fz3b-applications-demo.mp4)
+
+[![应用②：视频语义检索](docs/media/video-search-cover.png)](docs/media/fz3b-applications-demo.mp4)
+
+**[▶ 打开完整演示视频](docs/media/fz3b-applications-demo.mp4)** · **[下载完整画质 MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4)** · [2.0 版本发布](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.0)
+
+| 章节 | 开始时间 | 展示内容 |
+| --- | --- | --- |
+| 应用①：实时文字找场景 | 00:00 | 3 秒科技封面，随后展示实时检索工作台 |
+| 应用②：视频语义检索 | 03:06.3 | 3 秒科技封面，随后展示已有视频分析与命中时间段 |
+
+视频已对人脸打马赛克并移除音轨。第二段原始录像中的 **01:02–09:40 加速 10 倍**，加速期间持续显示“此处多倍加速节约时间”；其余演示部分保持原速。封面为项目概念插画，录像展示实际客户端。
+
 ## 能做什么
 
 - **边录像，边找场景。** 输入物品或场景描述，保存收到的视频，并按原始帧号与时间保存命中图像。

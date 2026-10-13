@@ -1,0 +1,80 @@
+{
+  "version": "2.0",
+  "branch": "main",
+  "video": {
+    "name": "FZ3B_应用演示_实时文字找场景与视频语义检索.mp4",
+    "bytes": 50926476,
+    "sha256": "f340d77e792486a4307c5a4a76ce5a651b228fbd9d20bdbcb37a2cb8c00cda6c",
+    "repository_path": "docs/media/fz3b-applications-demo.mp4",
+    "release_asset_name": "fz3b-applications-demo.mp4",
+    "release_asset_url": "https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4"
+  },
+  "fps": 30,
+  "frames": 10343,
+  "seconds": 344.76666666666665,
+  "resolution": [
+    1702,
+    1102
+  ],
+  "audio_tracks": 0,
+  "validation": "complete decode passed; frame count and duration passed",
+  "order": [
+    {
+      "type": "cover",
+      "title": "应用①：实时文字找场景",
+      "start": 0,
+      "duration": 3
+    },
+    {
+      "type": "demo",
+      "title": "实时文字找场景",
+      "start": 3,
+      "duration": 183.3
+    },
+    {
+      "type": "cover",
+      "title": "应用②：视频语义检索",
+      "start": 186.3,
+      "duration": 3
+    },
+    {
+      "type": "demo",
+      "title": "视频语义检索",
+      "start": 189.3,
+      "duration": 155.46666666666667
+    }
+  ],
+  "accelerated_caption": {
+    "text": "此处多倍加速节约时间",
+    "combined_video_range": [
+      251.3,
+      303.1
+    ]
+  },
+  "inputs": [
+    {
+      "name": "实时文字找场景_人脸马赛克_无声.mp4",
+      "bytes": 33554568,
+      "sha256": "fd70bf68b86601998f22f6494668a5032ae303b648ab12dec1ef2886848729e7"
+    },
+    {
+      "name": "视频语义检索_人脸马赛克_无声_中段10倍速.mp4",
+      "bytes": 16601919,
+      "sha256": "1fcef6e6cf1a2d93d52ea29ae64cdcc6452cd428bb4bb58542aa270de4734b09"
+    }
+  ],
+  "covers": [
+    {
+      "name": "live-scene-cover.png",
+      "bytes": 2026809,
+      "sha256": "d785f9c263f0e15b50f328797071c839f1106c63bcf1ffbf4e73eb75d00dbb44"
+    },
+    {
+      "name": "video-search-cover.png",
+      "bytes": 1854366,
+      "sha256": "25b72bd918d1e77eacd911011c182336fb962555655ee75f8f82b807cab3095b"
+    }
+  ],
+  "cover_generation": "Built-in imagegen; conceptual illustrations, not actual PCB photography",
+  "concatenation": "Original demo video streams copied without re-encoding; cover images encoded to matching format"
+}

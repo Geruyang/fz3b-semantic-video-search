@@ -15,6 +15,23 @@ A video search research project combining **MobileCLIP-S1**, a **Windows desktop
 
 *The actual client, shown in its disconnected state. The interface is currently in Chinese; the documentation is bilingual.*
 
+## Watch the applications
+
+**Two real application demos in one video · 5 min 45 s · version 2.0**
+
+[![Application ①: Real-time text-to-scene search](docs/media/live-scene-cover.png)](docs/media/fz3b-applications-demo.mp4)
+
+[![Application ②: Video semantic search](docs/media/video-search-cover.png)](docs/media/fz3b-applications-demo.mp4)
+
+**[▶ Open the combined video](docs/media/fz3b-applications-demo.mp4)** · **[Download the full-quality MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4)** · [Version 2.0 release](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.0)
+
+| Chapter | Starts at | What you will see |
+| --- | --- | --- |
+| Application ① — Real-time text-to-scene search | 00:00 | 3-second cover, followed by the live search workbench |
+| Application ② — Video semantic search | 03:06.3 | 3-second cover, followed by recorded-video analysis and matching intervals |
+
+Faces are mosaicked and the demo is silent. In the second source recording, **01:02–09:40 is shown at 10× speed**; the accelerated section displays “此处多倍加速节约时间” (“Accelerated here to save time”). The other demonstration sections retain their original speed. Cover art is a conceptual illustration; the footage shows the actual client.
+
 ## What you can do
 
 - **Search while recording.** Describe objects or scenes, preserve the received video, and keep original matching frames with timestamps.
