@@ -1,4 +1,4 @@
-"""Original restrained electronic underscore, synthesized from oscillators and seeded noise."""
+"""Original upbeat, futuristic electronic music synthesized from oscillators and seeded noise."""
 from pathlib import Path
 import json,wave
 import numpy as np
@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[3]
 OUT=ROOT/'.work/video-audio'
 SR=48000
 DURATION=10343/30
-BPM=84
+BPM=118
 BEAT=60/BPM
 rng=np.random.default_rng(210013)
 audio=np.zeros((round(DURATION*SR),2),np.float32)
@@ -24,35 +24,32 @@ def add(signal,start,gain=.1,pan=0):
 def pad(note,duration,seed):
     t=np.arange(round(duration*SR),dtype=np.float32)/SR
     f=hz(note);phase=seed*.37
-    sound=(np.sin(2*np.pi*f*t+phase)+.45*np.sin(2*np.pi*f*1.0015*t+phase+.8)+.15*np.sin(2*np.pi*f*2*t+phase))/.95
-    envelope=np.minimum(t/1.25,1)*np.minimum(np.maximum(duration-t,0)/1.7,1)
+    sound=(np.sin(2*np.pi*f*t+phase)+.38*np.sin(2*np.pi*f*1.003*t+phase+.8)+.20*np.sin(2*np.pi*f*2*t+phase))/.95
+    envelope=np.minimum(t/.35,1)*np.minimum(np.maximum(duration-t,0)/.7,1)
     return (sound*envelope).astype(np.float32)
 
 def pluck(note,duration=1.3):
     t=np.arange(round(duration*SR),dtype=np.float32)/SR;f=hz(note)
     sound=np.sin(2*np.pi*f*t)+.24*np.sin(2*np.pi*f*2*t)*np.exp(-t*3)+.09*np.sin(2*np.pi*f*3*t)*np.exp(-t*6)
-    envelope=(1-np.exp(-t*100))*np.exp(-t*3.8)
+    envelope=(1-np.exp(-t*140))*np.exp(-t*2.8)
     return (sound*envelope).astype(np.float32)
 
-# Am(add9), Fmaj7, Cmaj7, G(add9): a spacious instrumental progression.
-chords=[([57,60,64,71],33),([53,57,60,64],29),([55,59,60,64],36),([55,59,62,69],31)]
-for chord_index,start in enumerate(np.arange(0,DURATION,BEAT*8)):
+# D(add9), Gmaj7, Bm7, A(add9): bright major-key synth-pop progression.
+chords=[([62,66,69,76],38),([55,59,62,66],43),([59,62,66,69],35),([57,61,64,71],45)]
+for chord_index,start in enumerate(np.arange(0,DURATION,BEAT*4)):
     notes,bass=chords[chord_index%4]
-    for j,note in enumerate(notes):add(pad(note,BEAT*8+2,chord_index*4+j),start,.024,[-.62,.26,-.18,.68][j])
-    bass_t=np.arange(round(BEAT*7.5*SR),dtype=np.float32)/SR
-    bass_signal=(np.sin(2*np.pi*hz(bass)*bass_t)+.18*np.sin(2*np.pi*hz(bass)*2*bass_t))*np.minimum(bass_t/.08,1)*np.minimum((BEAT*7.5-bass_t)/.35,1)
-    add(bass_signal,start,.049,0)
-    order=[0,2,1,3,2,0,3,1] if chord_index%2 else [0,1,2,3,2,1,3,2]
-    step=BEAT*.5 if 251.3<=start<303.1 else BEAT
-    for k,at in enumerate(np.arange(start+.15,start+BEAT*8,step)):
+    for j,note in enumerate(notes):add(pad(note,BEAT*4+1,chord_index*4+j),start,.030,[-.62,.26,-.18,.68][j])
+    bass_t=np.arange(round(BEAT*3.8*SR),dtype=np.float32)/SR
+    bass_signal=(np.sin(2*np.pi*hz(bass)*bass_t)+.18*np.sin(2*np.pi*hz(bass)*2*bass_t))*np.minimum(bass_t/.04,1)*np.minimum((BEAT*3.8-bass_t)/.2,1)
+    add(bass_signal,start,.064,0)
+    order=[0,2,1,2,3,2,1,2] if chord_index%2 else [0,1,2,1,3,2,1,2]
+    for k,at in enumerate(np.arange(start+.08,start+BEAT*4,BEAT*.5)):
         if at<3 or at>DURATION-7:continue
         note=notes[order[k%len(order)]]+12
-        gain=.038 if 251.3<=at<303.1 else .032
-        signal=pluck(note)
-        pan=.5*np.sin(chord_index*.7+k*.8)
+        gain=.052 if 251.3<=at<303.1 else .045
+        signal=pluck(note,.92)
+        pan=.46*np.sin(chord_index*.7+k*.8)
         add(signal,at,gain,pan)
-        add(signal,at+BEAT*.75,gain*.25,-pan)
-        add(signal,at+BEAT*1.5,gain*.10,pan)
 
 for beat_index,start in enumerate(np.arange(0,DURATION,BEAT)):
     if start<12 or start>DURATION-10 or 184<start<191:continue
@@ -76,7 +73,7 @@ for beat_index,start in enumerate(np.arange(0,DURATION,BEAT)):
         hat=(noise-low)*np.exp(-t*85)*(1-np.exp(-t*1500))
         add(hat,start+k*BEAT*.5,.011*section,(-.32 if k else .32))
 
-# Subtle, restrained transition swells at chapter and accelerated-section boundaries.
+# Short bright sweeps accent chapter changes and the labeled accelerated interval.
 for at in (0,186.3,251.3,303.1):
     t=np.arange(round(2.5*SR),dtype=np.float32)/SR
     noise=rng.standard_normal(len(t)).astype(np.float32)
@@ -89,8 +86,8 @@ master=np.minimum(t/3,1)*np.minimum(np.maximum(DURATION-t,0)/8,1)
 audio*=master[:,None]
 peak=float(np.max(np.abs(audio)));audio*=.65/max(peak,1e-6)
 pcm=(np.clip(audio,-1,1)*32767).astype('<i2')
-p=OUT/'original-tech-ambient.wav'
+p=OUT/'original-tech-upbeat.wav'
 with wave.open(str(p),'wb') as f:f.setnchannels(2);f.setsampwidth(2);f.setframerate(SR);f.writeframes(pcm.tobytes())
-receipt={'title':'Semantic Circuit','composition':'Original procedural ambient electronic score','bpm':BPM,'sample_rate':SR,'seconds':DURATION,'channels':2,'oscillators_and_seeded_noise':True,'third_party_audio_samples':False,'path':str(p),'seed':210013}
+receipt={'title':'Bright Circuit','composition':'Original upbeat, bright futuristic electronic score with buoyant synth plucks, a crisp dance-pop beat, warm bass and bright chord stabs','bpm':BPM,'sample_rate':SR,'seconds':DURATION,'channels':2,'oscillators_and_seeded_noise':True,'third_party_audio_samples':False,'path':str(p),'seed':210013}
 (OUT/'music.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(receipt),flush=True)

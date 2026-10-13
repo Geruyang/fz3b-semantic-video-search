@@ -2601,17 +2601,17 @@
     },
     {
       "path": "README.md",
-      "source": "docs/maintenance/github-readme-en.md",
-      "bytes": 10046,
-      "sha256": "f187a4a021cd6280c13236867e16d0ef7cf4677d77cb7b54385148c31884fc20",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "source": "README.md",
+      "bytes": 10197,
+      "sha256": "367286c636c1e1058ca6b6ad0115ab4a02860f0bb9ebd4311903dffd728fc75f",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "README.zh-CN.md",
-      "source": "docs/maintenance/github-readme-zh-CN.md",
-      "bytes": 9005,
-      "sha256": "bec2ab8fbcf00352b1065715dc0949c1421696cf7fc77fd476be533cb6811ff2",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "source": "README.zh-CN.md",
+      "bytes": 9121,
+      "sha256": "b87dd6018d8354118ac983da2452717ed414c23c4c214084cd6c4a6a07befc04",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/cover-prompts.json",
@@ -2623,16 +2623,16 @@
     {
       "path": "docs/media/demo.json",
       "source": "docs/media/demo.json",
-      "bytes": 2812,
-      "sha256": "960761efe30756bd9b25e7bb3c4784f371c4e5e31789bb02fae27a6419ae1672",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "bytes": 2837,
+      "sha256": "39aeb6e6c3bc264c782b010c9fab3294ff24e21d0e9764d996c5b7b37ca14494",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/fz3b-applications-demo.mp4",
       "source": "docs/media/fz3b-applications-demo.mp4",
-      "bytes": 59449570,
-      "sha256": "4874eaa065dc589eaff3670711c0fc4ca4d02291a935ef7d2292dc96442eea60",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "bytes": 59424408,
+      "sha256": "bd1bdd5efee9075f5a842880b9a1dfeb85270646cbb617302eb91445b8d0aa13",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/live-scene-cover.png",
@@ -2658,93 +2658,100 @@
     {
       "path": "RELEASE.json",
       "source": "RELEASE.json",
-      "bytes": 758,
-      "sha256": "d75624672513069803286b29e3859ec274eb9e0b57408c3dcb82bd87a7c8b099",
+      "bytes": 802,
+      "sha256": "dba5ccbb4acf2fd1818c4a138e3c6135ce09f638ce2746be0580cbd38e244409",
       "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/narration/audio-receipt.json",
       "source": "docs/media/narration/audio-receipt.json",
-      "bytes": 6451,
-      "sha256": "e16a91e1a9be88b819c78c0afccc8cd44a0bb86f496b0c6a26141afb82cfa704",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "bytes": 6470,
+      "sha256": "3a6e1ede573c8d1b58d5958cd4a946cb5e8a06ae8b380c4515f7eda92d00b90a",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/narration/compose_music.py",
       "source": "docs/media/narration/compose_music.py",
-      "bytes": 4786,
-      "sha256": "a5e25d069cb81b24e65440760f664c46fc46c8d77027e83f655f7c56fb98f0a7",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "bytes": 4738,
+      "sha256": "213884b393915a2dd60ea29e626ca193ccb3bdc1b5e2ace649f14ec7363ecdb9",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/narration/cues.json",
       "source": "docs/media/narration/cues.json",
       "bytes": 3525,
       "sha256": "d0f278f147f89eeede0486a4428aef4053d9996d9ff9b839a117852ef9e13ecf",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/narration/mix_audio.py",
       "source": "docs/media/narration/mix_audio.py",
-      "bytes": 7016,
-      "sha256": "82d9006a17a3e543da82d69a34cea9a2461f8e733aa3bb03d1517ebf80d28517",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "bytes": 7411,
+      "sha256": "e85bed896ef038d90700ad707521fc554bceec955f468587a720e49cad29e4ed",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/narration/script.md",
       "source": "docs/media/narration/script.md",
       "bytes": 2570,
       "sha256": "a696bf0b1d19318520dda9c9aa54b5910e014e03c9bab6e4c69cd69ee1ce5afe",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/01-系统框架.png",
       "source": "docs/media/xiaohongshu/01-系统框架.png",
       "bytes": 1644684,
       "sha256": "2a7ed87e12d54d8f6015172a4de0964c73b837243834449240d176e4815e031b",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/02-技术路线.png",
       "source": "docs/media/xiaohongshu/02-技术路线.png",
       "bytes": 1777600,
       "sha256": "df3aadaad91cbef6c58e9a9789f059f57d031c3a029d257fa43643e349cf02a1",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/03-实时检索实机.png",
       "source": "docs/media/xiaohongshu/03-实时检索实机.png",
       "bytes": 972172,
       "sha256": "29ded4922c40e44cb7defcce8b3e37ac50691841954a0a1f421d379e612393c7",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/04-视频检索实机.png",
       "source": "docs/media/xiaohongshu/04-视频检索实机.png",
       "bytes": 705058,
       "sha256": "b2b0479bb16fdacd04658a38a809e8f9fa88886fc2ae73d35683260cbd2508e9",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/manifest.json",
       "source": "docs/media/xiaohongshu/manifest.json",
       "bytes": 949,
       "sha256": "b9950b211a3d48de8871778609531a19c4b99f195039c2950fbf19d6d4fddbdf",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/prompts.json",
       "source": "docs/media/xiaohongshu/prompts.json",
       "bytes": 5796,
       "sha256": "cc29b8de6173b2f364b9295b68e40b0bcfcde60015a32ba7ddb38c7a78d3476b",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/xiaohongshu/README.md",
       "source": "docs/media/xiaohongshu/README.md",
       "bytes": 1189,
       "sha256": "07c865276e9b1cf3d32978a46d3da92f2d3bae992330788a1c8159f797e35b4a",
-      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
+    },
+    {
+      "path": "docs/media/narration/original-music.wav",
+      "source": "docs/media/narration/original-music.wav",
+      "bytes": 66195244,
+      "sha256": "9b04b3e930b50b537efbbe8de385a02f4ae37d94a843d4468cc06c1eabd35a10",
+      "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     }
   ]
 }

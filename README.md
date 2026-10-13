@@ -17,14 +17,14 @@ An engineering research project combining **MobileCLIP-S1**, a **Windows desktop
 
 **[▶ Open the video in the repository](docs/media/fz3b-applications-demo.mp4)** · **[Download the narrated MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4)** · **[Download the four project images](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/project-images-2.1.zip)**
 
-The **5 min 45 s** demonstration combines both applications with 3-second chapter covers, Chinese technical narration and an original electronic underscore. Music lowers automatically under the narration. Faces remain mosaicked and the original recording audio remains removed.
+The **5 min 45 s** demonstration combines both applications with 3-second chapter covers, Chinese technical narration and an original, upbeat futuristic electronic score at 118 BPM. Bright synth arpeggios, an energetic beat and warm bass create an upbeat, technology-focused sound. Music lowers automatically under narration. Faces remain mosaicked and the original recording audio remains removed.
 
 | Chapter | Starts at | Demonstration |
 | --- | --- | --- |
 | ① Real-time text-to-scene search | 00:00 | Camera search, matching intervals, playback and export |
 | ② Video semantic search | 03:06.3 | Recorded-video analysis, matched moments and clip review |
 
-The second source recording's **01:02–09:40** interval is presented at **10× speed**, visibly labeled “此处多倍加速节约时间”. All other demonstration intervals retain their original speed. Narration is AI-synthesized using the local Suqing reference voice; the music is an original oscillator/noise composition. [Narration script](docs/media/narration/script.md) · [Audio and video validation](docs/media/narration/audio-receipt.json).
+The second source recording's **01:02–09:40** interval is presented at **10× speed**, visibly labeled “此处多倍加速节约时间”. All other demonstration intervals retain their original speed. Narration is AI-synthesized using the local Suqing reference voice; the 118 BPM music is an original oscillator/noise composition. [Narration script](docs/media/narration/script.md) · [Audio and video validation](docs/media/narration/audio-receipt.json).
 
 ## Two application workflows
 
@@ -63,7 +63,7 @@ Text and image features are compared with cosine similarity, filtered by a confi
 
 ## What's new in 2.1
 
-- A complete narrated two-application video with an original music bed and automatic music ducking.
+- A complete narrated two-application video with original upbeat futuristic electronic music and automatic music ducking.
 - Four project visuals: architecture, technical pipeline, and two real workbench screenshots.
 - Reorganized English and Chinese documentation around the demonstration and engineering implementation.
 
