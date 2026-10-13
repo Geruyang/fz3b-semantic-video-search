@@ -1,13 +1,13 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "branch": "main",
   "video": {
-    "name": "FZ3B_应用演示_实时文字找场景与视频语义检索.mp4",
-    "bytes": 50933294,
-    "sha256": "5325ed5bc1ca8629e1ca0bfde34169a649a85438393715e8c65a76c3a6d5e812",
+    "name": "FZ3B_应用演示_实时文字找场景与视频语义检索_解说配乐版.mp4",
+    "bytes": 59449570,
+    "sha256": "4874eaa065dc589eaff3670711c0fc4ca4d02291a935ef7d2292dc96442eea60",
     "repository_path": "docs/media/fz3b-applications-demo.mp4",
     "release_asset_name": "fz3b-applications-demo.mp4",
-    "release_asset_url": "https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4"
+    "release_asset_url": "https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4"
   },
   "fps": 30,
   "frames": 10343,
@@ -16,7 +16,7 @@
     1702,
     1102
   ],
-  "audio_tracks": 0,
+  "audio_tracks": 1,
   "validation": "complete decode passed; frame count and duration passed",
   "order": [
     {
@@ -81,5 +81,14 @@
     "chip": "ZYNQ UltraScale+",
     "board": "FZ3B",
     "evidence": "User correction on 2026-10-13"
+  },
+  "audio": {
+    "narration": "AI-synthesized local Suqing reference voice",
+    "music": "Semantic Circuit — original electronic composition",
+    "format": "AAC 192 kbit/s, 48 kHz stereo",
+    "integrated_loudness_lufs": -16.32,
+    "true_peak_dbtp": -4.46,
+    "ducked_under_narration": true,
+    "receipt": "narration/audio-receipt.json"
   }
 }

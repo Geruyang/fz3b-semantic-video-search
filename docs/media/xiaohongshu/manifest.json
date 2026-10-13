@@ -1,0 +1,36 @@
+{
+  "version": "2.1",
+  "chip": "ZYNQ UltraScale+ MPSoC",
+  "board": "FZ3B",
+  "files": [
+    {
+      "file": "01-系统框架.png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1644684,
+      "sha256": "2a7ed87e12d54d8f6015172a4de0964c73b837243834449240d176e4815e031b"
+    },
+    {
+      "file": "02-技术路线.png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1777600,
+      "sha256": "df3aadaad91cbef6c58e9a9789f059f57d031c3a029d257fa43643e349cf02a1"
+    },
+    {
+      "file": "03-实时检索实机.png",
+      "width": 1702,
+      "height": 1102,
+      "bytes": 972172,
+      "sha256": "29ded4922c40e44cb7defcce8b3e37ac50691841954a0a1f421d379e612393c7"
+    },
+    {
+      "file": "04-视频检索实机.png",
+      "width": 1702,
+      "height": 1102,
+      "bytes": 705058,
+      "sha256": "b2b0479bb16fdacd04658a38a809e8f9fa88886fc2ae73d35683260cbd2508e9"
+    }
+  ],
+  "original_image_creation_version": "2.0"
+}

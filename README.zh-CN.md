@@ -1,78 +1,79 @@
 # FZ3B 语义视频检索
 
-**描述一个场景，找到它出现的时刻，留下需要的片段。**
+**基于 ZYNQ UltraScale+ 的 PS–PL 协同视频语义检索系统。**
 
-[![版本 2.0](https://img.shields.io/badge/version-2.0-2563EB)](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0)
-![EdgeBoard FZ3B](https://img.shields.io/badge/board-EdgeBoard_FZ3B-0F766E)
-![手写 RTL](https://img.shields.io/badge/PL-handwritten_RTL-7C3AED)
-![Windows 客户端](https://img.shields.io/badge/client-Windows_%2B_Qt-334155)
+[![版本 2.1](https://img.shields.io/badge/version-2.1-2563EB)](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.1)
+![芯片](https://img.shields.io/badge/chip-ZYNQ_UltraScale%2B-7C3AED)
+![板卡](https://img.shields.io/badge/board-EdgeBoard_FZ3B-0F766E)
+![RTL008](https://img.shields.io/badge/PL-handwritten_RTL008-334155)
 
-[English](README.md) · **简体中文** · [历史版本](https://github.com/Geruyang/fz3b-semantic-video-search/tags)
+[English](README.md) · **简体中文** · [2.1 发布](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.1) · [历史版本](https://github.com/Geruyang/fz3b-semantic-video-search/tags)
 
-将 **MobileCLIP-S1**、**Windows 视频工作台**与**百度 EdgeBoard FZ3B 的 PS–PL 推理**结合的研究项目。可以边录像边检索，也可以分析已有视频：用自然语言寻找物品与场景，浏览命中时间段，再导出需要的片段。
+将 **MobileCLIP-S1**、**Windows 视频工作台**与**百度 EdgeBoard FZ3B 的 PS–PL 视觉推理**结合的工程研究项目。输入物品或场景描述，在实时画面或已有视频中定位相关时刻，再浏览和导出需要的片段。**ZYNQ UltraScale+ MPSoC 是芯片系列，FZ3B 是开发板代号。**
 
-![实际 Windows 语义视频工作台](docs/images/vision-console.png)
+## 完整解说演示
 
-*实际客户端截图，处于未连接状态。软件界面当前为中文，仓库文档提供中英文版本。*
+[![FZ3B 两种应用：实时文字找场景与视频语义检索](docs/media/live-scene-cover.png)](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4)
 
-## 应用演示
+**[▶ 在仓库中打开视频](docs/media/fz3b-applications-demo.mp4)** · **[下载解说配乐版 MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4)** · **[下载四张项目推广图](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/project-images-2.1.zip)**
 
-**两个真实应用，一支完整视频 · 约 5 分 45 秒 · 当前版本 2.0**
+成片约 **5 分 45 秒**，包含两种应用、各 3 秒章节封面、中文技术解说与原创电子配乐。旁白出现时背景音乐自动降低；人脸马赛克继续保留，原始录像的声音仍已移除。
 
-[![应用①：实时文字找场景](docs/media/live-scene-cover.png)](docs/media/fz3b-applications-demo.mp4)
-
-[![应用②：视频语义检索](docs/media/video-search-cover.png)](docs/media/fz3b-applications-demo.mp4)
-
-**[▶ 打开完整演示视频](docs/media/fz3b-applications-demo.mp4)** · **[下载完整画质 MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4)** · [2.0 版本发布](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.0)
-
-| 章节 | 开始时间 | 展示内容 |
+| 章节 | 开始时间 | 演示内容 |
 | --- | --- | --- |
-| 应用①：实时文字找场景 | 00:00 | 3 秒科技封面，随后展示实时检索工作台 |
-| 应用②：视频语义检索 | 03:06.3 | 3 秒科技封面，随后展示已有视频分析与命中时间段 |
+| ① 实时文字找场景 | 00:00 | 摄像头检索、命中区间、回放与导出 |
+| ② 视频语义检索 | 03:06.3 | 已有视频分析、命中时间段与片段浏览 |
 
-视频已对人脸打马赛克并移除音轨。第二段原始录像中的 **01:02–09:40 加速 10 倍**，加速期间持续显示“此处多倍加速节约时间”；其余演示部分保持原速。封面中的芯片标注为 **ZYNQ UltraScale+**，**FZ3B** 是板卡代号。封面为项目概念插画，录像展示实际客户端。
+第二段原始录像的 **01:02–09:40** 以 **10 倍速**展示，并持续显示“此处多倍加速节约时间”；其余演示区间保持原速。旁白采用本机苏晴参考音色合成，配乐由振荡器和噪声合成原创制作。[解说词](docs/media/narration/script.md) · [声音与视频验证回执](docs/media/narration/audio-receipt.json)。
 
-## 能做什么
+## 两种应用工作流
 
-- **边录像，边找场景。** 输入物品或场景描述，保存收到的视频，并按原始帧号与时间保存命中图像。
-- **检索已有视频。** 按顺序分析上传帧，浏览命中区间，导出片段并保留原音轨。
-- **中文描述，离线处理。** 主机本地翻译后调用固定版本的 MobileCLIP 文本编码器；语义检索不依赖云端推理服务。
-- **让有用片段更连贯。** 可选连续片段优化减少短暂掉分导致的碎片，每个描述导出一个汇总视频。
-- **看见板端运行状态。** 查看推理/相机 FPS、CPU 占用、内存、R5 状态、温度和电压，并选择 600/800/1000/1200 MHz 四档 CPU 频率。
+### ① 实时文字找场景
 
-## 2.0 更新
+输入中文描述，在录像过程中检索物品或场景，保存命中画面和时间段。工作台显示推理/相机 FPS 与相似度，并支持录像后的回放和片段导出。
 
-计算实现已升级为 **RTL008：手写 RTL 与 AMD 标准 IP**，替代 [1.0](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) 的 HLS 计算实现，保持 A0005 兼容的 PS/模型 ABI。
+![真实实时检索界面：正在推理、查询列表与已记录命中区间](docs/media/xiaohongshu/03-实时检索实机.png)
 
-客户端包含当前连续片段工作流、设备遥测与**最近十张图像的推理 FPS**：保留十一个完成时间边界，计算十个完成间隔。启动准备时间不计入，每次重新推理清空窗口，上传视频进度采用板端完成时间。
+### ② 视频语义检索
 
-## 三端协作，一条数据链
+选择本地视频，输入笔记本电脑、鞋子、眼镜或杯子等描述。系统按顺序分析视频帧，整理命中时间段，再回放或导出选中的片段。
 
-```mermaid
-flowchart LR
-    T[物品与场景描述] --> H[Windows 主机<br/>离线翻译与文本编码]
-    C[UVC 摄像头或上传帧] --> P[PS / A53 Linux<br/>采集、预处理与模型分区]
-    H -->|网口发送文本特征| P
-    P <-->|AXI 与 DDR| F[PL / RTL008<br/>CNN 加速]
-    P <-->|匹配辅助| R[PS / 双 R5<br/>TCM 工作核]
-    P -->|视频、帧号与结果| W[Windows 工作台<br/>录像、浏览、导出]
-```
+![真实视频检索界面：分析完成、命中时间段与笔记本电脑片段回放](docs/media/xiaohongshu/04-视频检索实机.png)
 
-摄像头、网口和 UART 的物理驱动仍由 Linux 管理。R5 辅助匹配和协议工作，不表示已经接管完整外设协议栈。
+以上为既有实机录像中直接提取的完整界面，画面状态与数值来自对应录像，均保留人脸马赛克。[截图来源与生成提示](docs/media/xiaohongshu/prompts.json)。
 
-| 目录 | 负责内容 |
+## 系统架构与技术路线
+
+| 系统框架 | 语义检索技术路线 |
 | --- | --- |
-| [PS/](PS/) | 当前 Linux/R5 应用、推理运行时、驱动、加载器与服务定义 |
-| [PL/](PL/) | RTL008 源码、约束、最终 Vivado 工程输入、冻结编译快照和精选证据 |
-| [HOST/](HOST/) | 当前 Windows 客户端、维护中的测试、固定源码依赖与构建入口 |
-| [docs/validation/](docs/validation/) | 已保存的应用与真实相机 FPS 验证 |
-| [UPLOAD_MANIFEST.json](UPLOAD_MANIFEST.json) | 每个上传文件的原路径、大小、SHA256 与保留原因 |
+| [![PS–PL 协同系统框架](docs/media/xiaohongshu/01-系统框架.png)](docs/media/xiaohongshu/01-系统框架.png) | [![从中文查询到视频片段的技术路线](docs/media/xiaohongshu/02-技术路线.png)](docs/media/xiaohongshu/02-技术路线.png) |
 
-## 有实测依据的结果
+**Windows 主机**完成中文离线翻译、文本编码、上传视频解码和可视化。**PS / Cortex-A53 Linux**负责采集、预处理与模型分区；**PL / RTL008**通过 AXI 与 DDR 加速部分 CNN 算子；**双 R5 / TCM 工作核**辅助匹配与协议处理。摄像头、网口和 UART 的物理驱动仍由 Linux 管理。
+
+文本与图像特征通过余弦相似度匹配，经阈值筛选和连续片段整理后，形成可浏览、可导出的命中时间段。当前客户端可以按描述汇总相关片段，中文查询与语义推理无需云端推理服务。
+
+| 源码目录 | 负责内容 |
+| --- | --- |
+| [PS/](PS/) | Linux/R5 应用、推理运行时、驱动、加载器与服务 |
+| [PL/](PL/) | 手写 RTL008、约束、最终 Vivado 工程输入与已保存签核 |
+| [HOST/](HOST/) | Windows 客户端、维护中的测试、固定源码依赖与构建入口 |
+| [docs/media/](docs/media/) | 解说演示、封面、项目图片与媒体身份 |
+| [docs/validation/](docs/validation/) | 已保存应用与真实相机 FPS 验证 |
+| [UPLOAD_MANIFEST.json](UPLOAD_MANIFEST.json) | 发布路径、输入身份、大小与 SHA256 |
+
+## 2.1 更新
+
+- 完整双应用视频加入中文解说、原创配乐和旁白期间的音乐自动压低。
+- 纳入四张项目图片：系统框架、技术路线，以及两张真实客户端截图。
+- 重新组织中英文 README，以应用演示和工程实现为主线。
+
+计算与应用实现继续采用 **RTL008 / A0005 兼容 ABI**，沿用 2.0。此次更新演示资料和文档，PS、PL、HOST 源码身份保持一致；客户端继续提供设备遥测与最近十张图像的推理 FPS。
+
+## 实测与验证依据
 
 已保存的对比采用同一 FZ3B boot、**1.2 GHz CPU**和 **200/400 MHz job/PW 时钟**。资源数据均取完整平台 post-route 报告。
 
-| 指标 | 1.0 HLS 基线 | 2.0 RTL008 | 变化 |
+| 指标 | 1.0 HLS 基线 | RTL008（2.0 / 2.1） | 变化 |
 | --- | ---: | ---: | ---: |
 | LUT | 51,334 | 47,645 | −7.19% |
 | 触发器 | 87,644 | 49,690 | −43.30% |
@@ -110,7 +111,7 @@ python tools/materialize_workspace.py --output workspace
 
 ## 版本管理
 
-[`main`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/main) 始终指向最新发布版本；[`1.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) 保存上一版，[`2.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0) 固定本次快照。以后使用**用户指定的版本号**更新 `main`，并创建不可变的 annotated tag 保存对应版本。[发布规则](RELEASE_POLICY.md)。
+[`main`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/main) 保存最新发布文件，[`2.1`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.1) 固定本次发布。[`2.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0) 与 [`1.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) 继续保留。版本号由用户指定，每次发布创建不可变的 annotated tag。[发布规则](RELEASE_POLICY.md)。
 
 ## 模型来源与许可
 

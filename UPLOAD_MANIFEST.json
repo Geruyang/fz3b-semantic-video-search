@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "2.0",
+  "version": "2.1",
   "files": [
     {
       "path": "PS/config.example.json",
@@ -2602,51 +2602,149 @@
     {
       "path": "README.md",
       "source": "docs/maintenance/github-readme-en.md",
-      "bytes": 9013,
-      "sha256": "24d51f316d360f9963e2261ea080e330e4132954360c3827047d4aa3f7bde2e9",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "bytes": 10046,
+      "sha256": "f187a4a021cd6280c13236867e16d0ef7cf4677d77cb7b54385148c31884fc20",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "README.zh-CN.md",
       "source": "docs/maintenance/github-readme-zh-CN.md",
-      "bytes": 8278,
-      "sha256": "541aad6927bb3addfdb5622d00acdb31e85a145af3a09e0efe6c0fdaebe81be6",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "bytes": 9005,
+      "sha256": "bec2ab8fbcf00352b1065715dc0949c1421696cf7fc77fd476be533cb6811ff2",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/cover-prompts.json",
       "source": "docs/media/cover-prompts.json",
       "bytes": 2379,
       "sha256": "7c00f7f389248f309ae78a328223f8dc88d9c2a4c22280ee32f8469edf3db307",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/demo.json",
       "source": "docs/media/demo.json",
-      "bytes": 2447,
-      "sha256": "e9153e6331b5e455315d82a8bea87c49b75d655e7cc9107a4be961f689f7b428",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "bytes": 2812,
+      "sha256": "960761efe30756bd9b25e7bb3c4784f371c4e5e31789bb02fae27a6419ae1672",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/fz3b-applications-demo.mp4",
       "source": "docs/media/fz3b-applications-demo.mp4",
-      "bytes": 50933294,
-      "sha256": "5325ed5bc1ca8629e1ca0bfde34169a649a85438393715e8c65a76c3a6d5e812",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "bytes": 59449570,
+      "sha256": "4874eaa065dc589eaff3670711c0fc4ca4d02291a935ef7d2292dc96442eea60",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/live-scene-cover.png",
       "source": "docs/media/live-scene-cover.png",
       "bytes": 2006929,
       "sha256": "817f69377c697b2aa1f23471af6fdc16e2b4b97fd195cf3811f8b9b8e623b15f",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     },
     {
       "path": "docs/media/video-search-cover.png",
       "source": "docs/media/video-search-cover.png",
       "bytes": 1873194,
       "sha256": "b622ac642b97291934245d61f0dd1e165850f6d1d8a25f1b4f5e672c6ca8781c",
-      "reason": "Version 2.0 application demonstration, original chapter art, reproducible media identity or bilingual project documentation"
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "VERSION",
+      "source": "VERSION",
+      "bytes": 4,
+      "sha256": "bf8bd8826b985abf5e6347211af927ee7130a5df00cfed5f1517cbcc1134b0c3",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "RELEASE.json",
+      "source": "RELEASE.json",
+      "bytes": 758,
+      "sha256": "d75624672513069803286b29e3859ec274eb9e0b57408c3dcb82bd87a7c8b099",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/narration/audio-receipt.json",
+      "source": "docs/media/narration/audio-receipt.json",
+      "bytes": 6451,
+      "sha256": "e16a91e1a9be88b819c78c0afccc8cd44a0bb86f496b0c6a26141afb82cfa704",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/narration/compose_music.py",
+      "source": "docs/media/narration/compose_music.py",
+      "bytes": 4786,
+      "sha256": "a5e25d069cb81b24e65440760f664c46fc46c8d77027e83f655f7c56fb98f0a7",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/narration/cues.json",
+      "source": "docs/media/narration/cues.json",
+      "bytes": 3525,
+      "sha256": "d0f278f147f89eeede0486a4428aef4053d9996d9ff9b839a117852ef9e13ecf",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/narration/mix_audio.py",
+      "source": "docs/media/narration/mix_audio.py",
+      "bytes": 7016,
+      "sha256": "82d9006a17a3e543da82d69a34cea9a2461f8e733aa3bb03d1517ebf80d28517",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/narration/script.md",
+      "source": "docs/media/narration/script.md",
+      "bytes": 2570,
+      "sha256": "a696bf0b1d19318520dda9c9aa54b5910e014e03c9bab6e4c69cd69ee1ce5afe",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/01-系统框架.png",
+      "source": "docs/media/xiaohongshu/01-系统框架.png",
+      "bytes": 1644684,
+      "sha256": "2a7ed87e12d54d8f6015172a4de0964c73b837243834449240d176e4815e031b",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/02-技术路线.png",
+      "source": "docs/media/xiaohongshu/02-技术路线.png",
+      "bytes": 1777600,
+      "sha256": "df3aadaad91cbef6c58e9a9789f059f57d031c3a029d257fa43643e349cf02a1",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/03-实时检索实机.png",
+      "source": "docs/media/xiaohongshu/03-实时检索实机.png",
+      "bytes": 972172,
+      "sha256": "29ded4922c40e44cb7defcce8b3e37ac50691841954a0a1f421d379e612393c7",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/04-视频检索实机.png",
+      "source": "docs/media/xiaohongshu/04-视频检索实机.png",
+      "bytes": 705058,
+      "sha256": "b2b0479bb16fdacd04658a38a809e8f9fa88886fc2ae73d35683260cbd2508e9",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/manifest.json",
+      "source": "docs/media/xiaohongshu/manifest.json",
+      "bytes": 949,
+      "sha256": "b9950b211a3d48de8871778609531a19c4b99f195039c2950fbf19d6d4fddbdf",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/prompts.json",
+      "source": "docs/media/xiaohongshu/prompts.json",
+      "bytes": 5796,
+      "sha256": "cc29b8de6173b2f364b9295b68e40b0bcfcde60015a32ba7ddb38c7a78d3476b",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
+    },
+    {
+      "path": "docs/media/xiaohongshu/README.md",
+      "source": "docs/media/xiaohongshu/README.md",
+      "bytes": 1189,
+      "sha256": "07c865276e9b1cf3d32978a46d3da92f2d3bae992330788a1c8159f797e35b4a",
+      "reason": "Current 2.1 demonstration, narrated audio identity, four project images or release documentation"
     }
   ]
 }

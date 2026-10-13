@@ -1,78 +1,79 @@
 # FZ3B Semantic Video Search
 
-**Describe a scene. Find its moments. Keep the clips.**
+**Natural-language video retrieval with ZYNQ UltraScale+ PS–PL inference.**
 
-[![Version 2.0](https://img.shields.io/badge/version-2.0-2563EB)](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0)
-![EdgeBoard FZ3B](https://img.shields.io/badge/board-EdgeBoard_FZ3B-0F766E)
-![Handwritten RTL](https://img.shields.io/badge/PL-handwritten_RTL-7C3AED)
-![Windows client](https://img.shields.io/badge/client-Windows_%2B_Qt-334155)
+[![Version 2.1](https://img.shields.io/badge/version-2.1-2563EB)](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.1)
+![Chip](https://img.shields.io/badge/chip-ZYNQ_UltraScale%2B-7C3AED)
+![Board](https://img.shields.io/badge/board-EdgeBoard_FZ3B-0F766E)
+![RTL008](https://img.shields.io/badge/PL-handwritten_RTL008-334155)
 
-**English** · [简体中文](README.zh-CN.md) · [Version history](https://github.com/Geruyang/fz3b-semantic-video-search/tags)
+**English** · [简体中文](README.zh-CN.md) · [Release 2.1](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.1) · [Version history](https://github.com/Geruyang/fz3b-semantic-video-search/tags)
 
-A video search research project combining **MobileCLIP-S1**, a **Windows desktop workbench**, and **PS–PL inference on Baidu EdgeBoard FZ3B**. Record a live camera stream or analyze an existing video, search with natural-language descriptions, and export the matching moments.
+An engineering research project combining **MobileCLIP-S1**, a **Windows desktop workbench**, and **PS–PL visual inference on Baidu EdgeBoard FZ3B**. Describe an object or scene, locate matching moments in live or recorded video, then review and export the useful clips. **ZYNQ UltraScale+ MPSoC is the chip family; FZ3B is the board name.**
 
-![Actual Windows semantic video search workbench](docs/images/vision-console.png)
+## Watch the narrated demonstration
 
-*The actual client, shown in its disconnected state. The interface is currently in Chinese; the documentation is bilingual.*
+[![Two applications on FZ3B: real-time text-to-scene search and video semantic search](docs/media/live-scene-cover.png)](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4)
 
-## Watch the applications
+**[▶ Open the video in the repository](docs/media/fz3b-applications-demo.mp4)** · **[Download the narrated MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4)** · **[Download the four project images](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/project-images-2.1.zip)**
 
-**Two real application demos in one video · 5 min 45 s · version 2.0**
+The **5 min 45 s** demonstration combines both applications with 3-second chapter covers, Chinese technical narration and an original electronic underscore. Music lowers automatically under the narration. Faces remain mosaicked and the original recording audio remains removed.
 
-[![Application ①: Real-time text-to-scene search](docs/media/live-scene-cover.png)](docs/media/fz3b-applications-demo.mp4)
-
-[![Application ②: Video semantic search](docs/media/video-search-cover.png)](docs/media/fz3b-applications-demo.mp4)
-
-**[▶ Open the combined video](docs/media/fz3b-applications-demo.mp4)** · **[Download the full-quality MP4](https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4)** · [Version 2.0 release](https://github.com/Geruyang/fz3b-semantic-video-search/releases/tag/2.0)
-
-| Chapter | Starts at | What you will see |
+| Chapter | Starts at | Demonstration |
 | --- | --- | --- |
-| Application ① — Real-time text-to-scene search | 00:00 | 3-second cover, followed by the live search workbench |
-| Application ② — Video semantic search | 03:06.3 | 3-second cover, followed by recorded-video analysis and matching intervals |
+| ① Real-time text-to-scene search | 00:00 | Camera search, matching intervals, playback and export |
+| ② Video semantic search | 03:06.3 | Recorded-video analysis, matched moments and clip review |
 
-Faces are mosaicked and the demo is silent. In the second source recording, **01:02–09:40 is shown at 10× speed**; the accelerated section displays “此处多倍加速节约时间” (“Accelerated here to save time”). The other demonstration sections retain their original speed. Cover art labels the chip **ZYNQ UltraScale+**; **FZ3B** is the board name. The artwork is conceptual, while the footage shows the actual client.
+The second source recording's **01:02–09:40** interval is presented at **10× speed**, visibly labeled “此处多倍加速节约时间”. All other demonstration intervals retain their original speed. Narration is AI-synthesized using the local Suqing reference voice; the music is an original oscillator/noise composition. [Narration script](docs/media/narration/script.md) · [Audio and video validation](docs/media/narration/audio-receipt.json).
 
-## What you can do
+## Two application workflows
 
-- **Search while recording.** Describe objects or scenes, preserve the received video, and keep original matching frames with timestamps.
-- **Search an existing video.** Analyze uploaded frames in order, browse matched intervals, and export clips with the original audio.
-- **Use Chinese descriptions offline.** Local translation feeds the pinned MobileCLIP text encoder; semantic search does not require a cloud inference service.
-- **Keep useful moments together.** Optional continuity processing reduces fragmented intervals, with one combined export per description.
-- **See what the board is doing.** Monitor inference/camera FPS, CPU load, memory, R5 state, temperature and voltages; select 600/800/1000/1200 MHz CPU operation.
+### ① Real-time text-to-scene search
 
-## What's new in 2.0
+Enter Chinese descriptions, record the camera stream, and collect matching frames and time intervals. The workbench shows inference/camera FPS and similarity values, then lets you review and export the recorded moments.
 
-The compute implementation is now **RTL008: handwritten RTL plus AMD standard IP**, replacing the HLS compute implementation in [1.0](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0). The PS/model ABI remains A0005-compatible.
+![Actual real-time workbench: active inference, query descriptions and matching intervals](docs/media/xiaohongshu/03-实时检索实机.png)
 
-The client also includes the current continuity workflow, device telemetry and **recent-ten-image inference FPS**: ten completion intervals, eleven time boundaries. Startup preparation is excluded, the window resets on a new inference session, and uploaded-video progress uses board completion times.
+### ② Recorded-video semantic search
 
-## Three parts, one pipeline
+Select a local video and enter descriptions such as a laptop, shoes, eyeglasses or a cup. Frames are analyzed in order, matching intervals are grouped, and selected clips can be replayed or exported.
 
-```mermaid
-flowchart LR
-    T[Scene descriptions] --> H[Windows host<br/>offline translation + text encoder]
-    C[UVC camera or uploaded frames] --> P[PS / A53 Linux<br/>capture + preprocessing + model partitions]
-    H -->|text features over Ethernet| P
-    P <-->|AXI + DDR| F[PL / RTL008<br/>CNN acceleration]
-    P <-->|matching assistance| R[PS / dual R5<br/>TCM workers]
-    P -->|video + frame IDs + results| W[Windows workbench<br/>record · browse · export]
-```
+![Actual recorded-video workbench: completed analysis, matching intervals and laptop clip playback](docs/media/xiaohongshu/04-视频检索实机.png)
 
-The Linux drivers own the physical camera, Ethernet and UART interfaces. R5 workers assist matching and protocol work; this project does not claim a complete peripheral-stack offload.
+These are full-frame screenshots extracted from the actual recordings; their UI states and displayed measurements belong to those recordings. Both remain face-mosaicked. [Image sources and generation prompts](docs/media/xiaohongshu/prompts.json).
 
-| Directory | Responsibility |
+## Architecture and technical pipeline
+
+| System architecture | Semantic retrieval pipeline |
 | --- | --- |
-| [PS/](PS/) | Current Linux/R5 application, inference runtime, drivers, loader and service definitions |
-| [PL/](PL/) | RTL008 sources, constraints, final Vivado project inputs, immutable compilation snapshot and selected evidence |
-| [HOST/](HOST/) | Current Windows client, maintained tests, pinned source dependencies and build entry |
-| [docs/validation/](docs/validation/) | Saved application and real-camera FPS validation |
-| [UPLOAD_MANIFEST.json](UPLOAD_MANIFEST.json) | Every published input, its original path, size, SHA256 and inclusion reason |
+| [![PS–PL system architecture](docs/media/xiaohongshu/01-系统框架.png)](docs/media/xiaohongshu/01-系统框架.png) | [![Text-to-video retrieval pipeline](docs/media/xiaohongshu/02-技术路线.png)](docs/media/xiaohongshu/02-技术路线.png) |
 
-## Measured, not estimated
+The **Windows host** performs offline Chinese translation and text encoding, plus uploaded-video decoding and visualization. **PS / Cortex-A53 Linux** handles capture, preprocessing and model partitions. **PL / RTL008** accelerates selected CNN operations through AXI and DDR. **Dual R5 / TCM workers** assist matching and protocol work. The physical camera, Ethernet and UART drivers remain owned by Linux.
+
+Text and image features are compared with cosine similarity, filtered by a configured threshold, then organized into matching intervals for review/export. The current continuity workflow can combine useful intervals per description. Chinese query processing and semantic inference do not require a cloud inference service.
+
+| Source directory | Responsibility |
+| --- | --- |
+| [PS/](PS/) | Linux/R5 applications, inference runtime, drivers, loader and services |
+| [PL/](PL/) | Handwritten RTL008, constraints, final Vivado project inputs and saved qualification |
+| [HOST/](HOST/) | Windows client, maintained tests, pinned source dependencies and build entry |
+| [docs/media/](docs/media/) | Narrated demo, covers, project images and media identities |
+| [docs/validation/](docs/validation/) | Saved application and real-camera FPS validation |
+| [UPLOAD_MANIFEST.json](UPLOAD_MANIFEST.json) | Publication paths, input identities, sizes and SHA256 hashes |
+
+## What's new in 2.1
+
+- A complete narrated two-application video with an original music bed and automatic music ducking.
+- Four project visuals: architecture, technical pipeline, and two real workbench screenshots.
+- Reorganized English and Chinese documentation around the demonstration and engineering implementation.
+
+The compute/application implementation remains **RTL008 with the A0005-compatible ABI**, inherited from 2.0. This release updates demonstration media and documentation; the PS, PL and HOST source trees retain their existing identities. Device telemetry and recent-ten-image inference FPS remain available in the client.
+
+## Measured performance
 
 The saved comparison uses the same FZ3B boot, **1.2 GHz CPU**, and **200/400 MHz job/PW clocks**. Resource counts are from full-platform post-route reports.
 
-| Metric | 1.0 HLS baseline | 2.0 RTL008 | Change |
+| Metric | 1.0 HLS baseline | RTL008 (2.0 / 2.1) | Change |
 | --- | ---: | ---: | ---: |
 | LUT | 51,334 | 47,645 | −7.19% |
 | Flip-flops | 87,644 | 49,690 | −43.30% |
@@ -110,7 +111,7 @@ This is a **source snapshot**, not an all-in-one binary distribution. Model weig
 
 ## Versioning
 
-[`main`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/main) tracks the latest published version. [`1.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) preserves the previous release; [`2.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0) fixes this snapshot. Every future version uses the **version number supplied by the user**, updates `main`, and receives an immutable annotated tag. [Publication policy](RELEASE_POLICY.md).
+[`main`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/main) contains the latest published files; [`2.1`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.1) fixes this release. [`2.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/2.0) and [`1.0`](https://github.com/Geruyang/fz3b-semantic-video-search/tree/1.0) remain preserved. Version numbers are supplied by the user, and every release receives an immutable annotated tag. [Publication policy](RELEASE_POLICY.md).
 
 ## Model provenance and licensing
 

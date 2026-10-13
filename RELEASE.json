@@ -1,16 +1,21 @@
 {
-  "version": "2.0",
-  "previous_version": "1.0",
-  "previous_commit": "7aa5cbeec7d6a2d09afa60dcbdf7bb1bd646abcb",
+  "version": "2.1",
+  "previous_version": "2.0",
+  "previous_commit": "bd119ed67ac1d276f3d286bfc1218a99f0712592",
   "branch": "main",
-  "tag": "2.0",
+  "tag": "2.1",
   "platform": "RTL008 / A0005-compatible ABI",
   "application": "semantic-video-continuity + recent-ten-image FPS",
-  "scope": "Current PS/HOST, final handwritten RTL/project inputs and compact evidence",
+  "scope": "RTL008 PS/PL/HOST identities retained; narrated applications demo, four project visuals and reorganized bilingual documentation",
   "external_resources": [
     "model weights",
     "learned binary parameters",
     "native runtime libraries",
     "compiled client/FPGA artifacts"
+  ],
+  "release_changes": [
+    "Chinese narration and original music with automatic ducking",
+    "Four architecture/pipeline/real-workbench images",
+    "Reorganized bilingual documentation"
   ]
 }
