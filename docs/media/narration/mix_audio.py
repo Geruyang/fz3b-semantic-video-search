@@ -60,7 +60,7 @@ result=subprocess.run([str(ffmpeg),'-hide_banner','-nostats','-n']+inputs+['-fil
 (TEMP/'mix-loudness.log').write_bytes(result.stderr)
 candidate=TARGET.with_name(TARGET.stem+'.processing.mp4')
 if candidate.exists():candidate.unlink()
-subprocess.run([str(ffmpeg),'-hide_banner','-loglevel','error','-n','-i',str(SOURCE),'-i',str(mixed),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-t',str(duration),'-movflags','+faststart','-metadata','title=FZ3B Semantic Video Search — narrated applications demo','-metadata','comment=AI-synthesized Suqing narration; original upbeat futuristic electronic score Bright Circuit',str(candidate)],check=True)
+subprocess.run([str(ffmpeg),'-hide_banner','-loglevel','error','-n','-i',str(SOURCE),'-i',str(mixed),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-t',str(duration),'-movflags','+faststart','-metadata','title=FZ3B Semantic Video Search — narrated applications demo','-metadata','comment=AI voice-over; original upbeat futuristic electronic score Bright Circuit',str(candidate)],check=True)
 decoded=subprocess.run([str(ffmpeg),'-hide_banner','-loglevel','error','-i',str(candidate),'-f','null','-'],capture_output=True)
 assert decoded.returncode==0 and not decoded.stderr,decoded.stderr.decode(errors='replace')
 def stream_hash(path):
@@ -75,7 +75,7 @@ candidate_bytes=candidate.stat().st_size;candidate_sha=hashlib.sha256(candidate.
 ASSETS.mkdir(exist_ok=True)
 for original,name in [(voice_path,'中文解说.wav'),(TEMP/'original-tech-upbeat.wav','原创科技配乐.wav'),(mixed,'完整混音.wav')]:shutil.copy2(original,ASSETS/name)
 candidate.replace(TARGET)
-receipt={'version':'2.1','source':SOURCE.name,'output':TARGET.name,'duration':duration,'voice':'本机苏晴合成参考音色','synthetic_voice':True,'music':'Bright Circuit — original upbeat futuristic electronic composition, 118 BPM','audio_format':'AAC 192 kbit/s, 48 kHz stereo','music_ducked_under_narration':True,'loudness':final_levels,'segments':segments,'video_stream_identity_preserved':True,'decode':'PASS','video_bytes':candidate_bytes,'video_sha256':candidate_sha,'local_output':str(TARGET),'local_audio_assets':str(ASSETS)}
+receipt={'version':'2.1','source':SOURCE.name,'output':TARGET.name,'duration':duration,'voice':'AI 配音','synthetic_voice':True,'music':'Bright Circuit — original upbeat futuristic electronic composition, 118 BPM','audio_format':'AAC 192 kbit/s, 48 kHz stereo','music_ducked_under_narration':True,'loudness':final_levels,'segments':segments,'video_stream_identity_preserved':True,'decode':'PASS','video_bytes':candidate_bytes,'video_sha256':candidate_sha,'local_output':str(TARGET),'local_audio_assets':str(ASSETS)}
 meta=Path(__file__).parent/'audio-receipt.json';meta.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 shutil.copy2(meta,ASSETS/'配音时间轴与混音回执.json')
 text='\n\n'.join('%.2f–%.2f 秒\n%s'%(s['start'],s['end'],s['text']) for s in segments)

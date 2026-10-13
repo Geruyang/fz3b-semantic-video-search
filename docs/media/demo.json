@@ -3,8 +3,8 @@
   "branch": "main",
   "video": {
     "name": "FZ3B_应用演示_实时文字找场景与视频语义检索_解说配乐版.mp4",
-    "bytes": 59424408,
-    "sha256": "bd1bdd5efee9075f5a842880b9a1dfeb85270646cbb617302eb91445b8d0aa13",
+    "bytes": 59424390,
+    "sha256": "308280d48666642ee37ca5ccccc89b63b0fd0394341d4e52681f611fe13ff1a1",
     "repository_path": "docs/media/fz3b-applications-demo.mp4",
     "release_asset_name": "fz3b-applications-demo.mp4",
     "release_asset_url": "https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.1/fz3b-applications-demo.mp4"
@@ -83,7 +83,7 @@
     "evidence": "User correction on 2026-10-13"
   },
   "audio": {
-    "narration": "AI-synthesized local Suqing reference voice",
+    "narration": "AI voice-over",
     "music": "Bright Circuit — original upbeat futuristic electronic composition, 118 BPM",
     "format": "AAC 192 kbit/s, 48 kHz stereo",
     "integrated_loudness_lufs": -16.05,

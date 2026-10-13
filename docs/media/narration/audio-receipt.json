@@ -3,7 +3,7 @@
   "source": "FZ3B_应用演示_实时文字找场景与视频语义检索.mp4",
   "output": "FZ3B_应用演示_实时文字找场景与视频语义检索_解说配乐版.mp4",
   "duration": 344.76666666666665,
-  "voice": "本机苏晴合成参考音色",
+  "voice": "AI 配音",
   "synthetic_voice": true,
   "music": "Bright Circuit — original upbeat futuristic electronic composition, 118 BPM",
   "audio_format": "AAC 192 kbit/s, 48 kHz stereo",
@@ -167,6 +167,10 @@
   ],
   "video_stream_identity_preserved": true,
   "decode": "PASS",
-  "video_bytes": 59424408,
-  "video_sha256": "bd1bdd5efee9075f5a842880b9a1dfeb85270646cbb617302eb91445b8d0aa13"
+  "video_bytes": 59424390,
+  "video_sha256": "308280d48666642ee37ca5ccccc89b63b0fd0394341d4e52681f611fe13ff1a1",
+  "metadata_update": {
+    "description": "AI voice-over",
+    "audio_and_video_packet_identity_preserved": true
+  }
 }

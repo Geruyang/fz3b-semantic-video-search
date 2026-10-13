@@ -2602,15 +2602,15 @@
     {
       "path": "README.md",
       "source": "README.md",
-      "bytes": 10197,
-      "sha256": "367286c636c1e1058ca6b6ad0115ab4a02860f0bb9ebd4311903dffd728fc75f",
+      "bytes": 10159,
+      "sha256": "bc92b6416fd511f52bf2bd07fcbe8aa0d4725fa5fe69170eac839a9a07409d21",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "README.zh-CN.md",
       "source": "README.zh-CN.md",
-      "bytes": 9121,
-      "sha256": "b87dd6018d8354118ac983da2452717ed414c23c4c214084cd6c4a6a07befc04",
+      "bytes": 9098,
+      "sha256": "1696ceda605f4f1af5aff24b05f6f7370e27597c4fdd1202f335b42fc1a54c7c",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
@@ -2623,15 +2623,15 @@
     {
       "path": "docs/media/demo.json",
       "source": "docs/media/demo.json",
-      "bytes": 2837,
-      "sha256": "39aeb6e6c3bc264c782b010c9fab3294ff24e21d0e9764d996c5b7b37ca14494",
+      "bytes": 2807,
+      "sha256": "f9ff7cc81f68b8a08ff6f7d208d13a567da79b7e235ce8f90035b94f022626f9",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/fz3b-applications-demo.mp4",
       "source": "docs/media/fz3b-applications-demo.mp4",
-      "bytes": 59424408,
-      "sha256": "bd1bdd5efee9075f5a842880b9a1dfeb85270646cbb617302eb91445b8d0aa13",
+      "bytes": 59424390,
+      "sha256": "308280d48666642ee37ca5ccccc89b63b0fd0394341d4e52681f611fe13ff1a1",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
@@ -2665,8 +2665,8 @@
     {
       "path": "docs/media/narration/audio-receipt.json",
       "source": "docs/media/narration/audio-receipt.json",
-      "bytes": 6470,
-      "sha256": "3a6e1ede573c8d1b58d5958cd4a946cb5e8a06ae8b380c4515f7eda92d00b90a",
+      "bytes": 6567,
+      "sha256": "4f516181e574092b9a89a9c6239b939decb592b576f7961b80e8c75aba023e73",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
@@ -2679,15 +2679,15 @@
     {
       "path": "docs/media/narration/cues.json",
       "source": "docs/media/narration/cues.json",
-      "bytes": 3525,
-      "sha256": "d0f278f147f89eeede0486a4428aef4053d9996d9ff9b839a117852ef9e13ecf",
+      "bytes": 3501,
+      "sha256": "d7fbc77296b4dbcffc87da46f2c50a8de0ecb86623e58ad64ab5b4c4b39975b5",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
       "path": "docs/media/narration/mix_audio.py",
       "source": "docs/media/narration/mix_audio.py",
-      "bytes": 7411,
-      "sha256": "e85bed896ef038d90700ad707521fc554bceec955f468587a720e49cad29e4ed",
+      "bytes": 7372,
+      "sha256": "2acefd33fe284c782efb9ba51b0dbc6837fcaeab7427b4a46c7ae2644e2fe1ba",
       "reason": "2.1 upbeat narrated video, original composition, project images, or bilingual documentation"
     },
     {
