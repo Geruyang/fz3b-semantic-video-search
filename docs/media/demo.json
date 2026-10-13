@@ -3,8 +3,8 @@
   "branch": "main",
   "video": {
     "name": "FZ3B_应用演示_实时文字找场景与视频语义检索.mp4",
-    "bytes": 50926476,
-    "sha256": "f340d77e792486a4307c5a4a76ce5a651b228fbd9d20bdbcb37a2cb8c00cda6c",
+    "bytes": 50933294,
+    "sha256": "5325ed5bc1ca8629e1ca0bfde34169a649a85438393715e8c65a76c3a6d5e812",
     "repository_path": "docs/media/fz3b-applications-demo.mp4",
     "release_asset_name": "fz3b-applications-demo.mp4",
     "release_asset_url": "https://github.com/Geruyang/fz3b-semantic-video-search/releases/download/2.0/fz3b-applications-demo.mp4"
@@ -66,15 +66,20 @@
   "covers": [
     {
       "name": "live-scene-cover.png",
-      "bytes": 2026809,
-      "sha256": "d785f9c263f0e15b50f328797071c839f1106c63bcf1ffbf4e73eb75d00dbb44"
+      "bytes": 2006929,
+      "sha256": "817f69377c697b2aa1f23471af6fdc16e2b4b97fd195cf3811f8b9b8e623b15f"
     },
     {
       "name": "video-search-cover.png",
-      "bytes": 1854366,
-      "sha256": "25b72bd918d1e77eacd911011c182336fb962555655ee75f8f82b807cab3095b"
+      "bytes": 1873194,
+      "sha256": "b622ac642b97291934245d61f0dd1e165850f6d1d8a25f1b4f5e672c6ca8781c"
     }
   ],
   "cover_generation": "Built-in imagegen; conceptual illustrations, not actual PCB photography",
-  "concatenation": "Original demo video streams copied without re-encoding; cover images encoded to matching format"
+  "concatenation": "Original demo video streams copied without re-encoding; cover images encoded to matching format",
+  "cover_hardware_labels": {
+    "chip": "ZYNQ UltraScale+",
+    "board": "FZ3B",
+    "evidence": "User correction on 2026-10-13"
+  }
 }

@@ -30,7 +30,7 @@ A video search research project combining **MobileCLIP-S1**, a **Windows desktop
 | Application ① — Real-time text-to-scene search | 00:00 | 3-second cover, followed by the live search workbench |
 | Application ② — Video semantic search | 03:06.3 | 3-second cover, followed by recorded-video analysis and matching intervals |
 
-Faces are mosaicked and the demo is silent. In the second source recording, **01:02–09:40 is shown at 10× speed**; the accelerated section displays “此处多倍加速节约时间” (“Accelerated here to save time”). The other demonstration sections retain their original speed. Cover art is a conceptual illustration; the footage shows the actual client.
+Faces are mosaicked and the demo is silent. In the second source recording, **01:02–09:40 is shown at 10× speed**; the accelerated section displays “此处多倍加速节约时间” (“Accelerated here to save time”). The other demonstration sections retain their original speed. Cover art labels the chip **ZYNQ UltraScale+**; **FZ3B** is the board name. The artwork is conceptual, while the footage shows the actual client.
 
 ## What you can do
 
